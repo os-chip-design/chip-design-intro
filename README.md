@@ -12,7 +12,7 @@ THis is a very tentative list of lectures. The course will be adapted to the stu
 - Covering the process
 - AISC with standard cells
 - PDK
-#### Lab
+#### [Lab 1](lab1)
 - Hello World on TinyTapeout
 - Install tools (openlane2)
 - Hello World on openlane2
