@@ -13,10 +13,7 @@ THis is a very tentative list of lectures. The course will be adapted to the stu
 - AISC with standard cells
 - PDK
 #### [Lab 1](lab1)
-- Hello World on TinyTapeout
-- Install tools (openlane2)
-- Hello World on openlane2
-- Explore the design
+
 
 ### Lecture 2: Transistor, inverter, NAND gate
 - SiliWiz drawing and simulation
