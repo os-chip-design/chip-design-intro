@@ -30,6 +30,14 @@ THis is a very tentative list of lectures. The course will be adapted to the stu
 - Placement and routing
 - OS tools (local) installation
 
+### Lecture X: memory and CPU register file
+
+- RF topics: FF, sync mem, latches, custom design
+- Synthesize in SkyWater and simulate
+- how to incorporate in processor designs (ask SyFive)
+- where are the limits
+
+
 ### Lecture 5: Chip design rules
 
 ### Lecture 6: Standard cells
