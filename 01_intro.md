@@ -32,10 +32,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
  * Moore's Law
 
-## try
 
-<img src="figures/Moores_Law_Transistor_Count_1970-2020.png" alt="drawing" width="200"/>
+---
 
-## Moor's Law
-
-![drawing](figures/Moores_Law_Transistor_Count_1970-2020.png)
+![width:800px](figures/Moores_Law_Transistor_Count_1970-2020.png)
