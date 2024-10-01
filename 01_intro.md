@@ -27,3 +27,9 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
  * Who are you?
  * Why this course?
+
+## The Exponential Growth
+
+ * Moore's Law
+ * Grab figure
+![alt text](Moores_Law_Transistor_Count_1970-2020.png "Title")
