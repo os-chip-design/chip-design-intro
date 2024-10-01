@@ -1,5 +1,5 @@
 slides:
-	marp --pdf 01_intro.md
+	marp --allow-local-files --pdf 01_intro.md
 	open 01_intro.pdf
 
 clean:
