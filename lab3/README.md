@@ -9,7 +9,7 @@ Navigate to your home directory:
 cd ~
 ```
 
-First, download the oss-cad-suite:
+First, download the [oss-cad-suite](https://github.com/YosysHQ/oss-cad-suite-build):
 ```
 wget https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2024-07-20/oss-cad-suite-linux-x64-20240720.tgz
 ```
