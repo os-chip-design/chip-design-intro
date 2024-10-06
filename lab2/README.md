@@ -29,5 +29,7 @@ This assignment is to be submitted before next week. You should provide a docume
 	- Explain your results, pictures are optional.
 
 ## 2. SiliWiz - Making ASICs
+Watch the videos in this section. These videos introduces some of the later steps in the course, they might help you get an overview, you are not expected to understand all of it.
 
 ## 3. SiliWiz - Working with HDLs
+Watch the videos in this section. These videos introduces some of the later steps in the course, they might help you get an overview, you are not expected to understand all of it.
