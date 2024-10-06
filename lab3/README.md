@@ -146,7 +146,7 @@ To run GTKwave do:
 
 Expand the "TOP" module, select "tb," and add the signals to the view by double-clicking. You should see:
 
-![GTKwave output](Images/GTKwave_output.png)
+![GTKwave output](GTKwave_output.png)
 
 ## Hand-in Assignment
 
