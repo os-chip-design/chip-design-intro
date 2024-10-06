@@ -9,12 +9,12 @@ Navigate to your home directory:
 cd ~
 ```
 
-First, download the [oss-cad-suite](https://github.com/YosysHQ/oss-cad-suite-build):
+First, download the oss-cad-suit:
 ```
 wget https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2024-07-20/oss-cad-suite-linux-x64-20240720.tgz
 ```
 
-Alternatively, you can find the newest version at: oss-cad-suite GitHub and download that.
+Alternatively, you can find the newest version at: [oss-cad-suite](https://github.com/YosysHQ/oss-cad-suite-build) and download that.
 
 Make a utils folder:
 ```
