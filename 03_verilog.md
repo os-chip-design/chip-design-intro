@@ -24,6 +24,10 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * And a few lines to connect stuff
  * For serious work: use Chisel
 
-
-
+---
 ## Links to Further Material
+
+ * [Verilog Tutorial](https://www.tutorialspoint.com/vlsi_design/vlsi_design_quick_guide.htm)
+ * [Verilog Tutorial](https://www.geeksforgeeks.org/verilog-introduction/)
+ * [Verilog Tutorial](https://www.tutorialspoint.com/vlsi_design/vlsi_design_quick_guide.htm)
+ * [Verilog Tutorial](https://www.geeksforgeeks.org/verilog-introduction/)

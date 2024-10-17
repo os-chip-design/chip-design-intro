@@ -14,11 +14,17 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 **Martin Schoeberl and Luca Pezzarossa**
 
 
-## List
+## Topics
 
  * MOS Transistor
  * NMOS Inverter
  * CMOS Inverter
  * Simple Gates
+ * Maybe transmission gate
+
+## Lab
+
+ * Silliwiz doing the whole thing
+ * Maybe also magic? It is more painful
 
 
