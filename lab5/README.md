@@ -32,6 +32,60 @@ Good luck
 ## TinyTapeout!
 Now for the goal of the course! This guide will go through how to harden your project locally with TinyTapeout.
 
+#### The tutorial is 2 different one merged "Local hardening setup" and "Harden your project" are to replace "Installation", "Hardening"  and "Project setup" . IDK what to do with "Factory Testing". Once these works "Expand Your Buildtools" should be updated and finished.
+#### Currently the build process does not work, i might be updated in the future, tt09 is broken and so please try these step again in the future.
+
+### Local hardening setup
+#### TO DEV: This works somewhat better then the later tutorial as it uses the docker, but it still does not work.
+
+You can setup a container for doing local hardening, this is a highly recommened for doing local hardening.
+```
+cd ~/my_designs/design3
+docker build -f .devcontainer/Dockerfile -t harden_container .
+```
+
+To run the docker do:
+```
+docker run -v $(pwd):/workspace -w /workspace -it harden_container /bin/bash
+```
+
+Do the following to setup the tinytapeout support tools:
+```
+export PDK_ROOT=~/ttsetup/pdk
+export PDK=sky130A
+export OPENLANE2_TAG=2.1.7
+```
+
+Install a local installtion of tt support tools (one comes with the docker, but that does not seem to work for later stages.)
+```
+git clone -b tt09 https://github.com/TinyTapeout/tt-support-tools tt
+```
+
+```
+python3 -m venv ./tt/venv
+source ./tt/venv/bin/activate
+pip install -r ./tt/tt-support-tools/requirements.txt
+pip install openlane==$OPENLANE2_TAG
+```
+
+### Harden your project
+
+First, generate the openlane configuration file:
+```
+./tt/tt_tool.py --create-user-config --openlane2
+```
+
+Then run the following command to harden the project locally. This might fail with the message `Verilator exited unexpectedly with return code 1 ` if !?!??!?.
+```
+./tt/tt_tool.py --harden --openlane2
+```
+
+It’s also recommended to run the following command, checking for any synthesis / clock warnings:
+```
+./tt/tt_tool.py --print-warnings --openlane2
+```
+
+
 ### Installation
 Firstly, to ensure that the following steps use the right version of Python, you must do: 
 ```bash
@@ -40,7 +94,7 @@ alias python3='python3.11'
 
 Next, you must install an example project called the "factory-test." This is done to test if everything works as expected.
 ```
-git clone https://github.com/TinyTapeout/tt08-factory-test ~/factory-test
+git clone https://github.com/TinyTapeout/tt09-factory-test ~/factory-test
 ```
 
 Now you must do the following, noting that the "OPENLANE2_TAG" might have changed, so please check with the teacher or checkout the TinyTapeout GitHub:
@@ -53,7 +107,7 @@ export OPENLANE2_TAG=2.0.8
 Now download the TinyTapeout support tools. These will be placed inside the factory-test folder under "tt," and you will set this up for each project you do.
 ```
 cd ~/factory-test
-git clone -b tt08 https://github.com/TinyTapeout/tt-support-tools tt
+git clone -b tt09 https://github.com/TinyTapeout/tt-support-tools tt
 ```
 
 Okay, now you also need to set up a TinyTapeout installation. This is done in a Python virtual environment, and it will install its own version of OpenLane2 and other requirements for TinyTapeout:
@@ -122,8 +176,35 @@ You can do this from any folder.
 For more information on the local hardening process, go to: [TinyTapeout Local Hardening](https://tinytapeout.com/guides/local-hardening/).
 
 
-## Expand Your Buildtools
+### Project setup
+You will at this point need to setup the project, do
+TODO TODO TODO
 
+Once you have done this you can finish the setup and harden the project.
+```
+./tt/tt_tool.py --create-user-config --openlane2
+```
+
+```
+./tt/tt_tool.py --harden --openlane2
+```
+
+```
+./tt/tt_tool.py --print-warnings --openlane2
+```
+
+git clone -b tt09 https://github.com/TinyTapeout/tt-support-tools tt
+
+### Hardening
+```
+source /tt/venv/bin/activate
+./tt/tt_tool.py --create-user-config --openlane2
+./tt/tt_tool.py --harden --openlane2
+```
+
+asd
+
+## Expand Your Buildtools
 Your old makefile does not include TinyTapeout, so you should include a TinyTapeout workflow.
 
 Copy the project from last week:
@@ -134,7 +215,7 @@ cp -r ~/my_designs/design2 ~/my_designs/design3
 Like before, download the TinyTapeout Support tools:
 ```
 cd ~/my_designs/design3
-git clone -b tt08 https://github.com/TinyTapeout/tt-support-tools tt
+git clone -b tt09 https://github.com/TinyTapeout/tt-support-tools tt
 ```
 
 TinyTapeout requires a git repository to function; therefore, you must create a local dummy repo.
@@ -144,7 +225,6 @@ git add .
 git commit -m "Initial commit"
 git remote add origin https://github.com/something/something.git
 ```
-
 
 ---
 
