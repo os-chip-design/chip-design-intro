@@ -12,6 +12,17 @@ The projects are:
 - SHA265 Hasher
 - Mandlebrot Set VGA Display
 
+For all projects you must:
+
+You must:
+- Provide a working chisel/verilog code.
+- Show that the project works by tests and simulating. The Simulations should be displayed using GTK-wave.
+- Provide an in-depth tour of the design and your ideas.
+- Provide an overview of the physical design.
+- Pass all the github actions tests.
+
+The project should be in a state where it should be possiable for you to commit it to tinytapeout and you should be quite sure the project would work.
+
 ## Before next week
 You should have a group before next week, each group should be between 2-3 person. You will begin the assignemnt next week or now if you already have a group.
 
@@ -40,13 +51,12 @@ The 7-seq display mapping is displayed:
 - 15:  "b01110001"
 
 Where the first binary number (seen from the left) is bound to pin OUT0.
-	
+
 ### Assignment
-You must:
-- Provide a working chisel/verilog code.
-- Show that the project works by tests and simulating. The Simulations should be displayed using GTK-wave.
-- Provide an overview of the physical design.
-- Pass all the github actions tests.
+You must awnser:
+- What is the max clock frequency you can operate at while still only counting up once every 1 second
+- What is the limiting factor (for increasing clock frequency) area or speed? and can you trade one for the other.
+- How much power do you consume?
 	
 The project should be in a state where it should be possiable for you to commit it to tinytapeout and you should be quite sure the project would work.
 
@@ -58,15 +68,17 @@ The first step of the SHA-256 is "Preprocessing", this step invloves 3 sub-steps
 To create a blocks of data which is required for the next step. The next step is "Hash Computation" which computes the resulting hash.
 You may find more information here: [SHA256 specification](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf).
 
+In this project you may assume that there will only be produced 1 block of 512 bits, that is the input message is 512 bits, and so you may skip the "padding the message" step.
+
+To load in the 512bits of data
+
+The interface is as follows:
+	
+
 ### Assignment
 You must:
-- Provide a working chisel/verilog code.
-- Show that the project works by tests and simulating. The Simulations should be displayed using GTK-wave.
-- Provide an overview of the physical design.
-- Pass all the github actions tests.
-
-The project should be in a state where it should be possiable for you to commit it to tinytapeout and you should be quite sure the project would work.
-
+- What is the max clock frequency you can operate at?
+- How much power do you consume?
 
 ## 3. Mandlebrot Set VGA Display 
 
