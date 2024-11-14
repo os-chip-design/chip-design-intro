@@ -9,7 +9,6 @@ This week you will choose a project, there will be 3 projects to choose from.
 
 The projects are:
 - 7-segment display counter
-- SHA265 Hasher
 - Mandlebrot Set VGA Display
 
 For all projects you must:
@@ -60,25 +59,6 @@ You must awnser:
 	
 The project should be in a state where it should be possiable for you to commit it to tinytapeout and you should be quite sure the project would work.
 
-## 2. SHA265 Hasher
-In this project you must construct A SHA265 (Secure Hash Algorithm 256-bit) hasher is a cryptographic hash function that produces a fixed-size output (256 bits) from an input of any length. The key property of a cryptographic hash function like SHA-256 is that it maps any input data to a fixed-length hash (256 bits) in a way that is computationally infeasible to reverse.
-
-The SHA-256 algorithem processes input data in blocks of 512 bits (64 bytes). 
-The first step of the SHA-256 is "Preprocessing", this step invloves 3 sub-steps,which are "padding the message", "parsing the message into message blocks" and "setting the initial hash value".
-To create a blocks of data which is required for the next step. The next step is "Hash Computation" which computes the resulting hash.
-You may find more information here: [SHA256 specification](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf).
-
-In this project you may assume that there will only be produced 1 block of 512 bits, that is the input message is 512 bits, and so you may skip the "padding the message" step.
-
-To load in the 512bits of data
-
-The interface is as follows:
-	
-
-### Assignment
-You must:
-- What is the max clock frequency you can operate at?
-- How much power do you consume?
 
 ## 3. Mandlebrot Set VGA Display 
 
