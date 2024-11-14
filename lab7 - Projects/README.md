@@ -15,7 +15,7 @@ The projects are:
 ## Before next week
 You should have a group before next week, each group should be between 2-3 person. You will begin the assignemnt next week or now if you already have a group.
 
-### 1. 7-segment display counter
+## 1. 7-segment display counter
 	In this project you should design a 7-seqment display using verilog or chisel, the display should count up from 0 to F (in hexadecimal) and display the number on a 7-seqment-display. 
 	The counter should count up once every 1 second given a clock freqeuncy of 1MHz. That is it should count up once every 1 million clock cycles.
 	 
@@ -41,7 +41,7 @@ You should have a group before next week, each group should be between 2-3 perso
 
 	Where the first binary number (seen from the left) is bound to pin OUT0.
 	
-#### Assignment
+### Assignment
 	You must:
 		- Provide a working chisel/verilog code.
 		- Show that the project works by tests and simulating. The Simulations should be displayed using GTK-wave.
@@ -50,7 +50,7 @@ You should have a group before next week, each group should be between 2-3 perso
 		
 	The project should be in a state where it should be possiable for you to commit it to tinytapeout and you should be quite sure the project would work.
 	
-### 2. SHA265 Hasher
+## 2. SHA265 Hasher
 	In this project you must construct A SHA265 (Secure Hash Algorithm 256-bit) hasher is a cryptographic hash function that produces a fixed-size output (256 bits) from an input of any length. The key property of a cryptographic hash function like SHA-256 is that it maps any input data to a fixed-length hash (256 bits) in a way that is computationally infeasible to reverse.
 	
 	The SHA-256 algorithem processes input data in blocks of 512 bits (64 bytes). 
@@ -58,7 +58,7 @@ You should have a group before next week, each group should be between 2-3 perso
 	To create a blocks of data which is required for the next step. The next step is "Hash Computation" which computes the resulting hash.
 	You may find more information here: [SHA256 specification](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf).
 	
-#### Assignment
+### Assignment
 	You must:
 		- Provide a working chisel/verilog code.
 		- Show that the project works by tests and simulating. The Simulations should be displayed using GTK-wave.
@@ -68,6 +68,6 @@ You should have a group before next week, each group should be between 2-3 perso
 	The project should be in a state where it should be possiable for you to commit it to tinytapeout and you should be quite sure the project would work.
 	
 
-### 3. Mandlebrot Set VGA Display 
+## 3. Mandlebrot Set VGA Display 
 	
 		
