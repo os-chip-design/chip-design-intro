@@ -1,0 +1,195 @@
+Now for the goal of the course! This guide will go through how to harden your project locally with TinyTapeout.
+
+#### The tutorial is 2 different one merged "Local hardening setup" and "Harden your project" are to replace "Installation", "Hardening"  and "Project setup" . IDK what to do with "Factory Testing". Once these works "Expand Your Buildtools" should be updated and finished.
+#### Currently the build process does not work, i might be updated in the future, tt09 is broken and so please try these step again in the future.
+
+### Local hardening setup
+#### TO DEV: This works somewhat better then the later tutorial as it uses the docker, but it still does not work.
+
+You can setup a container for doing local hardening, this is a highly recommened for doing local hardening.
+```
+cd ~/my_designs/design3
+docker build -f .devcontainer/Dockerfile -t harden_container .
+```
+
+To run the docker do:
+```
+docker run -v $(pwd):/workspace -w /workspace -it harden_container /bin/bash
+```
+
+Do the following to setup the tinytapeout support tools:
+```
+export PDK_ROOT=~/ttsetup/pdk
+export PDK=sky130A
+export OPENLANE2_TAG=2.1.7
+```
+
+Install a local installtion of tt support tools (one comes with the docker, but that does not seem to work for later stages.)
+```
+git clone -b tt09 https://github.com/TinyTapeout/tt-support-tools tt
+```
+
+```
+python3 -m venv ./tt/venv
+source ./tt/venv/bin/activate
+pip install -r ./tt/tt-support-tools/requirements.txt
+pip install openlane==$OPENLANE2_TAG
+```
+
+### Harden your project
+
+First, generate the openlane configuration file:
+```
+./tt/tt_tool.py --create-user-config --openlane2
+```
+
+Then run the following command to harden the project locally. This might fail with the message `Verilator exited unexpectedly with return code 1 ` if !?!??!?.
+```
+./tt/tt_tool.py --harden --openlane2
+```
+
+It’s also recommended to run the following command, checking for any synthesis / clock warnings:
+```
+./tt/tt_tool.py --print-warnings --openlane2
+```
+
+
+### Installation
+Firstly, to ensure that the following steps use the right version of Python, you must do: 
+```bash
+alias python3='python3.11' 
+```
+
+Next, you must install an example project called the "factory-test." This is done to test if everything works as expected.
+```
+git clone https://github.com/TinyTapeout/tt09-factory-test ~/factory-test
+```
+
+Now you must do the following, noting that the "OPENLANE2_TAG" might have changed, so please check with the teacher or checkout the TinyTapeout GitHub:
+```
+export PDK_ROOT=~/ttsetup/pdk
+export PDK=sky130A
+export OPENLANE2_TAG=2.0.8
+```
+
+Now download the TinyTapeout support tools. These will be placed inside the factory-test folder under "tt," and you will set this up for each project you do.
+```
+cd ~/factory-test
+git clone -b tt09 https://github.com/TinyTapeout/tt-support-tools tt
+```
+
+Okay, now you also need to set up a TinyTapeout installation. This is done in a Python virtual environment, and it will install its own version of OpenLane2 and other requirements for TinyTapeout:
+```
+python3 -m venv ~/ttsetup/venv
+source ~/ttsetup/venv/bin/activate
+pip install -r ~/factory-test/tt/requirements.txt
+pip install openlane==$OPENLANE2_TAG
+```
+
+This will be a different version than what your existing OpenLane2 is, and you will need both in the future. It is assumed that you are in the virtual environment for the rest of the commands.
+
+Now you must "harden" the factory-test project. You do this by:
+```
+cd ~/factory-test
+./tt/tt_tool.py --create-user-config --openlane2
+./tt/tt_tool.py --harden --openlane2
+```
+
+Now install the final requirements. Inside the factory-test folder, do:
+```
+cd test
+pip install -r requirements.txt
+```
+
+### Factory Testing
+
+Let us now run some tests:
+
+Firstly, run the RTL tests. Navigate to the factory-test's test folder:
+Let us now run some tests:
+```
+cd ~/factory-test/test
+```
+
+And do:
+```
+make -B
+```
+
+If this produces an error, you might be using the wrong "iverilog" version. You should use the "apt" version, not the "oss-cad-suite."
+
+You can also run a gate-level test in the same folder:
+```
+TOP_MODULE=$(cd .. && ./tt/tt_tool.py --print-top-module)
+cp ../runs/wokwi/final/pnl/$TOP_MODULE.pnl.v gate_level_netlist.v
+make -B GATES=yes
+```
+
+You might also want to check for warnings:
+```
+./tt/tt_tool.py --print-warnings --openlane2
+```
+
+You can now exit the virtual environment by:
+```
+deactivate
+```
+
+Before running TinyTapeout, you must enter the Python virtual environment, which you can do by:
+```
+source ~/ttsetup/venv/bin/activate
+```
+
+You can do this from any folder.
+For more information on the local hardening process, go to: [TinyTapeout Local Hardening](https://tinytapeout.com/guides/local-hardening/).
+
+
+### Project setup
+You will at this point need to setup the project, do
+TODO TODO TODO
+
+Once you have done this you can finish the setup and harden the project.
+```
+./tt/tt_tool.py --create-user-config --openlane2
+```
+
+```
+./tt/tt_tool.py --harden --openlane2
+```
+
+```
+./tt/tt_tool.py --print-warnings --openlane2
+```
+
+git clone -b tt09 https://github.com/TinyTapeout/tt-support-tools tt
+
+### Hardening
+```
+source /tt/venv/bin/activate
+./tt/tt_tool.py --create-user-config --openlane2
+./tt/tt_tool.py --harden --openlane2
+```
+
+
+
+## Expand Your Buildtools
+Your old makefile does not include TinyTapeout, so you should include a TinyTapeout workflow.
+
+Copy the project from last week:
+```
+cp -r ~/my_designs/design2 ~/my_designs/design3
+```
+
+Like before, download the TinyTapeout Support tools:
+```
+cd ~/my_designs/design3
+git clone -b tt09 https://github.com/TinyTapeout/tt-support-tools tt
+```
+
+TinyTapeout requires a git repository to function; therefore, you must create a local dummy repo.
+```
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/something/something.git
+```
