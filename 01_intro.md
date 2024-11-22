@@ -36,3 +36,6 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
 
 ![width:800px](figures/Moores_Law_Transistor_Count_1970-2020.png)
+
+---
+![width:700px](figures/openlane.svg)
