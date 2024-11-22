@@ -319,7 +319,7 @@ Then write the content of `tb.v` from github into this file. Alternatively, you 
 
 Your file structure should look like the following:
 
-![The file structure to expect.](Images/file_structure2.png)
+![The file structure to expect.](file_structure2.png)
 
 The commands provided by the makefile will be a good starting point for your projects.
 
