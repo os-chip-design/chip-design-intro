@@ -74,13 +74,13 @@ You can read the documentation here: [https://gtkwave.github.io/gtkwave/](https:
 
 ### Run Verilator
 
-Find and learn the `counter.v` and `tb.v` files and place them in: 
+Find on github the `counter.v` and `tb.v` files and place them in: 
 ```
-~/my_designs/my_first_design/source
+~/my_designs/my_first_design/src
 ```
 
 
-To run Verilator, do this inside the "source" directory:
+To run Verilator, do this inside the "src" directory:
 ```
 verilator --binary -j 0 -Wall counter.v tb.v --top tb --trace
 ```
@@ -142,7 +142,7 @@ end
 
 To run GTKwave do:
 
-`gtkwave counter.vcd`
+`gtkwave counter_tb.vcd`
 
 Expand the "TOP" module, select "tb," and add the signals to the view by double-clicking. You should see:
 
@@ -169,8 +169,8 @@ These questions require you to read the documentation of Verilator found at: [Ve
 5. What does the `-Wall` flag do? Is there a way to display warnings without exiting?
 6. What does the `--timing` flag do?
 7. What does the `-f` argument do?
-8. What does a VCD file contain?
-9. Is a VCD file in binary or text format? (Don't Google, see for yourself.)
+8. Is a VCD file in binary or text format? (Don't Google, see for yourself.)
+9. What does a VCD file contain?
 
 ### 3. GTKwave
 

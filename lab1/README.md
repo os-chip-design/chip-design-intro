@@ -161,7 +161,7 @@ Copy-paste into the config.json file:
 ```json
 {
   "DESIGN_NAME": "counter_64bit",
-  "VERILOG_FILES": ["dir::source/counter.v"],
+  "VERILOG_FILES": ["dir::src/counter.v"],
   "CLOCK_PERIOD": 25,
   "CLOCK_PORT": "clk"
 }
@@ -170,10 +170,10 @@ Copy-paste into the config.json file:
 In nano, you can do this by right-clicking, ctrl+s, and ctrl+x.
 Make a directory for your Verilog source files inside your my_first_design folder:
 ```
-mkdir source
+mkdir src
 ```
 
-Place the counter.v and tb.v file from learn inside the source folder.
+Place the counter.v and tb.v file from github inside the "src" folder.
 Now re-enter the nix-shell with:
 ```
 nix-shell --pure ~/openlane2/shell.nix
