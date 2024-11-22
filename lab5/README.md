@@ -26,11 +26,11 @@ This will open VS Code on Windows and connect it to your WSL instance.
 **Linux:**  
 If you are using Linux, you can also install VS Code, but you can use any other editor.
 
-**Mac:**  
+**Mac:**
 Good luck
 
 ## TinyTapeout and GitHub Actions
-You will not get ready to potentially commit a TinyTapeout project.
+You will now get ready to potentially commit a TinyTapeout project.
 
 Go to the TinyTapeout Verilog template, the newest at the time of writing is [https://github.com/TinyTapeout/tt08-verilog-template](https://github.com/TinyTapeout/tt08-verilog-template), but please find the newest version, which matches the tapeout iteration.
 

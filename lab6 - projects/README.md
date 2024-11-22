@@ -5,6 +5,7 @@
 ---
 
 ## Introduction
+This is a special week as it is the last of these weekly assignments, you must complete the Hand-in Assignment and find a group for next week where you can begin your final project.
 
 ## Assignment
 For the rest of the course you there will be no more weekly assignments, instead you will work on the followingly presented project.
@@ -49,7 +50,6 @@ Some optional additions are listed, but feel free to come up with your own ideas
 - Color: You must color the set based on level of unstability (itterations).
 - Zoom: You must allow the ability to zoom using button inputs.
 - Move: You must allow the ability to move the point of view using button inputs.
-
 
 
 ## Hand-in Assignment

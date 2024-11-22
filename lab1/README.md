@@ -2,8 +2,6 @@
 *Open Source Chip Design Course*  
 July 2024
 
-### Setup of Openlane2
-
 ## Introduction
 In this course, you'll begin by setting up the required tools on your own PC, which are fundamental for working with open-source chip design. These tools will allow you to run simulations, compile designs, and verify digital circuits using open-source workflows. Throughout the course, you will be interacting with OpenLane2; a toolchain designed for physical design automation (PDA) of digital circuits.
 
@@ -26,8 +24,7 @@ You may upgrade your Ubuntu by doing:
 sudo do-release-upgrade
 ```
 
-Required packages
-&nbsp;
+Required packages:
 
 Before starting, you must install the following requirements:
 
@@ -113,7 +110,7 @@ nix-shell --pure ~/openlane2/shell.nix
 ```
 
 This might take 20-60 minutes. This will set up the project and open a nix-shell. All following commands will take place inside the nix-shell.
-Test that the installation worked by doing inside the nix terminal:
+Test that the installation by doing the following inside the nix terminal:
 ```
 openlane --log-level ERROR --condensed --show-progress-bar --smoke-test
 ```

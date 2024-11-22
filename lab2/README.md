@@ -1,3 +1,7 @@
+# Week 2 Exercise
+*Open Source Chip Design Course*  
+July 2024
+
 # Introduction
 This week, you will be introduced to SiliWiz, a walkthrough provided by TinyTapeout, which covers the fundamentals of semiconductors.
 
@@ -25,7 +29,7 @@ This assignment is to be submitted before next week. You should provide a docume
 	- Explain your results, pictures are optional.
 7. Read and complete the "Draw a P type MOSFET" page found at: [Draw a P type MOSFET](https://tinytapeout.com/siliwiz/pmos/).
 	- Explain your results, pictures are optional.
-7. Read and complete the "Draw a CMOS inverter" page found at: [Draw a CMOS inverter](https://tinytapeout.com/siliwiz/cmosinverter/).
+8. Read and complete the "Draw a CMOS inverter" page found at: [Draw a CMOS inverter](https://tinytapeout.com/siliwiz/cmosinverter/).
 	- Explain your results, pictures are optional.
 
 ## 2. SiliWiz - Making ASICs
