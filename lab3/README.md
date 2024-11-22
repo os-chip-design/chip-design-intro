@@ -1,9 +1,13 @@
-# Introduction
+# Week 3 Exercise
+*Open Source Chip Design Course*  
+July 2024
+
+## Introduction
 Last week, you should have successfully installed OpenLane2 and completed running a design through its flow. While you were able to generate a layout and run verification checks like DRC and LVS, you likely noticed that simulation was not covered. Simulation is a crucial step that ensures the logical correctness of your design before it's sent for fabrication. This week, you will address that gap by setting up additional tools necessary for simulating Verilog designs.
 
 You will install the oss-cad-suite, a comprehensive collection of open-source EDA tools that includes simulators and utilities for hardware description languages such as Verilog and VHDL. These tools will allow you to run simulations, check waveforms, and verify the functionality of your design at the RTL level. By interacting with these tools, you will learn how to write testbenches, run simulations, and analyze the results to ensure your design behaves as expected.
 
-# Installing the tools
+## Installing the tools
 Navigate to your home directory:
 ```bash
 cd ~
@@ -60,7 +64,7 @@ You should now see:
 
 You now have the oss-cad-suite installed.
 
-## Using the tools
+### Using the tools
 The tools used today are Verilator and GTKwave.
 
 **Here is a quick explanation of Verilator:**  
@@ -138,7 +142,7 @@ end
     ```
 
 
-## Run GTKwave
+### Run GTKwave
 
 To run GTKwave do:
 

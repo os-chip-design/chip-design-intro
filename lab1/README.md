@@ -1,7 +1,8 @@
 # Week 1 Exercise
+*Open Source Chip Design Course*  
+July 2024
+
 ### Setup of Openlane2
-#### Open Source Chip Design Course
-*July 2024*
 
 ## Introduction
 In this course, you'll begin by setting up the required tools on your own PC, which are fundamental for working with open-source chip design. These tools will allow you to run simulations, compile designs, and verify digital circuits using open-source workflows. Throughout the course, you will be interacting with OpenLane2; a toolchain designed for physical design automation (PDA) of digital circuits.

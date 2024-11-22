@@ -13,7 +13,6 @@ all: build
 # These recipes calls a series of other recipes
 build: compile copy_verilog run_openlane
 sim : compile copy_verilog view_sim 
-tt : compile copy_verilog run_tt
 
 # Compile target
 compile:
@@ -40,7 +39,7 @@ copy_verilog:
 	@echo "Creating $(VERILOG_DIR) directory"
 	mkdir -p $(VERILOG_DIR)
 	@echo "Copying .sv and .v files from $(CHISEL_DIR) to $(VERILOG_DIR)"
-	mv $(CHISEL_DIR)/*.sv $(CHISEL_DIR)/*.v $(VERILOG_DIR) 2>/dev/null || true
+	cp $(CHISEL_DIR)/*.sv $(CHISEL_DIR)/*.v $(VERILOG_DIR) 2>/dev/null || true
 
 # Run verilator
 view_sim: copy_verilog

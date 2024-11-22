@@ -1,4 +1,6 @@
-# Week 3 Exercise
+# Week 4 Exercise
+*Open Source Chip Design Course*  
+July 2024
 
 ## Chisel3 and Make
 
