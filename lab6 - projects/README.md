@@ -122,3 +122,8 @@ A note on using TinyTapeout and openlane2: When you view your design in openlane
 The design implementation might change if you where to submit it to TinyTapeout, so all analysis you do in your local openlane2 installation should be taken as a approximation of what would be fabricated by TinyTapeout. 
 
 You can use the following projects to display your final GDS file: [GDS2glTF](https://github.com/TinyTapeout/GDS2glTF) and [GDS_viewer](https://github.com/TinyTapeout/tinytapeout_gds_viewer).
+
+Below are some examples on how it could look:
+![image](https://github.com/user-attachments/assets/b2c4147f-c531-47cb-bec2-3ece451c85fc)
+![image](https://github.com/user-attachments/assets/51c524b6-6c6f-4653-bad1-42b0231445a4)
+
