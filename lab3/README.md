@@ -173,8 +173,9 @@ These questions require you to read the documentation of Verilator found at: [Ve
 5. What does the `-Wall` flag do? Is there a way to display warnings without exiting?
 6. What does the `--timing` flag do?
 7. What does the `-f` argument do?
-8. Is a VCD file in binary or text format? (Don't Google, see for yourself.)
-9. What does a VCD file contain?
+8. What does the `-Wno-**` argument do?
+9. Is a VCD file in binary or text format? (Don't Google, see for yourself.)
+10. What does a VCD file contain?
 
 ### 3. GTKwave
 

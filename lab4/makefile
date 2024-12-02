@@ -39,7 +39,8 @@ copy_verilog:
 	@echo "Creating $(VERILOG_DIR) directory"
 	mkdir -p $(VERILOG_DIR)
 	@echo "Copying .sv and .v files from $(CHISEL_DIR) to $(VERILOG_DIR)"
-	cp $(CHISEL_DIR)/*.sv $(CHISEL_DIR)/*.v $(VERILOG_DIR) 2>/dev/null || true
+	mv $(CHISEL_DIR)/*.sv $(CHISEL_DIR)/*.v $(VERILOG_DIR) 2>/dev/null || true
+	cp top.sv $(VERILOG_DIR)/
 
 # Run verilator
 view_sim: copy_verilog
