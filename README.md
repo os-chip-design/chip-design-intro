@@ -9,31 +9,41 @@ This course is an introduction to the design of digital integrated circuits. It 
 
 ## Lectures
 
-This is a very tentative list of lectures. The course will be adapted to the students' needs and interests.
+This is a tentative list of lectures. The course will be adapted to the students' needs and interests.
 
-### Lecture 1: Introduction to the Chip Design course
+### Lecture 1: Introduction to the Chip Design course (MS)
+
 - Overview of chip design and its importance in modern electronics.
 - Basic terminology and concepts.
-- Covering the process
+- Covering the process (first intro in tool flow)
 - AISC with standard cells
 - PDK
-#### [Lab 1](lab1)
+
+#### Lab 1
+
+- OS tools (local) installation
+- Running a "Hello World" example
+- Exploring a standard gate
 
 
-### Lecture 2: Transistor, inverter, NAND gate
+### Lecture 2: Transistor, Inverter, and NAND gate (LP)
+
+#### Lab 2
+
 - SiliWiz drawing and simulation
 
-### Lecture 3: Verilog
+### Lecture 3: Verilog (MS)
+
 - Small exercises on connecting a module
 - Write a testbench and run it on post-synthesis
 - Do the same testbench in Chisel
 
-### Lecture 4: Tool flow
+### Lecture 4: Tool flow (LP)
+
 - Synthesis flow
 - Logic optimization
 - Timing analysis
 - Placement and routing
-- OS tools (local) installation
 
 ### Lecture X: memory and CPU register file
 
@@ -44,6 +54,8 @@ This is a very tentative list of lectures. The course will be adapted to the stu
 
 
 ### Lecture 5: Chip design rules
+
+- Jens guest lecture?
 
 ### Lecture 6: Standard cells
 - Start a Project
@@ -62,4 +74,6 @@ This is a very tentative list of lectures. The course will be adapted to the stu
 - Clock tree
 - Clock gating
 - Timing closure
+
+### Lecture 10: Submitting your Design to eFabless
 
