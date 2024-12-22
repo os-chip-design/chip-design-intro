@@ -2,9 +2,14 @@
 
 This course is an introduction to the design of digital integrated circuits. It covers the basics of digital circuits, the tools used, and the process of designing a chip. The course is based on the open-source tools and the open-source PDKs. Student projects will be taped out on Tiny Tapeout.
 
+## Course Information
+
+ * Wednesday 13:00-17:00
+ * Room: B324-H050
+
 ## Lectures
 
-THis is a very tentative list of lectures. The course will be adapted to the students' needs and interests.
+This is a very tentative list of lectures. The course will be adapted to the students' needs and interests.
 
 ### Lecture 1: Introduction to the Chip Design course
 - Overview of chip design and its importance in modern electronics.
