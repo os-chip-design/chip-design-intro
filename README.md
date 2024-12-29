@@ -7,6 +7,12 @@ This course is an introduction to the design of digital integrated circuits. It 
  * Wednesday 13:00-17:00
  * Room: B324-H050
 
+## Reading Material
+
+ * [CMOS VLSI Design, A Circuits and Systems Perspective](https://www.amazon.com/CMOS-VLSI-Design-Circuits-Perspective/dp/0321547748) by Neil H. E. Weste and David Harris, also available as [PDF](https://pages.hmc.edu/harris/cmosvlsi/4e/cmosvlsidesign_4e_fm.pdf)
+ * The open-source tools we use, including installation instructions: [OpenLean 2 Documentation](https://openlane2.readthedocs.io/en/latest/)
+   - For a quick start: [OpenLane 2 in the browser](https://colab.research.google.com/github/efabless/openlane2/blob/main/notebook.ipynb), link is from [efabless](https://efabless.com/openlane)
+
 ## Lectures
 
 This is a tentative list of lectures. The course will be adapted to the students' needs and interests.
@@ -18,6 +24,7 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Covering the process (first intro in tool flow)
 - AISC with standard cells
 - PDK
+- Edu4Chip
 
 #### Lab 1
 
@@ -37,6 +44,12 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Small exercises on connecting a module
 - Write a testbench and run it on post-synthesis
 - Do the same testbench in Chisel
+
+#### Lab 3
+
+- Explore Tiny Tapeout with a Verilog project (GitHib based)
+- Do local hardening
+- Simulate post-synthesis
 
 ### Lecture 4: Tool flow (LP)
 
@@ -58,6 +71,7 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Jens guest lecture?
 
 ### Lecture 6: Standard cells
+
 - Start a Project
 
 ### Lecture 7: SoC and NoC
@@ -77,3 +91,11 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 ### Lecture 10: Submitting your Design to eFabless
 
+- Work with Caravel
+
+## Project Ideas
+
+- SRAM for Tiny Tapeout
+- Work on Edu4Chip tapeout
+- Design a C-gate standard cell
+- Efficient register file

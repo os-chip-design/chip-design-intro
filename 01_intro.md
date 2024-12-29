@@ -13,13 +13,14 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 **Martin Schoeberl and Luca Pezzarossa**
 
-
 ## Welcome
 
  * Learn the basics of chip cesign
  * Design and fabricate your own chip (ASIC)
  * We will use open-source tools only
- * This is a new 12 weeks course
+ * This is a new 13 weeks course
+    * We will adapt to your needs and interests
+    * Did an open-source chipdesign course as special course before
  * Will have rough edges
  * I am exciting to see you building your own chips
 
@@ -32,7 +33,9 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
  * Moore's Law
 
+## Dennard Scaling
 
+ * Power density
 ---
 
 ![width:800px](figures/Moores_Law_Transistor_Count_1970-2020.png)
