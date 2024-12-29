@@ -31,6 +31,7 @@ This is a tentative list of lectures. The course will be adapted to the students
 - OS tools (local) installation
 - Running a "Hello World" example
 - Exploring a standard gate
+- see [Lab 1](lab01.md)
 
 
 ### Lecture 2: Transistor, Inverter, and NAND gate (LP)
