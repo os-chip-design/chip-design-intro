@@ -4,7 +4,7 @@
 
 The tools are currently usable on Linux and MacOS (even native with Mac Silicon). For Windows use WSL2 to have a Linux environment. There is no official support for Windows available.
 
-See documentation for installation instructions at the [OpenLean 2 Documentation](https://openlane2.readthedocs.io/en/latest/).
+See documentation for installation instructions at the [OpenLane 2 Documentation](https://openlane2.readthedocs.io/en/latest/).
 
  * Install nix
  * Install OpenLane 2 (via git clone)
