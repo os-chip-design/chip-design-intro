@@ -26,8 +26,10 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Introduction Round
 
+ * Who we are?
  * Who are you?
  * Why this course?
+ * What is your background?
 
 ## The Exponential Growth
 
@@ -42,3 +44,11 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ---
 ![width:700px](figures/openlane.svg)
+
+## TODO
+
+ * OpenLane
+ * Tiny Tapeout
+ * SkyWater PDK
+ * efabless chip for a (virtual) tapeout
+ * Show the flow

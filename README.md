@@ -12,12 +12,13 @@ This course is an introduction to the design of digital integrated circuits. It 
  * [CMOS VLSI Design, A Circuits and Systems Perspective](https://www.amazon.com/CMOS-VLSI-Design-Circuits-Perspective/dp/0321547748) by Neil H. E. Weste and David Harris, also available as [PDF](https://pages.hmc.edu/harris/cmosvlsi/4e/cmosvlsidesign_4e_fm.pdf)
  * The open-source tools we use, including installation instructions: [OpenLean 2 Documentation](https://openlane2.readthedocs.io/en/latest/)
    - For a quick start: [OpenLane 2 in the browser](https://colab.research.google.com/github/efabless/openlane2/blob/main/notebook.ipynb), link is from [efabless](https://efabless.com/openlane)
+ * [Caravel Documentation](https://github.com/efabless/caravel)  
 
 ## Lectures
 
 This is a tentative list of lectures. The course will be adapted to the students' needs and interests.
 
-### Lecture 1: Introduction to the Chip Design course (MS)
+### Lecture 1: Introduction to the Chip Design Course (MS)
 
 - Overview of chip design and its importance in modern electronics.
 - Basic terminology and concepts.

@@ -17,11 +17,11 @@ On the first call this will take quite some time, as it will download and instal
 
 ### Optional: use VSCode
 
-From any folder (e.g., where your design is) you can start VSCode (within the nix environment) with the following command:
+From any folder (e.g., where your design is) you can start VSCode with the following command:
 
 `$ code .`
 
-then your VSCode will be able to use the tools from the nix environment.
+then enter the nix environment from a VSCode terminal.
 
 ## Running a "Hello World" Example
 
@@ -43,7 +43,7 @@ openlane --last-run --flow openinklayout config.json
 
 This command will start KLayout and show the layout of the generated ASIC. Play with KLayout a bit, e.g., use the ruler to measure the size of your ASIC. The unit is um.
 
-Furthermore, the OpenLane run will generate severl reports in the run directory. Look around and see what you can findout about the design. Can you find the size and usuage of the standard cells? Can you find out the maximum frequency of the design?
+Furthermore, the OpenLane run will generate several reports in the run directory. Look around and see what you can findout about the design. Can you find the size and usuage of the standard cells? Can you find out the maximum frequency of the design?
 
 ## Optional: Synthesize your Own Design
 
@@ -51,4 +51,4 @@ Furthermore, the OpenLane run will generate severl reports in the run directory.
 
  ## Optional: Synthesize a Very Simple Design
 
- Although the former designs have been simple, we often loose the connection how they are implemented. I suggest to synthesize a super simple design, e.g., an 8-bit counter and explore the results in more detail.
+ Although the former designs have been simple, we often loose the connection how they are implemented. I suggest to synthesize a super simple design, e.g., an 8-bit counter and explore the results in more detail. Can you see the adder used for the counter?
