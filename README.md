@@ -39,7 +39,7 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 #### Lab 2
 
-- SiliWiz drawing and simulation
+- All exercises from [SiliWiz](https://tinytapeout.com/siliwiz/), draw and simulate transistors and an invertor
 
 ### Lecture 3: Verilog (MS)
 
