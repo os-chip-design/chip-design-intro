@@ -7,6 +7,11 @@ This course is an introduction to the design of digital integrated circuits. It 
  * Wednesday 13:00-17:00
  * Room: 308/017
 
+### Instructors
+
+  * [Martin Schoeberl](https://www.imm.dtu.dk/~masca/)
+  * [Luca Pezzarossa](https://www2.compute.dtu.dk/~lpez/)
+
 ## Reading Material
 
  * [CMOS VLSI Design, A Circuits and Systems Perspective](https://www.amazon.com/CMOS-VLSI-Design-Circuits-Perspective/dp/0321547748) by Neil H. E. Weste and David Harris, also available as [PDF](https://pages.hmc.edu/harris/cmosvlsi/4e/cmosvlsidesign_4e_fm.pdf)
