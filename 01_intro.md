@@ -20,7 +20,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * We will use open-source tools only
  * This is a new 13 weeks course
     * We will adapt to your needs and interests
-    * Did an open-source chipdesign course as special course before
+    * We did an open-source chipdesign course as special course before
  * Will have rough edges
  * I am exciting to see you building your own chips
 

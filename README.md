@@ -5,7 +5,7 @@ This course is an introduction to the design of digital integrated circuits. It 
 ## Course Information
 
  * Wednesday 13:00-17:00
- * Room: B324-H050
+ * Room: 308/017
 
 ## Reading Material
 
