@@ -11,3 +11,6 @@ No usage of reset on those two flip-flops. @Anas, where did you get your inspira
 
 Synchronizing reset is independent from how your circuit uses reset: asynchronous or synchronous. This is a style difference depending on company culture, maybe some way is cheaper (I don't know and should check the SykWater130 PDK), or just historical. Again: even if you use asynchronous flip-flops in your design, the reset has to be properly synchronized to the design's clock.
 
+# On efabless and ChipIgnite
+
+Have some slides on Caravel and the flow. Reading: https://info.efabless.com/knowledge-base/development-milestones-and-checklist-for-digital-design-projects-with-chipignite
