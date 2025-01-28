@@ -27,7 +27,7 @@ The course has two teachers:
 You are very welcome to seek for help by approaching the teachers during the letctures and laboratory sessions, or via mail. Also, feedback about the course is much appreciated.
 
 ## Course Aim and Learning Objectives
-This course is an introduction to the design of digital integrated circuits. It covers the basics of digital circuits, the tools used, and the process of designing a chip. The course is based open-source tools and open-source PDKs. Student projects will be taped out on Tiny Tapeout.
+This course is an introduction to the design of digital integrated circuits. It covers the basics of digital circuits, the tools used, and the process of designing a chip. The course is based open-source tools and open-source PDKs. The course also gives the possibility for student projects to be taped out on Tiny Tapeout.
 
 ### Learning Objectives
 
