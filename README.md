@@ -195,7 +195,56 @@ The teachers and the other groups give feeback.
 - [Lecture slides](???.pdf) - not yet availble
 
 
-### Lecture 9: Overview on Analog and Mixed Chip Desing (guest) - TENTATIVE  
+### Lecture 9: Standard Cells (MS) - TENTATIVE
+#### Lecture outline:
+- Introduction to standard cells
+- Role of standard cells in digital design
+- Components of a standard cell library
+- Types of standard cells (e.g., logic gates, flip-flops)
+- Power, performance, and area 
+- Characterization of standard cells
+
+#### Lab. 9
+- Work on the project
+
+#### Material
+- [Lecture slides](???.pdf) - not yet availble
+
+
+### Lecture 10: Chip Design Ruls, Power, and Clock (JS, OR(?), LP(?))
+
+#### Lecture outline:
+- Chip design rules
+- Power distribution design, optimization, and analysis
+- Digital design timing
+- Clock distribution challenges and clock trees
+- Power optimization through clock gating
+- Timing closure
+
+#### Lab. 10
+- Work on the project
+- Apply the learning from the lecture in the project
+
+#### Material
+- [Lecture slides](???.pdf) - not yet availble
+
+
+### Lecture 11: Submitting your Design to eFabless (LP(?)/MS(?)) - TENTATIVE
+
+#### Lecture outline:
+- Overview of eFabless
+- The Caravel framework
+- How to submit your desing
+
+#### Lab. 11 
+- Work on the project
+- Apply the learning from the lecture in the project
+
+#### Material
+- [Lecture slides](???.pdf) - not yet availble
+
+
+### Lecture 12: Overview on Analog and Mixed Chip Desing (guest) - TENTATIVE  
 
 #### Lecture outline:
 - Introduction to analog design
@@ -206,66 +255,12 @@ The teachers and the other groups give feeback.
 - Tools and methodologies for analog 
 - Challenges in mixed-signal design
 
-#### Lab. 9 
+#### Lab. 12
 - Work on the project
 
 #### Material
 - [Lecture slides](???.pdf) - not yet availble
 
-
-### Lecture 11: Standard Cells (MS) - TENTATIVE
-#### Lecture outline:
-- Introduction to standard cells
-- Role of standard cells in digital design
-- Components of a standard cell library
-- Types of standard cells (e.g., logic gates, flip-flops)
-- Power, performance, and area 
-- Characterization of standard cells
-
-#### Lab. 11 
-- Work on the project
-
-#### Material
-- [Lecture slides](???.pdf) - not yet availble
-
-
-### Lecture 9: Chip Design Ruls, Power, and Clock (JS, OR(?), LP(?))
-
-#### Lecture outline:
-- Chip design rules
-- Power distribution design, optimization, and analysis
-- Digital design timing
-- Clock distribution challenges and clock trees
-- Power optimization through clock gating
-- Timing closure
-
-#### Lab. 9
-- Work on the project
-- Apply the learning from the lecture in the project
-
-#### Material
-- [Lecture slides](???.pdf) - not yet availble
-
-
-### Lecture 10: Submitting your Design to eFabless (LP(?)/MS(?))
-
-#### Lecture outline:
-- Overview of eFabless
-- The Caravel framework
-- How to submit your desing
-
-#### Lab. 10 
-- Work on the project
-- Apply the learning from the lecture in the project
-
-#### Material
-- [Lecture slides](???.pdf) - not yet availble
-
-### Lecture 11: Dedicated to project work (MS/LP)
-No lecture. The full session is dedicated to project work.
-
-### Lecture 12: Dedicated to project work (MS/LP)
-No lecture. The full session is dedicated to project work.
 
 ### Lecture 13: Student project presentations (MS/LP)
 Each group presents their finalized project and discuss the results.
