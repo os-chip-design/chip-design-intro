@@ -1,6 +1,6 @@
 # 02118 - Introduction to Chip Design
 
-This repository contains the material for the 13-week course **02118 - Introduction to Chip Design** at the Technical University of Denmark (DTU). This course has been developed under the **Edu4Chip** project.
+This repository contains the material for the 13-week course **02118 - Introduction to Chip Design** at the Technical University of Denmark (DTU). This course was developed with support from the **Edu4Chip** project.
 
 This README file contains all the information related to the course. Please **read it carefully** to have an idea of the course structure and expectations.
 
