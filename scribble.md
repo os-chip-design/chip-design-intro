@@ -14,3 +14,7 @@ Synchronizing reset is independent from how your circuit uses reset: asynchronou
 # On efabless and ChipIgnite
 
 Have some slides on Caravel and the flow. Reading: https://info.efabless.com/knowledge-base/development-milestones-and-checklist-for-digital-design-projects-with-chipignite
+
+# Notes
+
+ animation of GDS: https://znah.net/tt09/

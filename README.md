@@ -56,6 +56,8 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 ### Lecture 1: Introduction to the Chip Design Course (MS) 
 
+- [Lecture slides](01_intro.md)
+
 #### Lecture outline:
 - Overview of chip design and its importance in modern electronics
 - Basic terminology and concepts
@@ -70,11 +72,11 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Exploring a standard gate
 - See [Lab 1](lab01.md) for instructions
 
-#### Material
-- [Lecture slides](???.pdf)
 
 
 ### Lecture 2: The Transistor, the Inverter, and Other Gates (LP)
+
+- [Lecture slides](02_CMOS.md)
 
 #### Lecture outline:
  - The need for a controlled switch  
@@ -86,13 +88,15 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 #### Lab. 2
 - Exercise from [SiliWiz](https://tinytapeout.com/siliwiz/), draw and simulate transistors and an inverter
-- See [Lab 2](lecture2/lab2.md) for instructions
+
 
 #### Material
 - [Lecture slides](???.pdf)
 
 
 ### Lecture 3: Verilog (MS)
+
+- [Lecture slides](03_verilog.md)
 
 #### Lecture outline:
 - Introduction to Verilog
@@ -105,8 +109,6 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Do local hardening
 - Simulate post-synthesis
 
-#### Material
-- [Lecture slides](???.pdf)
 
 
 ### Lecture 4: Tool flow (LP)
