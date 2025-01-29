@@ -6,11 +6,12 @@ This README file contains all the information related to the course. Please **re
 
 README content:
 * [Practicalities](#practicalities)
-* [Course Aim and Learning Objectives](#course-aim-and-learning-objectives)
+* [Course Aim](#course-aim)
 * [Reading Material](#reading-material)
 * [Lecture Plan](#lecture-plan)
 * [Project](#project)
 * [Exam](#exam)
+* [Learning Objectives](#learning_objectives)
 
 *Note: The first regular version will be given in Spring 2026. In Spring 2025, the course will be held in a flexible style (like a special course). Specifically, the content will be adapted to the students' needs and interests.*
 *Students are expected to contribute to the course actively and help improve the material for the future version of the course.*
@@ -26,21 +27,9 @@ The course has two teachers:
 
 You are very welcome to seek for help by approaching the teachers during the letctures and laboratory sessions, or via mail. Also, feedback about the course is much appreciated.
 
-## Course Aim and Learning Objectives
+## Course Aim
 This course is an introduction to the design of digital integrated circuits. It covers the basics of digital circuits, the tools used, and the process of designing a chip. The course is based open-source tools and open-source PDKs. The course also gives the possibility for student projects to be taped out on Tiny Tapeout.
 
-### Learning Objectives
-
-A student who has met the objectives of the course will be able to:
-- **Explain** the physics and operation of semiconductor devices, including transistors, and be able to use this knowledge to **design** simple analog and digital circuits.
-- **Explain** the fundamentals of memory design, including different types of memories and their organization, and be able to **design** and **analyze** memory subsystems.
-- **Explain** the principles of SoC design, including partitioning, floor planning, and individual hardening, and be able to **apply** these principles to the design of a simple SoC.
-- **Explain** the principles of multicore SoC design, including the use of NoCs and accelerators, and be able to **apply** these principles to the design of a simple multicore SoC.
-- **Explain** the principles of verification in hardware design, including the use of agile hardware design techniques, and be able to **apply** these principles to the verification of a simple SoC design.
-- **Explain** the tool flow involved in chip design, including the use of open-source tools, and be able to **use** these tools to design and simulate a simple SoC.
-- **Gain** practical experience in the design and simulation of a simple SoC, and experience a virtual tapeout process.
-- **Develop** critical thinking and problem-solving skills through the design and analysis of complex digital systems.
-- **Develop** effective communication skills, including the ability to present and discuss technical ideas and designs, both orally and in writing.
 
 ## Reading Material
  * Lecture slides and lab material (provided weekly).
@@ -73,7 +62,6 @@ This is a tentative list of lectures. The course will be adapted to the students
 - See [Lab 1](lab01.md) for instructions
 
 
-
 ### Lecture 2: The Transistor, the Inverter, and Other Gates (LP)
 
 - [Lecture slides](02_CMOS.md)
@@ -89,9 +77,6 @@ This is a tentative list of lectures. The course will be adapted to the students
 #### Lab. 2
 - Exercise from [SiliWiz](https://tinytapeout.com/siliwiz/), draw and simulate transistors and an inverter
 
-
-#### Material
-- [Lecture slides](???.pdf)
 
 
 ### Lecture 3: Verilog (MS)
@@ -113,6 +98,8 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 ### Lecture 4: Tool flow (LP)
 
+- [Lecture slides](???.pdf) - not yet availble
+
 #### Lecture outline:
 - Introduction to the OpenLane tool flow
 - Synthesis flow
@@ -125,11 +112,10 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Make a small/medium size design of your choiche (larger than the "Hello World" from Lab. 1.)
 - Run the desing through the open-source tools
 
-#### Material
-- [Lecture slides](???.pdf) - not yet availble
-
 
 ### Lecture 5: Memory and Register Files (MS) - TENTATIVE
+
+- [Lecture slides](???.pdf) - not yet availble
 
 #### Lecture outline:
 - Memory types and memory organization
@@ -139,13 +125,13 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Models and simulation
 
 #### Lab. 5 
-- TBD
-
-#### Material
-- [Lecture slides](???.pdf) - not yet availble
+- TBA
 
 
 ### Lecture 6: SoC, interfaces, and NoCs (LP)
+
+- [Lecture slides](???.pdf) - not yet availble
+
 #### Lecture outline:
 - Introduction to SoCs 
 - Memory-Mapped I/O concepts
@@ -160,9 +146,6 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Define a verification plan 
 - Make a timeplan
 
-#### Material
-- [Lecture slides](???.pdf) - not yet availble
-
 
 ### Lecture 7: Student project presentations (MS/LP)
 
@@ -174,11 +157,10 @@ The teachers and the other groups give feeback.
 - Work on the project
 - Apply the learning from the lecture in the project
 
-#### Material
-- None
-
 
 ### Lecture 8: Verification (TP)
+
+- [Lecture slides](???.pdf) - not yet availble
 
 #### Lecture outline:
 - Introduction to verification
@@ -193,11 +175,11 @@ The teachers and the other groups give feeback.
 - Work on the project
 - Apply the learning from the lecture in the project
 
-#### Material
-- [Lecture slides](???.pdf) - not yet availble
-
 
 ### Lecture 9: Standard Cells (MS) - TENTATIVE
+
+- [Lecture slides](???.pdf) - not yet availble
+
 #### Lecture outline:
 - Introduction to standard cells
 - Role of standard cells in digital design
@@ -209,11 +191,9 @@ The teachers and the other groups give feeback.
 #### Lab. 9
 - Work on the project
 
-#### Material
-- [Lecture slides](???.pdf) - not yet availble
-
 
 ### Lecture 10: Chip Design Ruls, Power, and Clock (JS, OR(?), LP(?))
+- [Lecture slides](???.pdf) - not yet availble
 
 #### Lecture outline:
 - Chip design rules
@@ -226,9 +206,6 @@ The teachers and the other groups give feeback.
 #### Lab. 10
 - Work on the project
 - Apply the learning from the lecture in the project
-
-#### Material
-- [Lecture slides](???.pdf) - not yet availble
 
 
 ### Lecture 11: Submitting your Design to eFabless (LP(?)/MS(?)) - TENTATIVE
@@ -248,6 +225,8 @@ The teachers and the other groups give feeback.
 
 ### Lecture 12: Overview on Analog and Mixed Chip Desing (guest) - TENTATIVE  
 
+- [Lecture slides](???.pdf) - not yet availble
+
 #### Lecture outline:
 - Introduction to analog design
 - Key differences vetween analog and digital design
@@ -260,12 +239,9 @@ The teachers and the other groups give feeback.
 #### Lab. 12
 - Work on the project
 
-#### Material
-- [Lecture slides](???.pdf) - not yet availble
-
 
 ### Lecture 13: Student project presentations (MS/LP)
-Each group presents their finalized project and discuss the results.
+Each group presents their finalized project and discusses the results.
 
 
 ## Project
@@ -309,7 +285,6 @@ Tapeout preparation
 ### Deliverables
 You are expected to hand-in the following deliverables:
 - **Report:** A report describing your desing and your work. The report should be formatted as IEEE paper and not be longer than 6 pages
-
 In the following, you can find the expected content of the report:
   - *Title*
   - *Group number*
@@ -326,7 +301,7 @@ In the following, you can find the expected content of the report:
     - Include results from DRC (Design Rule Check), timing analysis, etc. to demonstrate the design's readiness for tapeout.
     - Tapeout preparation: Summarize the final steps taken to prepare the design for tapeout, (integration with the Caravel framework and/or and ensuring compliance with Tiny Tapeout requirements). 
 
-- **Source files:** All the source code of your implementation (and tests). It is fine to just have a link to a repository. 
+- **Source files:** All the source code of your implementation, scripts, and tests/verification material. It is fine to just have a link to a repository. 
 
 - **README file:** A README file that includes instructions on how to set up and run your processor on the FPGA, as well as how to run any test cases you developed.
 
@@ -349,3 +324,16 @@ The deadline for the hand-in is **TBD** at **midnight**.
 ## Exam
 
 Project + written or oral examination. More information about the exam will come later.
+
+## Learning Objectives
+
+A student who has met the objectives of the course will be able to:
+- **Explain** the physics and operation of semiconductor devices, including transistors, and be able to use this knowledge to **design** simple analog and digital circuits.
+- **Explain** the fundamentals of memory design, including different types of memories and their organization, and be able to **design** and **analyze** memory subsystems.
+- **Explain** the principles of SoC design, including partitioning, floor planning, and individual hardening, and be able to **apply** these principles to the design of a simple SoC.
+- **Explain** the principles of multicore SoC design, including the use of NoCs and accelerators, and be able to **apply** these principles to the design of a simple multicore SoC.
+- **Explain** the principles of verification in hardware design, including the use of agile hardware design techniques, and be able to **apply** these principles to the verification of a simple SoC design.
+- **Explain** the tool flow involved in chip design, including the use of open-source tools, and be able to **use** these tools to design and simulate a simple SoC.
+- **Gain** practical experience in the design and simulation of a simple SoC, and experience a virtual tapeout process.
+- **Develop** critical thinking and problem-solving skills through the design and analysis of complex digital systems.
+- **Develop** effective communication skills, including the ability to present and discuss technical ideas and designs, both orally and in writing.
