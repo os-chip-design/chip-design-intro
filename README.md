@@ -87,12 +87,7 @@ This is a tentative list of lectures. The course will be adapted to the students
  - Other gates  
 
 #### Lab. 2
-- Exercise from [SiliWiz](https://tinytapeout.com/siliwiz/), draw and simulate transistors and an inverter
-
-
-#### Material
-- [Lecture slides](???.pdf)
-
+- Exercises from [SiliWiz](https://tinytapeout.com/siliwiz/), draw and simulate transistors and an inverter
 
 ### Lecture 3: Verilog (MS)
 
@@ -198,7 +193,7 @@ The teachers and the other groups give feeback.
 
 
 ### Lecture 9: Standard Cells (MS) - TENTATIVE
-#### Lecture outline:
+#### Lecture outline (interactive):
 - Introduction to standard cells
 - Role of standard cells in digital design
 - Components of a standard cell library
@@ -300,7 +295,7 @@ The project involves the following tasks:
   - Perform post-synthesis and post-layout simulations to ensure correctness
   - Test using an FPGA
 
--Physical design
+- Physical design
   -Use the OpenLane toolchain to run the design through the synthesis, placement, routing, and verification processes.
 
 Tapeout preparation

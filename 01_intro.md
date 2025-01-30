@@ -52,3 +52,4 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * SkyWater PDK
  * efabless chip for a (virtual) tapeout
  * Show the flow
+ * Talk on useing Chisel and how to learn it in self study book, lab)
