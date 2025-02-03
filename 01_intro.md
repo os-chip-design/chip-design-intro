@@ -152,6 +152,29 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
 ![width:700px](figures/openlane.svg)
 
+## Yosys: Open-Source Verilog Synthesis
+
+  - Framework for Verilog RTL synthesis
+  - Originally developed by Clifford Wolf as a BSc project at TU Wien
+  - Converts RTL designs into gate-level netlists
+  - Supports Verilog-2005 and SystemVerilog
+  - Includes optimization and formal verification.  
+  - ASIC and FPGA synthesis.  
+  - Educational and research projects.  
+  - Part of the OpenROAD project.  
+
+## Getting Started with Yosys
+- **Installation**:  
+  - Linux: `sudo apt-get install yosys`  
+  - macOS: `brew install yosys`  
+
+- **Basic Commands**:  
+  ```bash
+  read_verilog design.v       # Read Verilog file
+  synth -top top_module       # Synthesize design
+  write_verilog output.v      # Save netlist
+  ```
+
 ## SkyWater PDK and Google
 
  * SkyWater PDK is an open-source PDK
@@ -180,8 +203,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Start nix with `nix-shell shell.nix`
  * cd to wildcat
  * Show wildcat.json
- * Generate Verilog
- * Run OpenLane and show results
+ * Generate Verilog (`make hw-fmax`)
+ * Run OpenLane and show results (see Makefile)
  * Explore in IntelliJ (or VSC)
 
 ## How are Chips Produced?
@@ -223,7 +246,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
    - Using open-source tools only
    - We will use the Tiny Tapeout platform
  * This is an introduction course
-   - A motivation course
+   - Motivating you to learn more in the VLSI course
+     - and the chipe design specialisation (MS)
    - Project based
  * Under development
     
