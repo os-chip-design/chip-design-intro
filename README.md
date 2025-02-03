@@ -1,6 +1,7 @@
 # 02118 - Introduction to Chip Design
 
-This repository contains the material for the 13-week course **02118 - Introduction to Chip Design** at the Technical University of Denmark (DTU). This course was developed with support from the **Edu4Chip** project.
+This repository contains the material for the 13-week course **02118 - Introduction to Chip Design** at the Technical University of Denmark (DTU). This course was developed with support from the
+[Edu4Chip](https://edu4chip.github.io/) project.
 
 This README file contains all the information related to the course. Please **read it carefully** to have an idea of the course structure and expectations.
 
@@ -25,7 +26,8 @@ The course has two teachers:
  * [Martin Schoeberl](https://www.imm.dtu.dk/~masca/)
  * [Luca Pezzarossa](https://www2.compute.dtu.dk/~lpez/)
 
-You are very welcome to seek for help by approaching the teachers during the letctures and laboratory sessions, or via mail. Also, feedback about the course is much appreciated.
+You are very welcome to seek for help by approaching the teachers during the letctures and laboratory sessions, or via mail, or our Discord channel.
+Also, feedback about the course is much appreciated.
 
 ## Course Aim
 This course is an introduction to the design of digital integrated circuits. It covers the basics of digital circuits, the tools used, and the process of designing a chip. The course is based open-source tools and open-source PDKs. The course also gives the possibility for student projects to be taped out on Tiny Tapeout.
@@ -180,11 +182,6 @@ The teachers and the other groups give feeback.
 
 
 ### Lecture 9: Standard Cells (MS) - TENTATIVE
-
-- [Lecture slides](???.pdf) - not yet availble
-
-
-### Lecture 9: Standard Cells (MS) - TENTATIVE
 #### Lecture outline:
 - Introduction to standard cells
 - Role of standard cells in digital design
@@ -197,7 +194,7 @@ The teachers and the other groups give feeback.
 - Work on the project
 
 
-### Lecture 10: Chip Design Ruls, Power, and Clock (JS, OR(?), LP(?))
+### Lecture 10: Chip Design Ruls, Power, and Clock (OR)
 - [Lecture slides](???.pdf) - not yet availble
 
 #### Lecture outline:

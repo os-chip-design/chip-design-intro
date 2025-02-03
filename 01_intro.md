@@ -226,6 +226,12 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Cheap tile: 50 USD
  * We (Edu4Chip) sponsor one tile per project
 
+## Tiny Tapout Workshop
+ 
+ * We run a Tiny Tapeout workshop at DTU
+ * From now knowledge to a chip in 4 hours
+ * [Tiny Tapeout Workshop](https://edu4chip.github.io/ttw2025DTU.html)
+
 ## Using Chisel
 
  * Who does not know Chisel?
