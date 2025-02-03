@@ -22,7 +22,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
     * We will adapt to your needs and interests
     * We did an open-source chipdesign course as special course before
  * Will have rough edges
- * I am exciting to see you building your own chips
+ * I am excited to see you building your own chips
 
 ## Introduction Round
 
@@ -94,15 +94,40 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * OpenRoad and OpenLane
  * SkyWater PDK
 
-## The Flow (very generic)
+## Chip Design Workflow
 
- * RTL design
- * Synthesis
- * Place and route
- * Tapeout
- * Manufacturing (in the fab)
- * Testing
- * Bring-up
+1. **Specification**: Define the chip's purpose and requirements  
+2. **Architecture Design**: High-level design of the system
+3. **RTL Design**: Register Transfer Level design using HDLs (e.g., Verilog, VHDL)
+4. **Verification (Testing)**: Ensure the design meets specifications
+
+## Chip Design Workflow cont.
+
+5. **Synthesis**: Convert RTL to gate-level netlist
+6. **Physical Design**: Floorplanning, placement, routing
+7. **Fabrication**: Manufacturing the chip in a foundry
+8. **Testing**: Post-production validation
+9. **Bring-up**: First test of the chip
+10. **Sell**: Profit!
+
+## Key Components of a Chip
+- **Transistors**: Building blocks of chips
+- **Logic Gates**: AND, OR, NOT, etc.  
+- **Flip-Flops**: Memory elements
+- **Interconnects**: Wires connecting components  
+- **Memory**: RAM, ROM  
+- **I/O Pads**: Interface with external devices 
+
+
+## Hardware Description Languages (HDLs)
+- **Verilog**: Widely used for RTL design
+  - With extenstion to SystemVerilog
+  - We will introduce Verilog in this course
+- **VHDL**: Popular in Europe and for complex systems
+  - Almost not supported by open-source tools
+- **Chisel**: Our Favorite! 
+  - Scala-based HDL
+  - You learned it in DE2
 
 ## OpenLane
 
@@ -135,7 +160,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Google sponsored MPW runs
    - We tried to get a chip in, but failed :-(
    - Spnosoring is over
- * A MPW os around $ 10.000
+ * One MPW run is around $ 10.000 per tile
    - We might have money for MPW runs :-)  
 
 ## What is a PDK?
@@ -178,18 +203,27 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Cheap tile: 50 USD
  * We (Edu4Chip) sponsor one tile per project
 
+## Using Chisel
+
+ * Who does not know Chisel?
+ * Easy to learn in self study
+   - Use the [Chisel book](https://www.imm.dtu.dk/~masca/chisel-book.html)
+   - Do the [Chisel lab](https://github.com/schoeberl/chisel-lab)
+
 ## Reading
 
+ * Weste and Harris: 1.1 and 1.12
  * [OpenROAD: Toward a Self-Driving, Open-Source Digital Layout Implementation Tool Chain](https://vlsicad.ucsd.edu/Publications/Conferences/370/c370.pdf)
  * [Building OpenLANE: A 130nm OpenROAD-based Tapeout- Proven Flow : Invited Paper](https://ieeexplore.ieee.org/document/9256623)
  * [Tiny Tapeout: A Shared Silicon Tapeout Platform Accessible To Everyone](https://www.techrxiv.org/users/799365/articles/1165896-tiny-tapeout-a-shared-silicon-tapeout-platform-accessible-to-everyone)
 
-## TODO
+ ## Summary
 
- * OpenLane
- * Tiny Tapeout
- * SkyWater PDK
- * efabless chip for a (virtual) tapeout
- * Show the flow (with OpenLane)
- * Maybe show TT flow + chip view
- * Talk on using Chisel and how to learn it in self study book, lab)
+ * We will design and fabricate a chip
+   - Using open-source tools only
+   - We will use the Tiny Tapeout platform
+ * This is an introduction course
+   - A motivation course
+   - Project based
+ * Under development
+    
