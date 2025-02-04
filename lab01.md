@@ -32,6 +32,9 @@ start the nix shell.
 Then change back to your home directory start working from there.
 Please do not change anything in the `openlane2` directory.
 
+You can also use VSCode (running locally) connecting to the server for
+easier editing and file navigation.
+
 ## Running a "Hello World" Example
 
 A minimal design consists of Verilog files and a `.json` file for the configuration of OpenLane.
