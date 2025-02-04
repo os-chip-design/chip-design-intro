@@ -52,7 +52,10 @@ openlane --last-run --flow openinklayout config.json
 
 This command will start KLayout and show the layout of the generated ASIC. Play with KLayout a bit, e.g., use the ruler to measure the size of your ASIC. The unit is um.
 
-Furthermore, the OpenLane run will generate several reports in the run directory. Look around and see what you can findout about the design. Can you find the size and usuage of the standard cells? Can you find out the maximum frequency of the design?
+Furthermore, the OpenLane run will generate several reports in the run directory. Look around and see what you can findout about the design.
+
+ * Can you find the size and usuage of the standard cells?
+ * Can you find out the maximum frequency of the design?
 
 ## Optional: Synthesize your Own Design
 
