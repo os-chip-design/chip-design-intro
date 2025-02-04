@@ -23,6 +23,15 @@ From any folder (e.g., where your design is) you can start VSCode with the follo
 
 then enter the nix environment from a VSCode terminal.
 
+## Using a Server
+
+Alternative to installing the tools locally you can runn them on
+`chipdesign1.compute.dtu.dk`. You shall have access via `ssh` to this server.`nix` and OpenLane2 are installed. Change to `/home/share/openlane2` and
+start the nix shell.
+
+Then change back to your home directory start working from there.
+Please do not change anything in the `openlane2` directory.
+
 ## Running a "Hello World" Example
 
 A minimal design consists of Verilog files and a `.json` file for the configuration of OpenLane.
