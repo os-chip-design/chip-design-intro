@@ -25,7 +25,7 @@ then enter the nix environment from a VSCode terminal.
 
 ## Using a Server
 
-Alternative to installing the tools locally you can runn them on
+Alternative to installing the tools locally you can run them on
 `chipdesign1.compute.dtu.dk`. You shall have access via `ssh` to this server.`nix` and OpenLane2 are installed. Change to `/home/share/openlane2` and
 start the nix shell.
 
