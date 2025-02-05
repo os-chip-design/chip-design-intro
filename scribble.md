@@ -18,3 +18,10 @@ Have some slides on Caravel and the flow. Reading: https://info.efabless.com/kno
 # Notes
 
  animation of GDS: https://znah.net/tt09/
+
+ ## Synthesis TODO
+
+ * what is synthesis
+ * basic elements
+ * standard cells
+ * show a standard cell in a layout
