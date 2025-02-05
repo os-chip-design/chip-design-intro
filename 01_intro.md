@@ -157,11 +157,11 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
   - Framework for Verilog RTL synthesis
   - Originally developed by Clifford Wolf as a BSc project at TU Wien
   - Converts RTL designs into gate-level netlists
-  - Supports Verilog-2005 and SystemVerilog
-  - Includes optimization and formal verification.  
-  - ASIC and FPGA synthesis.  
-  - Educational and research projects.  
-  - Part of the OpenROAD project.  
+  - Supports Verilog-2005 and (some) SystemVerilog
+  - Includes optimization and formal verification
+  - ASIC and FPGA synthesis
+  - Educational and research projects
+  - Part of the OpenROAD project
 
 ## Getting Started with Yosys
 - **Installation**:  
@@ -175,14 +175,15 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
   write_verilog output.v      # Save netlist
   ```
 
+
 ## SkyWater PDK and Google
 
  * SkyWater PDK is an open-source PDK
  * The SkyWater fab was originally a Cypress fab
  * Google was pushing to open-source the PDK
  * Google sponsored MPW runs
-   - We tried to get a chip in, but failed :-(
-   - Spnosoring is over
+   - We tried to get a chip produced, but failed :-(
+   - Sponsoring is over
  * One MPW run is around $ 10.000 per tile
    - We might have money for MPW runs :-)  
 
@@ -200,7 +201,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## OpenLane2 Demo
 
- * Start nix with `nix-shell shell.nix`
+ * Start nix with `nix-shell`
  * cd to wildcat
  * Show wildcat.json
  * Generate Verilog (`make hw-fmax`)
@@ -228,8 +229,9 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Tiny Tapout Workshop
  
- * We run a Tiny Tapeout workshop at DTU
- * From now knowledge to a chip in 4 hours
+ * Matt Venn runs a Tiny Tapeout workshop at DTU
+ * Saturday 15th of January
+ * From zero to a chip in 4 hours
  * [Tiny Tapeout Workshop](https://edu4chip.github.io/ttw2025DTU.html)
 
 ## Using Chisel
