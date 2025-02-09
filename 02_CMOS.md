@@ -386,7 +386,7 @@ where $k = \frac{\mu_n C_{ox} W}{L}$ *(Process and geometry-dependent constant)*
 ![width:1150](./figures/L2/L2-18.2.JPG)
 
 
-# The NMOS inverter
+## The NMOS inverter
 
 - **High power consumption in the 'output LOW' state**
   - Current flows through the resistor
@@ -423,7 +423,7 @@ where $k = \frac{\mu_n C_{ox} W}{L}$ *(Process and geometry-dependent constant)*
   - Limited by gate capacitances
 
 
-## The CMOS inverter transfer carachetrisitcs
+## The CMOS inverter transfer characteristic
 
 <br>**Blackboard**
 
