@@ -13,6 +13,7 @@ README content:
 * [Project](#project)
 * [Exam](#exam)
 * [Learning Objectives](#learning_objectives)
+* [License](#license)
 
 *Note: The first regular version will be given in Spring 2026. In Spring 2025, the course will be held in a flexible style (like a special course). Specifically, the content will be adapted to the students' needs and interests.*
 *Students are expected to contribute to the course actively and help improve the material for the future version of the course.*
@@ -339,3 +340,10 @@ A student who has met the objectives of the course will be able to:
 - **Gain** practical experience in the design and simulation of a simple SoC, and experience a virtual tapeout process.
 - **Develop** critical thinking and problem-solving skills through the design and analysis of complex digital systems.
 - **Develop** effective communication skills, including the ability to present and discuss technical ideas and designs, both orally and in writing.
+
+## License
+
+All original content in this repository, including text, code, and other materials, is licensed under the CC0 1.0 Universal license (see LICENSE file), unless otherwise noted. 
+
+### Exception for Images
+Certain images in this repository are not covered by the CC0 license. These images may be subject to more restrictive copyright terms. Where applicable, copyright and licensing information is provided for these images in the relevant directories, file descriptions, or as text integrated in the images.
