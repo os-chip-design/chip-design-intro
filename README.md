@@ -345,5 +345,5 @@ A student who has met the objectives of the course will be able to:
 
 All original content in this repository, including text, code, and other materials, is licensed under the CC0 1.0 Universal license (see LICENSE file), unless otherwise noted. 
 
-### Exception for Images
+### License note for Images
 Certain images in this repository are not covered by the CC0 license. These images may be subject to more restrictive copyright terms. Where applicable, copyright and licensing information is provided for these images in the relevant directories, file descriptions, or as text integrated in the images.
