@@ -2,12 +2,40 @@
 
 ## Tool Installation
 
+The following tools are installed:
+* Install nix
+* Install OpenLane 2 (via git clone)
+
+### Nix Installation
+
+#### NixOS Method
+
+NixOS installation should have nix inherently installed.
+
+#### Lix Method
+
+This method uses [Lix](https://lix.systems/), which is an implementation of the Nix functional package management language, which is C++/Rust based. As of now they are intercompatible with standard Nix, although with additional type and escalation safety, errors reports and among other neat features.
+To install Lix, [by following this guide](https://lix.systems/install/), here is the following command. Also make sure to add extra support of flakes into the system as Openlane2 depends on it and has powerful uses, for extra reading here is [this](https://jade.fyi/blog/flakes-arent-real/) and [that](https://nixos-and-flakes.thiscute.world/introduction/).
+
+```zsh
+curl -sSf -L https://install.lix.systems/lix | sh -s -- install
+```
+For Openlane2 installation you might have to invoke `--extra-deprecated-features url-literals` to your command.
+```zsh
+nix-shell --pure ~/openlane2/shell.nix --extra-deprecated-features url-literals
+```
+
+After-wards, after long time of installing and compiling you should be ready to go!
+
+#### Nix Method
+
+[Use this following guide to install it.](https://nixos.wiki/wiki/Nix_Installation_Guide)
+
+### OpenLane 2 Installation
+
 The tools are currently usable on Linux and MacOS (even native with Mac Silicon). For Windows use WSL2 to have a Linux environment. There is no official support for Windows available.
 
 See documentation for installation instructions at the [OpenLane 2 Documentation](https://openlane2.readthedocs.io/en/latest/).
-
- * Install nix
- * Install OpenLane 2 (via git clone)
 
 Switch to your nix environment within your openlane clone directory by excuting the following command:
 
@@ -22,6 +50,18 @@ From any folder (e.g., where your design is) you can start VSCode with the follo
 `$ code .`
 
 then enter the nix environment from a VSCode terminal.
+
+## Using a Server
+
+Alternative to installing the tools locally you can run them on
+`chipdesign1.compute.dtu.dk`. You shall have access via `ssh` to this server.`nix` and OpenLane2 are installed. Change to `/home/share/openlane2` and
+start the nix shell.
+
+Then change back to your home directory start working from there.
+Please do not change anything in the `openlane2` directory.
+
+You can also use VSCode (running locally) connecting to the server for
+easier editing and file navigation.
 
 ## Running a "Hello World" Example
 
@@ -43,12 +83,15 @@ openlane --last-run --flow openinklayout config.json
 
 This command will start KLayout and show the layout of the generated ASIC. Play with KLayout a bit, e.g., use the ruler to measure the size of your ASIC. The unit is um.
 
-Furthermore, the OpenLane run will generate several reports in the run directory. Look around and see what you can findout about the design. Can you find the size and usuage of the standard cells? Can you find out the maximum frequency of the design?
+Furthermore, the OpenLane run will generate several reports in the run directory. Look around and see what you can findout about the design.
+
+* Can you find the size and usuage of the standard cells?
+* Can you find out the maximum frequency of the design?
 
 ## Optional: Synthesize your Own Design
 
- Use one of your own (Chisel) designs, create the `.json` file and run it through the flow. Maybe explore how large your vending machine is. Find as a reference the size of a single tile in Tiny Tapeout, the service you will use to produce your chip. Would your vending machine fit into that cheap $ 50 tile?
+Use one of your own (Chisel) designs, create the `.json` file and run it through the flow. Maybe explore how large your vending machine is. Find as a reference the size of a single tile in Tiny Tapeout, the service you will use to produce your chip. Would your vending machine fit into that cheap $ 50 tile?
 
- ## Optional: Synthesize a Very Simple Design
+## Optional: Synthesize a Very Simple Design
 
- Although the former designs have been simple, we often loose the connection how they are implemented. I suggest to synthesize a super simple design, e.g., an 8-bit counter and explore the results in more detail. Can you see the adder used for the counter?
+Although the former designs have been simple, we often loose the connection how they are implemented. I suggest to synthesize a super simple design, e.g., an 8-bit counter and explore the results in more detail. Can you see the adder used for the counter?
