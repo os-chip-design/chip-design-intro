@@ -9,91 +9,119 @@ backgroundColor: #fff
 
 <!-- headingDivider: 3 -->
 
-# **The Tranistor, the Inverter, <br>and Other Gates**
+
+# **The transistor, the inverter, <br>and other gates**
 
 **Luca Pezzarossa and Martin Schoeberl**
+
 
 ## Agenda
 
 1. The need for a controlled switch  
 2. A brief history of the transistor  
 3. The MOSFET transistor  
-4. The NMOS inverter  
-5. The CMOS inverter  
-6. Other gates  
+4. The inverter ('NOT' gate)
+5. Other gates  
+
+
 
 # <br><br>The need for a controlled switch
 
 
-# Information representation
+## Information representation
 
 - **Binary number representation** 
   - Foundation of digital computing
   - Foundation of digital electronics
 
 - **Physical levels** 
-  - Logic 1: High voltage (5V, 3.3V, 1.8V, or others.)
-  - Logic 0: Low voltage (e.g., 0V).
+  - Logic 1: High voltage (5V, 3.3V, 1.8V, or others)
+  - Logic 0: Low voltage (e.g., 0V)
 
 - **A sort of 'controlled switch' is needed to perfrom computations**
 
 
-# Controlled switch in a circuit
+## Controlled switch in a circuit
 
-**Image placeholder**: Not gate with resistor and controlled switch
-![width:850](./lecture_02/test.jpg)
-
-
-# Early technologies: Relays
-
-- **Mechanical relays**:
-  - Controlled by electromagnets.
-  - Early computers used relays for logic operations.
+![width:1150](./figures/L2/L2-1.1.JPG)
 
 
-# Early technologies: Relays
+## Controlled switch in a circuit
 
-**Image placeholder**: Relay photo, relay in the not gate
+![width:1150](./figures/L2/L2-1.2.JPG)
 
 
-# Early technologies: Relays
-- **Advantages**:
+## Controlled switch in a circuit
+
+![width:1150](./figures/L2/L2-1.3.JPG)
+
+
+## Controlled switch in a circuit
+
+![width:1150](./figures/L2/L2-1.4.JPG)
+
+
+## Early technologies: Relays
+
+- **Mechanical relays**
+  - Controlled by electromagnets
+  - Early computers used relays for logic operations
+
+
+## Early technologies: Relays
+
+![width:1150](./figures/L2/L2-2.JPG)
+
+
+## Early technologies: Relays
+
+![width:1150](./figures/L2/L2-3.1.JPG)
+
+
+## Early technologies: Relays
+
+![width:1150](./figures/L2/L2-3.2.JPG)
+
+
+## Early technologies: Relays
+- **Advantages**
   - Easy to build
   - Support high loads
 
-- **Disadvantages**:
+- **Disadvantages**
   - Slow switching speed
   - Prone to mechanical wear
   - Loud
 
-# Early technologies: Vacuum tubes
 
-- **Vacuum tubes**:
-  - Used thermionic emission to control current flow.
+## Early technologies: Vacuum tubes
 
-**Image placeholder**: Diagram and thermoionic effect.
+- **Vacuum tubes**
+  - Used thermionic emission to control current flow
 
-
-# Early technologies: Vacuum tubes
-**Image placeholder**: Tube photo.
+- **Acts as a controlled switch**
 
 
-# Early technologies: Vacuum tubes
-- **Advantages**:
+## Early technologies: Vacuum tubes
+![width:1150](./figures/L2/L2-4.JPG)
+
+
+## Early technologies: Vacuum tubes
+- **Advantages**
   - No moving parts
   - Faster than relays
 
-- **Disadvantages**:
+- **Disadvantages**
   - Bulky and fragile
   - High power consumption
   - Excessive heat generation
 
 
-# EINAC (1946)
-**Image placeholder**: EINAC
+## EINAC (1946)
+![width:1150](./figures/L2/L2-5.JPG)
 
 
-# Transition to solid-state devices
+## Transition to solid-state devices
 
 - **The need for improvement**
   - Relays and vacuum tubes were not scalable
@@ -102,12 +130,14 @@ backgroundColor: #fff
   - Solid-state devices transistors
   - Smaller, faster, cheaper, and more reliable
 
-# Transition to Solid-State Devices
-**Image placeholder**: Side-by-side comparison of a vacuum tube and a transistor.
+
+## Transition to solid-state devices
+![width:1150](./figures/L2/L2-6.JPG)
 
 
 
 # <br><br>A brief history of the transistor
+
 
 ## The point-contact transistor
 
@@ -119,8 +149,9 @@ backgroundColor: #fff
 - **Goal** 
   - Replace vacuum tubes with a solid-state solution
 
+
 ## The point-contact transistor
-**Image placeholder**: the first point-contact transistor.
+![width:1150](./figures/L2/L2-7.JPG)
 
 
 ## The point-contact transistor
@@ -144,7 +175,8 @@ backgroundColor: #fff
 
 ## The Bipolar Junction Transistor (BJT)
 
-**Image placeholder**: Diagram of an NPN transistor and a photo of BJTs...
+![width:1150](./figures/L2/L2-8.JPG)
+
 
 ## Transition from Germanium to Silicon
 
@@ -166,9 +198,10 @@ backgroundColor: #fff
   - Scalable for miniaturization
   - Low power consumption
 
+
 ## The Impact of the MOSFET
 
-- **Enabled the development of integrated circuits (ICs)**.
+- **Enabled the development of integrated circuits (ICs)**
 <br>
 - **MOSFETs are the foundation of:**
   - Microprocessors
@@ -176,25 +209,31 @@ backgroundColor: #fff
   - Digital logic circuits
   - ...
 
+
 ## The impact of the MOSFET
 
-**Image placeholder**: Diagram of an integrated circuit highlighting MOSFETs.
+![width:1150](./figures/L2/L2-9.JPG)
+
 
 ## The Integrated circuit revolution
 
 - **First ICs contained only a few transistors**
-- **Moore's Law (1965)**:
-  - Predicted the doubling of transistors on a chip every two years.
-
-
+- **Moore's Law (1965)**
+  - Predicted the doubling of transistors on a chip every two years
+<br>
 - **1971**: Intel 4004 (First microprocessor)
-  - 2,300 transistors.
+  - 2,300 transistors
 - **2020s**: Modern processors
-  - Billions of transistors.
+  - Billions of transistors
 
-## Evolition of transistors in microprocessors
 
-**Placeholder**: Intel 4004 vs Modern processors
+## The Integrated circuit revolution
+
+![width:1150](./figures/L2/L2-12.JPG)
+
+
+## The Integrated circuit revolution
+![width:1150](./figures/L2/L2-10.JPG)
 
 
 ## FinFET and 3D transistors
@@ -203,11 +242,8 @@ backgroundColor: #fff
   - FinFET (2010s)
   - Gate-All-Around Transistors (2020s)
 
-## FinFET and 3D transistors
-**Placeholder**: Diagram of FinFET and Gate-All-Around designs
 
-
-# Timeline summary
+## Timeline summary
 
 1947 --> **Point-Contact Transistor**: First working transistor
 <br>1948  --> **BJT**: Improved, smaller, producilble
@@ -216,7 +252,9 @@ backgroundColor: #fff
 <br>2020s -> **Gate-All-Around Transistors**
 
 
+
 # <br><br>The MOSFET transistor
+
 
 ## Generalities
 
@@ -230,92 +268,86 @@ backgroundColor: #fff
 
 
 ## Generalities
+
 - **Two Types**
   - NMOS: Uses electrons as charge carriers
   - PMOS: Uses holes as charge carriers
 
 - **Pins**
-  - **Gate**: Controls current flow between Source and Drain.
-  - **Source**: Starting point of current flow.
-  - **Drain**: Endpoint of current flow.
-  - **Substrate (Body)**: The semiconductor base material (**omitted**).
+  - **Gate**: Controls current flow between Source and Drain
+  - **Source**: Starting point of current flow
+  - **Drain**: Endpoint of current flow
+  - **Substrate (Body)**: The semiconductor base material (**omitted**)
+
 
 ## Symbols
-**Placeholder**: Symbols for NMOS and PMOS transistors.
 
-
-## How MOSFETs Work
-
-- **Gate Voltage**:
-  - Controls whether current flows between the Source and Drain
-- **Regions of Operation**:
-  1. Cutoff: $V_{GS} < V_{th}$, no current
-  2. Linear: $V_{DS}$ small, current proportional to $V_{DS}$
-  3. Saturation: $V_{DS} > V_{GS} - V_{th}$, maximum current
-
-**Placeholder**: Graph of MOSFET transfer characteristics.
+![width:1150](./figures/L2/L2-14.JPG)
 
 
 ## MOSFET Structure
 
-**Placeholder**: Cross-sectional diagram of a MOSFET showing Gate, Source, Drain, and Substrate.
+![width:1150](./figures/L2/L2-15.JPG)
 
 
 ## Working basic principle
 
-- **Voltage at the Gate**:
-  - Controls a channel between Source and Drain.
+- **Voltage at the Gate**
+  - Controls a channel between Source and Drain
+<br>
+- **Key Mechanism**
+  - Gate voltage creates an electric field, inducing a conductive channel
 
-- **Key Mechanism**:
-  - Gate voltage creates an electric field, inducing a conductive channel.
 
-## MOSFET Structure
+## Working basic principle
 
-**Placeholder**: Blackboard.
+<br>**Blackboard**
 
 
 ## MOSFET regions of operation
 
-1. **Cutoff**:
+1. **Cutoff**
    - $V_{GS} < V_{th}$: No current flows
-2. **Linear (Ohmic)**:
+2. **Linear (Ohmic)**
    - $V_{GS} > V_{th}, V_{DS} < V_{GS} - V_{th}$: Current flows <br> proportionally to $V_{DS}$
-3. **Saturation**:
+3. **Saturation**
    - $V_{GS} > V_{th}, V_{DS} > V_{GS} - V_{th}$: Current is constant
 
 $V_{th}$ is the Gate  threshold voltage needed for conduction
 
+
 ## MOSFET regions of operation
 
-1. **Cutoff**:
+1. **Cutoff**
    $I_D = 0$
-2. **Linear (Ohmic)**:
+2. **Linear (Ohmic)**
    $I_D = k \cdot \left( V_{GS} - V_{th} \right) \cdot V_{DS}$
-3. **Saturation**:
+3. **Saturation**
    $I_D = \frac{k}{2} \cdot \left( V_{GS} - V_{th} \right)^2$
 
 $k = \frac{\mu_n C_{ox} W}{L}$ : Process and geometry-dependent constant
 
-## MOSFET Transfer Characteristics
 
-**Placeholder**: Graph of $ I_D $ vs. $ V_{GS} $ showing the regions.
+## MOSFET transfer characteristic
+
+![width:1150](./figures/L2/L2-16.JPG)
 
 
 ## Capacitance in MOSFETs
 
-- **Reason**:
+- **Reason**
   - Proximity of components where there is a potential difference
-
-- **Effect**:
+<br>
+- **Effect**
   - Limits switching speed
 
 
 ## Capacitance in MOSFETs
 
-**Placeholder**: Diagram illustrating Gate capacitance in a MOSFET
+<br>**Blackboard**
 
 
-# Leakage in MOSFETs
+## Leakage in MOSFETs
 - **Subthreshold leakage**
    - Current flows even when $V_{GS} < V_{th}$
 - **Gate leakage**
@@ -324,110 +356,116 @@ $k = \frac{\mu_n C_{ox} W}{L}$ : Process and geometry-dependent constant
    - Anywhere there is a potential difference
 
 
-# Leakage in MOSFETs
-**Placeholder**: Diagram showing leakage paths in a MOSFET.
-
-
-## Fabricating a MOSFET in silicon
-
-**Placeholder**: Diagram of MOSFET fabrication process showing the steps.
+## Leakage in MOSFETs
+<br>**Blackboard**
 
 
 
-# <br><br>The NMOS inverter (NOT gate)
+# <br><br>The inverter ('NOT' gate)
 
-## The NMOS Inverter
+
+## The NMOS inverter
 
 - Single NMOS transistor with a pull-up resistor
 <br>
 - **Operation**
-  - Input LOW: Output HIGH (resistor pulls up).
-  - Input HIGH: Output LOW (NMOS conducts).
-
-## The NMOS Inverter
-
-**Placeholder**: Circuit diagram of an NMOS inverter.
+  - Input LOW: Output HIGH (resistor pulls up)
+  - Input HIGH: Output LOW (NMOS conducts)
 
 
-# The NMOS Inverter
+## The NMOS inverter
+
+![width:1150](./figures/L2/L2-18.1.JPG)
+
+
+## The NMOS inverter
+
+![width:1150](./figures/L2/L2-18.2.JPG)
+
+
+# The NMOS inverter
 
 - **High power consumption in the 'output LOW' state**
   - Current flows through the resistor
 <br>
-- Slower operation due to resistive pull-up
+- **Slower operation due to resistive pull-up**
 
 
-## The CMOS Inverter
+## The CMOS inverter
 
-- **Complementary MOS (CMOS)**:
+- **Complementary MOS (CMOS)**
   - Combines NMOS and PMOS transistors
-
-- Operation:
-  - Input LOW: PMOS ON, NMOS OFF → Output HIGH.
-  - Input HIGH: NMOS ON, PMOS OFF → Output LOW.
-
-## The CMOS Inverter
-
-**Placeholder**: Circuit diagram of a CMOS inverter.
+<br>
+- **Operation**
+  - Input LOW: PMOS ON, NMOS OFF → Output HIGH
+  - Input HIGH: NMOS ON, PMOS OFF → Output LOW
 
 
-## The CMOS Inverter
+## The CMOS inverter
+
+![width:1150](./figures/L2/L2-19.1.JPG)
+
+
+## The CMOS inverter
+
+![width:1150](./figures/L2/L2-19.2.JPG)
+
+
+## The CMOS inverter
 
 - **No static power dissipation**
-  - Only consumes power during switching.
-
-- **Fast switching**
-  - Limited by gate capacitances.
-
-
-## The CMOS Inverter
-
-**Placeholder**: Circuit diagram of a CMOS inverter in silicon.
-
-
-# <br><br> Simple gates
-
-## Building logic gates with CMOS
-
-- **NAND Gate**:
-  - Series NMOS and parallel PMOS transistors.
-
-- **NOR Gate**:
-  - Parallel NMOS and series PMOS transistors.
-
-
-## Building logic gates with CMOS
-
-**Placeholder**: Circuit diagrams of CMOS NAND and NOR gates.
-
-## Building logic gates with CMOS
-
-**Placeholder**: SILICON OF NAND / NOR
-
-
-## Standard Cells and Custom Circuits
-
-- **Standard Cells**:
-  - Predefined layouts for basic gates (NAND, NOR, etc.).
-  - Simplify chip design.
+  - Only consumes power during switching
 <br>
-- **Custom Circuits**:
-  - Tailored for specific applications.
+- **Fast switching**
+  - Limited by gate capacitances
 
 
-## Standard Cells and Custom Circuits
-**Placeholder**: Example of a standard cell layout.
+## Fabricating a CMOS inverter in silicon
+
+![width:1150](./figures/L2/L2-20.1.JPG)
 
 
-# <br><br>Summary
+## Fabricating a CMOS inverter in silicon
 
-## Key Takeaways
+![width:1150](./figures/L2/L2-20.2.JPG)
 
-- **Controlled Switches**: Foundation of digital circuits.
-- **MOSFET**: Scalable, energy-efficient, and reliable.
-- **CMOS**: Power-efficient design for logic gates.
-- **Logic Gates**: Built from CMOS for high performance.
 
+## Fabricating a CMOS inverter in silicon
+
+![width:1150](./figures/L2/L2-20.3.JPG)
+
+
+## Fabricating a CMOS inverter in silicon
+
+![width:1150](./figures/L2/L2-20.4.JPG)
+
+
+
+# <br><br> Other gates
+
+
+## Building logic gates with CMOS
+
+- **NAND Gate**
+  - Series NMOS and parallel PMOS transistors
+
+- **NOR Gate**
+  - Parallel NMOS and series PMOS transistors
+
+
+## Building logic gates with CMOS (NAND)
+
+![width:1150](./figures/L2/L2-21.JPG)
+
+
+## Standard cells and custom circuits
+
+- **Standard Cells**
+  - Predefined layouts for basic gates (NAND, NOR, etc.)
+  - Simplify chip design
+<br>
+- **Custom Circuits**
+  - Tailored for specific applications
 
 
 # <br>End
@@ -435,6 +473,4 @@ $k = \frac{\mu_n C_{ox} W}{L}$ : Process and geometry-dependent constant
   - All exercises form [SiliWiz](https://tinytapeout.com/siliwiz/)
   - See Laboratory 2 file
   - Feel free to skip some if you are confident witht the topic
-
-
 
