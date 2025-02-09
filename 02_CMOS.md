@@ -98,7 +98,7 @@ backgroundColor: #fff
 
 - **Vacuum tubes**
   - Used thermionic emission to control current flow
-
+<br>
 - **Acts as a controlled switch**
 
 
@@ -126,6 +126,7 @@ backgroundColor: #fff
 - **The need for improvement**
   - Relays and vacuum tubes were not scalable
   - High power and size limitations
+<br>
 - **Solution** 
   - Solid-state devices transistors
   - Smaller, faster, cheaper, and more reliable
@@ -159,7 +160,7 @@ backgroundColor: #fff
 - **Structure**: Germanium crystal with two gold contacts
 - **Functionality**: Amplified electrical signals
 - **Limitations**: Fragile and difficult to manufacture
-
+<br>
 - **The science behind it was now demostrated!**
 
 
@@ -313,7 +314,7 @@ backgroundColor: #fff
 3. **Saturation**
    - $V_{GS} > V_{th}, V_{DS} > V_{GS} - V_{th}$: Current is constant
 
-$V_{th}$ is the Gate  threshold voltage needed for conduction
+*Note : $V_{th}$ is the Gate  threshold voltage needed for conduction*
 
 
 ## MOSFET regions of operation
@@ -325,7 +326,7 @@ $V_{th}$ is the Gate  threshold voltage needed for conduction
 3. **Saturation**
    $I_D = \frac{k}{2} \cdot \left( V_{GS} - V_{th} \right)^2$
 
-$k = \frac{\mu_n C_{ox} W}{L}$ : Process and geometry-dependent constant
+where $k = \frac{\mu_n C_{ox} W}{L}$ *(Process and geometry-dependent constant)*
 
 
 ## MOSFET transfer characteristic
@@ -350,8 +351,10 @@ $k = \frac{\mu_n C_{ox} W}{L}$ : Process and geometry-dependent constant
 ## Leakage in MOSFETs
 - **Subthreshold leakage**
    - Current flows even when $V_{GS} < V_{th}$
+<br>
 - **Gate leakage**
    - Caused by tunneling through the thin oxide layer
+<br>
 - **Other leakages**
    - Anywhere there is a potential difference
 
@@ -420,6 +423,11 @@ $k = \frac{\mu_n C_{ox} W}{L}$ : Process and geometry-dependent constant
   - Limited by gate capacitances
 
 
+## The CMOS inverter transfer carachetrisitcs
+
+<br>**Blackboard**
+
+
 ## Fabricating a CMOS inverter in silicon
 
 ![width:1150](./figures/L2/L2-20.1.JPG)
@@ -448,7 +456,7 @@ $k = \frac{\mu_n C_{ox} W}{L}$ : Process and geometry-dependent constant
 
 - **NAND Gate**
   - Series NMOS and parallel PMOS transistors
-
+<br>
 - **NOR Gate**
   - Parallel NMOS and series PMOS transistors
 
@@ -468,7 +476,7 @@ $k = \frac{\mu_n C_{ox} W}{L}$ : Process and geometry-dependent constant
   - Tailored for specific applications
 
 
-# <br>End
+# <br>End - Lecture 2
   **Laboratory** 
   - All exercises form [SiliWiz](https://tinytapeout.com/siliwiz/)
   - See Laboratory 2 file
