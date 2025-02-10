@@ -39,7 +39,7 @@ This course is an introduction to the design of digital integrated circuits. It 
 ## Reading Material
 
  * Lecture slides and lab material (provided weekly).
- * The textbook [CMOS VLSI Design, A Circuits and Systems Perspective](https://www.amazon.com/CMOS-VLSI-Design-Circuits-Perspective/dp/0321547748) by Neil H. E. Weste and David Harris, also available as PDF (run an online search).
+ * The textbook [CMOS VLSI Design, A Circuits and Systems Perspective](https://www.amazon.com/CMOS-VLSI-Design-Circuits-Perspective/dp/0321547748) by Neil H. E. Weste and David Harris, also available as PDF.
  * The material related to the open-source tools we use, including installation instructions: [OpenLean 2 Documentation](https://openlane2.readthedocs.io/en/latest/)
    - For a quick start: [OpenLane 2 in the browser](https://colab.research.google.com/github/efabless/openlane2/blob/main/notebook.ipynb), link is from [efabless](https://efabless.com/openlane)
  * [Caravel Documentation](https://github.com/efabless/caravel)  
@@ -65,8 +65,10 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Open Source tools (local) installation
 - Running a "Hello World" example
 - Exploring a standard gate
-- See [Lab 1](lab01.md) for instructions
+- See [Lab 1](lab_01.md) for instructions
 
+#### Reading/reference material
+- Lecture slides (also available as PDF in DTU-Learn)
 
 ### Lecture 2: The Transistor, the Inverter, and Other Gates (LP)
 
@@ -81,11 +83,16 @@ This is a tentative list of lectures. The course will be adapted to the students
  - Other gates  
 
 #### Lab. 2
-- Exercise from [SiliWiz](https://tinytapeout.com/siliwiz/), draw and simulate transistors and an inverter
+- SiliWiz exercises 
+- See [Lab 2](lab_02.md) for instructions
 
-
-#### Material
-- [Lecture slides](???.pdf)
+#### Reading/reference material
+- Lecture slides (also available as PDF in DTU-Learn)
+- From the textbook: 
+  - 1.3 
+  - 1.4.1, 1.4.2, 1.4.3, 1.4.4, 1.4.5
+  - 1.5.1, 1.5.2
+  - 2.1, 2.2 (quick read, no need to go into details with formulas), 2.3 (quick read, no need to go into details with formulas) 
 
 
 ### Lecture 3: Verilog (MS)
