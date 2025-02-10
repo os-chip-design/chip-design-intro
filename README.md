@@ -18,6 +18,7 @@ README content:
 *Students are expected to contribute to the course actively and help improve the material for the future version of the course.*
 
 ## Practicalities
+
 The course runs on **Wednesdays from 13:00 to 17:00** in **Building 308 - Room 017**. 
 
 Each weekly session consist of a lecture and laboratory work. Some session will be fully dedicated to laboratory work (especially at the end of the course when you are expected to work on your project).
@@ -30,10 +31,12 @@ You are very welcome to seek for help by approaching the teachers during the let
 Also, feedback about the course is much appreciated.
 
 ## Course Aim
+
 This course is an introduction to the design of digital integrated circuits. It covers the basics of digital circuits, the tools used, and the process of designing a chip. The course is based open-source tools and open-source PDKs. The course also gives the possibility for student projects to be taped out on Tiny Tapeout.
 
 
 ## Reading Material
+
  * Lecture slides and lab material (provided weekly).
  * The textbook [CMOS VLSI Design, A Circuits and Systems Perspective](https://www.amazon.com/CMOS-VLSI-Design-Circuits-Perspective/dp/0321547748) by Neil H. E. Weste and David Harris, also available as PDF (run an online search).
  * The material related to the open-source tools we use, including installation instructions: [OpenLean 2 Documentation](https://openlane2.readthedocs.io/en/latest/)
