@@ -23,6 +23,16 @@ backgroundColor: #fff
 4. The inverter ('NOT' gate)
 5. Other gates  
 
+## Reading/reference material
+- Lecture slides (also available as PDF in DTU-Learn)
+- From the textbook: 
+  - 1.3 
+  - 1.4.1, 1.4.2, 1.4.3, 1.4.4, 1.4.5
+  - 1.5.1, 1.5.2
+  - 2.1, 2.2*, 2.3* 
+
+<br>
+*quick read, no need to go into details with formulas
 
 
 # <br><br>The need for a controlled switch

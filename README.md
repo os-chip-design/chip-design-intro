@@ -92,8 +92,9 @@ This is a tentative list of lectures. The course will be adapted to the students
   - 1.3 
   - 1.4.1, 1.4.2, 1.4.3, 1.4.4, 1.4.5
   - 1.5.1, 1.5.2
-  - 2.1, 2.2 (quick read, no need to go into details with formulas), 2.3 (quick read, no need to go into details with formulas) 
+  - 2.1, 2.2*, 2.3* 
 
+\* quick read, no need to go into details with formulas
 
 ### Lecture 3: Verilog (MS)
 
