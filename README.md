@@ -106,15 +106,18 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 #### Lecture outline:
 - Introduction to Verilog
-- Small exercises on connecting a module
-- Write a testbench and run it on post-synthesis
-- Do the same in Chisel
+- Introduction to Tiny Tapeout
 
 #### Lab. 3
-- Explore Tiny Tapeout with a Verilog project (GitHib based)
+
+- Small Verilog example (programmable counter)
+- Write a testbench and run it on post-synthesis
+- Do the same in Chisel
+- Use the conters in a memory mapped device
+- Explore Tiny Tapeout with a Verilog project (GitHub based)
 - Do local hardening
 - Simulate post-synthesis
-
+  - probably need a Verilog or cocotb testbench
 
 
 ### Lecture 4: Tool flow (LP)
