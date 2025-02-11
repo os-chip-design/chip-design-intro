@@ -67,8 +67,12 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Exploring a standard gate
 - See [Lab 1](lab_01.md) for instructions
 
-#### Reading/reference material
-- Lecture slides (also available as PDF in DTU-Learn)
+#### Reading
+
+ * Weste and Harris: 1.1 and 1.12
+ * [OpenROAD: Toward a Self-Driving, Open-Source Digital Layout Implementation Tool Chain](https://vlsicad.ucsd.edu/Publications/Conferences/370/c370.pdf)
+ * [Building OpenLANE: A 130nm OpenROAD-based Tapeout- Proven Flow : Invited Paper](https://ieeexplore.ieee.org/document/9256623)
+ * [Tiny Tapeout: A Shared Silicon Tapeout Platform Accessible To Everyone](https://www.techrxiv.org/users/799365/articles/1165896-tiny-tapeout-a-shared-silicon-tapeout-platform-accessible-to-everyone)
 
 ### Lecture 2: The Transistor, the Inverter, and Other Gates (LP)
 
