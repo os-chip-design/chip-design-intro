@@ -5,7 +5,8 @@ This repository contains the material for the 13-week course **02118 - Introduct
 
 This README file contains all the information related to the course. Please **read it carefully** to have an idea of the course structure and expectations.
 
-README content:
+### Content
+
 * [Practicalities](#practicalities)
 * [Course Aim](#course-aim)
 * [Reading Material](#reading-material)
@@ -114,12 +115,12 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Small Verilog example (programmable counter)
 - Write a testbench and run it on post-synthesis
 - Do it in Chisel and in Verilog
-- Use the counters in a memory mapped device (maybe)
 - Do local hardening
 - Simulate post-synthesis
   - probably need a Verilog or cocotb testbench
 - Explore Tiny Tapeout with a Verilog project (GitHub based)
-
+- Use the counters in a memory mapped device (maybe)
+- See [Lab 3](lab_03.md) for instructions
 
 ### Lecture 4: Tool flow (LP)
 

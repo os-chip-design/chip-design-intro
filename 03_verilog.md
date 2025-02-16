@@ -24,6 +24,17 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * And a few lines to connect stuff
  * For serious work: use Chisel
 
+## Verilog vs SystemVerilog
+
+ * Verilog is the old standard
+ * SystemVerilog is an extension
+   - Adding a lot of features
+     - 200+ keywords
+   - Mainly for verification (with UVM)
+     - E.g., object oriented programming
+ * But open-source tools do not fully support SV
+ * We stick to plain Verilog
+
 ---
 ## Links to Further Material
 
