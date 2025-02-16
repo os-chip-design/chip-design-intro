@@ -1,5 +1,11 @@
 `timescale 1ns / 1ps
 
+`define assert(signal, value) \
+        if (signal !== value) begin \
+            $display("ASSERTION FAILED in %m: signal != value"); \
+            $finish; \
+        end
+
 module up_down_counter_tb;
 
     // Inputs
@@ -14,7 +20,7 @@ module up_down_counter_tb;
     wire [3:0] count;
 
     // Instantiate the Unit Under Test (UUT)
-    up_down_counter uut (
+    up_down_counter dut (
         .clk(clk),
         .reset(reset),
         .enable(enable),
@@ -28,6 +34,8 @@ module up_down_counter_tb;
     always #5 clk = ~clk;
 
     initial begin
+        $dumpfile("counter.vcd");
+        $dumpvars(0, dut);
         // Initialize Inputs
         clk = 0;
         reset = 0;
@@ -35,22 +43,26 @@ module up_down_counter_tb;
         set = 0;
         set_value = 4'b0000;
         up_down = 0;
+        `assert(set, 0);
 
         // Apply reset
         reset = 1;
         #10;
         reset = 0;
+        `assert(count, 4'b0000);
 
         // Test set functionality
         set_value = 4'b1010;
         set = 1;
         #10;
         set = 0;
+        `assert(count, 4'b1010);
 
         // Test enable and up counting
         enable = 1;
         up_down = 1; // Count up
         #50;
+        `assert(count, 4'b1111);
 
         // Test down counting
         up_down = 0; // Count down
@@ -64,6 +76,7 @@ module up_down_counter_tb;
         reset = 1;
         #10;
         reset = 0;
+        `assert(count, 4'b0000);
         enable = 1;
         up_down = 1; // Count up
         #50;

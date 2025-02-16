@@ -14,5 +14,9 @@ test_verilog:
 	./a.out
 
 clean:
-	rm -rf src
-	rm -rf test_run_dir
+	- rm -rf src
+	- rm -rf test_run_dir
+	- rm *.txt
+	- rm *.vcd
+	- rm *.out
+	- rm *.vvp
