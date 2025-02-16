@@ -38,11 +38,12 @@ This course is an introduction to the design of digital integrated circuits. It 
 
 ## Reading Material
 
- * Lecture slides and lab material (provided weekly).
- * The textbook [CMOS VLSI Design, A Circuits and Systems Perspective](https://www.amazon.com/CMOS-VLSI-Design-Circuits-Perspective/dp/0321547748) by Neil H. E. Weste and David Harris, also available as PDF.
+ * Lecture slides and lab material
+ * The textbook [CMOS VLSI Design, A Circuits and Systems Perspective](https://www.amazon.com/CMOS-VLSI-Design-Circuits-Perspective/dp/0321547748) by Neil H. E. Weste and David Harris, also available as PDF
  * The material related to the open-source tools we use, including installation instructions: [OpenLean 2 Documentation](https://openlane2.readthedocs.io/en/latest/)
    - For a quick start: [OpenLane 2 in the browser](https://colab.research.google.com/github/efabless/openlane2/blob/main/notebook.ipynb), link is from [efabless](https://efabless.com/openlane)
- * [Caravel Documentation](https://github.com/efabless/caravel)  
+ * [Caravel Documentation](https://github.com/efabless/caravel)
+ * [Chisel Book](https://www.imm.dtu.dk/~masca/chisel-book.html) (as  reference when doing designs in Chisel) 
 
 ## Lecture plan
 
@@ -100,7 +101,7 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 \* quick read, no need to go into details with formulas
 
-### Lecture 3: Verilog (MS)
+### Lecture 3: Verilog and Tiny Tapeout (MS)
 
 - [Lecture slides](03_verilog.md)
 
@@ -112,12 +113,12 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 - Small Verilog example (programmable counter)
 - Write a testbench and run it on post-synthesis
-- Do the same in Chisel
-- Use the conters in a memory mapped device
-- Explore Tiny Tapeout with a Verilog project (GitHub based)
+- Do it in Chisel and in Verilog
+- Use the counters in a memory mapped device (maybe)
 - Do local hardening
 - Simulate post-synthesis
   - probably need a Verilog or cocotb testbench
+- Explore Tiny Tapeout with a Verilog project (GitHub based)
 
 
 ### Lecture 4: Tool flow (LP)

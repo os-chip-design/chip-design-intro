@@ -12,7 +12,7 @@ backgroundColor: #fff
 
 # **The transistor, the inverter, <br>and other gates**
 
-**Luca Pezzarossa and Martin Schoeberl**
+**Luca Pezzarossa**
 
 
 ## Agenda

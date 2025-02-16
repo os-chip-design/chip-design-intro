@@ -9,9 +9,9 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 <!-- headingDivider: 3 -->
 
-# **Verilog**
+# **Verilog and Tiny Tapeout**
 
-**Martin Schoeberl and Luca Pezzarossa**
+**Martin Schoeberl**
 
 
 ## Verilog Introduction

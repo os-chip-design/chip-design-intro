@@ -1,6 +1,6 @@
 # Lab 2: Exercides with SiliWiz
 
-This week, you will carry out some exercises using SiliWiz, a walkthrough provided by TinyTapeout, which covers the fundamentals of semiconductors.
+This week, you will carry out some exercises using SiliWiz, a walkthrough provided by Tiny Tapeout, which covers the fundamentals of semiconductors.
 
 ## Instructions
 Read the material and carry out the all exercises in order form [SiliWiz](https://tinytapeout.com/siliwiz/).

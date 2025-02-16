@@ -8,6 +8,10 @@ The following tools are installed:
 
 ### Nix Installation
 
+Follow the description from the [OpenLane 2 Documentation](https://openlane2.readthedocs.io/en/latest/) to install nix.
+
+Only if this fails, explore the following options.
+
 #### NixOS Method
 
 NixOS installation should have nix inherently installed.
