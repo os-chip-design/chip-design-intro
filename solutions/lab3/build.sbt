@@ -1,10 +1,11 @@
-name := "chip-design-intro"
+scalaVersion := "2.13.10"
 
-version := "0.1"
-
-scalaVersion := "2.12.10"
-
-libraryDependencies ++= Seq(
-  "edu.berkeley.cs" %% "chisel3" % "3.5.0",
-  "edu.berkeley.cs" %% "chiseltest" % "0.5.0"
+scalacOptions ++= Seq(
+  "-feature",
+  "-language:reflectiveCalls",
 )
+
+// Chisel 3.5
+addCompilerPlugin("edu.berkeley.cs" % "chisel3-plugin" % "3.5.6" cross CrossVersion.full)
+libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.5.6"
+libraryDependencies += "edu.berkeley.cs" %% "chiseltest" % "0.5.6"
