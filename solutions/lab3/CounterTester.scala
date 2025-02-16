@@ -5,7 +5,7 @@ import chiseltest._
 import org.scalatest.flatspec.AnyFlatSpec
 
 // Define the BlackBox for the Verilog module
-class up_down_counter extends BlackBox {
+class up_down_counter extends BlackBox with HasBlackBoxResource {
   val io = IO(new Bundle {
     val clk = Input(Bool())
     val reset = Input(Bool())
@@ -15,6 +15,8 @@ class up_down_counter extends BlackBox {
     val up_down = Input(Bool())
     val count = Output(UInt(4.W))
   })
+  // addPath("up_down_counter.v")
+  addResource("up_down_counter.v")
 }
 
 // Define a wrapper module to connect the BlackBox
@@ -37,10 +39,12 @@ class UpDownCounterWrapper extends Module {
   io.count := counter.io.count
 }
 
+// IcarusBackendAnnotation
+// VerilatorBackendAnnotation
 // Testbench using ChiselTest
 class UpDownCounterTest extends AnyFlatSpec with ChiselScalatestTester {
   "UpDownCounter" should "count up and down correctly" in {
-    test(new UpDownCounterWrapper).withAnnotations(Seq(WriteVcdAnnotation, VerilatorBackendAnnotation)) { c =>
+    test(new UpDownCounterWrapper).withAnnotations(Seq(WriteVcdAnnotation, IcarusBackendAnnotation)) { c =>
       // Initialize inputs
       c.io.enable.poke(false.B)
       c.io.set.poke(false.B)

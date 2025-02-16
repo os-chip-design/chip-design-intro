@@ -1,32 +1,18 @@
-# Define the Verilog source files
-VERILOG_SOURCES = counter.v tb_counter.v
+all: clean test_counter test_verilog
 
-# Define the output executable
-OUTPUT_EXECUTABLE = tb_counter
+# Use ChiselTest
+# some workaround to find the Verilog files
+test_counter:
+	mkdir src
+	mkdir src/main
+	mkdir src/main/resources
+	cp up_down_counter.v src/main/resources
+	sbt test
 
-# Define the VVP output file
-VVP_OUTPUT = tb_counter.vvp
+test_verilog:
+	iverilog up_down_counter.v tb_counter.v
+	./a.out
 
-# Define the simulation output file
-SIM_OUTPUT = tb_counter_output.txt
-
-# Define the Icarus Verilog compiler and simulator
-IVERILOG = iverilog
-VVP = vvp
-
-# Default target to compile and run the testbench
-all: run
-
-# Compile the Verilog sources
-compile:
-	$(IVERILOG) -o $(VVP_OUTPUT) $(VERILOG_SOURCES)
-
-# Run the simulation
-run: compile
-	$(VVP) $(VVP_OUTPUT) | tee $(SIM_OUTPUT)
-
-# Clean up generated files
 clean:
-	rm -f $(VVP_OUTPUT) $(SIM_OUTPUT) $(OUTPUT_EXECUTABLE)
-
-.PHONY: all compile run clean
+	rm -rf src
+	rm -rf test_run_dir
