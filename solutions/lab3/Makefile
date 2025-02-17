@@ -13,9 +13,15 @@ test_verilog:
 	iverilog up_down_counter.v tb_counter.v
 	./a.out
 
+synth:
+	openlane counter.json
+
+show:
+	openlane --last-run --flow openinklayout counter.json
 clean:
 	- rm -rf src
 	- rm -rf test_run_dir
+	- rm -rf runs
 	- rm *.txt
 	- rm *.vcd
 	- rm *.out

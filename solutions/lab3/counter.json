@@ -1,0 +1,6 @@
+{
+  "DESIGN_NAME": "up_down_counter",
+  "VERILOG_FILES": ["dir::up_down_counter.v"],
+  "CLOCK_PERIOD": 20,
+  "CLOCK_PORT": "clock"
+}
