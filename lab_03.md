@@ -143,20 +143,68 @@ Use your macro as:
  * Run the flow
  * Check the results
 
+### Lab 1 Reminder
+   
+   * *Assuming your OpenLane installation is in the home / ~ directory.*
+   ```zsh
+   nix-shell --pure ~/openlane2/shell.nix
+   ```
+
 ## Tiny Tapeout
 
- * Use the [Verilog template](https://github.com/TinyTapeout/tt10-verilog-template) for Tiny Tapout (TT10)
+ * Use the [Verilog template](https://github.com/TinyTapeout/tt10-verilog-template) for Tiny Tapeout (TT10)
  * Add your counter and a test for it
  * Edit the needed documentation and configuration files
-   * See [docu in Tiny Tapeout](https://tinytapeout.com/guides/workshop/create-your-gds/)
+   * See [documentation in Tiny Tapeout](https://tinytapeout.com/guides/workshop/create-your-gds/)
    * But ignore the reference to Wokwi
  * Run the flow with GitHub actions
- * Explore the resuls
-   - Reources needed
+ * Explore the results
+   - Resources needed
    - 3D view of your design
    - Look at individual cells in the 3D viewer
 
-## Advaced Stuff
+### Common Issues
+
+#### *'docs' Build Failure*
+
+Ensure that the info.yaml file has every entry but the Discord filled in the .yaml,
+ensure that the indentation is preserved.
+Also make sure that /docs/info.md has each subheader filled with different information other than the default given one as otherwise it will fail the build.
+
+#### *'gds' Build Failure*
+
+```rust
+Run ./tt/tt_tool.py --create-user-config
+2025-02-18 07:28:24,712 - project    - ERROR    - Error loading /home/runner/work/ta-test-run/ta-test-run/info.yaml: Top module must start with 'tt_um_' (e.g. tt_um_my_project)
+Error: Process completed with exit code 1.
+```
+
+Ensure that top module of the verilog project starts with 'tt_um_*'.
+
+#### *"Missing Ports"*
+
+```rust
+2025-02-18 09:12:31,901 - project    - ERROR    - [000 : unknown] port 'ena' missing from top module ('tt_um_up_down_counter')
+2025-02-18 09:12:31,901 - project    - ERROR    - [000 : unknown] port 'rst_en' missing from top module ('tt_um_up_down_counter')
+..
+2025-02-18 09:12:31,901 - project    - ERROR    - [000 : unknown] port 'ui_in' missing from top module ('tt_um_up_down_counter')
+```
+
+TinyTapeout has hard-typed inputs and outputs. You need to make sure that the ports in your Verilog file match the ports in the template. Here are the following "missing ports" to the top module in your implementation.
+
+```verilog
+    input  wire [7:0] ui_in,    // Dedicated inputs
+    output wire [7:0] uo_out,   // Dedicated outputs
+    input  wire [7:0] uio_in,   // IOs: Input path
+    output wire [7:0] uio_out,  // IOs: Output path
+    output wire [7:0] uio_oe,   // IOs: Enable path (active high: 0=input, 1=output)
+    input  wire       ena,      // always 1 when the design is powered, so you can ignore it
+    input  wire       clk,      // clock
+    input  wire       rst_n     // reset_n - low to reset
+```
+
+
+## Advanced Stuff
 
  * Run your test bench on the post synthesis Verilog
    - one from OpenLane2
