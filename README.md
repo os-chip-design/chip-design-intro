@@ -286,6 +286,21 @@ You can choose your own project idea based on your interests. Some suggestions i
 - VGA-based videogame
 - More suggestion will come later
 
+### System on Chip Tapeout
+
+ * CPU
+ * VGA as character display
+ * Keyboard
+ * Serial port
+ * GPIO
+ * Cache
+ * Memory controller
+ * SPI with switch to *fast* mode
+ * Accelerator
+ * Special IOs (PWM and others)
+
+
+
 ### Project Scope
 The project involves the following tasks:
 

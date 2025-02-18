@@ -145,9 +145,10 @@ Use your macro as:
 
 ### Lab 1 Reminder
    
-   * *Assuming your OpenLane installation is in the home / ~ directory.*
+   * Assuming your OpenLane installation is in the home ~ directory
    ```zsh
-   nix-shell --pure ~/openlane2/shell.nix
+   cd openlane2
+   nix-shell
    ```
 
 ## Tiny Tapeout
@@ -204,8 +205,8 @@ TinyTapeout has hard-typed inputs and outputs. You need to make sure that the po
 ```
 
 
-## Advanced Stuff
+## Advanced Lab
 
  * Run your test bench on the post synthesis Verilog
-   - one from OpenLane2
-   - one from Tiny Tapeout
+   - the one from OpenLane2
+   - the one from Tiny Tapeout
