@@ -39,3 +39,51 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 ```
 #### Workaround
 Wait for some minutes and retry again! It just means that people are overloading the GitHub API.
+
+## SiliWiz
+
+
+- Make sure you use "in", "Vdd", "Vss" as input, power and ground respectively to make sure that the SPICE simulator built into the SiliWiz works as intended.
+- Make sure that you have added the "via" layer between the silicon and the metal.
+- The current through the gate is proportional to the width and height of the polysilicon, which means that the thinner and smaller the gate, the more current can go through it.
+- Higher the capacitance, the less steep the voltage drop after the charge, so you need to zoom in really deep to see the drop than the given example gives.
+
+## TinyTapeout
+
+### *'docs' Build Failure*
+
+Ensure that the info.yaml file has every entry but the Discord filled in the .yaml,
+ensure that the indentation is preserved.
+Also make sure that /docs/info.md has each subheader filled with different information other than the default given one as otherwise it will fail the build.
+
+### *'gds' Build Failure*
+
+```rust
+Run ./tt/tt_tool.py --create-user-config
+2025-02-18 07:28:24,712 - project    - ERROR    - Error loading /home/runner/work/ta-test-run/ta-test-run/info.yaml: Top module must start with 'tt_um_' (e.g. tt_um_my_project)
+Error: Process completed with exit code 1.
+```
+
+Ensure that top module of the verilog project starts with 'tt_um_*'.
+
+### *"Missing Ports"*
+
+```rust
+2025-02-18 09:12:31,901 - project    - ERROR    - [000 : unknown] port 'ena' missing from top module ('tt_um_up_down_counter')
+2025-02-18 09:12:31,901 - project    - ERROR    - [000 : unknown] port 'rst_en' missing from top module ('tt_um_up_down_counter')
+..
+2025-02-18 09:12:31,901 - project    - ERROR    - [000 : unknown] port 'ui_in' missing from top module ('tt_um_up_down_counter')
+```
+
+TinyTapeout has hard-typed inputs and outputs. You need to make sure that the ports in your Verilog file match the ports in the template. Here are the following "missing ports" to the top module in your implementation.
+
+```verilog
+    input  wire [7:0] ui_in,    // Dedicated inputs
+    output wire [7:0] uo_out,   // Dedicated outputs
+    input  wire [7:0] uio_in,   // IOs: Input path
+    output wire [7:0] uio_out,  // IOs: Output path
+    output wire [7:0] uio_oe,   // IOs: Enable path (active high: 0=input, 1=output)
+    input  wire       ena,      // always 1 when the design is powered, so you can ignore it
+    input  wire       clk,      // clock
+    input  wire       rst_n     // reset_n - low to reset
+```
