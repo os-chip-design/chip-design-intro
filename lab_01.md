@@ -58,7 +58,11 @@ then enter the nix environment from a VSCode terminal.
 ## Using a Server
 
 Alternative to installing the tools locally you can run them on
-`chipdesign1.compute.dtu.dk`. You shall have access via `ssh` to this server.`nix` and OpenLane2 are installed. Change to `/home/share/openlane2` and
+`chipdesign1.compute.dtu.dk`. You shall have access via `ssh` to this server.
+
+However, students cannot access our internal systems directly by default, even with DTU VPN active. The only system we allow SSH into by students using DTU VPN is 'linuxterm1.compute.dtu.dk' aka. 'thinlinc.compute.dtu.dk'. From here they can then ssh again into chipdesign1.
+
+`nix` and OpenLane2 are installed. Change to `/home/share/openlane2` and
 start the nix shell.
 
 Then change back to your home directory start working from there.

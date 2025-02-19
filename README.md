@@ -32,6 +32,10 @@ The course has two teachers:
 You are very welcome to seek for help by approaching the teachers during the letctures and laboratory sessions, or via mail, or our Discord channel.
 Also, feedback about the course is much appreciated.
 
+## Tools
+
+Install the OpenLane2 tools locally or use the server `chipdesign1.compute.dtu.dk`. The tools are currently usable on Linux and MacOS (even native with Mac Silicon). For Windows use WSL2 to have a Linux environment. There is no official support for Windows available. See [Lab 1](lab_01.md) for installation instructions.
+
 ## Course Aim
 
 This course is an introduction to the design of digital integrated circuits. It covers the basics of digital circuits, the tools used, and the process of designing a chip. The course is based open-source tools and open-source PDKs. The course also gives the possibility for student projects to be taped out on Tiny Tapeout.
