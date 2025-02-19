@@ -37,6 +37,9 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Verilog Syntax
 
+ * Very C like
+   - e.g, has include file
+   - defines
  * Module based
  * Ports
  * Wires and regs
@@ -265,7 +268,7 @@ iverilog hello.v
 
 ## Reading Verilog
 
- * Many not so good examples on the web
+ * Examples on the web often not great
  * [YARVI](https://github.com/tommythorn/yarvi) is fine
  * [IBEX](https://github.com/lowRISC/ibex) is a very verbose RISC-V example
  * Maybe check the output from Chisel?
@@ -288,7 +291,8 @@ iverilog hello.v
    * $ 50 for a tile
    * 100 x 160 um
    * About 1000 gates
- * We can use Tiny Tapeout for our project
+   * A tiny 8-bit processor (Lipsi) fits in one tile
+ * We can use Tiny Tapeout for projects
 
 
  ## Project
@@ -301,7 +305,7 @@ iverilog hello.v
    * Send me your GitHub ID to get access
  * Do a real tapeout
    * Sponsored by Edu4Chip
- * Show the efabless chip
+ * Show the efabless physical chip
 
  ## Core Components
 
