@@ -122,6 +122,11 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Use the counters in a memory mapped device (maybe)
 - See [Lab 3](lab_03.md) for instructions
 
+#### Reading
+
+ - Find good Verilog projects and read the code
+   - E.g., [YARVI](https://github.com/tommythorn/yarvi)
+
 ### Lecture 4: Tool flow (LP)
 
 - [Lecture slides](???.pdf) - not yet availble

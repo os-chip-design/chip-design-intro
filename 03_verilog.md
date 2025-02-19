@@ -47,10 +47,13 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ## Verilog by Examples
 
  * Will show you some examples
- * First Chisel code
- * Again: we only need to be able to read Verilog
+ * First Chisel code then Verilog
+ * Again: we only need to be able to read some Verilog
+ * It is OK to use LLMs for generating Verilog
+   - You *just* need to be able to fix errors ;-)
+ * See also the [Verilog Cheat Sheet](https://marceluda.github.io/rp_dummy/EEOF2018/Verilog_Cheat_Sheet.pdf)
 
-## Chisel Component
+## A Chisel Component
 
 ```scala
 import chisel3._
@@ -65,7 +68,7 @@ class ChiselAdder extends Module {
 }
 ```
 
-## Verilog Component
+## A Verilog Component
 
 ```verilog
 module adder(
@@ -184,12 +187,13 @@ endmodule
 
  * Blocking assignments
    - `=` in Verilog
-   - Sequential
+   - Sequential execution (order matters)
    - for combinational logic
  * Non-blocking assignments
    - `<=` in Verilog
+   - Parallel execution
    - for sequential logic
-   - Parallel
+
 
 ## Blocking Assignments
 
@@ -209,8 +213,8 @@ assign count = count_reg;
 
 ## Non-Blocking Assignments
 - **Syntax**: `<=`
-- **Execution**: Executes concurrently, allowing multiple assignments to occur simultaneously.
-- **Usage**: Typically used in sequential logic (e.g., within `always` blocks triggered by clock edges).
+- **Execution**: Executes concurrently, allowing multiple assignments to occur simultaneously
+- **Usage**: Typically used in sequential logic (e.g., within `always` blocks triggered by clock edge)
 
 ```verilog
 always @(posedge clk) begin
@@ -218,14 +222,6 @@ always @(posedge clk) begin
   d <= a + e;
 end
 ```
-
-## Blocking vs. Non-Blocking
-- **Blocking (`=`)**:
-  - Executes sequentially.
-  - Suitable for combinational logic.
-- **Non-Blocking (`<=`)**:
-  - Executes concurrently.
-  - Suitable for sequential logic.
 
 
 ## reg vs wire
@@ -236,23 +232,9 @@ end
    - Depends on always block
  * `wire` is a wire
    - Represents combinational logic or a port
-   - Connects modules
    - Can be assigned
    - Used out of always blocks
-
-## Verilog Example
-
-```verilog
-module up_down_counter (
-    input wire clk,
-    input wire reset,
-    input wire enable,
-    input wire set,
-    input wire [3:0] set_value,
-    input wire up_down, // 1 for up, 0 for down
-    output wire [3:0] count
-);
-```
+   - Connects modules
 
 
 ## Verilog Simulation
@@ -280,6 +262,33 @@ endmodule
 iverilog hello.v
 ./a.out
 ```
+
+## Reading Verilog
+
+ * Many not so good examples on the web
+ * [YARVI](https://github.com/tommythorn/yarvi) is fine
+ * [IBEX](https://github.com/lowRISC/ibex) is a very verbose RISC-V example
+ * Maybe check the output from Chisel?
+
+## Multi-Project Wafer (MPW)
+
+ * A waver is expensive
+ * Sharing cost on a multi-project wafer (MPW)
+ * eFabless offers this service, see [MPW example](https://efabless.com/open_shuttle_program)
+   * $ 10000 for a full chip
+   * 10 mm2
+ * 130 nm
+ * Full oppen source PDK
+ * Show the chip around
+
+## Tiny Tapeout
+
+ * Tiny Tapeout takes it further down
+ * Split the MPW into 512 tiny tiles
+   * $ 50 for a tile
+   * 100 x 160 um
+   * About 1000 gates
+ * We can use Tiny Tapeout for our project
 
 
  ## Project
@@ -340,7 +349,7 @@ iverilog hello.v
 
 ## Summary
 
- * Verilog is the standard language for OS tools
+ * Verilog is the standard language for open-source tools
  * In general used in ASIC design
    - VHDL is a bit dead
  * We looked at a bit on Verilog
