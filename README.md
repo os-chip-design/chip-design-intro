@@ -148,11 +148,13 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Run the desing through the open-source tools
 
 
-### Lecture 5: Memory and Register Files (MS) - TENTATIVE
+### Lecture 5: Chisel Review, Memory and Register Files (MS) - TENTATIVE
 
 - [Lecture slides](???.pdf) - not yet availble
 
 #### Lecture outline:
+
+- Review of Chisel
 - Memory types and memory organization
 - Register files: FF, sync mem, latches, custom design
 - Memory macros (IP blocks)
