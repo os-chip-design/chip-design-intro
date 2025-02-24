@@ -75,10 +75,11 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 #### Reading
 
- * Weste and Harris: 1.1 and 1.12
- * [OpenROAD: Toward a Self-Driving, Open-Source Digital Layout Implementation Tool Chain](https://vlsicad.ucsd.edu/Publications/Conferences/370/c370.pdf)
- * [Building OpenLANE: A 130nm OpenROAD-based Tapeout- Proven Flow : Invited Paper](https://ieeexplore.ieee.org/document/9256623)
- * [Tiny Tapeout: A Shared Silicon Tapeout Platform Accessible To Everyone](https://www.techrxiv.org/users/799365/articles/1165896-tiny-tapeout-a-shared-silicon-tapeout-platform-accessible-to-everyone)
+- Lecture slides (also available as PDF in DTU-Learn)
+- Weste and Harris: 1.1 and 1.12
+- [OpenROAD: Toward a Self-Driving, Open-Source Digital Layout Implementation Tool Chain](https://vlsicad.ucsd.edu/Publications/Conferences/370/c370.pdf)
+- [Building OpenLANE: A 130nm OpenROAD-based Tapeout- Proven Flow : Invited Paper](https://ieeexplore.ieee.org/document/9256623)
+- [Tiny Tapeout: A Shared Silicon Tapeout Platform Accessible To Everyone](https://www.techrxiv.org/users/799365/articles/1165896-tiny-tapeout-a-shared-silicon-tapeout-platform-accessible-to-everyone)
 
 ### Lecture 2: The Transistor, the Inverter, and Other Gates (LP)
 
@@ -128,25 +129,41 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 #### Reading
 
- - Find good Verilog projects and read the code
-   - E.g., [YARVI](https://github.com/tommythorn/yarvi)
+- Lecture slides (also available as PDF in DTU-Learn)
+- Find good Verilog projects and read the code
+  - E.g., [YARVI](https://github.com/tommythorn/yarvi)
 
-### Lecture 4: Tool flow (LP)
 
-- [Lecture slides](???.pdf) - not yet availble
+### Lecture 4: Tool flow and course project (LP)
+
+- [Lecture slides](04_tools.md)
 
 #### Lecture outline:
-- Introduction to the OpenLane tool flow
-- Synthesis flow
-- Logic optimization
-- Timing analysis
-- Placement and routing
-- Post-implementation verification
+
+- Introduction to the OpenLane2 ASIC design flow
+- Input preparation and RTL linting
+- Synthesis and logic optimization
+- Floorplanning and placement
+- Clock tree synthesis
+- Routing and RC extraction
+- Timing signoff and GDSII streaming
+- Physical signoff and SDF simulation
+- Overview of the course project and group formation
 
 #### Lab. 4 
-- Make a small/medium size design of your choiche (larger than the "Hello World" from Lab. 1.)
-- Run the desing through the open-source tools
+- Discussion about the project
+- Form and register groups for the course project
+- Choose a project component to work on (CPU, memory, peripherals, testing, etc.)
+- Set up the development environment
+- Start working on initial design steps
+- Register groups in DTU-Learn and sign up in the GitHub repository
 
+#### Reading
+
+- Lecture slides (also available as PDF in DTU-Learn)
+- [OpenLane2 Documentation](https://openlane2.readthedocs.io/en/latest/)* 
+
+\* This is a large documentation from whih this slide set is based upon, you do not need to read it all. Reference to it when needed.
 
 ### Lecture 5: Chisel Review, Memory and Register Files (MS) - TENTATIVE
 
