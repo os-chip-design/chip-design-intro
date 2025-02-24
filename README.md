@@ -165,6 +165,7 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 \* This is a large documentation from whih this slide set is based upon, you do not need to read it all. Reference to it when needed.
 
+
 ### Lecture 5: Chisel Review, Memory and Register Files (MS) - TENTATIVE
 
 - [Lecture slides](???.pdf) - not yet availble
@@ -179,7 +180,7 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Models and simulation
 
 #### Lab. 5 
-- TBA
+- Work on the project
 
 
 ### Lecture 6: SoC, interfaces, and NoCs (LP)
@@ -194,11 +195,7 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Building large systems 
 
 #### Lab. 6 
-- Decide the desing for the final project
-- Define the objectives 
-- Compile the design specifications
-- Define a verification plan 
-- Make a timeplan
+- Work on the project
 
 
 ### Lecture 7: Student project presentations (MS/LP)
@@ -295,69 +292,57 @@ The teachers and the other groups give feeback.
 Each group presents their finalized project and discusses the results.
 
 
-## Project
-The project aims to provides you with an opportunity to apply the concepts, tools, and techniques learned throughout the course to design, implement, verify, and prepare a medium/small digital design for tapeout using open-source tools. 
+## Project: DTU-SoC-2025
+
+The course project is focused on designing and implementing a **System-on-Chip (SoC)** using open-source tools. The goal is to collaboratively develop a working SoC that includes a **CPU, memory, peripherals, and essential interfaces**.
 
 ### Group forming
+
 The project should be carried out in **groups of 3 people** (groups of 2 are also possible but less preferred). You are free to select your group members. **Groups should be registered as soon as formed in the DTU-Learn group forming facility.** If you experience difficulties forming a group, please contact the teacher.
 
 When forming a new group, please make sure that you align expectations between the members. To achieve this, we recommend having a discussion about each member’s availability, work habits, and goals for the course to ensure a smooth and collaborative experience.
 
+### Project scope
 
-### Ideas
-You can choose your own project idea based on your interests. Some suggestions include:
+Each student group will contribute to a part of the SoC. You can choose from the following components:
 
-- Designing an SRAM module for Tiny Tapeout
-- Contributing a component for the Edu4Chip tapeout, such as a small accelerator or subsystem
-- Creating a custom-designed C-gate standard cell
-- Developing an efficient register file or other fundamental digital block
-- VGA-based videogame
-- More suggestion will come later
+- **CPU** (Wildcat RISC-V core)
+- **Cache system** (optional)
+- **Memory controller** (handling SPI-based flash, RAM access, memory-mapped peripherals)
+- **Peripherals:**
+  - VGA character display
+  - Keyboard interface
+  - Serial port (UART)
+  - GPIO and timer
+  - Special IOs (PWM and others)
+- **SPI interface** (with optional quad-mode support)
+- **Continuous integration** (managing continuous verification after design changes)
+- **Verification** (creating testbenches, simulations, and FPGA testing)
+- **Physical design tools** (OpenLane2 workflow, synthesis, placement, routing, signoff)
 
-### System on Chip Tapeout
+See Lecture 4 for more details.
 
- * CPU
- * VGA as character display
- * Keyboard
- * Serial port
- * GPIO
- * Cache
- * Memory controller
- * SPI with switch to *fast* mode
- * Accelerator
- * Special IOs (PWM and others)
+### Weekly Coordination
 
+To ensure smooth progress, we will coordinate weekly during the lab sessions. These sessions will be used to:
 
-
-### Project Scope
-The project involves the following tasks:
-
--Design selection and implementation
-  - Choose a design
-  - Define objectives and specifications
-  - Implement the design using Verilog or Chisel
-
-- Verification and testing
-  - Create a testbench to verify the functionality of the design pre-synthesis
-  - Perform post-synthesis and post-layout simulations to ensure correctness
-  - Test using an FPGA
-
-- Physical design
-  -Use the OpenLane toolchain to run the design through the synthesis, placement, routing, and verification processes.
-
-Tapeout preparation
-  - Prepare the design for submission to eFabless or Tiny Tapeout, ensuring it meets the requirements.
+- Discuss progress and challenges faced by each group
+- Provide feedback and guidance on design, implementation, and verification
+- Address any issues related to tools and integration
+- Keep track of milestones and ensure alignment with the tapeout schedule
+- Work on the project
 
 ### Deliverables
+
 You are expected to hand-in the following deliverables:
 - **Report:** A report describing your desing and your work. The report should be formatted as IEEE paper and not be longer than 6 pages
-In the following, you can find the expected content of the report:
+In the following, you can find the expected content of the report (not all entries may apply to your project):
   - *Title*
   - *Group number*
   - *Names and student IDs of the group members*
   - *Contributions:* Clearly state what each team member contributed to the project. This section is crucial for evaluating individual contributions and ensuring fair grading.
-  - *Introduction*: Introduce your chosen design, outlining its purpose, objectives, and specifications. Explain the type of system you aimed to design (and its potential applications).
-  - *Design*: Summarize the key aspects of your design, including its functionality and features. Provide a detailed block diagram to illustrate the overall architecture. If needed, explain how the design fits into a larger system.
+  - *Introduction*: Introduce your chosen design, outlining its purpose, objectives, and specifications.
+  - *Design*: Summarize the key aspects of your design, including its functionality and features. Provide a detailed block diagram to illustrate the overall architecture. Explain how the design fits into the larger system.
   - *Implementation*:
     - Describe how you implemented your design using Verilog, Chisel, or both.
     - Highlight specific steps in the chip design process and explain how open-source tools were used.
@@ -367,25 +352,41 @@ In the following, you can find the expected content of the report:
     - Include results from DRC (Design Rule Check), timing analysis, etc. to demonstrate the design's readiness for tapeout.
     - Tapeout preparation: Summarize the final steps taken to prepare the design for tapeout, (integration with the Caravel framework and/or and ensuring compliance with Tiny Tapeout requirements). 
 
-- **Source files:** All the source code of your implementation, scripts, and tests/verification material. It is fine to just have a link to a repository. 
+- **Source files:** All the source code of your implementation, scripts, and tests/verification material. Mentioning the location on the repository is fine. 
 
-- **README file:** A README file that includes instructions on how to set up and run your processor on the FPGA, as well as how to run any test cases you developed.
+- **README file:** A README file that includes all needed tachnical instructions.
 
 The deadline for the hand-in is **TBD** at **midnight**.
 
 ### Project assessment criteria
-- **Relevance and complexity**: Is the desing releavnt and sufficiently complex?
-- **Correctness**: Does the design function as intended?
-- **Optimization**: Is the design efficient in terms of area and performance?
-- **Verification quality**: Are the testbenches comprehensive and simulations accurate?
-- **Testing quality**: Was the desing properly tested?
-- **Completion**: Is the design ready for tapeout?
-- **Report quality**: Does the report properly convey what was acheived?
+
+- **Relevance and complexity**
+  - Does the design address a meaningful challenge?
+- **Correctness**
+  - Does the implementation function as intended?
+  - Are there any critical design flaws?
+- **Optimization**
+  - Area and performance efficiency considerations
+  - Power consumption and design trade-offs
+- **Verification quality**
+  - Comprehensive testbenches and accurate simulations
+  - Pre-synthesis and post-synthesis validation
+- **Testing quality**
+  - Functional FPGA testing
+  - DRC and layout verification
+- **Completion**
+  - Is the design ready for tapeout?
+- **Report quality**
+  - Clear documentation of methodology, challenges, and results
 
 ### Suggested timeline
-- **Weeks 6**: Finalize the project concept, define objectives, and begin initial design and verification planning.
-- **Weeks 7-11**: Develop the design, perform simulation and verification, and initiate the physical design process.
-- **Weeks 12-13**: Finalize physical design, complete DRC/LVS checks, and prepare the design for submission.
+
+- **Week 4**: Form groups, select project, open discussion
+- **Week 6**: Finalize desing concept, define specs, align between groups
+- **Weeks 7-11**: Develop design, run simulations, initiate physical design
+- **Weeks 12-13**: Finalize physical design, complete DRC/LVS checks, prepare for submission
+
+- **We could finish earlier** for the April tapeout
 
 ## Exam
 

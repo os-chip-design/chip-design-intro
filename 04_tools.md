@@ -507,7 +507,7 @@ Explore "The OpenLane Infrastructure" image at this [link](https://github.com/ef
 
 
 ## Suggested timeline
-- **Week 5 (today)**: Form groups, select project, open discussion
+- **Week 4**: Form groups, select project, open discussion
 - **Week 6**: Finalize desing concept, define specs, align between groups
 - **Weeks 7-11**: Develop design, run simulations, initiate physical design
 - **Weeks 12-13**: Finalize physical design, complete DRC/LVS checks, prepare for submission
