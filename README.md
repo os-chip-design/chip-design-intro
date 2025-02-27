@@ -183,28 +183,31 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Work on the project
 
 
-### Lecture 6: SoC, interfaces, and NoCs (LP)
+### Lecture 6: SoC, Interfaces, and NoCs (LP)
 
 - [Lecture slides](???.pdf) - not yet availble
 
 #### Lecture outline:
+
 - Introduction to SoCs 
 - Memory-Mapped I/O concepts
 - Interfaces: Ready/Valid handshaking, APB, AXI, SPI
 - Introduction to NoCs (Networks-on-Chip)
 - Building large systems 
 
-#### Lab. 6 
+#### Lab. 6
+
 - Work on the project
 
 
-### Lecture 7: Student project presentations (MS/LP)
+### Lecture 7: Student Project Presentations (MS/LP)
 
 Each group presents the project idea and preliminary design, outlining the chosen concept, the objectives, the verification plan, and the time plan.
 
 The teachers and the other groups give feeback. 
 
 #### Lab. 7 
+
 - Work on the project
 - Apply the learning from the lecture in the project
 
@@ -214,6 +217,7 @@ The teachers and the other groups give feeback.
 - [Lecture slides](???.pdf) - not yet availble
 
 #### Lecture outline:
+
 - Introduction to verification
 - Verification methodologies
 - Simulation-based verification
@@ -223,12 +227,15 @@ The teachers and the other groups give feeback.
 - Industry Standards, tools, and frameworks in verification
 
 #### Lab. 8
+
 - Work on the project
 - Apply the learning from the lecture in the project
 
 
 ### Lecture 9: Standard Cells (MS) - TENTATIVE
+
 #### Lecture outline:
+
 - Introduction to standard cells
 - Role of standard cells in digital design
 - Components of a standard cell library
@@ -237,13 +244,16 @@ The teachers and the other groups give feeback.
 - Characterization of standard cells
 
 #### Lab. 9
+
 - Work on the project
 
 
 ### Lecture 10: Chip Design Ruls, Power, and Clock (OR)
+
 - [Lecture slides](???.pdf) - not yet availble
 
 #### Lecture outline:
+
 - Chip design rules
 - Power distribution design, optimization, and analysis
 - Digital design timing
@@ -252,16 +262,20 @@ The teachers and the other groups give feeback.
 - Timing closure
 
 #### Lab. 10
+
 - Work on the project
 - Apply the learning from the lecture in the project
 
+### Lecture TBD: Submitting your Design to eFabless (LP(?)/MS(?)) - TENTATIVE
 
-### Lecture 11: Submitting your Design to eFabless (LP(?)/MS(?)) - TENTATIVE
-
-#### Lecture outline:
 - Overview of eFabless
 - The Caravel framework
 - How to submit your desing
+
+### Lecture 11: Low-power Chip Design (Lars Graversen/Demant)
+
+#### Lecture outline:
+
 
 #### Lab. 11 
 - Work on the project
@@ -306,8 +320,7 @@ When forming a new group, please make sure that you align expectations between t
 
 Each student group will contribute to a part of the SoC. You can choose from the following components:
 
-- **CPU** (Wildcat RISC-V core)
-- **Cache system** (optional)
+- **Cache system** for Wildcat
 - **Memory controller** (handling SPI-based flash, RAM access, memory-mapped peripherals)
 - **Peripherals:**
   - VGA character display
@@ -319,6 +332,7 @@ Each student group will contribute to a part of the SoC. You can choose from the
 - **Continuous integration** (managing continuous verification after design changes)
 - **Verification** (creating testbenches, simulations, and FPGA testing)
 - **Physical design tools** (OpenLane2 workflow, synthesis, placement, routing, signoff)
+- **Caravel** integration (integrating the design with the Caravel framework)
 
 See Lecture 4 for more details.
 
