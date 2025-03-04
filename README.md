@@ -59,7 +59,7 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 - [Lecture slides](01_intro.md)
 
-#### Lecture outline:
+#### Lecture outline
 - Overview of chip design and its importance in modern electronics
 - Basic terminology and concepts
 - Covering the process (first intro in tool flow)
@@ -85,7 +85,7 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 - [Lecture slides](02_CMOS.md)
 
-#### Lecture outline:
+#### Lecture outline
  - The need for a controlled switch  
  - A brief history of the transistor  
  - The MOSFET transistor  
@@ -111,7 +111,8 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 - [Lecture slides](03_verilog.md)
 
-#### Lecture outline:
+#### Lecture outline
+
 - Introduction to Verilog
 - Introduction to Tiny Tapeout
 
@@ -138,7 +139,7 @@ This is a tentative list of lectures. The course will be adapted to the students
 
 - [Lecture slides](04_tools.md)
 
-#### Lecture outline:
+#### Lecture outline
 
 - Introduction to the OpenLane2 ASIC design flow
 - Input preparation and RTL linting
@@ -150,7 +151,8 @@ This is a tentative list of lectures. The course will be adapted to the students
 - Physical signoff and SDF simulation
 - Overview of the course project and group formation
 
-#### Lab. 4 
+#### Lab. 4
+
 - Discussion about the project
 - Form and register groups for the course project
 - Choose a project component to work on (CPU, memory, peripherals, testing, etc.)
@@ -161,33 +163,33 @@ This is a tentative list of lectures. The course will be adapted to the students
 #### Reading
 
 - Lecture slides (also available as PDF in DTU-Learn)
-- [OpenLane2 Documentation](https://openlane2.readthedocs.io/en/latest/)* 
+- [OpenLane2 Documentation](https://openlane2.readthedocs.io/en/latest/)
 
-\* This is a large documentation from whih this slide set is based upon, you do not need to read it all. Reference to it when needed.
+This is a large documentation from whih this slide set is based upon, you do not need to read it all. Reference to it when needed.
 
 
-### Lecture 5: Chisel Review, Memory and Register Files (MS) - TENTATIVE
+### Lecture 5: Introduction to Chisel (MS)
 
-- [Lecture slides](???.pdf) - not yet availble
+- [Lecture slides sources](https://github.com/schoeberl/chisel-book/tree/master/slides-tutorial)
+- PDF in DTU Learn (unit1-4)
 
-#### Lecture outline:
+#### Lecture outline
 
-- Review of Chisel
-- Memory types and memory organization
-- Register files: FF, sync mem, latches, custom design
-- Memory macros (IP blocks)
-- Memory in SkyWater (?) 
-- Models and simulation
+- High paced introduction of Chisel
 
-#### Lab. 5 
-- Work on the project
+#### Lab. 5
 
+- Lab 1-4 at [chisel-lab](https://github.com/schoeberl/chisel-lab)
+
+#### Reading
+
+ - [Digital Design with Chisel](https://www.imm.dtu.dk/~masca/chisel-book.html)
 
 ### Lecture 6: SoC, Interfaces, and NoCs (LP)
 
 - [Lecture slides](???.pdf) - not yet availble
 
-#### Lecture outline:
+#### Lecture outline
 
 - Introduction to SoCs 
 - Memory-Mapped I/O concepts
@@ -216,7 +218,7 @@ The teachers and the other groups give feeback.
 
 - [Lecture slides](???.pdf) - not yet availble
 
-#### Lecture outline:
+#### Lecture outline
 
 - Introduction to verification
 - Verification methodologies
@@ -232,9 +234,9 @@ The teachers and the other groups give feeback.
 - Apply the learning from the lecture in the project
 
 
-### Lecture 9: Standard Cells (MS) - TENTATIVE
+### Lecture 9: Standard Cells, Memory, and Register Files (MS)(MS) - TENTATIVE
 
-#### Lecture outline:
+#### Lecture outline
 
 - Introduction to standard cells
 - Role of standard cells in digital design
@@ -242,6 +244,11 @@ The teachers and the other groups give feeback.
 - Types of standard cells (e.g., logic gates, flip-flops)
 - Power, performance, and area 
 - Characterization of standard cells
+- Memory types and memory organization
+- Register files: FF, sync mem, latches, custom design
+- Memory macros (IP blocks)
+- Memory with the SkyWater PDK
+- Models and simulation
 
 #### Lab. 9
 
