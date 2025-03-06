@@ -171,7 +171,7 @@ This is a large documentation from whih this slide set is based upon, you do not
 ### Lecture 5: Introduction to Chisel (MS)
 
 - [Lecture slides sources](https://github.com/schoeberl/chisel-book/tree/master/slides-tutorial)
-- PDF in DTU Learn (unit1-4)
+- PDF in DTU Learn (05_Chisel_unit1-4)
 
 #### Lecture outline
 
@@ -180,14 +180,16 @@ This is a large documentation from whih this slide set is based upon, you do not
 #### Lab. 5
 
 - Lab 1-4 at [chisel-lab](https://github.com/schoeberl/chisel-lab)
+- Work on the project
 
 #### Reading
 
- - [Digital Design with Chisel](https://www.imm.dtu.dk/~masca/chisel-book.html)
+- Lecture slides
+- [Digital Design with Chisel](https://www.imm.dtu.dk/~masca/chisel-book.html)
 
 ### Lecture 6: SoC, Interfaces, and NoCs (LP)
 
-- [Lecture slides](???.pdf) - not yet availble
+- [Lecture slides](06_soc_interfaces_noc.md)
 
 #### Lecture outline
 
@@ -201,22 +203,24 @@ This is a large documentation from whih this slide set is based upon, you do not
 
 - Work on the project
 
+#### Reading
+
+- Lecture slides (also available as PDF in DTU-Learn)
 
 ### Lecture 7: Student Project Presentations (MS/LP)
 
-Each group presents the project idea and preliminary design, outlining the chosen concept, the objectives, the verification plan, and the time plan.
+Each group presents the plan and initial development for the project. This includes list of actions, the objectives, time plan, preliminary design, verification plan.
 
 The teachers and the other groups give feeback. 
 
 #### Lab. 7 
 
 - Work on the project
-- Apply the learning from the lecture in the project
 
 
 ### Lecture 8: Verification (TP)
 
-- [Lecture slides](???.pdf) - not yet availble
+- [Lecture slides](???.md) - not yet availble
 
 #### Lecture outline
 
@@ -231,10 +235,14 @@ The teachers and the other groups give feeback.
 #### Lab. 8
 
 - Work on the project
-- Apply the learning from the lecture in the project
+
+#### Reading
+
+- Lecture slides (also available as PDF in DTU-Learn)
+- TBA
 
 
-### Lecture 9: Standard Cells, Memory, and Register Files (MS)(MS) - TENTATIVE
+### Lecture 9: Standard Cells, Memory, and Register Files (MS) - TENTATIVE
 
 #### Lecture outline
 
@@ -257,7 +265,7 @@ The teachers and the other groups give feeback.
 
 ### Lecture 10: Chip Design Ruls, Power, and Clock (OR)
 
-- [Lecture slides](???.pdf) - not yet availble
+- [Lecture slides](???.md) - not yet availble
 
 #### Lecture outline:
 
@@ -271,7 +279,6 @@ The teachers and the other groups give feeback.
 #### Lab. 10
 
 - Work on the project
-- Apply the learning from the lecture in the project
 
 ### Lecture TBD: Submitting your Design to eFabless (LP(?)/MS(?)) - TENTATIVE
 
@@ -281,20 +288,22 @@ The teachers and the other groups give feeback.
 
 ### Lecture 11: Low-power Chip Design (Lars Graversen/Demant)
 
-#### Lecture outline:
+- [Lecture slides](???.md) - not yet availble
 
+#### Lecture outline:
+- TBA
 
 #### Lab. 11 
 - Work on the project
 - Apply the learning from the lecture in the project
 
-#### Material
-- [Lecture slides](???.pdf) - not yet availble
+#### Reading
+- TBA
 
 
 ### Lecture 12: Overview on Analog and Mixed Chip Desing (guest) - TENTATIVE  
 
-- [Lecture slides](???.pdf) - not yet availble
+- [Lecture slides](???.md) - not yet availble
 
 #### Lecture outline:
 - Introduction to analog design
