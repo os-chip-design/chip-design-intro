@@ -286,14 +286,17 @@ The teachers and the other groups give feeback.
 - The Caravel framework
 - How to submit your desing
 
-### Lecture 11: Low-power Chip Design (Lars Graversen/Demant)
-
-- [Lecture slides](???.md) - not yet availble
+### Lecture 11: Low-power Chip Design and Implementation (Lars Graversen/Demant)
 
 #### Lecture outline:
-- TBA
 
-#### Lab. 11 
+- Chip design at Demant
+- Industrial design and implementation flow overview
+- Design and implementation considerations for low power
+- Challenges in lower design nodes (and/or at lower voltages)
+
+#### Lab. 11
+
 - Work on the project
 - Apply the learning from the lecture in the project
 
