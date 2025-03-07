@@ -187,7 +187,7 @@ This is a large documentation from whih this slide set is based upon, you do not
 - Lecture slides
 - [Digital Design with Chisel](https://www.imm.dtu.dk/~masca/chisel-book.html)
 
-### Lecture 6: SoC, Interfaces, and NoCs (LP)
+### Lecture 6: SoC and Interconnects (LP)
 
 - [Lecture slides](06_soc_interfaces_noc.md)
 
