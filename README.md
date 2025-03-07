@@ -187,17 +187,16 @@ This is a large documentation from whih this slide set is based upon, you do not
 - Lecture slides
 - [Digital Design with Chisel](https://www.imm.dtu.dk/~masca/chisel-book.html)
 
-### Lecture 6: SoC and Interconnects (LP)
+### Lecture 6: SoC, Interconnects, and NoCs (LP)
 
-- [Lecture slides](06_soc_interfaces_noc.md)
+- [Lecture slides](06_soc_interconnects_noc.md)
 
 #### Lecture outline
 
-- Introduction to SoCs 
-- Memory-Mapped I/O concepts
-- Interfaces: Ready/Valid handshaking, APB, AXI, SPI
-- Introduction to NoCs (Networks-on-Chip)
-- Building large systems 
+- System-on-Chip
+- Interconnects
+- Networks-on-Chip overview
+
 
 #### Lab. 6
 
