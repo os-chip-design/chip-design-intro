@@ -154,7 +154,7 @@ backgroundColor: #fff
 
 - **Bus** = critical resource  
 - **Bandwidth is plentiful!**
-  - **10mm² processor in 90nm 6-metal layers**  
+  - 10mm² processor in 90nm 6-metal layers
   - 40 TB/s achievable bandwidth  
 
 - Take advantage of high communication bandwidth using **network-on-chip** and **bridged buses**  
@@ -208,7 +208,7 @@ backgroundColor: #fff
 ## Typical bus standard specifications
 
 - **Signal wires:** 
- - Address, data, control *(read/write, arbitration)*  
+  - Address, data, control *(read/write, arbitration)*  
 - **Transactions:**  
   - Read/write: byte, word, block  
 - **Protocols:**
