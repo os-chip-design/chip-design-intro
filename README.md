@@ -208,9 +208,25 @@ This is a large documentation from whih this slide set is based upon, you do not
 
 ### Lecture 7: Student Project Presentations (MS/LP)
 
-Each group presents the plan and initial development for the project. This includes list of actions, the objectives, time plan, preliminary design, verification plan.
+Each group presents their project plan and initial developments. This is a key milestone in the course, where you will receive valuable feedback from the teachers and your peers.
 
-The teachers and the other groups give feeback. 
+Please prepare a short presentation (a few simple slides) for a maximum duration of 10 minutes. Your presentation should include:
+- **Objectives:** What are the key goals of your project?
+- **Current actions:** What steps have been taken so far?
+- **Time plan:** Timeline for development and key milestones.
+- **Preliminary design:** Initial architecture, block diagrams, ideas, etc.
+- **Implementation and verification plan:** How do you plan to implement and validate your design?
+- **Obstacles and open matters:** Are there any obstacles or current problems that prevent moving forward?
+
+After each presentation, we will have a 5 minutes feedback session.
+
+The schedule of the presentations is announced on DTU-Learn. Please note that all groups should be present for all the presentations.
+
+To make the most of the presentation and feedback session, please take into account the following tips:
+
+- Keep your presentation structured and concise.
+- Focus on clarity: explain your choices and reasoning.
+- Be prepared to engage with feedback and questions.
 
 #### Lab. 7 
 
