@@ -344,6 +344,8 @@ Each group presents their finalized project and discusses the results.
 
 The course project is focused on designing and implementing a **System-on-Chip (SoC)** using open-source tools. The goal is to collaboratively develop a working SoC that includes a **CPU, memory, peripherals, and essential interfaces**.
 
+The project is hosted at [DTU-SoC-2025](https://github.com/os-chip-design/dtu-soc-2025).
+
 ### Group forming
 
 The project should be carried out in **groups of 3 people** (groups of 2 are also possible but less preferred). You are free to select your group members. **Groups should be registered as soon as formed in the DTU-Learn group forming facility.** If you experience difficulties forming a group, please contact the teacher.
