@@ -85,20 +85,20 @@ class Handshake extends Bundle {
 - **Functionality**:
   - A write handshake places an item in the FIFO
   - A read handshake removes an item from the FIFO
-  - Data written to the FIFO should eventually be available for reading
-  - A data item written to the FIFO should be available for reading *before* all items written *after* it
-  - Writes must not occur when *N* items are in the FIFO (`!in.ready`)
-  - Reads must not occur when 0 items are in the FIFO (`!out.valid`)
+  - Data written to the FIFO will eventually be available for reading
+  - A data item written to the FIFO will be available for reading *before* all items written *after* it
+  - Writes aren't accepted when *N* items are in the FIFO
+  - Reads aren't accepted when 0 items are in the FIFO
 ---
-- **Reset**: The FIFO should signal that it is empty (`!out.valid`) after reset
+- **Reset**: The FIFO will signal that it is empty after reset
 - **Performance**:
-  - If not full, the FIFO must assert `in.ready`
-  - If non-empty, the FIFO must assert `out.valid`
-  - Writing to an empty FIFO should result in `out.valid` being asserted the next clock cycle and the `out.data` being the same as the written data
+  - If not full, the FIFO will always assert `in.ready`
+  - If non-empty, the FIFO will always assert `out.valid`
+  - Writing to an empty FIFO will result in the data being available for reading on the next cycle
 
 ## Scenarios - Example 1
 
-- Let's develope a scenario for the feature: "Writes must not occur when *N* items are in the FIFO (`!in.ready`)"
+- Let's develop a scenario for the feature: "Writes aren't accepted when *N* items are in the FIFO"
 - Scenario:
   - Insert *N* items into the FIFO
   - Now `in.ready` should be deasserted
@@ -107,7 +107,7 @@ class Handshake extends Bundle {
 
 ## Scenarios - Example 2
 
-- Let's develope a scenario for the feature: "A data item written to the FIFO should be available for reading *before* all items written *after* it"
+- Let's develop a scenario for the feature: "A data item written to the FIFO will be available for reading *before* all items written *after* it"
 - Scenario:
   - Write *N* items to the FIFO with `in.data` being the item number
   - Read *N* items from the FIFO and check that the `out.data` is the same as the item number 
@@ -255,14 +255,14 @@ test(new Fifo) { dut =>
 - A BFM for driving an input port in Scala
 ```scala
 class SenderBFM(port: Handshake, clock: Clock) {
-  def send(data: BigInt): Unit = {
+  def send(data: Int): Unit = {
     port.valid.poke(1.B)
     port.data.poke(data.U)
     while(!port.ready.peekBoolean()) clock.step()                                           
     clock.step()
     port.valid.poke(0.B)
   }
-  def send(data: Seq[BigInt]): Unit = {
+  def send(data: Seq[Int]): Unit = {
     data.foreach(d => send(d))
   }
 }
@@ -272,15 +272,15 @@ class SenderBFM(port: Handshake, clock: Clock) {
 - A BFM for reading an output port in Scala
 ```scala
 class ReceiverBFM(port: Handshake, clock: Clock) {
-  def receive(): BigInt = {
+  def receive(): Int = {
     port.ready.poke(1.B)
     while(!port.valid.peekBoolean()) clock.step()
-    val data = port.data.peekInt()
+    val data = port.data.peekInt().toInt
     clock.step()
     port.ready.poke(0.B)
     data
   }
-  def expect(data: BigInt): Unit = {
+  def expect(data: Int): Unit = {
     val received = receive()
     assert(received == data, s"Expected $data, got $received")                                   
   }
@@ -369,11 +369,11 @@ endclass
 ## Now what?
 - We now know that our DUT behaves according to our model for *X* random transactions
 - But how do we know what kind of scenarios we have *covered*?
-- We need a tool to measure the *coverage* of executing our random testbench
+- We need a tool to measure the *functional coverage* of executing our random testbench
 - Concretely, this means measuring whether a certain condition has been met during simulation
 - E.g. whether `in.valid` and `in.ready` where both high two cycles in a row resulting in two back-to-back writes
 
-## SystemVerilog Coverage
+## SystemVerilog Functional Coverage
 - In SystemVerilog, coverage is measured using sets, so-called *bins*, which record how many times a signal took a value which is part of the set
 - *Coverpoints* are collections of bins and may be *crossed* to create the Cartesian product of bins
 
@@ -389,16 +389,120 @@ covergroup cg;
 endgroup
 ```
 
+## Open-Source Functional Coverage
+- In Cocotb, we can use *cocotb-coverage* to collect functional coverage at the interface of a DUT
+- In Scala, we can use the *ChiselVerify* library together with Chiseltest:
+
+```scala
+val cr = new CoverageReporter(dut)
+cr.register(
+  // Declare CoverPoints
+  cover("a", dut.io.a)(DefaultBin(dut.io.a)),
+  cover("b", dut.io.b)(DefaultBin(dut.io.b)),
+  // Declare timed cross point with a delay of 1 cycle                                      
+  cover("timedAB", dut.io.a, dut.io.b)(Exactly(1))(
+    cross("both1", Seq(1 to 1, 1 to 1))
+  )
+)
+```
+
 ## Using CRV in the Verification Effort
 - CRV is a powerful tool to achieve relatively high coverage with low effort
 - However, we need a good transaction level reference model and a very good coverage model to be able to trust the results
 - CRV will not cover all wanted scenarios, some might be obtained by tweaking constraints
 - Scenarios not covered by CRV can be added through directed tests to ensure full coverage
 
-## Plan
-- what about the properties -> assertions and formal verification
-- how do we scale?
-  - UVM
+## What about the Properties?
+- In addition to scenarios, we also have properties to describe system behavior
+- E.g. "If not full, the FIFO will always assert `in.ready`":
+  - Let `cnt` be the number of items in the FIFO
+  - Then if `cnt < N` then `in.ready == 1`
+- This is something concrete we can check in our testbench using *assertions*
+
+## Assertions
+- Assertions can be added directly to the design code
+- They are also a good tool to check *design assumptions*
+- If the property does not hold at any point during simulation, an error is raised
+- Assertions directly point to the source of the problem in contrast to black-box testing where an error has to be *traced-back* to the source
+```scala
+when(cnt < N.U) {
+  assert(in.ready, "FIFO not accepting write when not full")
+}
+```
+
+## Coverage and Assertions
+- If assertions are used in simulation, we again have a problem of coverage
+- How do we know that interesting scenarios which exercise the assertions have been covered?
+- In addition to the presented functional coverage, SystemVerilog for instance also as *cover* statements, which keep track of whether a condition has been met
+
+## But there is more...
+- There are actually tools which can *prove* that the same assertions in a design that we used during simulation hold for *all* possible scenarios
+- This is called *formal verification*
+- A solver will try to *falsify* assertions and will find a *counter-example* if the assertion does not hold
+- The counter-example describes the sequence of inputs which lead to the assertion being violated
+
+## Formal Verification
+- Often, bounded model checking is used, which explores the state space of a design up to a certain number of cycles
+- How many cycles do we need to check to be sure?
+- For larger designs and more complex properties, the state space explodes and the tool becomes unusable
+- However, for smaller designs and properties, formal verification can be a quick and powerful tool 
+
+## Assumptions
+- As with CRV, not all input sequences are *legal*
+- We can use *assumptions* to constrain the input space
+- This limits the solver in what input sequences it will explore
+- We could for instance force the solver to accept the FIFO output as soon as it is available:
+
+```scala
+assume(!out.valid || out.ready) // If output is valid, out.ready must be high
+```
+
+## Open-Source Formal Verification
+- [SymbiYosys](https://yosyshq.readthedocs.io/projects/sby/en/latest/) is a front-end for Yosys-based formal hardware verification
+- It can be used to prove properties in SystemVerilog designs, but does not support more complex assertions
+- Chiseltest has a formal library which can be used to check properties in Chisel designs
+
+
+## Chiseltest Formal Example
+```scala
+class QueueWrapper extends Module {
+  ... // instantiate a queue
+  // keeps track of the internal queue count
+  val cntReg = RegInit(0.U(8.W))
+  when(in.fire && !out.fire) {
+    cntReg := cntReg + 1.U
+  }.elsewhen(!in.fire && out.fire) {
+    cntReg := cntReg - 1.U
+  }
+
+  // Property: The queue count should not exceed the internal queue size           
+  assert(cntReg <= n.U, "Queue count should not exceed n")
+}
+```
+
+```scala
+verify(new QueueWrapper, Seq(BoundedCheck(10))) // Check for 10 cycles
+```
+
+## Let's recap
+- We've seen how we can increase the abstraction of a testbench using BFMs and transactions
+- We've seen how we can use CRV alongside functional coverage to automate the verification process partially
+- We have seen how we can directly use properties to check system behavior during simulation or using formal verification
+- These techniques together present the state-of-the-art in terms of primitive tools in functional verification
+
+## How do we scale?
+- These techniques only provide the foundation for a verification effort
+- For larger projects with many engineers, we need a way to scale the verification effort
+- This is a matter of *methodology* and *design patterns*
+- How can we structure a testbench such that we can keep it flexible and maintainable?
+- How do we create verification components which are composable and can be reused?
+
+## Universal Verification Methodology
+- Each EDA vendor tried to answer this question with their own methodology
+- A merger of all these methodologies resulted in the *Universal Verification Methodology* (UVM)
+- UVM is a methodology and concrete class library for creating testbenches in SystemVerilog
+
+## UVM Testbench structure
 
 ## References
 
