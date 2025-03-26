@@ -235,7 +235,7 @@ To make the most of the presentation and feedback session, please take into acco
 
 ### Lecture 8: Verification (TP)
 
-- [Lecture slides](???.md) - not yet availble
+- [Lecture slides](08_verification.md)
 
 #### Lecture outline
 
