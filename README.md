@@ -233,7 +233,7 @@ To make the most of the presentation and feedback session, please take into acco
 - Work on the project
 
 
-### Lecture 8: Verification (TP)
+### Lecture 8: Verification (TP) + Midterm course evaluation
 
 - [Lecture slides](???.md) - not yet availble
 
