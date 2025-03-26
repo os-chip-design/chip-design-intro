@@ -8,7 +8,7 @@ backgroundColor: #fff
 
 <!-- headingDivider: 3 -->
 
-# **Functional Verification**
+# **Functional Hardware Verification**
 
 **Tjark Petersen**
 
@@ -21,9 +21,13 @@ backgroundColor: #fff
 - We have to verify our design
 - It does not add any value but it is a necessary task
 
-
-## Lecture Overview
+## Lecture Overview I
 - A journey from a bare-bones Verilog/VHDL testbench to modern verification methodologies
+- How do we decide what to verify?
+- How can we verify a design?
+- How can we keep our infrastructure maintainable and scalable?
+
+## Lecture Overview II
 - A First-In-First-Out buffer will serve as an example to showcase different verification techniques
 ```scala
 class Handshake extends Bundle {
@@ -57,7 +61,7 @@ class Handshake extends Bundle {
 - This means that for each feature there should be a scenario or property that can reveil whether the feature is implemented correctly or not
 - A complete verification plan *covers* all aspects of the specification
 - Writing a complete verification plan is hard, time-consuming and difficult to automate
-  - When do you know you are done?
+  - When do you know that you are done?
 
 ## What is a feature?
 - A *capability* of a design and how it should work under a certain *mode of operation*
@@ -246,7 +250,7 @@ test(new Fifo) { dut =>
 
 ## Introducing Abstraction
 - What if we have to insert 100 items into the FIFO?
-- Copy and paste the same code 100 times? I've seen it done!
+- Copy and paste the same code 100 times?
 - We need to abstract the interaction with the DUT
 - We can use so-called *Bus Functional Models* (BFM)
 - A BFM provides functions which take the parameters of an interaction and take care of the low level timing and signal manipulation
@@ -332,8 +336,8 @@ test(new Fifo) { dut =>
     for (_ <- 0 until 100) {
       val data = Random.nextInt(256)
       val delay = Random.nextInt(10)
-      sender.send(data, delay)
       model.write(data)
+      sender.send(data, delay) 
     }
   }.fork {
     for (_ <- 0 until 100) {
@@ -349,7 +353,10 @@ test(new Fifo) { dut =>
 - For complex transactions, not all combinations of the parameters represent valid transactions
 - We need a way to *constrain* the random transaction generator to only produce valid transactions
 - This approach is called *Constrained Random Verification* (CRV)
-- E.g. SystemVerilog has a built-in constraint solver for this purpose
+
+## CRV in SystemVerilog
+- SystemVerilog has a built-in constraint solver for this purpose
+- Randomizable variables are marked with the `rand` keyword
 
 ```verilog
 class Packet;
@@ -361,7 +368,7 @@ class Packet;
   }
 
   constraint payload_c {
-    payload.size() == length; // Ensure payload matches length                                                                                                              
+    payload.size() == length; // Ensure payload matches length                                    
   }
 endclass
 ```
@@ -416,7 +423,7 @@ cr.register(
 - In addition to scenarios, we also have properties to describe system behavior
 - E.g. "If not full, the FIFO will always assert `in.ready`":
   - Let `cnt` be the number of items in the FIFO
-  - Then if `cnt < N` then `in.ready == 1`
+  - If `cnt < N` then `in.ready == 1`
 - This is something concrete we can check in our testbench using *assertions*
 
 ## Assertions
@@ -431,7 +438,7 @@ when(cnt < N.U) {
 ```
 
 ## Coverage and Assertions
-- If assertions are used in simulation, we again have a problem of coverage
+- If assertions are used in simulation, we again have a problem of unknown coverage
 - How do we know that interesting scenarios which exercise the assertions have been covered?
 - In addition to the presented functional coverage, SystemVerilog for instance also as *cover* statements, which keep track of whether a condition has been met
 
@@ -465,23 +472,23 @@ assume(!out.valid || out.ready) // If output is valid, out.ready must be high
 
 ## Chiseltest Formal Example
 ```scala
-class QueueWrapper extends Module {
-  ... // instantiate a queue
+class FifoWrapper extends Module {
+  ... // instantiate a fifo
   // keeps track of the internal queue count
   val cntReg = RegInit(0.U(8.W))
-  when(in.fire && !out.fire) {
-    cntReg := cntReg + 1.U
-  }.elsewhen(!in.fire && out.fire) {
-    cntReg := cntReg - 1.U
+  when(in.fire && !out.fire) { // push but not pop
+    cntReg := cntReg + 1.U // we gain one element
+  }.elsewhen(!in.fire && out.fire) { // pop but not push
+    cntReg := cntReg - 1.U // we lose one element
   }
 
-  // Property: The queue count should not exceed the internal queue size           
-  assert(cntReg <= n.U, "Queue count should not exceed n")
+  // Property: The fifo count should not exceed the internal fifo size           
+  assert(cntReg <= n.U, "Fifo count should not exceed n")
 }
 ```
 
 ```scala
-verify(new QueueWrapper, Seq(BoundedCheck(10))) // Check for 10 cycles
+verify(new FifoWrapper, Seq(BoundedCheck(10))) // Check for 10 cycles
 ```
 
 ## Let's recap
@@ -501,10 +508,96 @@ verify(new QueueWrapper, Seq(BoundedCheck(10))) // Check for 10 cycles
 - Each EDA vendor tried to answer this question with their own methodology
 - A merger of all these methodologies resulted in the *Universal Verification Methodology* (UVM)
 - UVM is a methodology and concrete class library for creating testbenches in SystemVerilog
+- It tries to provide a standard way to structure and implement functionality in a testbench, such that it is as composable and flexible as possible
 
-## UVM Testbench structure
 
-![width:800](figures/L8/uvm_structure.svg)
+## My Master Thesis
+- The UVM is a huge standard with only a subset being used in practice
+- My thesis took the key concepts of the UVM, tried to simplify them and bring them to Scala 3
+- Built a standalone co-simulation framework for Scala 3 based on Verilator for simulation
+- Let's now look at the key aspects of UVM-like testbenches
+
+## Phases
+- A testbench usually can be structured into multiple phases which are executed in sequence and take care of different aspects
+- By making phasing explicit, we can reuse standard implementations, e.g. for resetting the DUT
+
+![](figures/L8/phases.svg)
+
+## Components I
+- Components allow us to split a testbench from one monolithic block into smaller pieces with well defined interfaces
+- In the UVM, components build a hierarchy, like a hardware design
+- *Drivers* and *Monitors* directly interact with the DUT
+- *Agents* provide access to a specific interface type
+
+![bg right:40% width:95%](figures/L8/tb_components.jpg)
+
+## Components II
+- *Environments* are containers for all agents for specific subsystems of the design
+- They contain *Scoreboards* which check the correctness of the DUT output and other *Analysis* components such as *Coverage Collectors*
+- Components pass *transactions* in between them through channels
+
+![bg right:40% width:95%](figures/L8/tb_components.jpg)
+
+
+## Components III
+- The component hierarchy builds static infrastructure around the DUT to facilitate the applying of stimuli and check correctness as well as coverage
+- The idea is to reuse components across different levels of testing (module-level up to chip-level) and across different projects
+
+![bg right:40% width:95%](figures/L8/tb_components.jpg)
+
+## What about Stimulus?
+
+- In UVM, stimulus is generated by *sequences*
+- Sequences are objects which generate a transaction stream based on some internal code
+- For each produced item, the sequence receives feedback to decide what to do next
+
+```scala
+class MySeq extends Sequence[Int] {
+  def body() = {
+    for (i <- 0 until 100) {
+      val response = yieldTx(i)
+      println(s"$i -> $response")                                                            
+    }
+  }
+}
+```
+
+## Building a Test Case
+
+- A test case combines the environment/agents with a sequence and runs the simulation
+- Using the `Factory` allows us to extends MyTest and overwrite e.g. the type of sequence
+
+```scala
+class MyTest(dut: TinyAlu) extends Test {
+  val agent = Factory.create[AluAgent]
+  val cov = Factory.create[AluCoverage]
+  agent.monitor.addListener(cov)
+
+  def test() = {
+    val seq = Factory.create[MySeq]                                                                         
+    seq.start(agent)
+    agent.sequencer.play(seq)
+    seq.waitUntilDone()
+  }
+}
+```
+
+## Taking a Step Back I
+- We have seen the basic tools that we have at our disposal to verify a hardware design
+- Non of them is a silver bullet and they have to be combined to get the best productivity
+- CRV and simulation-time assertions are a powerful tool, but they rely on a good coverage model
+- Formal verification is only feasible for smaller designs, and developing properties and all required assumptions is hard
+
+## Taking a Step Back II
+- The basic tools alone are not enough to scale a verification effort
+- Verification is a software engineering task and requires managing a large code base
+- Efforts such as the UVM try to provide software patterns to structure a testbench to make it modular and scalable
+
+## Verifiation Lab
+- In the `verification-lab` folder, you will find a lab exercise
+- You will be provided with four Fifos, of which some violate some aspect of the specification
+- Your task is to develop properties and scenarios to find which Fifo violates which part of the specification
+- Implement properties as assertions and scenarios as test cases
 
 ## References
 

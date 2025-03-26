@@ -1,3 +1,8 @@
+# Requirements
+- sbt
+- jdk (8 up to 21)
+- see https://github.com/schoeberl/chisel-lab/blob/master/Setup.md for instructions
+
 # Verification Lab
 
 In this lab you will be given four FIFO implementations, `FIFO[0-3]`. Some Fifos follow the spec, some violate it. Your task is to identify the potential specification violations and match them to one of the following statements, without looking at the implementation itself:
