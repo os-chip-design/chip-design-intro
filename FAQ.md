@@ -97,14 +97,14 @@ TinyTapeout has hard-typed inputs and outputs. You need to make sure that the po
 
 #### IntelliJ IDEA
 
-In order to force the SBT to use the Java version (which is 11) which is able to compile the compiler bridge component,
+In order to force the SBT to use the Java version (which currently supported is 11) which is able to compile the compiler bridge component,
 then you need to do the following:
 - Change the Project SDK to Java 11 by `File -> Project Structure -> Project Settings -> SDKs`, select the `+` and add the Java 11 SDK either using your own or download it from the IDE.
 - Change the Build Tool (sbt) SDK to chosen Java 11 SDK by `Settings -> Build, Execution, Deployment -> Build Tools -> sbt`, select the `jre` and pick the Java 11 SDK.
 
 ##### WSL (Windows Subsystem for Linux)
 
-To install OpenJDK 11 and set it as the default Java version in WSL, follow these steps:
+Assuming the supported version, in order to install OpenJDK 11 and set it as the default Java version in WSL, follow these steps:
 
 1. Update your package list:
     ```bash
