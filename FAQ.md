@@ -87,3 +87,42 @@ TinyTapeout has hard-typed inputs and outputs. You need to make sure that the po
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 ```
+
+## SBT
+
+### SBT Java Version - Error compiling the sbt component 'compiler-bridge_2.13'
+
+#### System Dependent
+
+
+#### IntelliJ IDEA
+
+In order to force the SBT to use the Java version (which is 11) which is able to compile the compiler bridge component,
+then you need to do the following:
+- Change the Project SDK to Java 11 by `File -> Project Structure -> Project Settings -> SDKs`, select the `+` and add the Java 11 SDK either using your own or download it from the IDE.
+- Change the Build Tool (sbt) SDK to chosen Java 11 SDK by `Settings -> Build, Execution, Deployment -> Build Tools -> sbt`, select the `jre` and pick the Java 11 SDK.
+
+##### WSL (Windows Subsystem for Linux)
+
+To install OpenJDK 11 and set it as the default Java version in WSL, follow these steps:
+
+1. Update your package list:
+    ```bash
+    sudo apt update
+    ```
+
+2. Install OpenJDK 11:
+    ```bash
+    sudo apt install openjdk-11-jdk
+    ```
+
+3. Verify the installation:
+    ```bash
+    java -version
+    ```
+
+4. Add the `JAVA_HOME` variable to your shell configuration file (e.g., `.bashrc` or `.zshrc`) to make it persistent, please note and replace `YOURSYSTEM` with your system architecture, like :
+    ```bash
+    echo 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-YOURSYSTEM' >> ~/.bashrc
+    source ~/.bashrc
+    ```
