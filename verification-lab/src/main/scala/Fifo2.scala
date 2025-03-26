@@ -1,11 +1,9 @@
-
 import chisel3._
 import chisel3.util._
 
-class Queue1(n: Int) extends AbstractQueue(n) {
-  
+class Fifo2(n: Int) extends AbstractFifo(n) {
 
-  val queue = Module(new Queue(UInt(8.W), n, flow = true))
+  val queue = Module(new Queue(UInt(8.W), n))
   in.ready := queue.io.enq.ready
   queue.io.enq.valid := in.valid
   queue.io.enq.bits := in.data

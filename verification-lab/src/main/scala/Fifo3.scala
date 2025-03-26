@@ -1,9 +1,8 @@
-
 import chisel3._
 
-class Queue3(n: Int) extends AbstractQueue(n) {
+class Fifo3(n: Int) extends AbstractFifo(n) {
 
-  val cells = Seq.fill(n) { Module(new Queue0(1)) }
+  val cells = Seq.fill(n) { Module(new Fifo0(1)) }
   in <> cells.head.in
   out <> cells.last.out
 
@@ -11,7 +10,8 @@ class Queue3(n: Int) extends AbstractQueue(n) {
     cells(i).out <> cells(i + 1).in
   }
 
-  val trigger = in.valid && !cells.head.in.ready && cells.last.out.valid && cells(1).in.ready
+  val trigger = in.valid && !cells.head.in.ready &&
+    cells.last.out.valid && cells(1).in.ready
   when(trigger) {
     cells(1).in.valid := 1.B
     cells(1).in.data := in.data

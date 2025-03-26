@@ -487,7 +487,7 @@ verify(new QueueWrapper, Seq(BoundedCheck(10))) // Check for 10 cycles
 ## Let's recap
 - We've seen how we can increase the abstraction of a testbench using BFMs and transactions
 - We've seen how we can use CRV alongside functional coverage to automate the verification process partially
-- We have seen how we can directly use properties to check system behavior during simulation or using formal verification
+- We have seen how we can directly use properties to check system behavior during simulation (dynamic verification) or using formal verification
 - These techniques together present the state-of-the-art in terms of primitive tools in functional verification
 
 ## How do we scale?
@@ -503,6 +503,8 @@ verify(new QueueWrapper, Seq(BoundedCheck(10))) // Check for 10 cycles
 - UVM is a methodology and concrete class library for creating testbenches in SystemVerilog
 
 ## UVM Testbench structure
+
+![width:800](figures/L8/uvm_structure.svg)
 
 ## References
 

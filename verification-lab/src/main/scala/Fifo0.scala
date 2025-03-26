@@ -1,14 +1,7 @@
-
 import chisel3._
 import chisel3.util._
 
-/**
-  * Violations:
-  * - 
-  *
-  * @param n
-  */
-class Queue0(n: Int) extends AbstractQueue(n) {
+class Fifo0(n: Int) extends AbstractFifo(n) {
 
   val dataReg = Reg(UInt(8.W))
   val validReg = RegInit(0.B)
@@ -17,10 +10,10 @@ class Queue0(n: Int) extends AbstractQueue(n) {
   out.valid := validReg
   out.data := dataReg
 
-  when (in.fire) {
+  when(in.fire) {
     dataReg := in.data
     validReg := 1.B
-  }.elsewhen (out.fire) {
+  }.elsewhen(out.fire) {
     validReg := 0.B
   }
 }
