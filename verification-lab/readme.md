@@ -1,4 +1,7 @@
 # Requirements
+- z3 
+  - on ubuntu: `sudo apt install z3`
+  - releases: https://github.com/Z3Prover/z3/releases
 - sbt
 - jdk (8 up to 21)
 - see https://github.com/schoeberl/chisel-lab/blob/master/Setup.md for instructions
