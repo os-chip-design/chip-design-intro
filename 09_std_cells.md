@@ -16,8 +16,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## What are Standard Cells?
 
-- Pre-designed logic gates and flip-flops used in digital IC design
-- Created using a uniform height and power rail structure
+- Pre-designed logic gates and flip-flops
+- With a uniform height and power rail structure
 - Enable automated design through place-and-route (PnR) tools
 
 ![width:600px](figures/sky130_fd_sc_hd__dfxtp_1.svg)
@@ -28,13 +28,16 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 - Improves design consistency and manufacturability
 - Enables efficient use of silicon area
 - Supports various power, performance, and area (PPA) trade-offs
+- Alternative is full-custom design
+  - More effort, but better performance
+  - Maybe used for critical parts of a chip
 
 ## Standard Cell Library
 
 - Logic gates (AND, OR, NOT, XOR, etc.)
 - Sequential elements (Flip-flops, Latches)
 - Buffers and Inverters
-- Multiplexers and Special Cells (e.g., clock gating cells, tie cells)
+- Multiplexers and Special Cells (e.g., clock gating cells)
 
 ## Examples
 
@@ -51,15 +54,10 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Fabrication and Layout
 
-- Standard cells are arranged in rows within an Integrated Circuit (IC)
+- Standard cells are arranged in rows within an IC
 - Each row shares common power (VDD) and ground (VSS) rails
-- Cells are abutted to minimize routing complexity
-
-## Standard Cell Design Rules
-
-- **Cell Alignment:** Maintain alignment in rows for proper routing
-- **Well and Substrate Contacts:** Ensure correct electrical behavior
-- **Metal Layer Constraints:** Follow routing rules for interconnect layers
+- Cells are designed to minimize routing complexity
+- [Example Wildcat Design in Tiny Tapeout](https://legacy-gltf.gds-viewer.tinytapeout.com/?model=https://schoeberl.github.io/tt10-wildcat/tinytapeout.gds.gltf)
 
 ## Power, Performance, and Area (PPA) Considerations
 
@@ -67,18 +65,14 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 - **Low-power cells:** Smaller size, reduced power, but slower speed
 - **Trade-offs:** Selecting appropriate cells based on design constraints
 
-## Standard Cell Libraries in ASIC and FPGA Design
-
-- ASIC designs rely heavily on standard cell libraries from foundries
-- FPGAs use configurable logic blocks but may also have standard cells in hard macros
-
 ## Skywater Standard Cell Designs
 
 - Open-source standard cell library for 130nm technology
 - Available on GitHub
 - Provides a variety of cells for digital design
 - https://sky130-unofficial.readthedocs.io/en/latest/index.html
-- [Example Wildcat Design in Tiny Tapeout](https://legacy-gltf.gds-viewer.tinytapeout.com/?model=https://schoeberl.github.io/tt10-wildcat/tinytapeout.gds.gltf)
+- [Cell list](https://sky130-unofficial.readthedocs.io/en/latest/contents/libraries/sky130_fd_sc_hd/README.html)
+
 
 ## Memories in Standard Cell Design
 
@@ -178,7 +172,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Register File in Hardware (Wildcat)
 
-- Implemented as a 2-port SRAM in an FPGA
+- Implemented as a two read, one write port SRAM in an FPGA
+  - 2 read ports implemented by two single port SRAMs
 - As registers and muxes in ASICs
 - 1024 flip-flops and 32 32:1 muxes
 - This is BIG
@@ -191,7 +186,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Synthesized Wildcat and Register File
 
-  - Using SkyWater130nm
+  - Using SkyWater 130 nm
   - 3-stages Wildcat pipeline: 429 x 432 umm2
   - Register file: 320 x 320 umm2
   - RF is **55 %** of the area!
@@ -206,7 +201,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 - Enable efficient automated design and manufacturing
 - Optimize trade-offs between power, performance, and area
 - Memories like SRAM need a memory compiler for ASICs
-- 6T SRAM design is a widely used memory structure for high-speed applications
+- 6T SRAM design is a widely used memory structure
 - Rgister file out of FFs is expensive
 
 
