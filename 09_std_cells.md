@@ -202,9 +202,11 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ## Summary
 
 - Standard cells are the building blocks of digital IC design
+  - standard hight, variable width
 - Enable efficient automated design and manufacturing
 - Optimize trade-offs between power, performance, and area
-- Memories like SRAM and DRAM are crucial components in digital ICs
+- Memories like SRAM need a memory compiler for ASICs
 - 6T SRAM design is a widely used memory structure for high-speed applications
+- Rgister file out of FFs is expensive
 
 
