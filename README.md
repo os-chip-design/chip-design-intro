@@ -257,7 +257,9 @@ To make the most of the presentation and feedback session, please take into acco
 - TBA
 
 
-### Lecture 9: Standard Cells, Memory, and Register Files (MS) - TENTATIVE
+### Lecture 9: Standard Cells, Memory, and Register Files (MS)
+
+- [Lecture slides](09_std_cells.md)
 
 #### Lecture outline
 
