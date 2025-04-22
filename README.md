@@ -297,16 +297,10 @@ To make the most of the presentation and feedback session, please take into acco
 
 - Work on the project
 
-### Lecture TBD: Submitting your Design to eFabless (LP(?)/MS(?)) - TENTATIVE
 
-- Overview of eFabless
-- The Caravel framework
-- How to submit your desing
-
-### Lecture 11: Low-power Chip Design and Implementation (Lars Graversen/Demant)
+### Lecture 11: Guest lecture - Low-power Chip Design and Implementation (Lars Graversen/Demant)
 
 #### Lecture outline:
-
 - Chip design at Demant
 - Industrial design and implementation flow overview
 - Design and implementation considerations for low power
@@ -315,27 +309,22 @@ To make the most of the presentation and feedback session, please take into acco
 #### Lab. 11
 
 - Work on the project
-- Apply the learning from the lecture in the project
 
 #### Reading
-- TBA
+- None
 
-
-### Lecture 12: Overview on Analog and Mixed Chip Desing (guest) - TENTATIVE  
-
-- [Lecture slides](???.md) - not yet availble
+### Lecture 12: Submitting your Design to eFabless (LP(?)/MS(?)) - TENTATIVE
 
 #### Lecture outline:
-- Introduction to analog design
-- Key differences vetween analog and digital design
-- Basic building blocks of analog circuits
-- Analog layout considerations
-- Example: Op. Amp. or ADC/DAC
-- Tools and methodologies for analog 
-- Challenges in mixed-signal design
+- Overview of eFabless
+- The Caravel framework
+- How to submit your desing
 
 #### Lab. 12
 - Work on the project
+
+#### Reading
+- TBA
 
 
 ### Lecture 13: Student project presentations (MS/LP)
