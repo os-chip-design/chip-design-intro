@@ -427,7 +427,7 @@ The deadline for the hand-in is the **4th of May 2025** at **23:59**.
 
 ## Exam
 
-Project + written or oral examination. More information about the exam will come later.
+Project report and presentation.
 
 ## Learning Objectives
 
