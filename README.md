@@ -375,7 +375,7 @@ To ensure smooth progress, we will coordinate weekly during the lab sessions. Th
 
 ### Report
 
-You are expected to hand-in a **report** describing your desing and your work. The report should be formatted as IEEE paper (IEEEtran template) and not be longer than 6 pages.
+You are expected to hand-in a **report** describing your desing and your work. The report should be formatted as IEEE paper (IEEEtran template) and not be longer than 4 pages.
 In the following, you can find the expected content of the report (not all entries may apply to your project):
   - *Title*
   - *Group number*
