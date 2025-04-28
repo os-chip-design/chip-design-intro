@@ -313,18 +313,13 @@ To make the most of the presentation and feedback session, please take into acco
 #### Reading
 - None
 
-### Lecture 12: Submitting your Design to eFabless (LP(?)/MS(?)) - TENTATIVE
-
-#### Lecture outline:
-- Overview of eFabless
-- The Caravel framework
-- How to submit your desing
+### Lecture 12: Project Work
 
 #### Lab. 12
 - Work on the project
 
 #### Reading
-- TBA
+- None
 
 
 ### Lecture 13: Student project presentations (MS/LP)
