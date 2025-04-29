@@ -315,7 +315,7 @@ To make the most of the presentation and feedback session, please take into acco
 
 ### Lecture 12: Project work
 
-THe full time slot is dedicated to project work.
+The full time slot is dedicated to project work.
 
 #### Lab. 12
 - Work on the project
