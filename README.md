@@ -15,6 +15,7 @@ This README file contains all the information related to the course. Please **re
 * [Exam](#exam)
 * [Learning Objectives](#learning_objectives)
 * [License](#license)
+* [Funding](#funding)
 
 *Note: The first regular version will be given in Spring 2026. In Spring 2025, the course will be held in a flexible style (like a special course). Specifically, the content will be adapted to the students' needs and interests.*
 *Students are expected to contribute to the course actively and help improve the material for the future version of the course.*
@@ -442,3 +443,10 @@ All original content in this repository, including text, code, and other materia
 
 ### License note for Images
 Certain images in this repository are not covered by the CC0 license. These images may be subject to more restrictive copyright terms. Where applicable, copyright and licensing information is provided for these images in the relevant directories, file descriptions, or as text integrated in the images.
+
+## Funding
+
+Funded by the European Union within the *Edu4Chip - Joint Education for Advanced Chip Design in Europe* project. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or European Health and Digital Executive Agency (HaDEA). Neither the European Union nor the granting authority can be held responsible for them.
+
+<img src="figures/funded_by_the_EU.png" width="200">
+
