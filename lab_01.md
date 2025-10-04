@@ -5,6 +5,7 @@
 * Have a pointer to config options, a more current version than https://openlane.readthedocs.io/en/latest/reference/configuration.html
 * Substitute OpenLane with LibreLane
 * Also offer Docker version
+* Use Matt Venn's tool from https://github.com/mattvenn/librelane_summary
 
 ## Tool Installation
 
