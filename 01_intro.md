@@ -12,22 +12,29 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 # **Introduction to Chip Design**
 
 **Martin Schoeberl and Luca Pezzarossa**
+## TODO
+
+ * Talk about the tools
+ * Talk about the output files
+   * Details later
+ * Got through 4 in Z2A for additional stuff
+
 
 ## Welcome
 
- * Learn the basics of chip cesign
+ * Learn the basics of chip design
  * Design and fabricate your own chip (ASIC)
  * We will use open-source tools only
- * This is a new 13 weeks course
+ * This is a new 13-week course
     * We will adapt to your needs and interests
-    * We did an open-source chipdesign course as special course before
+    * We did an open-source chip design course as a special course before
  * Will have rough edges
  * I am excited to see you building your own chips
 
 ## Introduction Round
 
- * Who we are?
-   - Luca and Martin
+ * Who are we?
+   - Ole, Luca, and Martin
  * Who are you?
    - Why this course?
    - What is your background?
@@ -46,13 +53,13 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Moore's Law: the Exponential Growth
 
- * Number of transistors on a chip doubles every 2 years
+ * The number of transistors on a chip doubles every 2 years
  * Predicted by Gordon Moore in 1965 (Intel co-founder)
    * Still holds, but not for free
    * Transistors are getting smaller
    * Power density is increasing
-   * 7 nm technology node is common now
-     - x nm was originally gate length, but not anymore
+   * The 7 nm technology node is common now
+     - x nm was originally the gate length, but not anymore
    * When is the end of Moore's Law?
  * [Moor's Law](https://en.wikipedia.org/wiki/Moore%27s_law)
 
@@ -245,7 +252,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
  * Weste and Harris: 1.1 and 1.12
  * [OpenROAD: Toward a Self-Driving, Open-Source Digital Layout Implementation Tool Chain](https://vlsicad.ucsd.edu/Publications/Conferences/370/c370.pdf)
- * [Building OpenLANE: A 130nm OpenROAD-based Tapeout- Proven Flow : Invited Paper](https://ieeexplore.ieee.org/document/9256623)
+ * [Building OpenLANE: A 130nm OpenROAD-based Tapeout- Proven Flow: Invited Paper](https://ieeexplore.ieee.org/document/9256623)
  * [Tiny Tapeout: A Shared Silicon Tapeout Platform Accessible To Everyone](https://www.techrxiv.org/users/799365/articles/1165896-tiny-tapeout-a-shared-silicon-tapeout-platform-accessible-to-everyone)
 
  ## Summary
@@ -253,9 +260,9 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * We will design and fabricate a chip
    - Using open-source tools only
    - We will use the Tiny Tapeout platform
- * This is an introduction course
+ * This is an introductory course
    - Motivating you to learn more in the VLSI course
-     - and the chipe design specialisation (MS)
-   - Project based
+     - and the chip design specialisation (MS)
+   - Project-based
  * Under development
     
