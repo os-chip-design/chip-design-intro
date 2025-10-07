@@ -14,10 +14,12 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 **Martin Schoeberl and Luca Pezzarossa**
 ## TODO
 
+ * Talk about the OS chip design movement, Google, Skywater, Tiny Tapeout - watch Matts chapter 5 video
  * Talk about the tools
  * Talk about the output files
    * Details later
  * Got through 4 in Z2A for additional stuff
+   * Show live the different parts of the flow (see also Z2A)
 
 
 ## Welcome
@@ -45,10 +47,10 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Guest lectures
  * Project work
    - Pick a topic and work in groups
-   - Design and tapeout a chip
+   - Design and tape out a chip
      - By combining projects
      - Chip design is a large team effort
-   - Use the Tiny Tapeout platform (and/or efabless)
+   - Use ChipFoundry and/or the Tiny Tapeout platform
    - Write a (short) report
 
 ## Moore's Law: the Exponential Growth
@@ -79,9 +81,9 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Trends in Chip Design
 
- * Processors performance gains are slowing down
+ * Processors' performance gains are slowing down
  * More specialized cores (e.g, AI accelerators)
- * More digital/ASIC designes needed
+ * More digital/ASIC designs needed
  * We need 20+ new chip designers per year in Denmark/Copenhagen
  * Bright future for you!
 
@@ -128,7 +130,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Hardware Description Languages (HDLs)
 - **Verilog**: Widely used for RTL design
-  - With extenstion to SystemVerilog
+  - With extension to SystemVerilog
   - We will introduce Verilog in this course
 - **VHDL**: Popular in Europe and for complex systems
   - Almost not supported by open-source tools
@@ -219,7 +221,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
  * In a fab (short for fabrication plant)
  * Very expensive! (fab and masks)
-   * MPW (Multi Project Wafer) is a way to share the cost
+   * MPW (Multi-Project Wafer) is a way to share the cost
  * Details in VLSI course   
  * Watch [Matt Venn at IHP](https://youtu.be/aBDJQ9NYTEU?si=G19gW0zrbZuDSOp4)
 
@@ -244,7 +246,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ## Using Chisel
 
  * Who does not know Chisel?
- * Easy to learn in self study
+ * Easy to learn in self-study
    - Use the [Chisel book](https://www.imm.dtu.dk/~masca/chisel-book.html)
    - Do the [Chisel lab](https://github.com/schoeberl/chisel-lab)
 
