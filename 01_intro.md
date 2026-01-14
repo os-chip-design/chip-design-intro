@@ -15,7 +15,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Welcome
 
- * Learn the basics of chip cesign
+ * Learn the basics of chip design
  * Design and fabricate your own chip (ASIC)
  * We will use open-source tools only
  * This is a new 13 weeks course

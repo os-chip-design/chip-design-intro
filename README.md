@@ -3,8 +3,6 @@
 This repository contains the material for the 13-week course **02118 - Introduction to Chip Design** at the Technical University of Denmark (DTU). This course was developed with support from the
 [Edu4Chip](https://edu4chip.github.io/) project.
 
-This README file contains all the information related to the course. Please **read it carefully** to have an idea of the course structure and expectations.
-
 ### Content
 
 * [Practicalities](#practicalities)
@@ -16,25 +14,19 @@ This README file contains all the information related to the course. Please **re
 * [Learning Objectives](#learning_objectives)
 * [License](#license)
 
-*Note: The first regular version will be given in Spring 2026. In Spring 2025, the course will be held in a flexible style (like a special course). Specifically, the content will be adapted to the students' needs and interests.*
-*Students are expected to contribute to the course actively and help improve the material for the future version of the course.*
-
 ## Practicalities
 
-The course runs on **Wednesdays from 13:00 to 17:00** in **Building 308 - Room 017**. 
+The course runs on **Wednesdays from 13:00 to 17:00** in **TBD: Building 308 - Room 017**. 
 
 Each weekly session consist of a lecture and laboratory work. Some session will be fully dedicated to laboratory work (especially at the end of the course when you are expected to work on your project).
 
 The course has two teachers:
  * [Martin Schoeberl](https://www.imm.dtu.dk/~masca/)
- * [Luca Pezzarossa](https://www2.compute.dtu.dk/~lpez/)
-
-You are very welcome to seek for help by approaching the teachers during the letctures and laboratory sessions, or via mail, or our Discord channel.
-Also, feedback about the course is much appreciated.
+ * [Ole Richter](https://orbit.dtu.dk/en/persons/ole-richter/)
 
 ## Tools
 
-Install the OpenLane2 tools locally or use the server `chipdesign1.compute.dtu.dk`. The tools are currently usable on Linux and MacOS (even native with Mac Silicon). For Windows use WSL2 to have a Linux environment. There is no official support for Windows available. See [Lab 1](lab_01.md) for installation instructions.
+Install the LibreLane tools locally or use the server `chipdesign1.compute.dtu.dk`. The tools are currently usable on Linux and MacOS (even native with Mac Silicon). For Windows use WSL2 to have a Linux environment. There is no official support for Windows available. See [Lab 1](lab_01.md) for installation instructions.
 
 ## Course Aim
 
@@ -52,8 +44,7 @@ This course is an introduction to the design of digital integrated circuits. It 
 
 ## Lecture plan
 
-This is a tentative list of lectures. The course will be adapted to the students' needs and interests.
-
+This is the list of lectures from 2025. It will be adapted for 2026. 
 
 ### Lecture 1: Introduction to the Chip Design Course (MS) 
 
@@ -444,22 +435,11 @@ The deadline for the hand-in is **TBD** at **midnight**.
 
 Project + written or oral examination. More information about the exam will come later.
 
-## Learning Objectives
-
-A student who has met the objectives of the course will be able to:
-- **Explain** the physics and operation of semiconductor devices, including transistors, and be able to use this knowledge to **design** simple analog and digital circuits.
-- **Explain** the fundamentals of memory design, including different types of memories and their organization, and be able to **design** and **analyze** memory subsystems.
-- **Explain** the principles of SoC design, including partitioning, floor planning, and individual hardening, and be able to **apply** these principles to the design of a simple SoC.
-- **Explain** the principles of multicore SoC design, including the use of NoCs and accelerators, and be able to **apply** these principles to the design of a simple multicore SoC.
-- **Explain** the principles of verification in hardware design, including the use of agile hardware design techniques, and be able to **apply** these principles to the verification of a simple SoC design.
-- **Explain** the tool flow involved in chip design, including the use of open-source tools, and be able to **use** these tools to design and simulate a simple SoC.
-- **Gain** practical experience in the design and simulation of a simple SoC, and experience a virtual tapeout process.
-- **Develop** critical thinking and problem-solving skills through the design and analysis of complex digital systems.
-- **Develop** effective communication skills, including the ability to present and discuss technical ideas and designs, both orally and in writing.
 
 ## License
 
 All original content in this repository, including text, code, and other materials, is licensed under the CC0 1.0 Universal license (see LICENSE file), unless otherwise noted. 
 
-### License note for Images
+### License Note for Images
+
 Certain images in this repository are not covered by the CC0 license. These images may be subject to more restrictive copyright terms. Where applicable, copyright and licensing information is provided for these images in the relevant directories, file descriptions, or as text integrated in the images.
