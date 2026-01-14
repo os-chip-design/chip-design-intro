@@ -137,7 +137,14 @@ backgroundColor: #fff
 
 ## Spacing 
 
+![width:800px](https://skywater-pdk.readthedocs.io/en/main/_images/p035-li_dotdash_dotdash.svg) 
+skywater 130 li connect
+
 ## minimim width and area
+
+![width:600px](https://skywater-pdk.readthedocs.io/en/main/_images/p044-m4_dotdash.svg) 
+skywater 130 metal
+
 
 ## Conclusion
 
@@ -150,7 +157,6 @@ backgroundColor: #fff
 
 
 
-
-
+x``
 
 

@@ -1,5 +1,12 @@
 # Lab 1: Explore OpenLane 2
 
+## TODO for Next Iteration
+
+* Have a pointer to config options, a more current version than https://openlane.readthedocs.io/en/latest/reference/configuration.html
+* Substitute OpenLane with LibreLane
+* Also offer Docker version
+* Use Matt Venn's tool from https://github.com/mattvenn/librelane_summary
+
 ## Tool Installation
 
 The following tools are installed:
@@ -8,32 +15,8 @@ The following tools are installed:
 
 ### Nix Installation
 
-Follow the description from the [OpenLane 2 Documentation](https://openlane2.readthedocs.io/en/latest/) to install nix.
+Follow the description from the [OpenLane 2 Documentation](https://openlane2.readthedocs.io/en/latest/) to install Nix.
 
-Only if this fails, explore the following options.
-
-#### NixOS Method
-
-NixOS installation should have nix inherently installed.
-
-#### Lix Method
-
-This method uses [Lix](https://lix.systems/), which is an implementation of the Nix functional package management language, which is C++/Rust based. As of now they are intercompatible with standard Nix, although with additional type and escalation safety, errors reports and among other neat features.
-To install Lix, [by following this guide](https://lix.systems/install/), here is the following command. Also make sure to add extra support of flakes into the system as Openlane2 depends on it and has powerful uses, for extra reading here is [this](https://jade.fyi/blog/flakes-arent-real/) and [that](https://nixos-and-flakes.thiscute.world/introduction/).
-
-```zsh
-curl -sSf -L https://install.lix.systems/lix | sh -s -- install
-```
-For Openlane2 installation you might have to invoke `--extra-deprecated-features url-literals` to your command.
-```zsh
-nix-shell --pure ~/openlane2/shell.nix --extra-deprecated-features url-literals
-```
-
-After-wards, after long time of installing and compiling you should be ready to go!
-
-#### Nix Method
-
-[Use this following guide to install it.](https://nixos.wiki/wiki/Nix_Installation_Guide)
 
 ### OpenLane 2 Installation
 

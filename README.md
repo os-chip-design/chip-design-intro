@@ -13,6 +13,7 @@ This repository contains the material for the 13-week course **02118 - Introduct
 * [Exam](#exam)
 * [Learning Objectives](#learning_objectives)
 * [License](#license)
+* [Funding](#funding)
 
 ## Practicalities
 
@@ -288,16 +289,10 @@ To make the most of the presentation and feedback session, please take into acco
 
 - Work on the project
 
-### Lecture TBD: Submitting your Design to eFabless (LP(?)/MS(?)) - TENTATIVE
 
-- Overview of eFabless
-- The Caravel framework
-- How to submit your desing
-
-### Lecture 11: Low-power Chip Design and Implementation (Lars Graversen/Demant)
+### Lecture 11: Guest lecture - Low-power Chip Design and Implementation (Lars Graversen/Demant)
 
 #### Lecture outline:
-
 - Chip design at Demant
 - Industrial design and implementation flow overview
 - Design and implementation considerations for low power
@@ -306,24 +301,13 @@ To make the most of the presentation and feedback session, please take into acco
 #### Lab. 11
 
 - Work on the project
-- Apply the learning from the lecture in the project
 
 #### Reading
-- TBA
+- None
 
+### Lecture 12: Project work
 
-### Lecture 12: Overview on Analog and Mixed Chip Desing (guest) - TENTATIVE  
-
-- [Lecture slides](???.md) - not yet availble
-
-#### Lecture outline:
-- Introduction to analog design
-- Key differences vetween analog and digital design
-- Basic building blocks of analog circuits
-- Analog layout considerations
-- Example: Op. Amp. or ADC/DAC
-- Tools and methodologies for analog 
-- Challenges in mixed-signal design
+The full time slot is dedicated to project work.
 
 #### Lab. 12
 - Work on the project
@@ -375,10 +359,9 @@ To ensure smooth progress, we will coordinate weekly during the lab sessions. Th
 - Keep track of milestones and ensure alignment with the tapeout schedule
 - Work on the project
 
-### Deliverables
+### Report
 
-You are expected to hand-in the following deliverables:
-- **Report:** A report describing your desing and your work. The report should be formatted as IEEE paper and not be longer than 6 pages
+You are expected to hand-in a **report** describing your desing and your work. The report should be formatted as IEEE paper (IEEEtran template) and not be longer than 4 pages.
 In the following, you can find the expected content of the report (not all entries may apply to your project):
   - *Title*
   - *Group number*
@@ -394,12 +377,9 @@ In the following, you can find the expected content of the report (not all entri
     - Describe how you verified the design.
     - Include results from DRC (Design Rule Check), timing analysis, etc. to demonstrate the design's readiness for tapeout.
     - Tapeout preparation: Summarize the final steps taken to prepare the design for tapeout, (integration with the Caravel framework and/or and ensuring compliance with Tiny Tapeout requirements). 
+  - *Link/explanantion where to find your code* Explain where your code is located in your repository. Possibly link to a **README file** that includes all needed technical instructions.
 
-- **Source files:** All the source code of your implementation, scripts, and tests/verification material. Mentioning the location on the repository is fine. 
-
-- **README file:** A README file that includes all needed tachnical instructions.
-
-The deadline for the hand-in is **TBD** at **midnight**.
+The deadline for the hand-in is the **4th of May 2025** at **23:59**.
 
 ### Project assessment criteria
 
@@ -433,7 +413,7 @@ The deadline for the hand-in is **TBD** at **midnight**.
 
 ## Exam
 
-Project + written or oral examination. More information about the exam will come later.
+Project report and presentation.
 
 
 ## License
@@ -443,3 +423,9 @@ All original content in this repository, including text, code, and other materia
 ### License Note for Images
 
 Certain images in this repository are not covered by the CC0 license. These images may be subject to more restrictive copyright terms. Where applicable, copyright and licensing information is provided for these images in the relevant directories, file descriptions, or as text integrated in the images.
+
+## Funding
+Funded by the European Union within the *[Edu4Chip](https://edu4chip.github.io/) - Joint Education for Advanced Chip Design in Europe* project. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or European Health and Digital Executive Agency (HaDEA). Neither the European Union nor the granting authority can be held responsible for them.
+
+<img src="figures/funded_by_the_EU.png" width="300">
+
