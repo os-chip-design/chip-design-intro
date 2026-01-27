@@ -127,7 +127,7 @@ This is the list of lectures from 2025. It will be adapted for 2026.
   - E.g., [YARVI](https://github.com/tommythorn/yarvi)
 
 
-### Lecture 4: Tool flow and course project (OR) 
+### Lecture 4: Tool flow and course project (MS/OR) 
 
 - [Lecture slides](04_tools.md)
 
@@ -248,8 +248,20 @@ To make the most of the presentation and feedback session, please take into acco
 - Lecture slides (also available as PDF in DTU-Learn)
 - TBA
 
+### Lecture 9: Guest lecture - Chip Design at Oticon (Kasper)
 
-### Lecture 9: Standard Cells, Memory, and Register Files (MS) OR?
+#### Lecture outline:
+- Chip design at Demant
+- Industrial design and implementation flow overview
+- Design and implementation considerations for low power
+- Challenges in lower design nodes (and/or at lower voltages)
+
+#### Lab. 9
+
+- Finalise functional implementation of project
+
+
+### Lecture 10: Standard Cells, Floorplan, Memory, and Register Files (OR)
 
 - [Lecture slides](09_std_cells.md)
 
@@ -267,12 +279,12 @@ To make the most of the presentation and feedback session, please take into acco
 - Memory with the SkyWater PDK
 - Models and simulation
 
-#### Lab. 9
+#### Lab. 10
 
-- Finalise functional implementation of project
+- Run your though P&R (OR)
+- Handle placement and macro insertion
 
-
-### Lecture 10: Chip Design Ruls, Power, and Clock (OR)
+### Lecture 11: Chip Design Ruls, Power, and Clock (OR)
 
 - [Lecture slides](???.md) - not yet availble
 
@@ -284,20 +296,6 @@ To make the most of the presentation and feedback session, please take into acco
 - Clock distribution challenges and clock trees
 - Power optimization through clock gating
 - Timing closure
-
-#### Lab. 10
-
-- Run your though P&R (OR)
-- Handle placement and macro insertion
-
-
-### Lecture 11: Guest lecture - Low-power Chip Design and Implementation (Lars Graversen/Demant)
-
-#### Lecture outline:
-- Chip design at Demant
-- Industrial design and implementation flow overview
-- Design and implementation considerations for low power
-- Challenges in lower design nodes (and/or at lower voltages)
 
 #### Lab. 11
 
