@@ -138,16 +138,16 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
   - Scala-based HDL
   - You learned it in DE2
 
-## OpenLane
+## LibreLane
 
- * OpenLane is an open-source digital ASIC flow
+ * LibreLane is an open-source digital ASIC flow
  * RTL to GDSII flow
    - GDSII is the final layout file for the chip
    - Sent to the foundry (short fab) for manufacturing 
  * Based on several open-source tools
  * Developed by efabless
  * Resuses OpenROAD and Yosys
- * We will explore OpenLane today!
+ * We will explore LibreLane today!
 
 ## OpenRoad
 
@@ -208,7 +208,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
    * The PDK is provided by the fab
    * Needed to produce a GDSII file
 
-## OpenLane2 Demo
+## LibreLane Demo
 
  * Start nix with `nix-shell`
  * cd to wildcat

@@ -1,12 +1,5 @@
 # Lab 1: Explore OpenLane 2
 
-## TODO for Next Iteration
-
-* Have a pointer to config options, a more current version than https://openlane.readthedocs.io/en/latest/reference/configuration.html
-* Substitute OpenLane with LibreLane
-* Also offer Docker version
-* Use Matt Venn's tool from https://github.com/mattvenn/librelane_summary
-
 ## Tool Installation
 
 The following tools are installed:
@@ -15,14 +8,14 @@ The following tools are installed:
 
 ### Nix Installation
 
-Follow the description from the [OpenLane 2 Documentation](https://openlane2.readthedocs.io/en/latest/) to install Nix.
+Follow the description from the [LibreLane Install](https://librelane.readthedocs.io/en/latest/installation/nix_installation/index.html) to install Nix.
 
 
-### OpenLane 2 Installation
+### LibreLane Installation
 
 The tools are currently usable on Linux and MacOS (even native with Mac Silicon). For Windows use WSL2 to have a Linux environment. There is no official support for Windows available.
 
-See documentation for installation instructions at the [OpenLane 2 Documentation](https://openlane2.readthedocs.io/en/latest/).
+See documentation for installation instructions at the [LibreLane Install](https://librelane.readthedocs.io/en/latest/installation/nix_installation/index.html).
 
 Switch to your nix environment within your openlane clone directory by excuting the following command:
 
@@ -30,7 +23,7 @@ Switch to your nix environment within your openlane clone directory by excuting 
 
 On the first call this will take quite some time, as it will download and install all the necessary tools. On subsequent calls, it will be faster.
 
-### Optional: use VSCode
+### Optional: use VSCode / VSCodium
 
 From any folder (e.g., where your design is) you can start VSCode with the following command:
 
@@ -38,12 +31,19 @@ From any folder (e.g., where your design is) you can start VSCode with the follo
 
 then enter the nix environment from a VSCode terminal.
 
+### Alternative: Install via docker
+
+Follow the description from the [LibreLane Docker](https://librelane.readthedocs.io/en/latest/installation/docker_installation/index.html) to install Nix.
+
+
 ## Using a Server
 
 Alternative to installing the tools locally you can run them on
 `chipdesign1.compute.dtu.dk`. You shall have access via `ssh` to this server.
 
 However, students cannot access our internal systems directly by default, even with DTU VPN active. The only system we allow SSH into by students using DTU VPN is 'linuxterm1.compute.dtu.dk' aka. 'thinlinc.compute.dtu.dk'. From here they can then ssh again into chipdesign1.
+
+#### Update in progress
 
 `nix` and OpenLane2 are installed. Change to `/home/share/openlane2` and
 start the nix shell.
@@ -53,6 +53,8 @@ Please do not change anything in the `openlane2` directory.
 
 You can also use VSCode (running locally) connecting to the server for
 easier editing and file navigation.
+
+
 
 ## Running a "Hello World" Example
 
@@ -79,6 +81,22 @@ Furthermore, the OpenLane run will generate several reports in the run directory
 * Can you find the size and usuage of the standard cells?
 * Can you find out the maximum frequency of the design?
 
+## Optional: Use tinytapeout summary tool
+
+explore the summary tool to get a better overview of your design statistics
+
+```
+git clone https://github.com/mattvenn/librelane_summary.git
+# and add the tool to your path
+export PATH=$PATH:$(pwd)/librelane_summary
+```
+
+go inside you design folder and generate the statistics with:
+```
+summary.py
+```
+checkout the readme for more options.
+
 ## Optional: Synthesize your Own Design
 
 Use one of your own (Chisel) designs, create the `.json` file and run it through the flow. Maybe explore how large your vending machine is. Find as a reference the size of a single tile in Tiny Tapeout, the service you will use to produce your chip. Would your vending machine fit into that cheap $ 50 tile?
@@ -86,3 +104,14 @@ Use one of your own (Chisel) designs, create the `.json` file and run it through
 ## Optional: Synthesize a Very Simple Design
 
 Although the former designs have been simple, we often loose the connection how they are implemented. I suggest to synthesize a super simple design, e.g., an 8-bit counter and explore the results in more detail. Can you see the adder used for the counter?
+
+## How to control and customise your flow
+
+librelane lets you adapt thier example flow at many levels, 
+
+If you start your own design you have to adapt your design configuration [Design Conf Docs](https://librelane.readthedocs.io/en/latest/reference/configuration.html).
+
+each flow consists out of steps and do get your design tapeed out we will need to tweek and adapt them to your design. Both for better results and most promently to fix mistakes and problems.
+This we can do by changing the config of each step in the flow [Step Variable Docs](https://librelane.readthedocs.io/en/latest/reference/step_config_vars.html).
+
+In special circumstances if you doing more complex designs or something special you can also adapt the flow itself [Flow Variable Docs](https://librelane.readthedocs.io/en/latest/reference/flows.html).
