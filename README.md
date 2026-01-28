@@ -284,6 +284,7 @@ To make the most of the presentation and feedback session, please take into acco
 
 #### Lab. 10
 
+- Simulate a standrtad cell in Spice
 - Run your though P&R (OR)
 - Handle placement and macro insertion
 
