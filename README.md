@@ -101,41 +101,14 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 
 \* quick read, no need to go into details with formulas
 
-### Lecture 3: Verilog and Tiny Tapeout (MS)
 
-- [Lecture slides](03_verilog.md)
-
-#### Lecture outline
-
-- Introduction to Verilog
-- Introduction to Tiny Tapeout
-
-#### Lab. 3
-
-- Small Verilog example (programmable counter)
-- Write a testbench and run it on post-synthesis
-- Do it in Chisel and in Verilog
-- Do local hardening
-- Simulate post-synthesis
-  - probably need a Verilog or cocotb testbench
-- Explore Tiny Tapeout with a Verilog project (GitHub based)
-- Use the counters in a memory mapped device (maybe)
-- See [Lab 3](lab_03.md) for instructions
-
-#### Reading
-
-- Lecture slides (also available as PDF in DTU-Learn)
-- Find good Verilog projects and read the code
-  - E.g., [YARVI](https://github.com/tommythorn/yarvi)
-
-
-### Lecture 4: Tool flow and course project (LP)
+### Lecture 3: Tool flow and course project (MS/OR) 
 
 - [Lecture slides](04_tools.md)
 
 #### Lecture outline
 
-- Introduction to the OpenLane2 ASIC design flow
+- Introduction to the LibreLane ASIC design flow
 - Input preparation and RTL linting
 - Synthesis and logic optimization
 - Floorplanning and placement
@@ -145,7 +118,7 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 - Physical signoff and SDF simulation
 - Overview of the course project and group formation
 
-#### Lab. 4
+#### Lab. 3
 
 - Discussion about the project
 - Form and register groups for the course project
@@ -157,9 +130,37 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 #### Reading
 
 - Lecture slides (also available as PDF in DTU-Learn)
-- [OpenLane2 Documentation](https://openlane2.readthedocs.io/en/latest/)
+- [LibreLane Documentation](https://librelane.readthedocs.io/en/latest/)
 
 This is a large documentation from whih this slide set is based upon, you do not need to read it all. Reference to it when needed.
+
+### Lecture 4: Verilog and Tiny Tapeout (MS)
+
+- [Lecture slides](03_verilog.md)
+
+#### Lecture outline
+
+- Introduction to Verilog
+- Introduction to Tiny Tapeout
+
+#### Lab. 4
+
+- Small Verilog example (programmable counter)
+- Write a testbench and run it on post-synthesis
+- Do it in Chisel and in Verilog
+- Do local hardening
+- Simulate post-synthesis
+  - probably need a Verilog or cocotb testbench
+- Explore Tiny Tapeout with a Verilog project (GitHub based)
+- Use the counters in a memory mapped device (maybe)
+- See [Lab 3](lab_03.md) for instructions
+- Work on the project
+
+#### Reading
+
+- Lecture slides (also available as PDF in DTU-Learn)
+- Find good Verilog projects and read the code
+  - E.g., [YARVI](https://github.com/tommythorn/yarvi)
 
 
 ### Lecture 5: Introduction to Chisel (MS)
@@ -200,7 +201,7 @@ This is a large documentation from whih this slide set is based upon, you do not
 
 - Lecture slides (also available as PDF in DTU-Learn)
 
-### Lecture 7: Student Project Presentations (MS/LP)
+### Lecture 7: Student Project Presentations (MS/OR)
 
 Each group presents their project plan and initial developments. This is a key milestone in the course, where you will receive valuable feedback from the teachers and your peers.
 
@@ -243,15 +244,27 @@ To make the most of the presentation and feedback session, please take into acco
 
 #### Lab. 8
 
-- Work on the project
+- Finalise implementation of project
 
 #### Reading
 
 - Lecture slides (also available as PDF in DTU-Learn)
 - TBA
 
+### Lecture 9: Guest lecture - Chip Design at Oticon (Kasper)
 
-### Lecture 9: Standard Cells, Memory, and Register Files (MS)
+#### Lecture outline:
+- Chip design at Demant
+- Industrial design and implementation flow overview
+- Design and implementation considerations for low power
+- Challenges in lower design nodes (and/or at lower voltages)
+
+#### Lab. 9
+
+- Finalise the functional implementation of your project
+
+
+### Lecture 10: Standard Cells, Floorplan, Memory, and Register Files (OR)
 
 - [Lecture slides](09_std_cells.md)
 
@@ -269,12 +282,12 @@ To make the most of the presentation and feedback session, please take into acco
 - Memory with the SkyWater PDK
 - Models and simulation
 
-#### Lab. 9
+#### Lab. 10
 
-- Work on the project
+- Run your though P&R (OR)
+- Handle placement and macro insertion
 
-
-### Lecture 10: Chip Design Ruls, Power, and Clock (OR)
+### Lecture 11: Chip Design Ruls, Power, and Clock (OR)
 
 - [Lecture slides](???.md) - not yet availble
 
@@ -287,35 +300,24 @@ To make the most of the presentation and feedback session, please take into acco
 - Power optimization through clock gating
 - Timing closure
 
-#### Lab. 10
-
-- Work on the project
-
-
-### Lecture 11: Guest lecture - Low-power Chip Design and Implementation (Lars Graversen/Demant)
-
-#### Lecture outline:
-- Chip design at Demant
-- Industrial design and implementation flow overview
-- Design and implementation considerations for low power
-- Challenges in lower design nodes (and/or at lower voltages)
-
 #### Lab. 11
 
-- Work on the project
+- Run routing (OR)
+- Fix shorts and design rule violations
 
 #### Reading
 - None
 
-### Lecture 12: Project work
+### Lecture & Lab 12: Project work and "tapeout" (OR)
 
 The full time slot is dedicated to project work.
 
-#### Lab. 12
-- Work on the project
+- Run Timing closure and LVS
+- Fix timing violations and handle design missmatches 
+- "tape out" your project  
 
 
-### Lecture 13: Student project presentations (MS/LP)
+### Lecture 13: Student project presentations (MS/OR)
 Each group presents their finalized project and discusses the results.
 
 
@@ -408,10 +410,9 @@ The deadline for the hand-in is the **4th of May 2025** at **23:59**.
 
 - **Week 4**: Form groups, select project, open discussion
 - **Week 6**: Finalize desing concept, define specs, align between groups
-- **Weeks 7-11**: Develop design, run simulations, initiate physical design
+- **Weeks 7-9**: Develop design, run simulations
+- **Weeks 10-11**: Initiate physical design, P&R, Problem strategies
 - **Weeks 12-13**: Finalize physical design, complete DRC/LVS checks, prepare for submission
-
-- **We could finish earlier** for the April tapeout
 
 ## Exam
 
