@@ -27,7 +27,7 @@ The course has two teachers:
 
 ## Tools
 
-Install the LibreLane tools locally or use the server `chipdesign1.compute.dtu.dk`. The tools are currently usable on Linux and MacOS (even native with Mac Silicon). For Windows use WSL2 to have a Linux environment. There is no official support for Windows available. See [Lab 1](lab_01.md) for installation instructions.
+Install the LibreLane tools locally or use the server `chipdesign1.compute.dtu.dk`. The tools are currently usable on Linux and MacOS (even native with Mac Silicon). For Windows use WSL2 to have a Linux environment. There is no official support for Windows available. See Section 1.2 in the [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf) for installation instructions.
 
 ## Course Aim
 
@@ -38,8 +38,9 @@ This course is an introduction to the design of digital integrated circuits. It 
 
  * Lecture slides and lab material
  * The textbook [CMOS VLSI Design, A Circuits and Systems Perspective](https://www.amazon.com/CMOS-VLSI-Design-Circuits-Perspective/dp/0321547748) by Neil H. E. Weste and David Harris, also available as PDF
- * The material related to the open-source tools we use, including installation instructions: [OpenLean 2 Documentation](https://openlane2.readthedocs.io/en/latest/)
-   - For a quick start: [OpenLane 2 in the browser](https://colab.research.google.com/github/efabless/openlane2/blob/main/notebook.ipynb), link is from [efabless](https://efabless.com/openlane)
+ * The [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf) is a start of notes and exercises for the course.
+ * The material related to the open-source tools we use, including installation instructions: [LibreLane Documentation](https://librelane.readthedocs.io/en/latest/)
+   - For a quick start you can explore [LibreLane in the browser](https://colab.research.google.com/github/librelane/librelane/blob/main/notebook.ipynb)
  * [Caravel Documentation](https://github.com/efabless/caravel)
  * [Chisel Book](https://www.imm.dtu.dk/~masca/chisel-book.html) (as  reference when doing designs in Chisel) 
 
@@ -60,10 +61,11 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 - Edu4Chip
 
 #### Lab. 1
-- Open Source tools (local) installation
-- Running a "Hello World" example
-- Exploring a standard gate
-- See [Lab 1](lab_01.md) for instructions
+- Local installation of the open-srouce tools (LibreLane)
+- Running a "Hello World" example from Verilog source to GDSII
+- Explore timing and size
+- Explore different reset strategies
+- See Section 1.3 in the [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf)
 
 #### Reading
 
