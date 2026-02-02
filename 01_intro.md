@@ -11,25 +11,16 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 # **Introduction to Chip Design**
 
-**Martin Schoeberl and Luca Pezzarossa**
-## TODO
-
- * Talk about the OS chip design movement, Google, Skywater, Tiny Tapeout - watch Matts chapter 5 video
- * Talk about the tools
- * Talk about the output files
-   * Details later
- * Got through 4 in Z2A for additional stuff
-   * Show live the different parts of the flow (see also Z2A)
-
+**Martin Schoeberl**
 
 ## Welcome
 
  * Learn the basics of chip design
  * Design and fabricate your own chip (ASIC)
  * We will use open-source tools only
- * This is a new 13-week course
+ * This is a (relatively) new 13-week course
     * We will adapt to your needs and interests
-    * We did an open-source chip design course as a special course before
+    * We did an initial open-source chip design course 2025
  * Will have rough edges
  * I am excited to see you building your own chips
 
@@ -37,6 +28,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
  * Who are we?
    - Ole, Luca, and Martin
+   - Tjark as TA
  * Who are you?
    - Why this course?
    - What is your background?
@@ -46,12 +38,32 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Some initial lectures, including labs
  * Guest lectures
  * Project work
-   - Pick a topic and work in groups
-   - Design and tape out a chip
-     - By combining projects
-     - Chip design is a large team effort
-   - Use ChipFoundry and/or the Tiny Tapeout platform
+   - We will do a full chip design
+     - From RTL to GDSII and tapeout
+   - Subtopics as group work
    - Write a (short) report
+
+## Tapeout Project
+
+  * Design a chip together
+  * Using Caravel as base chip framework
+  * Your sub-projects will be combined
+  * Chip design is a large team effort
+  * Tapeout with ChipFoundry
+    - Multi-Project Wafer (MPW) run
+  * Fabrication in SkyWater 130 nm technology
+  * We will cover the full flow
+
+## Prerequisites
+
+ * Digital Design (DE2)
+   - Combinational and sequential logic
+   - Finite state machines
+   - Basic Verilog, VHDL, or Chisel knowledge
+   - Which language do you know?
+ * Basic programming skills
+ * Basic understanding of computer architecture is helpful
+ * No prior knowledge of VLSI or chip design needed
 
 ## Moore's Law: the Exponential Growth
 
@@ -89,10 +101,10 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Open Source Chip Design
 
- * Open source tools (OpenLane)
+ * Open source tools (LibreLane)
  * Open source PDK (SkyWater130)
  * Open source IP (e.g., RISC-V core Wildcat)
- * Open source chip framework (Caravell from efabless)
+ * Open source chip framework (Caravel from efabless)
  * Open source teaching material (this course)
 
 ## Tools
@@ -107,7 +119,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 1. **Specification**: Define the chip's purpose and requirements  
 2. **Architecture Design**: High-level design of the system
-3. **RTL Design**: Register Transfer Level design using HDLs (e.g., Verilog, VHDL)
+3. **RTL Design**: Register Transfer Level design using HDLs (e.g., Chisel or Verilog)
 4. **Verification (Testing)**: Ensure the design meets specifications
 
 ## Chip Design Workflow cont.
@@ -193,8 +205,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Google sponsored MPW runs
    - We tried to get a chip produced, but failed :-(
    - Sponsoring is over
- * One MPW run is around $ 10.000 per tile
-   - We might have money for MPW runs :-)  
+ * One MPW run is around $ 15.000 per tile
+   - We have money for a chip tapeout :-)  
 
 ## What is a PDK?
 
@@ -214,7 +226,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * cd to wildcat
  * Show wildcat.json
  * Generate Verilog (`make hw-fmax`)
- * Run OpenLane and show results (see Makefile)
+ * Run LibreLane and show results (see Makefile)
  * Explore in IntelliJ (or VSC)
 
 ## How are Chips Produced?
@@ -234,14 +246,17 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
    - 160 x 100 um tiles
  * Full flow in the cloud (GitHub Actions)
  * Cheap tile: 50 USD
- * We (Edu4Chip) sponsor one tile per project
+ * We (Edu4Chip) can sponsor one tile per project
 
 ## Tiny Tapout Workshop
  
  * Matt Venn runs a Tiny Tapeout workshop at DTU
- * Saturday 15th of January
+ * Saturday 21st of February 2026
  * From zero to a chip in 4 hours
- * [Tiny Tapeout Workshop](https://edu4chip.github.io/ttw2025DTU.html)
+ * [Tiny Tapeout Workshop](https://edu4chip.github.io/ttw2026DTU.html)
+ * Sign up quickly, limited seats!
+ * Just DKK 100, including one tile
+   - Thanks to our sponsors
 
 ## Using Chisel
 
@@ -264,7 +279,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
    - We will use the Tiny Tapeout platform
  * This is an introductory course
    - Motivating you to learn more in the VLSI course
-     - and the chip design specialisation (MS)
+     - and the chip design specialisation (in the MSc)
    - Project-based
- * Under development
+ * Still a bit under development
     

@@ -1,6 +1,6 @@
 slides:
-	marp --allow-local-files --pdf 03_verilog.md
-	open 03_verilog.pdf
+	marp --allow-local-files --pdf 01_intro.md
+	open 01_intro.pdf
 
 clean:
 	@rm -rf build generated
