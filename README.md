@@ -44,7 +44,7 @@ This course is an introduction to the design of digital integrated circuits. It 
  * [Caravel Documentation](https://github.com/efabless/caravel)
  * [Chisel Book](https://www.imm.dtu.dk/~masca/chisel-book.html) (as  reference when doing designs in Chisel) 
 
-## Lecture plan
+## Lecture Plan
 
 This is the list of lectures from 2025. It will be adapted for 2026. 
 
@@ -99,10 +99,10 @@ This is the list of lectures from 2025. It will be adapted for 2026.
   - 1.5.1, 1.5.2
   - 2.1, 2.2*, 2.3* 
 
-\* quick read, no need to go into details with formulas
+* quick read, no need to go into details with formulas
 
 
-### Lecture 3: Tool flow and course project (MS/OR) 
+### Lecture 4: Tool Flow and Caravel (MS) 
 
 - [Lecture slides](04_tools.md)
 
@@ -117,6 +117,13 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 - Timing signoff and GDSII streaming
 - Physical signoff and SDF simulation
 - Overview of the course project and group formation
+
+#### Lab. 4
+
+- Run steps of the LibreLane flow on a simple design (from Python)
+- Explore the different stages of the flow
+- Analyze the results and understand the output files
+
 
 #### Lab. 3
 
@@ -133,6 +140,30 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 - [LibreLane Documentation](https://librelane.readthedocs.io/en/latest/)
 
 This is a large documentation from whih this slide set is based upon, you do not need to read it all. Reference to it when needed.
+
+### Lecture 3: Standard Cells, Floorplan, Memory, and Register Files (OR)
+
+- [Lecture slides](09_std_cells.md)
+
+#### Lecture outline
+
+- Introduction to standard cells
+- Role of standard cells in digital design
+- Components of a standard cell library
+- Types of standard cells (e.g., logic gates, flip-flops)
+- Power, performance, and area 
+- Characterization of standard cells
+- Memory types and memory organization
+- Register files: FF, sync mem, latches, custom design
+- Memory macros (IP blocks)
+- Memory with the SkyWater PDK
+- Models and simulation
+
+#### Lab. 3
+
+- Simulate a SkyWater130 standard cell in Spice
+- Run your though P&R (OR)
+- Handle placement and macro insertion
 
 ### Lecture 4: Verilog and Tiny Tapeout (MS)
 
@@ -264,29 +295,7 @@ To make the most of the presentation and feedback session, please take into acco
 - Finalise the functional implementation of your project
 
 
-### Lecture 10: Standard Cells, Floorplan, Memory, and Register Files (OR)
 
-- [Lecture slides](09_std_cells.md)
-
-#### Lecture outline
-
-- Introduction to standard cells
-- Role of standard cells in digital design
-- Components of a standard cell library
-- Types of standard cells (e.g., logic gates, flip-flops)
-- Power, performance, and area 
-- Characterization of standard cells
-- Memory types and memory organization
-- Register files: FF, sync mem, latches, custom design
-- Memory macros (IP blocks)
-- Memory with the SkyWater PDK
-- Models and simulation
-
-#### Lab. 10
-
-- Simulate a standrtad cell in Spice
-- Run your though P&R (OR)
-- Handle placement and macro insertion
 
 ### Lecture 11: Chip Design Ruls, Power, and Clock (OR)
 
