@@ -42,6 +42,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
      - From RTL to GDSII and tapeout
    - Subtopics as group work
    - Write a (short) report
+ * Join Discord for communication (link in DTU Learn)
 
 ## Tapeout Project
 
@@ -60,6 +61,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
    - Combinational and sequential logic
    - Basic computer architecture
    - Basic Verilog, VHDL, or Chisel knowledge
+   - Translation between HDLs and schematic
    - Which language do you know?
  * Basic programming skills
  * No prior knowledge of VLSI or chip design needed
@@ -72,7 +74,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
    * Transistors are getting smaller
    * Power density is increasing
    * The 7 nm technology node is common now
-     - x nm was originally the gate length, but not anymore
+     - x nm was originally half the gate length, but not anymore
    * When is the end of Moore's Law?
  * [Moor's Law](https://en.wikipedia.org/wiki/Moore%27s_law)
 
@@ -93,8 +95,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ## Trends in Chip Design
 
  * Processors' performance gains are slowing down
- * More specialized cores (e.g, AI accelerators)
- * More digital/ASIC designs needed
+ * More specialized cores (e.g, AI accelerators) are needed
+ * More digital/ASIC designs and designers are needed
  * We need 20+ new chip designers per year in Denmark/Copenhagen
  * Bright future for you!
 
@@ -158,6 +160,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 - **Chisel**: Our Favorite! 
   - Scala-based HDL
   - You learned it in DE2
+  - Generates Verilog
 
 ## LibreLane
 
@@ -252,12 +255,13 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
  * [Tiny Tapeout](https://tinytapeout.com/)
  * A simple flow for a simple chip
- * Uses one MPW tile from efabless
+ * Uses one MPW tile from ChipFoundry
  * Cut into 512 mini tiles
    - 160 x 100 um tiles
  * Full flow in the cloud (GitHub Actions)
  * Cheap tile: 50-70 EUR
  * We (Edu4Chip) can sponsor one tile per project
+ * Has a large Discord community
 
 ## Tiny Tapout Workshop
  
@@ -292,7 +296,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Login with SSH
    - Need to use VPN (OpenVPN)
    - See: https://itswiki.compute.dtu.dk/index.php/OpenVPN
- * Nice to use with VSC (show)
+ * Nice to use with VSC (show it)
 
 ## The Lab Today
 
