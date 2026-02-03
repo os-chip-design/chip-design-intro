@@ -22,7 +22,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
     * We will adapt to your needs and interests
     * We did an initial open-source chip design course 2025
  * Will have rough edges
- * I am excited to see you building your own chips
+ * I am excited to see you building your own chip
 
 ## Introduction Round
 
@@ -49,7 +49,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
   * Using Caravel as base chip framework
   * Your sub-projects will be combined
   * Chip design is a large team effort
-  * Tapeout with ChipFoundry
+  * Tapeout with [ChipFoundry](https://chipfoundry.io/)'s ChipIgnite
     - Multi-Project Wafer (MPW) run
   * Fabrication in SkyWater 130 nm technology
   * We will cover the full flow
@@ -58,11 +58,10 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
  * Digital Design (DE2)
    - Combinational and sequential logic
-   - Finite state machines
+   - Basic computer architecture
    - Basic Verilog, VHDL, or Chisel knowledge
    - Which language do you know?
  * Basic programming skills
- * Basic understanding of computer architecture is helpful
  * No prior knowledge of VLSI or chip design needed
 
 ## Moore's Law: the Exponential Growth
@@ -106,6 +105,16 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Open source IP (e.g., RISC-V core Wildcat)
  * Open source chip framework (Caravel from efabless)
  * Open source teaching material (this course)
+
+## Open Source Enables
+
+  * Learn chip design on your own computer!
+  * No expensive licenses, no server access needed
+  * Allowed to share results and designs
+    - Not possible with the commercial tools
+  * Collaboration and sharing designs
+  * Contribute to the community
+  * Enables the Tiny Tapeout project
 
 ## Tools
 
@@ -236,6 +245,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
    * MPW (Multi-Project Wafer) is a way to share the cost
  * Details in VLSI course   
  * Watch [Matt Venn at IHP](https://youtu.be/aBDJQ9NYTEU?si=G19gW0zrbZuDSOp4)
+   - IHP joined the open-source movement
+   - Last open-source conference FSiC was at IHP
 
 ## Tiny Tapeout
 
@@ -245,7 +256,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Cut into 512 mini tiles
    - 160 x 100 um tiles
  * Full flow in the cloud (GitHub Actions)
- * Cheap tile: 50 USD
+ * Cheap tile: 50-70 EUR
  * We (Edu4Chip) can sponsor one tile per project
 
 ## Tiny Tapout Workshop
@@ -255,7 +266,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * From zero to a chip in 4 hours
  * [Tiny Tapeout Workshop](https://edu4chip.github.io/ttw2026DTU.html)
  * Sign up quickly, limited seats!
- * Just DKK 100, including one tile
+ * Just DKK 100, includs one tile
    - Thanks to our sponsors
 
 ## Using Chisel
@@ -272,11 +283,31 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * [Building OpenLANE: A 130nm OpenROAD-based Tapeout- Proven Flow: Invited Paper](https://ieeexplore.ieee.org/document/9256623)
  * [Tiny Tapeout: A Shared Silicon Tapeout Platform Accessible To Everyone](https://www.techrxiv.org/users/799365/articles/1165896-tiny-tapeout-a-shared-silicon-tapeout-platform-accessible-to-everyone)
 
+## Chipdesign1 Server
+
+ * If tool installation is a (big) issue, use chipdesign1
+ * chipdesign1.compute.dtu.dk
+ * All will get an account on chipdesign1
+   - Signe the paper work
+ * Login with SSH
+   - Need to use VPN (OpenVPN)
+   - See: https://itswiki.compute.dtu.dk/index.php/OpenVPN
+ * Nice to use with VSC (show)
+
+## The Lab Today
+
+ * Install LibreLane
+   - With nix
+   - Easy on Linux and macOS
+   - Windows: use WSL
+ * The beauty of open-source tools is running them locally
+   - With closed-source tools you need to use our servers 
+
  ## Summary
 
  * We will design and fabricate a chip
    - Using open-source tools only
-   - We will use the Tiny Tapeout platform
+   - We will do a real chip tapeout
  * This is an introductory course
    - Motivating you to learn more in the VLSI course
      - and the chip design specialisation (in the MSc)
