@@ -102,45 +102,6 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 * quick read, no need to go into details with formulas
 
 
-### Lecture 4: Tool Flow and Caravel (MS) 
-
-- [Lecture slides](04_tools.md)
-
-#### Lecture outline
-
-- Introduction to the LibreLane ASIC design flow
-- Input preparation and RTL linting
-- Synthesis and logic optimization
-- Floorplanning and placement
-- Clock tree synthesis
-- Routing and RC extraction
-- Timing signoff and GDSII streaming
-- Physical signoff and SDF simulation
-- Overview of the course project and group formation
-
-#### Lab. 4
-
-- Run steps of the LibreLane flow on a simple design (from Python)
-- Explore the different stages of the flow
-- Analyze the results and understand the output files
-
-
-#### Lab. 3
-
-- Discussion about the project
-- Form and register groups for the course project
-- Choose a project component to work on (CPU, memory, peripherals, testing, etc.)
-- Set up the development environment
-- Start working on initial design steps
-- Register groups in DTU-Learn and sign up in the GitHub repository
-
-#### Reading
-
-- Lecture slides (also available as PDF in DTU-Learn)
-- [LibreLane Documentation](https://librelane.readthedocs.io/en/latest/)
-
-This is a large documentation from whih this slide set is based upon, you do not need to read it all. Reference to it when needed.
-
 ### Lecture 3: Standard Cells, Floorplan, Memory, and Register Files (OR)
 
 - [Lecture slides](09_std_cells.md)
@@ -165,7 +126,44 @@ This is a large documentation from whih this slide set is based upon, you do not
 - Run your though P&R (OR)
 - Handle placement and macro insertion
 
-### Lecture 4: Verilog and Tiny Tapeout (MS)
+#### Project Setup
+
+- Discussion about the project
+- Form and register groups in DTU Learn
+- Choose a project component to work on (CPU, memory, peripherals, testing, etc.)
+- Sign up in the GitHub repository (TBD)
+
+
+### Lecture 4: Tool Flow and Caravel (MS) 
+
+- [Lecture slides](04_tools.md)
+
+#### Lecture outline
+
+- Introduction to the LibreLane ASIC design flow
+- Input preparation and RTL linting
+- Synthesis and logic optimization
+- Floorplanning and placement
+- Clock tree synthesis
+- Routing and RC extraction
+- Timing signoff and GDSII streaming
+- Physical signoff and SDF simulation
+- Overview of the course project and group formation
+
+#### Lab. 4
+
+- Run steps of the LibreLane flow on a simple design (from Python)
+- Explore the different stages of the flow
+- Analyze the results and understand the output files
+
+#### Reading
+
+- Lecture slides (also available as PDF in DTU-Learn)
+- [LibreLane Documentation](https://librelane.readthedocs.io/en/latest/)
+
+This is a large documentation from which this slide set is based upon, you do not need to read it all. Reference to it when needed.
+
+### Lecture X: Verilog and Tiny Tapeout (MS)
 
 - [Lecture slides](03_verilog.md)
 
