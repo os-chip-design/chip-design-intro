@@ -43,14 +43,21 @@ Alternative to installing the tools locally you can run them on
 
 However, students cannot access our internal systems directly by default, even with DTU VPN active. The only system we allow SSH into by students using DTU VPN is 'linuxterm1.compute.dtu.dk' aka. 'thinlinc.compute.dtu.dk'. From here they can then ssh again into chipdesign1.
 
-#### Update in progress
+`nix` and librelane packages are installed. 
 
-`nix` and OpenLane2 are installed. Change to `/home/share/openlane2` and
-start the nix shell.
-
-Then change back to your home directory start working from there.
-Please do not change anything in the `openlane2` directory.
-
+go and clone librelane (first time only)
+```
+git clone https://github.com/librelane/librelane
+```
+go inside the folder and execute nix-shell
+```
+cd librelane
+nix-shell
+```
+the first time check if everything works with 
+```
+librelane --smoke-test
+```
 You can also use VSCode (running locally) connecting to the server for
 easier editing and file navigation.
 
