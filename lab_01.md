@@ -4,7 +4,7 @@
 
 The following tools are installed:
 * Install nix
-* Install OpenLane 2 (via git clone)
+* Install librelane (via git clone)
 
 ### Nix Installation
 
