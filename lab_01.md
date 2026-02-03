@@ -1,4 +1,4 @@
-# Lab 1: Explore OpenLane 2
+# Lab 1: Explore LibreLane
 
 ## Tool Installation
 
