@@ -64,7 +64,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
    - Translation between HDLs and schematic
    - Which language do you know?
  * Basic programming and shell/git skills
- * This is *not* an introduction to digital design!
+ * This is **not** an introduction to digital design!
  * No prior knowledge of VLSI or chip design needed
 
 ## Moore's Law: the Exponential Growth
@@ -305,6 +305,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
    - With nix
    - Easy on Linux and macOS
    - Windows: use WSL
+ * Run a small design through the flow
  * The beauty of open-source tools is running them locally
    - With closed-source tools you need to use our servers 
 
