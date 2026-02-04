@@ -63,7 +63,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
    - Basic Verilog, VHDL, or Chisel knowledge
    - Translation between HDLs and schematic
    - Which language do you know?
- * Basic programming skills
+ * Basic programming and shell/git skills
+ * This is *not* an introduction to digital design!
  * No prior knowledge of VLSI or chip design needed
 
 ## Moore's Law: the Exponential Growth
