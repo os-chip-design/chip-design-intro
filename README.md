@@ -55,10 +55,9 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 #### Lecture outline
 - Overview of chip design and its importance in modern electronics
 - Basic terminology and concepts
-- Covering the process (first intro in tool flow)
+- Introduction to the LibreLane ASIC design flow
 - AISC with standard cells
 - PDK
-- Edu4Chip
 
 #### Lab. 1
 - Local installation of the open-srouce tools (LibreLane)
@@ -104,7 +103,7 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 
 ### Lecture 3: Standard Cells, Floorplan, Memory, and Register Files (OR)
 
-- [Lecture slides](09_std_cells.md)
+- [Lecture slides](03_std_cells.md)
 
 #### Lecture outline
 
@@ -140,14 +139,11 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 
 #### Lecture outline
 
-- Introduction to the LibreLane ASIC design flow
-- Input preparation and RTL linting
-- Synthesis and logic optimization
-- Floorplanning and placement
-- Clock tree synthesis
-- Routing and RC extraction
-- Timing signoff and GDSII streaming
-- Physical signoff and SDF simulation
+- Details of the LibreLane ASIC design flow
+- Individual tools and their outputs
+- Caravel
+- Tapeout options (CF, waver.space for production, IHP)
+- Wishbone bus overview
 - Overview of the course project and group formation
 
 #### Lab. 4
@@ -155,6 +151,8 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 - Run steps of the LibreLane flow on a simple design (from Python)
 - Explore the different stages of the flow
 - Analyze the results and understand the output files
+- Harden the Caravel framework with a simple peripheral
+- Write a simple Wishbone peripheral (in Chisel)
 
 #### Reading
 
@@ -163,7 +161,82 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 
 This is a large documentation from which this slide set is based upon, you do not need to read it all. Reference to it when needed.
 
-### Lecture X: Verilog and Tiny Tapeout (MS)
+
+### Lecture 5: Verification (TP) + Midterm course evaluation
+
+- [Lecture slides](05_verification.md)
+
+#### Lecture outline
+
+- Introduction to verification
+- Verification methodologies
+- Simulation-based verification
+- Testbench design
+- Assertions and coverage metrics
+- Brief overview of formal verification
+- Industry Standards, tools, and frameworks in verification
+
+#### Lab. 5
+
+- Verification lab
+
+#### Reading
+
+- Lecture slides (also available as PDF in DTU-Learn)
+- TBA
+
+### Lecture 6: Timing and Physical Design (OR)
+
+#### Lecture outline
+
+- TBD
+
+#### Lab. 6
+
+- TBD
+
+#### Reading
+
+- Lecture slides (also available as PDF in DTU-Learn)
+
+### Lecture 7 TBD (MS)
+
+
+### Lecture 8: Memory (OR)
+
+#### Lecture outline
+
+- TBD
+
+#### Lab. 8
+
+- TBD
+
+#### Reading
+
+- Lecture slides (also available as PDF in DTU-Learn)
+
+
+### Lecture X: Introduction to Chisel (MS)
+
+- [Lecture slides sources](https://github.com/schoeberl/chisel-book/tree/master/slides-tutorial)
+- PDF in DTU Learn (05_Chisel_unit1-4)
+
+#### Lecture outline
+
+- High paced introduction of Chisel
+
+#### Lab. X
+
+- Lab 1-4 at [chisel-lab](https://github.com/schoeberl/chisel-lab)
+- Work on the project
+
+#### Reading
+
+- Lecture slides
+- [Digital Design with Chisel](https://www.imm.dtu.dk/~masca/chisel-book.html)
+
+### Lecture X: Verilog, Chisel, and Tiny Tapeout (MS)
 
 - [Lecture slides](03_verilog.md)
 
@@ -172,7 +245,7 @@ This is a large documentation from which this slide set is based upon, you do no
 - Introduction to Verilog
 - Introduction to Tiny Tapeout
 
-#### Lab. 4
+#### Lab. X
 
 - Small Verilog example (programmable counter)
 - Write a testbench and run it on post-synthesis
@@ -192,43 +265,6 @@ This is a large documentation from which this slide set is based upon, you do no
   - E.g., [YARVI](https://github.com/tommythorn/yarvi)
 
 
-### Lecture 5: Introduction to Chisel (MS)
-
-- [Lecture slides sources](https://github.com/schoeberl/chisel-book/tree/master/slides-tutorial)
-- PDF in DTU Learn (05_Chisel_unit1-4)
-
-#### Lecture outline
-
-- High paced introduction of Chisel
-
-#### Lab. 5
-
-- Lab 1-4 at [chisel-lab](https://github.com/schoeberl/chisel-lab)
-- Work on the project
-
-#### Reading
-
-- Lecture slides
-- [Digital Design with Chisel](https://www.imm.dtu.dk/~masca/chisel-book.html)
-
-### Lecture 6: SoC, Interconnects, and NoCs (LP)
-
-- [Lecture slides](06_soc_interconnects_noc.md)
-
-#### Lecture outline
-
-- System-on-Chip
-- Interconnects
-- Networks-on-Chip overview
-
-
-#### Lab. 6
-
-- Work on the project
-
-#### Reading
-
-- Lecture slides (also available as PDF in DTU-Learn)
 
 ### Lecture 7: Student Project Presentations (MS/OR)
 
@@ -257,28 +293,7 @@ To make the most of the presentation and feedback session, please take into acco
 - Work on the project
 
 
-### Lecture 8: Verification (TP) + Midterm course evaluation
 
-- [Lecture slides](08_verification.md)
-
-#### Lecture outline
-
-- Introduction to verification
-- Verification methodologies
-- Simulation-based verification
-- Testbench design
-- Assertions and coverage metrics
-- Brief overview of formal verification
-- Industry Standards, tools, and frameworks in verification
-
-#### Lab. 8
-
-- Finalise implementation of project
-
-#### Reading
-
-- Lecture slides (also available as PDF in DTU-Learn)
-- TBA
 
 ### Lecture 9: Guest lecture - Chip Design at Oticon (Kasper)
 
