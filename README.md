@@ -101,7 +101,7 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 * quick read, no need to go into details with formulas
 
 
-### Lecture 3: Standard Cells, Floorplan, Memory, and Register Files (OR)
+### Lecture 3: Standard Cells, Floorplan (OR)
 
 - [Lecture slides](03_std_cells.md)
 
@@ -113,10 +113,6 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 - Types of standard cells (e.g., logic gates, flip-flops)
 - Power, performance, and area 
 - Characterization of standard cells
-- Memory types and memory organization
-- Register files: FF, sync mem, latches, custom design
-- Memory macros (IP blocks)
-- Memory with the SkyWater PDK
 - Models and simulation
 
 #### Lab. 3
@@ -162,7 +158,7 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 This is a large documentation from which this slide set is based upon, you do not need to read it all. Reference to it when needed.
 
 
-### Lecture 5: Verification (TP) + Midterm course evaluation
+### Lecture 5: Verification (TP)
 
 - [Lecture slides](05_verification.md)
 
@@ -199,23 +195,78 @@ This is a large documentation from which this slide set is based upon, you do no
 
 - Lecture slides (also available as PDF in DTU-Learn)
 
-### Lecture 7 TBD (MS)
+### Lecture 7 TBD (MS)  + Midterm course evaluation
 
 
 ### Lecture 8: Memory (OR)
 
 #### Lecture outline
 
-- TBD
+- Memory types and memory organization
+- Register files: FF, sync mem, latches, custom design
+- Memory macros (IP blocks)
+- Memory options with the SkyWater130 PDK
+
+- [Lecture slides](08_memory.md) TBD
 
 #### Lab. 8
 
-- TBD
+- Exploring memory options with SkyWater130
 
 #### Reading
 
 - Lecture slides (also available as PDF in DTU-Learn)
 
+### Lecture 9: Guest lecture - Chip Design at Oticon (Kasper)
+
+#### Lecture outline:
+- Chip design at Demant
+- Industrial design and implementation flow overview
+- Design and implementation considerations for low power
+- Challenges in lower design nodes (and/or at lower voltages)
+
+#### Lab. 9
+
+- Finalise the functional implementation of your project
+
+
+
+
+### Lecture 11: Chip Design Ruls, Power, and Clock (OR)
+
+- [Lecture slides](???.md) - not yet availble
+
+#### Lecture outline:
+
+- Chip design rules
+- Power distribution design, optimization, and analysis
+- Digital design timing
+- Clock distribution challenges and clock trees
+- Power optimization through clock gating
+- Timing closure
+
+#### Lab. 11
+
+- Run routing (OR)
+- Fix shorts and design rule violations
+
+#### Reading
+- None
+
+### Lecture & Lab 12: Project work and "tapeout" (OR)
+
+The full time slot is dedicated to project work.
+
+- Run Timing closure and LVS
+- Fix timing violations and handle design missmatches 
+- "tape out" your project  
+
+
+### Lecture 13: Student project presentations (MS/OR)
+
+Each group presents their finalized project and discusses the results.
+
+## Possible Additional Topics
 
 ### Lecture X: Introduction to Chisel (MS)
 
@@ -266,7 +317,7 @@ This is a large documentation from which this slide set is based upon, you do no
 
 
 
-### Lecture 7: Student Project Presentations (MS/OR)
+### Lecture Y: Student Project Presentations (MS/OR)
 
 Each group presents their project plan and initial developments. This is a key milestone in the course, where you will receive valuable feedback from the teachers and your peers.
 
@@ -295,53 +346,7 @@ To make the most of the presentation and feedback session, please take into acco
 
 
 
-### Lecture 9: Guest lecture - Chip Design at Oticon (Kasper)
 
-#### Lecture outline:
-- Chip design at Demant
-- Industrial design and implementation flow overview
-- Design and implementation considerations for low power
-- Challenges in lower design nodes (and/or at lower voltages)
-
-#### Lab. 9
-
-- Finalise the functional implementation of your project
-
-
-
-
-### Lecture 11: Chip Design Ruls, Power, and Clock (OR)
-
-- [Lecture slides](???.md) - not yet availble
-
-#### Lecture outline:
-
-- Chip design rules
-- Power distribution design, optimization, and analysis
-- Digital design timing
-- Clock distribution challenges and clock trees
-- Power optimization through clock gating
-- Timing closure
-
-#### Lab. 11
-
-- Run routing (OR)
-- Fix shorts and design rule violations
-
-#### Reading
-- None
-
-### Lecture & Lab 12: Project work and "tapeout" (OR)
-
-The full time slot is dedicated to project work.
-
-- Run Timing closure and LVS
-- Fix timing violations and handle design missmatches 
-- "tape out" your project  
-
-
-### Lecture 13: Student project presentations (MS/OR)
-Each group presents their finalized project and discusses the results.
 
 
 ## Project: DTU-SoC-2025
