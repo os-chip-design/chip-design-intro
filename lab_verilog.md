@@ -1,4 +1,4 @@
-# Lab 3: Verilog and Tiny Tapeout
+# Lab 4b: Verilog and Tiny Tapeout
 
 ## Lab Overview
 

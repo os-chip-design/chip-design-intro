@@ -54,6 +54,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
     - Multi-Project Wafer (MPW) run
   * Fabrication in SkyWater 130 nm technology
   * We will cover the full flow
+  * Show the die
 
 ## Prerequisites
 

@@ -157,6 +157,34 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 
 This is a large documentation from which this slide set is based upon, you do not need to read it all. Reference to it when needed.
 
+### Lecture 4b: Verilog, Chisel, and Tiny Tapeout (MS)
+
+- [Lecture slides](04_verilog.md)
+
+#### Lecture outline
+
+- Introduction to Verilog
+- Introduction to Tiny Tapeout
+
+#### Lab. 4b
+
+- Small Verilog example (programmable counter)
+- Write a testbench and run it on post-synthesis
+- Do it in Chisel and in Verilog
+- Do local hardening
+- Simulate post-synthesis
+  - probably need a Verilog or cocotb testbench
+- Explore Tiny Tapeout with a Verilog project (GitHub based)
+- Use the counters in a memory mapped device (maybe)
+- See [Lab 4b](lab_verilog.md) for instructions
+- Work on the project
+
+#### Reading
+
+- Lecture slides (also available as PDF in DTU-Learn)
+- Find good Verilog projects and read the code
+  - E.g., [YARVI](https://github.com/tommythorn/yarvi)
+
 
 ### Lecture 5: Verification (TP)
 
