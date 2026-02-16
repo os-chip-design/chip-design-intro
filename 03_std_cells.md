@@ -13,6 +13,12 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 **Martin Schoeberl**
 
+## Using Chisel
+
+ * Reminder to learn Chisel
+ * Easy to learn in self-study
+   - Use the [Chisel book](https://www.imm.dtu.dk/~masca/chisel-book.html)
+   - Do the [Chisel lab](https://github.com/schoeberl/chisel-lab)
 
 ## What are Standard Cells?
 

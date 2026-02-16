@@ -176,7 +176,7 @@ This is a large documentation from which this slide set is based upon, you do no
   - probably need a Verilog or cocotb testbench
 - Explore Tiny Tapeout with a Verilog project (GitHub based)
 - Use the counters in a memory mapped device (maybe)
-- See [Lab 4b](lab_verilog.md) for instructions
+- See [Lab Verilog](lab_verilog.md) for instructions
 - Work on the project
 
 #### Reading
