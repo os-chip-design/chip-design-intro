@@ -155,7 +155,6 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 - Lecture slides (also available as PDF in DTU-Learn)
 - [LibreLane Documentation](https://librelane.readthedocs.io/en/latest/)
 
-This is a large documentation from which this slide set is based upon, you do not need to read it all. Reference to it when needed.
 
 ### Lecture 4b: Verilog, Chisel, and Tiny Tapeout (MS)
 
@@ -166,7 +165,7 @@ This is a large documentation from which this slide set is based upon, you do no
 - Introduction to Verilog
 - Introduction to Tiny Tapeout
 
-#### Lab. 4b
+#### Verilog Lab. 4b (Optional)
 
 - Small Verilog example (programmable counter)
 - Write a testbench and run it on post-synthesis

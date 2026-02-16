@@ -6,7 +6,7 @@
  * Test bench in Chisel
  * Test bench in Verilog
  * Check wave forms
- * Synthesize with OpenLane
+ * Synthesize with LibreLane
  * Run post synthesis tests (optional)
  * Setup Tiny Tapeout
  * Run it with Tiny Tapeout
@@ -137,17 +137,17 @@ Use your macro as:
 `assert(count, 4'b0000);
 ```
 
-## Synthesize with OpenLane
+## Synthesize with LibreLane
 
- * Add your Verilog files to the OpenLane flow
+ * Add your Verilog files to the LibreLane flow
  * Run the flow
  * Check the results
 
 ### Lab 1 Reminder
    
-   * Assuming your OpenLane installation is in the home ~ directory
+   * Assuming your LibreLane installation is in the home ~ directory
    ```zsh
-   cd openlane2
+   cd librelane
    nix-shell
    ```
 
@@ -208,5 +208,5 @@ TinyTapeout has hard-typed inputs and outputs. You need to make sure that the po
 ## Advanced Lab
 
  * Run your test bench on the post synthesis Verilog
-   - the one from OpenLane2
+   - the one from LibreLane
    - the one from Tiny Tapeout

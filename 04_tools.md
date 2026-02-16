@@ -30,7 +30,7 @@ backgroundColor: #fff
 
 ## Reading/reference material
 - Lecture slides (also available as PDF in DTU-Learn)
-- [OpenLean 2 Documentation](https://openlane2.readthedocs.io/en/latest/)* 
+- [LibreLane Documentation](https://librelane.readthedocs.io/en/latest/)* 
 <br><br><br>
 \* This is a large documentation from whih this slide set is based upon, you do not need to read it all. Reference to it when needed.
 
@@ -38,7 +38,7 @@ backgroundColor: #fff
 
 ## Introduction
 
-- Step-by-step overview of the **OpenLane2** ASIC design flow, from **RTL** to **GDSII**
+- Step-by-step overview of the **LibreLane** ASIC design flow, from **RTL** to **GDSII**
 <br>
 - Gives an intuitive understanding of each stage in the process
 - Helps getting an understand of each step basics
@@ -46,24 +46,24 @@ backgroundColor: #fff
 - More in-depth exploration is up to you, if needed
 
 
-## OpenLane2 ASIC design flow
+## LibreLane ASIC design flow
 
-- OpenLane2 is an open-source toolchain for ASIC design
+- LibreLane is an open-source toolchain for ASIC design
   - Automates the process from RTL to GDSII for tapeout
   - Ensures manufacturability with verification steps
   - Uses open-source tools (e.g., Yosys, OpenROAD, and Magic)
 
 
-## OpenLane2 ASIC design flow
+## LibreLane ASIC design flow
 
 ![width:1150](./figures/L4/L4-1.1.JPG)
 
 
-## OpenLane2 ASIC design flow
+## LibreLane ASIC design flow
  
 <br>
 
-Explore "The OpenLane Infrastructure" image at this [link](https://github.com/efabless/openlane2/blob/main/Readme.md)
+Explore "The LibreLane Infrastructure" image at this [link](https://github.com/efabless/openlane2/blob/main/Readme.md)
 
 
 ## Input preparation
@@ -302,7 +302,7 @@ Explore "The OpenLane Infrastructure" image at this [link](https://github.com/ef
 
 ## Summary
 
-- OpenLane2 is an open-source toolchain for ASIC design
+-   LibreLane is an open-source toolchain for ASIC design
   - Automates the process from RTL to GDSII for tapeout
   - Ensures manufacturability with verification steps
   - **Many many steps** are involved

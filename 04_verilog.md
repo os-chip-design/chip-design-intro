@@ -245,7 +245,7 @@ end
  * Two open-source simulators
    - Icarus Verilog
    - Verilator
- * Both part of your OpenLane2 installation
+ * Both part of your LibreLane installation
  * Icarus is a bit easier to use
 
 ## Simulate Hello World - Demo Time
@@ -277,11 +277,11 @@ iverilog hello.v
 
  * A waver is expensive
  * Sharing cost on a multi-project wafer (MPW)
- * eFabless offers this service, see [MPW example](https://efabless.com/open_shuttle_program)
-   * $ 10000 for a full chip
+ * [ChipFoundry](https://chipfoundry.io/) offers this service, it is called chipIginite
+   * $ 15000 for a full chip
    * 10 mm2
- * 130 nm
- * Full oppen source PDK
+ * SkyWater 130 nm
+ * Full open source PDK
  * Show the chip around
 
 ## Tiny Tapeout
@@ -301,7 +301,7 @@ iverilog hello.v
  * A simple system-on-chip (SoC)
  * With a CPU, memory, and some IO
  * Hosted on GitHub
-   * https://github.com/os-chip-design/dtu-soc-2025
+   * https://github.com/os-chip-design/dtu-soc-2026
    * Send me your GitHub ID to get access
  * Do a real tapeout
    * Sponsored by Edu4Chip
@@ -327,10 +327,10 @@ iverilog hello.v
 
 ## Tapeout
 
- * With efabless and the Open MPW shuttle
-   * [ChipIgnite](https://efabless.com/prototyping)
- * Tapeout date: April 21, 2025
- * We can also have experimantal work on Tiny Tapeout
+ * With ChipFoundry and the Open MPW shuttle
+   * [ChipIgnite](https://chipfoundry.io/chipignite)
+ * Tapeout date: May 13, 2026
+ * We can also have experimental work on Tiny Tapeout
 
 ## Workflow
 
