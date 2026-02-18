@@ -44,22 +44,23 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Hosted on GitHub
    * https://github.com/os-chip-design/dtu-soc-2026
    * Send me your GitHub ID to get access
+   * Similar to https://github.com/os-chip-design/caravel_leros_2025
  * Do a real tapeout
    * Sponsored by Edu4Chip
- * Show the efabless physical chip
 
  ## Core Components
 
  * CPU: [Wildcat RISC-V](https://github.com/schoeberl/wildcat)
- * Cache
+ * On-chip memory
+ * Interface with Wishbone to the Caravel host CPU
+ * UART for serial communication
  * Memory controller (SPI based Flash and RAM)
- * SPI with switch to *fast* mode
+ * Maybe caches
 
 ## Peripherals
 
  * VGA as character display
  * Keyboard
- * Serial port
  * GPIO
  * Timer
  * Accelerator
@@ -95,7 +96,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ## Group formation
 
 - Groups of minimum 3 students (larger groups preferred)
-- Register groups in DTU Learn
+- Register groups in DTU Learn (this week)
 
 
 ## Deliverables
