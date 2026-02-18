@@ -60,7 +60,18 @@ eg. try NAND2X1, AND2X1, NOR3X1, INVX1
 
 you can dispaly the out.vcd file in gtkwave with `gtkwave out.vcd`
 
-## run SPICE sims
+
+## alternative
+
+please follow https://tinytapeout.com/digital_design/wokwi/
+
+and do the 
+
+https://tinytapeout.com/digital_design/puzzle_flipflop/
+
+lab
+
+## run SPICE sims (TBD)
 
 open colab from the zero to asic course
 
