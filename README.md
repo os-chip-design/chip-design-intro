@@ -101,7 +101,7 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 * quick read, no need to go into details with formulas
 
 
-### Lecture 3: Standard Cells, Floorplan (OR)
+### Lecture 3: Standard Cells, Interconnect (OR)
 
 - [Lecture slides](03_std_cells.md)
 
@@ -118,8 +118,6 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 #### Lab. 3
 
 - Simulate a SkyWater130 standard cell in Spice
-- Run your though P&R (OR)
-- Handle placement and macro insertion
 
 #### Project Setup
 
