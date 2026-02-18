@@ -4,7 +4,7 @@
 
 https://unishare.nl/index.php/s/Fnsgyy6CaEe2Zgi download async-circuit-toolkit-2022-07-05.tar.gz
 
-unzip it
+unzip it (tar -xvf async-circuit-toolkit-2022-07-05.tar.gz)
 
 install gtkwave
 
@@ -17,6 +17,9 @@ have a peek in the README.md
 add act to your path:
 
 ```export PATH=$PATH:$ACT_HOME/bin```
+
+if you get a error libedit not found exec this:
+```export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ACT_HOME/lib```
 
 download the cell act from
 

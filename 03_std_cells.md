@@ -9,7 +9,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 <!-- headingDivider: 3 -->
 
-# **Standard Cells, Memory, and Register Files**
+# **Standard Cells and how to automate the physical design**
 
 **Ole Richter**
 
