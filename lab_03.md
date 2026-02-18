@@ -54,9 +54,11 @@ actsim> vcd_stop
 If you have a peek in 
 $ACT_HOME/act/std/cells.act
 
-you will find a lot more standard cells
+you will find a lot more standard cells https://sky130-unofficial.readthedocs.io/en/latest/contents/libraries/sky130_fd_sc_hd/README.html
 
 eg. try NAND2X1, AND2X1, NOR3X1, INVX1
+
+you can dispaly the out.vcd file in gtkwave with `gtkwave out.vcd`
 
 ## run SPICE sims
 
