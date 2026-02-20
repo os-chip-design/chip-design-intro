@@ -23,7 +23,7 @@ Each weekly session consist of a lecture and laboratory work. Some session will 
 
 The course has two teachers:
  * [Martin Schoeberl](https://www.imm.dtu.dk/~masca/)
- * [Ole Richter](https://orbit.dtu.dk/en/persons/ole-richter/)
+ * [Tjark Petersen](https://orbit.dtu.dk/en/persons/tjark-petersen/)
 
 ## Tools
 
@@ -223,7 +223,7 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 ### Lecture 7 TBD (MS)  + Midterm course evaluation
 
 
-### Lecture 8: Memory (OR)
+### Lecture 8: Memory (TP)
 
 #### Lecture outline
 
@@ -257,7 +257,7 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 
 
 
-### Lecture 11: Chip Design Ruls, Power, and Clock (OR)
+### Lecture 11: TBD (TP/MS)
 
 - [Lecture slides](???.md) - not yet availble
 
@@ -278,7 +278,7 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 #### Reading
 - None
 
-### Lecture & Lab 12: Project work and "tapeout" (OR)
+### Lecture & Lab 12: Project Work and Tapeout (MS/TP)
 
 The full time slot is dedicated to project work.
 
@@ -287,7 +287,7 @@ The full time slot is dedicated to project work.
 - "tape out" your project  
 
 
-### Lecture 13: Student project presentations (MS/OR)
+### Lecture 13: Student project presentations (MS/TP)
 
 Each group presents their finalized project and discusses the results.
 
