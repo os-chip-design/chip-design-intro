@@ -25,6 +25,11 @@ The course has two teachers:
  * [Martin Schoeberl](https://www.imm.dtu.dk/~masca/)
  * [Tjark Petersen](https://orbit.dtu.dk/en/persons/tjark-petersen/)
 
+ Guest Lectures:
+  * Luca Pezzarossa
+  * Ole Richter
+  * Kasper Hesse
+
 ## Tools
 
 Install the LibreLane tools locally or use the server `chipdesign1.compute.dtu.dk`. The tools are currently usable on Linux and MacOS (even native with Mac Silicon). For Windows use WSL2 to have a Linux environment. There is no official support for Windows available. See Section 1.2 in the [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf) for installation instructions.
