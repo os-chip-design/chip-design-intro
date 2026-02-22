@@ -17,7 +17,7 @@ This repository contains the material for the 13-week course **02118 - Introduct
 
 ## Practicalities
 
-The course runs on **Wednesdays from 13:00 to 17:00** in **TBD: Building 308 - Room 017**. 
+The course runs on **Wednesdays from 13:00 to 17:00** in **Building 308 - Room 017**. 
 
 Each weekly session consist of a lecture and laboratory work. Some session will be fully dedicated to laboratory work (especially at the end of the course when you are expected to work on your project).
 
@@ -372,11 +372,6 @@ To make the most of the presentation and feedback session, please take into acco
 #### Lab. 7 
 
 - Work on the project
-
-
-
-
-
 
 
 ## Project: DTU-SoC-2025
