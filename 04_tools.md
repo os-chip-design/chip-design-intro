@@ -104,6 +104,14 @@ backgroundColor: #fff
 
 ## LibreLane Configuration
 
+- a single, simple YAML file to configure the design flow
+```
+DESIGN_NAME: adder
+VERILOG_FILES: dir::adder.v
+CLOCK_PERIOD: 20
+CLOCK_PORT: clock
+```
+
 ## The Flow Stages
 
   1. RTL Design: Write your design in a hardware description language (e.g., Chisel or Verilog)
@@ -163,6 +171,25 @@ sky130_fd_sc_hd__nand2_2 _36_ (
   );
   ...
 ```
+
+## Floorplanning
+- Define the physical layout of the chip
+- Place the standard cells and macros in the designated areas
+
+## Placement
+- Place the standard cells and macros on the chip according to the floorplan
+- Optimize for timing and area
+## Routing
+- Connect the placed cells with wires
+- Ensure that the connections meet design rules and timing requirements 
+## Verification
+- Check for design rule violations (DRC) and timing issues (LVS)
+- Ensure that the design is manufacturable and meets performance requirements
+## GDSII Generation
+- Create the final layout file (GDSII) for fabrication
+- This file is sent to the foundry for manufacturing the chip
+
+
 ## Caravel
 
 ![width:900px](figures/layout.png)
@@ -247,6 +274,6 @@ Wishbone synchronous read followed by a synchronous write
 ## Project Discussion
 
 - A System-on-Chip (SoC) design project
-- We have [dtu-soc-2025](https://github.com/os-chip-design/dtu-soc-2025) to start
+- We have [dtu-soc-2026](https://github.com/os-chip-design/dtu-soc-2026) to start
 - You will add your source there
   - I have not yet the GitHub ids from all of you
