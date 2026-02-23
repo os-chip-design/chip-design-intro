@@ -17,10 +17,31 @@ backgroundColor: #fff
 ## Outline
 
 - Overview of the LibreLane ASIC design flow: from RTL to GDSII
-- Gives an intuitive understanding of each stage in the process
-- Helps getting an understand of each step basics
-- More in-depth exploration is up to you, if needed
+- Caravel: an open-source SoC framework for tapeout
+- Wishbone bus overview
 
+## A Bit of History
+
+- Very early chips were designed by hand
+- Photo masks were produced by *drawing* them with tape
+- Computer-aided design (CAD) tools were developed to automate the process
+- Early tools were developed in open-source
+  - Spice, Espresso, Magic, etc.
+- Commercial tools emerged in the 1980s
+  - Alberto Sangiovanni-Vincentelli's co-founded Cadence Design Systems and Synopsys, the two major EDA tool vendors.
+
+## OpenROAD
+
+- DARPA sponsored project
+- End-to-end design flow of chips from RTL to the final chips without human intervention
+- Collection of tools
+- https://openroad.readthedocs.io/en/latest/
+## Google Kicked it Off
+
+- In 2020, Google launched the OpenMPW shuttle program
+- Aimed to democratize access to chip fabrication
+- Provided free access to the SkyWater 130nm process for open-source designs
+- Sparked a surge in open-source hardware design and education
 
 ## LibreLane ASIC design flow
 
@@ -55,6 +76,12 @@ OpenLane design flow, including the OpenROAD flow in blue.
 <small>*Copyright 2020-2022 Efabless Corporation and contributors, License: Apache 2.0.*</small>
 
 The combination of the Caravel harness with the user project results in the final Caravel tile for the MPW run.
+
+## MPW Shuttle
+
+![width:900px](figures/MPW.jpg)
+
+<small>*Copyright 2020-2022 Efabless Corporation and contributors, License: Apache 2.0.*</small>
 
 ## Caravel
 
