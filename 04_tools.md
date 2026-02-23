@@ -44,13 +44,22 @@ backgroundColor: #fff
 
 ![width:900px](figures/flow.png)
 
+OpenLane design flow, including the OpenROAD flow in blue. 
+
+<small>*Copyright 2020-2022 Efabless Corporation and contributors, License: Apache 2.0.*</small>
+
 ## Caravel
 
 ![width:900px](figures/layout.png)
 
+<small>*Copyright 2020-2022 Efabless Corporation and contributors, License: Apache 2.0.*</small>
+
+The combination of the Caravel harness with the user project results in the final Caravel tile for the MPW run.
+
 ## Caravel
 
 ![width:600px](figures/caravel.svg)
+
 
 ## Wishbone Interface
 
@@ -59,3 +68,11 @@ backgroundColor: #fff
 ## Wishbone Bus
 
 ![width:500px](figures/wishbone.svg)
+
+Wishbone asynchronous read followed by an asynchronous write
+
+## Wishbone Bus
+
+![width:500px](figures/wishbone_sync.svg)
+
+Wishbone synchronous read followed by a synchronous write
