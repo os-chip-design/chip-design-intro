@@ -147,16 +147,19 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 
 #### Lab. 4
 
-- Run steps of the LibreLane flow on a simple design (from Python)
-- Explore the different stages of the flow
-- Analyze the results and understand the output files
-- Harden the Caravel framework with a simple peripheral
-- Write a simple Wishbone peripheral (in Chisel)
+1. Run steps of the LibreLane flow on a simple design from Python
+  - According to Section 1.4 in the [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf)
+  - Explore the outputs of the individual stages
+2. Harden the Caravel framework with a simple peripheral
+3. Write a simple Wishbone peripheral (in Chisel)
+   - See Section 2.3.9 in the [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf)
 
 #### Reading
 
 - Lecture slides (also available as PDF in DTU-Learn)
+- [Article on OpenLane2](https://woset-workshop.github.io/PDFs/2024/17_OpenLane_2_Making_the_Most_.pdf)
 - [LibreLane Documentation](https://librelane.readthedocs.io/en/latest/)
+- [Wishbone Specification](https://cdn.opencores.org/downloads/wbspec_b4.pdf)
 
 
 ### Lecture 4b: Verilog (MS)
