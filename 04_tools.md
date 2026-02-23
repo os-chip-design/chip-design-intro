@@ -14,30 +14,11 @@ backgroundColor: #fff
 
 **Martin Schoeberl**
 
+## Outline
 
-## The End Produce: a Real Chip
-
- * We will do a real tapeout with [ChipFoundry](https://chipfoundry.io/)'s ChipIgnite
-   - Multi-Project Wafer (MPW) run
- * Fabrication in SkyWater 130 nm technology
- * 10 mm2 die size
- * Show the die around
-
-## Reading/reference material
-- Lecture slides (also available as PDF in DTU-Learn)
-- [LibreLane Documentation](https://librelane.readthedocs.io/en/latest/)* 
-<br><br><br>
-\* This is a large documentation from whih this slide set is based upon, you do not need to read it all. Reference to it when needed.
-
-
-
-## Introduction
-
-- Step-by-step overview of the **LibreLane** ASIC design flow, from **RTL** to **GDSII**
-<br>
+- Overview of the LibreLane ASIC design flow: from RTL to GDSII
 - Gives an intuitive understanding of each stage in the process
 - Helps getting an understand of each step basics
-<br>
 - More in-depth exploration is up to you, if needed
 
 
@@ -48,5 +29,33 @@ backgroundColor: #fff
   - Ensures manufacturability with verification steps
   - Uses open-source tools (e.g., Yosys, OpenROAD, and Magic)
 
+## The Flow Stages
+
+  1. RTL Design: Write your design in a hardware description language (e.g., Chisel or Verilog)
+  2. Synthesis: Convert RTL to gate-level netlist
+  3. Floorplanning: Define the physical layout of the chip
+  4. Placement: Place standard cells and macros on the chip
+  5. Routing: Connect the placed cells with wires
+  6. Verification: Check for design rule violations and timing issues
+  7. GDSII Generation: Create the final layout file for fabrication
 
 
+## LibreLane
+
+![width:900px](figures/flow.png)
+
+## Caravel
+
+![width:900px](figures/layout.png)
+
+## Caravel
+
+![width:600px](figures/caravel.svg)
+
+## Wishbone Interface
+
+![width:500px](figures/Wishbone_Interface.svg)
+
+## Wishbone Bus
+
+![width:500px](figures/wishbone.svg)

@@ -151,7 +151,7 @@ Use your macro as:
    nix-shell
    ```
 
-## Tiny Tapeout
+## Tiny Tapeout (Optional)
 
  * Use the [Verilog template](https://github.com/TinyTapeout/tt10-verilog-template) for Tiny Tapeout (TT10)
  * Add your counter and a test for it
