@@ -203,9 +203,6 @@ sky130_fd_sc_hd__nand2_2 _36_ (
   );
   ...
 ```
-## TODO
-
-- go through this: https://librelane.readthedocs.io/en/stable/getting_started/newcomers/index.html
 
 ## Floorplanning
 
@@ -263,9 +260,32 @@ Cell type report:                       Count       Area
 
 ## PDN Example
 
-- The simple adder example
+- Pins and the PDN of our adder example
 
 ![width:350px](figures/pdn.png)
+
+## Globale Placement
+
+- Global placement places the standard cells
+- Aim to minimize the distance between connected cells
+- The cells are not exactly placed
+- The placement is even *illegal*
+  - Not properly aligned with the grid
+- This is fixed in the next step of detailed placement
+  - Also called placement legalization
+
+## Global Placement Example
+
+![width:350px](figures/glp.png))
+
+## Detailed Placement
+
+- Detailed placement aligns the cells with the grid
+- We call this also *legalizing* it
+
+## Detailed Placement Example
+
+![width:350px](figures/dlp.png)
 
 ## Routing
 - Connect the placed cells with wires
