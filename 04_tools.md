@@ -287,16 +287,45 @@ Cell type report:                       Count       Area
 
 ![width:350px](figures/dlp.png)
 
+## Clock Tree Synthesis (CTS)
+
+- After placing all cells, we create the clock tree
+  - including buffers for the clock
+  
 ## Routing
 - Connect the placed cells with wires
 - Ensure that the connections meet design rules and timing requirements 
+- Global routing: determine the general path for each connection
+- Detailed routing: finalize the exact paths for each connection, ensuring that they meet design rules and
+
+## The routed adder design
+
+![width:350px](figures/route.png)
+
+## Fill Insertion
+
+## Resistance/Capacitance Extraction (RCX)
+
+## Static Timing Analysis (STA)
+
+## GDSII Generation
+- Create the final layout file (GDSII) for fabrication
+- Stream out the GDSII, e.g., with KLayout
+- This file is sent to the foundry for manufacturing the chip
+
+
 ## Verification
 - Check for design rule violations (DRC) and timing issues (LVS)
 - Ensure that the design is manufacturable and meets performance requirements
-## GDSII Generation
-- Create the final layout file (GDSII) for fabrication
-- This file is sent to the foundry for manufacturing the chip
+- Layout vs. Schematic (LVS)
 
+## Caravel Harness
+
+- From eFabless designed SoC framework for tapeout
+- Provides a RISC-V core
+- User area 10 mm2
+- Wishbone bus to connect the user project to the RISC-V core
+- The combination of the Caravel harness with the user project results in the final Caravel tile for the MPW run  
 
 ## Caravel
 
@@ -304,7 +333,7 @@ Cell type report:                       Count       Area
 
 <small>*Copyright 2020-2022 Efabless Corporation and contributors, License: Apache 2.0.*</small>
 
-The combination of the Caravel harness with the user project results in the final Caravel tile for the MPW run.
+
 
 
 ## Caravel
