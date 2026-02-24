@@ -150,7 +150,7 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 1. Run steps of the LibreLane flow on a simple design from Python
   - According to Section 1.4 in the [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf)
   - Explore the outputs of the individual stages
-2. Harden the Caravel framework with a simple peripheral
+2. Harden our [Caravel framework](https://github.com/os-chip-design/dtu-soc-2026) with a simple peripheral
 3. Write a simple Wishbone peripheral (in Chisel)
    - See Section 2.3.9 in the [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf)
 
