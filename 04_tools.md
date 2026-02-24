@@ -151,6 +151,38 @@ module adder (
 endmodule
 ```
 
+## A Run Gives Initial Metrics
+
+```
+   Number of wires:                 56
+   Number of wire bits:             77
+   Number of public wires:          20
+   Number of public wire bits:      41
+   Number of ports:                  4
+   Number of port bits:             25
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 60
+     sky130_fd_sc_hd__a31oi_2        1
+     sky130_fd_sc_hd__and2_2         4
+     sky130_fd_sc_hd__dfxtp_2       24
+     sky130_fd_sc_hd__nand2_2        6
+     sky130_fd_sc_hd__nand2b_2       1
+     sky130_fd_sc_hd__nor2_2         4
+     sky130_fd_sc_hd__o21a_2         1
+     sky130_fd_sc_hd__o21ai_2        2
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__o21bai_2       1
+     sky130_fd_sc_hd__o31a_2         2
+     sky130_fd_sc_hd__or2_2          4
+     sky130_fd_sc_hd__xnor2_2        6
+     sky130_fd_sc_hd__xor2_2         3
+   Chip area for module '\adder': 863.328000
+     of which used for sequential elements: 510.489600 (59.13%)
+  ```
+
+
 ## Yosys Output: Sky130 Standard Cell Netlist
 
 ```verilog
@@ -171,14 +203,70 @@ sky130_fd_sc_hd__nand2_2 _36_ (
   );
   ...
 ```
+## TODO
+
+- go through this: https://librelane.readthedocs.io/en/stable/getting_started/newcomers/index.html
 
 ## Floorplanning
-- Define the physical layout of the chip
-- Place the standard cells and macros in the designated areas
 
-## Placement
-- Place the standard cells and macros on the chip according to the floorplan
-- Optimize for timing and area
+- Define the physical layout of the chip
+- Create a grid for the placement of standard cells and macros
+- A cell in the grid is called a *site*
+- Place the standard cells and macros in the designated areas
+- Standard cells are of diffferent width, multiple sites are needed for wider cells
+
+## Floorplanning Results
+
+- Size of the chip
+
+```
+[INFO] Floorplanned on a die area of 0.0 0.0 52.595 63.315 (µm).
+
+[INFO] Floorplanned on a core area of 5.52 10.88 46.92 51.68 (µm).
+```
+
+## Tap/Endcap Cell Insertion
+
+- Endcap cells are placed at the beginning and end of each row.
+  - They terminate each power line.
+- Connects tap cells to the power and ground rails
+  - n-well to VDD and p-well to GND
+  - Standard cells my not contain the taps
+
+```
+Cell type report:                       Count       Area
+  Fill cell                                62     232.72
+  Tap cell                                 99     123.87
+  Inverter                                 64     240.23
+  Sequential cell                          64    1681.61
+  Multi-Input combinational cell          158    1732.91
+  Total                                   447    4011.35
+```
+
+## I/O Placement
+
+- Metal pins are placed at the edges of the design for the top-level inputs and outputs.
+- The default placement can be overridden by a placement configuration.
+```
+[INFO PPL-0001] Number of slots           72
+[INFO PPL-0002] Number of I/O             25
+[INFO PPL-0003] Number of I/O w/sink      25
+[INFO PPL-0004] Number of I/O w/o sink    0
+```
+
+## Power Distribution Network (PDN)
+
+- The next step is to generate the power distribution network (PDN)
+- It is a pattern of vertical and horizontal straps
+- The vertical straps are thicker and distribute power to the horizontal straps
+- The horizontal straps are delivering power to the individual standard cells
+
+## PDN Example
+
+- The simple adder example
+
+![width:350px](figures/pdn.png)
+
 ## Routing
 - Connect the placed cells with wires
 - Ensure that the connections meet design rules and timing requirements 
@@ -271,9 +359,18 @@ Wishbone synchronous read followed by a synchronous write
 - Four Leros cores with different memory options
 - [caravel_leros_2025](https://github.com/os-chip-design/caravel_leros_2025)
 
+## Summary
+
+- LibreLane is an open-source toolchain for ASIC design
+- Caravel is an open-source SoC framework for tapeout
+- Wishbone is a simple bus interface for connecting components in a chip
+- Let us use those tools to build a chip!
+
 ## Project Discussion
 
 - A System-on-Chip (SoC) design project
 - We have [dtu-soc-2026](https://github.com/os-chip-design/dtu-soc-2026) to start
 - You will add your source there
   - I have not yet the GitHub ids from all of you
+- Let us start a Google Doc for the project
+  - Send the link via DTU Learn
