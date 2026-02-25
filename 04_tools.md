@@ -19,16 +19,23 @@ backgroundColor: #fff
 - Overview of the LibreLane ASIC design flow: from RTL to GDSII
 - Caravel: an open-source SoC framework for tapeout
 - Wishbone bus overview
+- Project discussion
 
 ## A Bit of History
 
 - Very early chips were designed by hand
-- Photo masks were produced by *drawing* them with tape
+- Photo masks were produced by *drawing* them with a tape
 - Computer-aided design (CAD) tools were developed to automate the process
 - Early tools were developed in open-source
   - Spice, Espresso, Magic, etc.
+
+## A Bit of Histrory II
+
 - Commercial tools emerged in the 1980s
-  - Alberto Sangiovanni-Vincentelli's co-founded Cadence Design Systems and Synopsys, the two major EDA tool vendors
+  - Alberto Sangiovanni-Vincentelli's (from UCB) co-founded Cadence Design Systems and Synopsys, the two major EDA tool vendors
+- Early customer was the US military
+  - Now it is commercial driven
+- Good reading: [Chip War](https://en.wikipedia.org/wiki/Chip_War) by Chris Miller
 
 ## OpenROAD
 
@@ -291,7 +298,8 @@ Cell type report:                       Count       Area
 
 - After placing all cells, we create the clock tree
   - including buffers for the clock
-  
+- The clock tree is designed to minimize the clock skew and meet timing requirements
+
 ## Routing
 - Connect the placed cells with wires
 - Ensure that the connections meet design rules and timing requirements 
@@ -304,20 +312,39 @@ Cell type report:                       Count       Area
 
 ## Fill Insertion
 
+- Fill cells are inserted to meet the density requirements of the design
+- Ensure the device can be manufactured
+
 ## Resistance/Capacitance Extraction (RCX)
+
+- Extract the parasitic resistance and capacitance of the wires and cells
+- This is the input for timing analysis
 
 ## Static Timing Analysis (STA)
 
+- Analyze the timing of the design to ensure it meets the specified clock period
+- Reports slack to the given clock period
+- Identify critical paths and potential timing violations
+- Different corners are analyzed:
+  - process
+  - voltage
+  - temperature
+
 ## GDSII Generation
+
 - Create the final layout file (GDSII) for fabrication
 - Stream out the GDSII, e.g., with KLayout
 - This file is sent to the foundry for manufacturing the chip
 
 
 ## Verification
+
 - Check for design rule violations (DRC) and timing issues (LVS)
 - Ensure that the design is manufacturable and meets performance requirements
 - Layout vs. Schematic (LVS)
+  - Today this is Verilog netlist vs. the extracted SPICE netlist from the layout
+
+## Break
 
 ## Caravel Harness
 
@@ -414,6 +441,15 @@ Wishbone synchronous read followed by a synchronous write
 - Caravel is an open-source SoC framework for tapeout
 - Wishbone is a simple bus interface for connecting components in a chip
 - Let us use those tools to build a chip!
+
+## Today's Lab
+
+1.Run steps of the LibreLane flow on a simple design from Python
+  - According to Section 1.4 in the [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf)
+  - Explore the outputs of the individual stages
+2. Harden our [Caravel framework](https://github.com/os-chip-design/dtu-soc-2026) with a simple peripheral
+3. Write a simple Wishbone peripheral (in Chisel)
+   - See Section 2.3.9 in the [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf)
 
 ## Project Discussion
 
