@@ -225,6 +225,7 @@ The lab consists of two parts:
 #### Lab. 6
 
 - Start your project
+- See [Project Start](06_project_start.md) for background info
 
 #### Reading
 
