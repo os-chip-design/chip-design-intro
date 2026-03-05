@@ -58,7 +58,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * 3-stage pipeline
  * Simple memory interface (PipeCon)
 
-## Pipeline
+## Wildcat Pipeline
 
 ![width:1100px](figures/wildcat.svg)
 
@@ -89,7 +89,7 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
    val cpuPort = IO(new PipeConIO(addrWidth))
 }
 ```
-## Main Rules Defining PipeCon:
+## Main Rules Defining PipeCon
 
  * There are two transactions: read and write
  * The transaction command is valid for a single clock cycle
@@ -99,6 +99,6 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
  * The CPU may issue a new read or write command in the same cycle `ack` is asserted
  * fits well for pipelined processors, being parallel to the memory stage
 
-## Handshake
+## PipeCon Handshake
 
 ![width:900px](figures/handshake.svg)

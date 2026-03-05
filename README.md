@@ -215,11 +215,16 @@ The lab consists of two parts:
 
 #### Lecture outline
 
-- TBD
+- Chip design rules
+- Power distribution design, optimization, and analysis
+- Digital design timing
+- Clock distribution challenges and clock trees
+- Power optimization through clock gating
+- Timing closure
 
 #### Lab. 6
 
-- TBD
+- Start your project
 
 #### Reading
 
@@ -269,12 +274,7 @@ The lab consists of two parts:
 
 #### Lecture outline:
 
-- Chip design rules
-- Power distribution design, optimization, and analysis
-- Digital design timing
-- Clock distribution challenges and clock trees
-- Power optimization through clock gating
-- Timing closure
+
 
 #### Lab. 11
 
