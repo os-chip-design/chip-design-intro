@@ -16,10 +16,10 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ## TODO
 
  * Explain Wildcat
- * Add submodule
+ * Add submodule and add the instructions for the checkout
  * Explain PipeCon
- * MVP
- * Ideas
+ * MVP - Wildcat connected to a pin (= LED), hardcoded program, blinking the LED in simulation
+   - Does this sound similar to the RISC-V course project?* Ideas
    * Solutions for memory
    * Solutions for RF
    * Multiple tiles (with different memory and/or boot logic)

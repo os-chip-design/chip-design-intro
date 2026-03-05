@@ -232,7 +232,15 @@ The lab consists of two parts:
 
 - Lecture slides (also available as PDF in DTU-Learn)
 
-### Lecture 7 TBD (MS)  + Midterm course evaluation
+### Lecture 7 Floorplanning (MS)  + Midterm course evaluation
+
+- [Lecture slides](07_floorplanning.md)
+
+#### Lecture outline
+
+- Floorplanning
+- Placement and routing
+- Macros
 
 
 ### Lecture 8: Memory (TP)
