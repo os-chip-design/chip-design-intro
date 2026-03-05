@@ -268,20 +268,29 @@ The lab consists of two parts:
 - Finalise the functional implementation of your project
 
 
+### Lecture 10: TBD (MS)
+
+- not yet availble
+
+#### Lecture outline:
+
+#### Lab. 10
+
+- Work on project
+
+#### Reading
+- None
 
 
 ### Lecture 11: TBD (TP/MS)
 
-- [Lecture slides](???.md) - not yet availble
+- not yet availble
 
 #### Lecture outline:
 
-
-
 #### Lab. 11
 
-- Run routing (OR)
-- Fix shorts and design rule violations
+- Work on project
 
 #### Reading
 - None
