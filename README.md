@@ -129,7 +129,8 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 - Discussion about the project
 - Form and register groups in DTU Learn
 - Choose a project component to work on (CPU, memory, peripherals, testing, etc.)
-- Sign up in the GitHub repository (TBD)
+- Sign up in the GitHub repository
+- See [The Tapeout Project](03_project.md) for instructions
 
 
 ### Lecture 4: Tool Flow and Caravel (MS) 
@@ -225,7 +226,7 @@ The lab consists of two parts:
 #### Lab. 6
 
 - Start your project
-- See [Project Start](06_project_start.md) for background info
+- See [The Tapeout Project](03_project.md) and [Project Start](06_project_start.md) for background info
 
 #### Reading
 
