@@ -22,11 +22,15 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Ideas
    * Solutions for memory
    * Solutions for RF
+   * Multiple tiles (with different memory and/or boot logic)
+   * S4NoC and SlimFlit
+   * Accellerators
 
 ## You are Ready to Start
 
  * You added a Wishbone interface to Caravel in week 4
  * You tested that interface in week 5
+   - Did you?
  * Now we can start the project
  * a MVP running today
 
@@ -46,7 +50,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
  * Wildcat connected to a pin (= LED)
  * Hardcoded program
- * Blinking the LED in test
+ * Blinking the LED in simulation
  
 
 ## Wildcat
@@ -57,10 +61,19 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Supports RV32I
  * 3-stage pipeline
  * Simple memory interface (PipeCon)
+ * https://github.com/schoeberl/wildcat
 
 ## Wildcat Pipeline
 
 ![width:1100px](figures/wildcat.svg)
+
+## Wildcat Papers
+
+ * Martin Schoeberl. The Educational RISC-V Microprocessor Wildcat.
+Proceedings of the Sixth Workshop on Open-Source EDA Technology (WOSET), 2024. 
+ * Martin Schoeberl. Wildcat: Educational RISC-V Microprocessors.
+Architecture of Computing Systems -- ARCS 2025, 2025. [pdf](https://www.jopdesign.com/doc/wildcat-arcs.pdf)
+  
 
 ## The CPU Interface PipeCon
 
