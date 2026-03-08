@@ -115,3 +115,18 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
 ## PipeCon Handshake
 
 ![width:900px](figures/handshake.svg)
+
+## Project Ideas
+
+ * Build a simple SoC with a CPU and some IO
+ * Wildcat as CPU
+ * Explore different memory solutions
+ * More than one Wildcat
+   - Multicore
+   - Use a NoC to connect
+     - S4NOC and SlimFlit
+
+## Lab
+
+ * Wildcat blinking LED in simulation
+ * Harden the design
