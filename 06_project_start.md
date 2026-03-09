@@ -13,19 +13,6 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 **Martin Schoeberl**
 
-## TODO
-
- * Explain Wildcat
- * Add submodule and add the instructions for the checkout
- * Explain PipeCon
- * MVP - Wildcat connected to a pin (= LED), hardcoded program, blinking the LED in simulation
-   - Does this sound similar to the RISC-V course project?* Ideas
-   * Solutions for memory
-   * Solutions for RF
-   * Multiple tiles (with different memory and/or boot logic)
-   * S4NoC and SlimFlit
-   * Accellerators
-
 ## You are Ready to Start
 
  * You added a Wishbone interface to Caravel in week 4
@@ -43,15 +30,13 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
    * https://github.com/os-chip-design/dtu-soc-2026
    * Send me your GitHub ID to get access
    * Similar to https://github.com/os-chip-design/caravel_leros_2025
- * Do a real tapeout
-   * Sponsored by Edu4Chip
 
-## MVP
+## We do a Real Tapeout
 
- * Wildcat connected to a pin (= LED)
- * Hardcoded program
- * Blinking the LED in simulation
- 
+* Sponsored by Edu4Chip
+* $ 15.000 for you
+* Deadline: 13 May 2026
+* We will have a bringup party later this year
 
 ## Wildcat
 
@@ -102,6 +87,7 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
    val cpuPort = IO(new PipeConIO(addrWidth))
 }
 ```
+
 ## Main Rules Defining PipeCon
 
  * There are two transactions: read and write
@@ -110,7 +96,7 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
  * A read result is valid in the clock cycle `ack` is asserted
  * An IO device can insert wait cycles by asserting `ack` later
  * The CPU may issue a new read or write command in the same cycle `ack` is asserted
- * fits well for pipelined processors, being parallel to the memory stage
+ * Fits well for pipelined processors, being parallel to the memory stage
 
 ## PipeCon Handshake
 
@@ -120,13 +106,47 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
 
  * Build a simple SoC with a CPU and some IO
  * Wildcat as CPU
- * Explore different memory solutions
  * More than one Wildcat
    - Multicore
    - Use a NoC to connect
      - S4NOC and SlimFlit
 
-## Lab
+## Project Ideas (cont.)
 
- * Wildcat blinking LED in simulation
- * Harden the design
+ * Explore different memory solutions
+   - OpenRAM
+   - DFF memory
+   - Flip-flop memory
+
+## Project Ideas (cont.)
+
+ * Explore different RF solutions
+   - RF via DFF
+   - RF via memory from Sylvain
+
+## Project Ideas (cont.)
+
+ * Explore different boot solutions
+ * We discussed this in week 3
+   - Boot with help from RV and Wishbone
+   - Boot from SPI Flash
+   - Have a boot ROM to load a program from the UART
+   - FSM plus UART to load a program
+   - Implement in different versions of Wildcat
+
+## Lab Today
+
+ * a MVP as group work
+ * Get used to Wildcat
+ * Wildcat connected to a pin (= LED)
+ * Hardcoded program (blinking LED)
+ * Blinking the LED in simulation
+ * Harden the design, how big is Wildcat?
+ * Wildcat is a submodule in our GitHub repo
+ * Update the repo (see README)
+
+## Project Work
+
+ * Decide on your project
+ * Write it into the README
+ * Evey group shall have at least one commit today!
