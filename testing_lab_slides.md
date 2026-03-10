@@ -12,6 +12,12 @@ backgroundColor: #fff
 
 **02118 - Introduction to Chip Design**
 
+## Overview
+- Goal: Integrate a memory-mapped GPIO module into the Caravel user area and test it using the Caravel testing setup
+- Get to know C API for management core and Python Cocotb API for testbench
+
+![bg right:50% width:100%](https://caravel-mgmt-soc-litex.readthedocs.io/en/latest/_images/block_diagram.png)
+
 ## GPIO Module Integration - Instantiation
 - Create instance and connect to wishbone and GPIO pins
 - Connected to GPIO pins [15:8] to avoid conflicts with management core
