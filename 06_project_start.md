@@ -13,20 +13,11 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 **Martin Schoeberl**
 
-## TODO
-
- * Explain Wildcat
- * Add submodule
- * Explain PipeCon
- * MVP
- * Ideas
-   * Solutions for memory
-   * Solutions for RF
-
 ## You are Ready to Start
 
  * You added a Wishbone interface to Caravel in week 4
  * You tested that interface in week 5
+   - Did you?
  * Now we can start the project
  * a MVP running today
 
@@ -39,15 +30,13 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
    * https://github.com/os-chip-design/dtu-soc-2026
    * Send me your GitHub ID to get access
    * Similar to https://github.com/os-chip-design/caravel_leros_2025
- * Do a real tapeout
-   * Sponsored by Edu4Chip
 
-## MVP
+## We do a Real Tapeout
 
- * Wildcat connected to a pin (= LED)
- * Hardcoded program
- * Blinking the LED in test
- 
+* Sponsored by Edu4Chip
+* $ 15.000 for you
+* Deadline: 13 May 2026
+* We will have a bringup party later this year
 
 ## Wildcat
 
@@ -57,10 +46,19 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * Supports RV32I
  * 3-stage pipeline
  * Simple memory interface (PipeCon)
+ * https://github.com/schoeberl/wildcat
 
-## Pipeline
+## Wildcat Pipeline
 
 ![width:1100px](figures/wildcat.svg)
+
+## Wildcat Papers
+
+ * Martin Schoeberl. The Educational RISC-V Microprocessor Wildcat.
+Proceedings of the Sixth Workshop on Open-Source EDA Technology (WOSET), 2024. 
+ * Martin Schoeberl. Wildcat: Educational RISC-V Microprocessors.
+Architecture of Computing Systems -- ARCS 2025, 2025. [pdf](https://www.jopdesign.com/doc/wildcat-arcs.pdf)
+  
 
 ## The CPU Interface PipeCon
 
@@ -89,7 +87,8 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
    val cpuPort = IO(new PipeConIO(addrWidth))
 }
 ```
-## Main Rules Defining PipeCon:
+
+## Main Rules Defining PipeCon
 
  * There are two transactions: read and write
  * The transaction command is valid for a single clock cycle
@@ -97,8 +96,57 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
  * A read result is valid in the clock cycle `ack` is asserted
  * An IO device can insert wait cycles by asserting `ack` later
  * The CPU may issue a new read or write command in the same cycle `ack` is asserted
- * fits well for pipelined processors, being parallel to the memory stage
+ * Fits well for pipelined processors, being parallel to the memory stage
 
-## Handshake
+## PipeCon Handshake
 
 ![width:900px](figures/handshake.svg)
+
+## Project Ideas
+
+ * Build a simple SoC with a CPU and some IO
+ * Wildcat as CPU
+ * More than one Wildcat
+   - Multicore
+   - Use a NoC to connect
+     - S4NOC and SlimFlit
+
+## Project Ideas (cont.)
+
+ * Explore different memory solutions
+   - OpenRAM
+   - DFF memory
+   - Flip-flop memory
+
+## Project Ideas (cont.)
+
+ * Explore different RF solutions
+   - RF via DFF
+   - RF via memory from Sylvain
+
+## Project Ideas (cont.)
+
+ * Explore different boot solutions
+ * We discussed this in week 3
+   - Boot with help from RV and Wishbone
+   - Boot from SPI Flash
+   - Have a boot ROM to load a program from the UART
+   - FSM plus UART to load a program
+   - Implement in different versions of Wildcat
+
+## Lab Today
+
+ * a MVP as group work
+ * Get used to Wildcat
+ * Wildcat connected to a pin (= LED)
+ * Hardcoded program (blinking LED)
+ * Blinking the LED in simulation
+ * Harden the design, how big is Wildcat?
+ * Wildcat is a submodule in our GitHub repo
+ * Update the repo (see README)
+
+## Project Work
+
+ * Decide on your project
+ * Write it into the README
+ * Evey group shall have at least one commit today!

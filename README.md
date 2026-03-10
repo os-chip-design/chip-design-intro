@@ -129,7 +129,8 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 - Discussion about the project
 - Form and register groups in DTU Learn
 - Choose a project component to work on (CPU, memory, peripherals, testing, etc.)
-- Sign up in the GitHub repository (TBD)
+- Sign up in the GitHub repository
+- See [The Tapeout Project](03_project.md) for instructions
 
 
 ### Lecture 4: Tool Flow and Caravel (MS) 
@@ -214,17 +215,31 @@ The lab consists of two parts:
 
 #### Lecture outline
 
-- TBD
+- Chip design rules
+- Power distribution design, optimization, and analysis
+- Digital design timing
+- Clock distribution challenges and clock trees
+- Power optimization through clock gating
+- Timing closure
 
 #### Lab. 6
 
-- TBD
+- Start your project
+- See [The Tapeout Project](03_project.md) and [Project Start](06_project_start.md) for background info
 
 #### Reading
 
 - Lecture slides (also available as PDF in DTU-Learn)
 
-### Lecture 7 TBD (MS)  + Midterm course evaluation
+### Lecture 7 Floorplanning (MS)  + Midterm course evaluation
+
+- [Lecture slides](07_floorplanning.md)
+
+#### Lecture outline
+
+- Floorplanning
+- Placement and routing
+- Macros
 
 
 ### Lecture 8: Memory (TP)
@@ -260,25 +275,29 @@ The lab consists of two parts:
 - Finalise the functional implementation of your project
 
 
+### Lecture 10: TBD (MS)
+
+- not yet availble
+
+#### Lecture outline:
+
+#### Lab. 10
+
+- Work on project
+
+#### Reading
+- None
 
 
 ### Lecture 11: TBD (TP/MS)
 
-- [Lecture slides](???.md) - not yet availble
+- not yet availble
 
 #### Lecture outline:
 
-- Chip design rules
-- Power distribution design, optimization, and analysis
-- Digital design timing
-- Clock distribution challenges and clock trees
-- Power optimization through clock gating
-- Timing closure
-
 #### Lab. 11
 
-- Run routing (OR)
-- Fix shorts and design rule violations
+- Work on project
 
 #### Reading
 - None
