@@ -22,7 +22,11 @@ In this lab you will learn how to write tests for Caravel and your user project 
 
 ## Integrating the Wishbone GPIO
 
-You are provided with a simple wishbone GPIO module in `src/main/scala/WishboneGpio.scala`. Your first task is to integrate this module into the Chisel top level in `src/main/scala/CaravelTop.scala`. This requires instantiating the module, integrating it into the existing address decoding and wishbone logic and connecting it to the GPIO pins. Take a look at the `WishboneGpio` module and make sure you understand how it works. Remember to run `make chisel-generate` to generate the Verilog code after you have made the changes.
+You are provided with a simple wishbone GPIO module in `src/main/scala/WishboneGpio.scala`. Your first task is to integrate this module into the Chisel top level in `src/main/scala/CaravelTop.scala`. This requires instantiating the module, integrating it into the existing address decoding and wishbone logic and connecting it to the GPIO pins. Take a look at the `WishboneGpio` module and make sure you understand how it works. 
+
+Some of the lower GPIO pins are shared with the management core, use therefore the [15:8] range. A simple address decoding scheme is used where `addr[19:16]` is used to select the peripheral and `addr[15:0]` is used as the address within the peripheral. You can use `addr[19:16] == 0` for the wishbone GPIO module.
+
+Remember to run `make chisel-generate` to generate the Verilog code after you have made the changes.
 
 ## Testing in Caravel
 
