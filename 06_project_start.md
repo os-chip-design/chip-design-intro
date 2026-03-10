@@ -117,6 +117,8 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
    - OpenRAM
    - DFF memory
    - Flip-flop memory
+ * Caches for Wildcat
+ * SPI based memory controller (Flash + RAM)
 
 ## Project Ideas (cont.)
 
@@ -150,3 +152,4 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
  * Decide on your project
  * Write it into the README
  * Evey group shall have at least one commit today!
+ * We will start with weekly sprints and short reports
