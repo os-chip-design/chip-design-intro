@@ -200,9 +200,8 @@ This is the list of lectures from 2025. It will be adapted for 2026.
 
 The lab consists of two parts:
 
-
-1. One part works with formal verification methods. See [Verification Lab](verification-lab/readme.md) for instructions
-2. For the other part, see [Caravel Testing](caravel_test.md) for instructions
+1. One part introduces the testing setup in Caravel, see [Caravel Testing Lab](caravel_test.md) for instructions
+2. The other part works with formal verification methods. See [Verification Lab](verification-lab/readme.md) for instructions
 
 #### Reading
 
