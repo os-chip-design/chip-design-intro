@@ -35,8 +35,15 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 * Sponsored by Edu4Chip
 * $ 15.000 for you
+* This is the first student tapeout at DTU
+  - Last chip activity was 20 years ago
+  - Only research chips, no student tapeouts
 * Deadline: 13 May 2026
 * We will have a bringup party later this year
+
+## What is in for You
+
+ * Doing a real chip in your CV
 
 ## Wildcat
 
