@@ -50,9 +50,9 @@ switch(wb.addr(WB_ADDR_WIDTH - 1, WB_ADDR_WIDTH - 8)) {
 
 | Address | Description |
 |---------|-------------|
-|0x3010_0000|Read-only GPIO input register|
-|0x3010_0004|Read/write GPIO output register|
-|0x3010_0008|Read/write GPIO (inverted) output enable register|
+|0x3000_0000|Read-only GPIO input register|
+|0x3000_0004|Read/write GPIO output register|
+|0x3000_0008|Read/write GPIO (inverted) output enable register|
 
 - Now we are all set for testing!
 
@@ -136,8 +136,8 @@ void main(){
   GPIOs_loadConfigs(); // load the configuration
 
   User_enableIF();
-  USER_writeWord(0x00, 0x0000004 >> 2); // output enable
-  USER_writeWord(0x66, 0x0000000 >> 2); // output value
+  USER_writeWord(0x00, 0x0000008 >> 2); // output enable
+  USER_writeWord(0x66, 0x0000004 >> 2); // output value
 
   ManagmentGpio_write(1); // signal done
   return;
