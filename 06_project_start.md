@@ -96,7 +96,7 @@ class PipeCon(private val addrWidth: Int) extends Bundle {
 
 ## PipeCon
 
-```PipeCon``` itself is an abstract class, just containing the interface:
+```PipeConDevice``` itself is an abstract class, just containing the interface:
 
 ```scala
 abstract class PipeConDevice(addrWidth: Int) extends Module {
@@ -124,7 +124,7 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
  * Wildcat as CPU
  * More than one Wildcat
    - Multicore
-   - Use a NoC to connect
+   - Use a network-on-chip (NoC) to connect
      - S4NOC and SlimFlit
 
 ## Project Ideas (cont.)
@@ -135,6 +135,8 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
    - Flip-flop memory
  * Caches for Wildcat
  * SPI based memory controller (Flash + RAM)
+
+ ![bg right:50% width:50%](https://d2j6dbq0eux0bg.cloudfront.net/images/103749801/4890230295.jpg)
 
 ## Project Ideas (cont.)
 
