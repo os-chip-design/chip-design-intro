@@ -34,11 +34,11 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
  * Sponsored by Edu4Chip
  * Paying $ 15.000 for you
- * This is the first student tapeout at DTU
-   - Last chip activity was 20 years ago
+ * This is the first student tapeout at DTU Compute
+   - Last chip activity at DTU Compute was 20 years ago
    - Only research chips, no student tapeouts
- * Probably first student tapeout in EU
-   - TUM, TAU, KTH, IMT woring on it (Edu4Chip)
+ * Probably one of the first student tapeouts in EU (Chips Act)
+   - TUM, TAU, KTH, IMT working on it (Edu4Chip)
  * Deadline: 13 May 2026
 
 ## What is in for You
@@ -49,7 +49,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * You get several chips
  * We will have a bringup party later this year
 
-## The PCB with Our Chip
+## The PCB with Your Chip
 
 ![width:500px](https://umsousercontent.com/lib_lnlnuhLgkYnZdkSC/6kf0oi8snb3db7fh.png?w=1200&h=900&fit=max&dpr=2)
 
