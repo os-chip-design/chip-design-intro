@@ -28,22 +28,30 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * With a CPU, memory, and some IO
  * Hosted on GitHub
    * https://github.com/os-chip-design/dtu-soc-2026
-   * Send me your GitHub ID to get access
    * Similar to https://github.com/os-chip-design/caravel_leros_2025
 
 ## We do a Real Tapeout
 
-* Sponsored by Edu4Chip
-* $ 15.000 for you
-* This is the first student tapeout at DTU
-  - Last chip activity was 20 years ago
-  - Only research chips, no student tapeouts
-* Deadline: 13 May 2026
-* We will have a bringup party later this year
+ * Sponsored by Edu4Chip
+ * Paying $ 15.000 for you
+ * This is the first student tapeout at DTU
+   - Last chip activity was 20 years ago
+   - Only research chips, no student tapeouts
+ * Probably first student tapeout in EU
+   - TUM, TAU, KTH, IMT woring on it (Edu4Chip)
+ * Deadline: 13 May 2026
 
 ## What is in for You
 
- * Doing a real chip in your CV
+ * Your design in a real chip
+ * Taping out a real chip in your CV
+ * Once in a lifetime chance
+ * You get several chips
+ * We will have a bringup party later this year
+
+## The PCB with Our Chip
+
+![width:500px](https://umsousercontent.com/lib_lnlnuhLgkYnZdkSC/6kf0oi8snb3db7fh.png?w=1200&h=900&fit=max&dpr=2)
 
 ## Wildcat
 
@@ -54,6 +62,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * 3-stage pipeline
  * Simple memory interface (PipeCon)
  * https://github.com/schoeberl/wildcat
+
 
 ## Wildcat Pipeline
 
@@ -152,7 +161,7 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
  * Blinking the LED in simulation
  * Harden the design, how big is Wildcat?
  * Wildcat is a submodule in our GitHub repo
- * Update the repo (see README)
+ * Update your clone ofthe repo (see README)
 
 ## Project Work
 
