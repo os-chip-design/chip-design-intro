@@ -28,15 +28,30 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * With a CPU, memory, and some IO
  * Hosted on GitHub
    * https://github.com/os-chip-design/dtu-soc-2026
-   * Send me your GitHub ID to get access
    * Similar to https://github.com/os-chip-design/caravel_leros_2025
 
 ## We do a Real Tapeout
 
-* Sponsored by Edu4Chip
-* $ 15.000 for you
-* Deadline: 13 May 2026
-* We will have a bringup party later this year
+ * Sponsored by Edu4Chip
+ * Paying $ 15.000 for you
+ * This is the first student tapeout at DTU Compute
+   - Last chip activity at DTU Compute was 20 years ago
+   - Only research chips, no student tapeouts
+ * Probably one of the first student tapeouts in EU (Chips Act)
+   - TUM, TAU, KTH, IMT working on it (Edu4Chip)
+ * Deadline: 13 May 2026
+
+## What is in for You
+
+ * Your design in a real chip
+ * Taping out a real chip in your CV
+ * Once in a lifetime chance
+ * You get several chips
+ * We will have a bringup party later this year
+
+## The PCB with Your Chip
+
+![width:500px](https://umsousercontent.com/lib_lnlnuhLgkYnZdkSC/6kf0oi8snb3db7fh.png?w=1200&h=900&fit=max&dpr=2)
 
 ## Wildcat
 
@@ -47,6 +62,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * 3-stage pipeline
  * Simple memory interface (PipeCon)
  * https://github.com/schoeberl/wildcat
+
 
 ## Wildcat Pipeline
 
@@ -80,7 +96,7 @@ class PipeCon(private val addrWidth: Int) extends Bundle {
 
 ## PipeCon
 
-```PipeCon``` itself is an abstract class, just containing the interface:
+```PipeConDevice``` itself is an abstract class, just containing the interface:
 
 ```scala
 abstract class PipeConDevice(addrWidth: Int) extends Module {
@@ -108,7 +124,7 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
  * Wildcat as CPU
  * More than one Wildcat
    - Multicore
-   - Use a NoC to connect
+   - Use a network-on-chip (NoC) to connect
      - S4NOC and SlimFlit
 
 ## Project Ideas (cont.)
@@ -117,6 +133,10 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
    - OpenRAM
    - DFF memory
    - Flip-flop memory
+ * Caches for Wildcat
+ * SPI based memory controller (Flash + RAM)
+
+ ![bg right:50% width:50%](https://d2j6dbq0eux0bg.cloudfront.net/images/103749801/4890230295.jpg)
 
 ## Project Ideas (cont.)
 
@@ -143,10 +163,11 @@ abstract class PipeConDevice(addrWidth: Int) extends Module {
  * Blinking the LED in simulation
  * Harden the design, how big is Wildcat?
  * Wildcat is a submodule in our GitHub repo
- * Update the repo (see README)
+ * Update your clone ofthe repo (see README)
 
 ## Project Work
 
  * Decide on your project
  * Write it into the README
  * Evey group shall have at least one commit today!
+ * We will start with weekly sprints and short reports

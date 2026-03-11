@@ -211,7 +211,9 @@ The lab consists of two parts:
 
 ### Lecture 6: Timing and Physical Design (OR)
 
-- [Lecture slides](06_timing_and_placement.md)
+- [Lecture slides](06_timing_and_backend_intro.md)
+- [Testing slides](testing_lab_slides.md)
+- [Project start slides](06_project_start.md)
 
 #### Lecture outline
 
@@ -219,11 +221,13 @@ The lab consists of two parts:
 - Power distribution design, optimization, and analysis
 - Digital design timing
 - Clock distribution challenges and clock trees
-- Power optimization through clock gating
 - Timing closure
+- Physical Verification
 
 #### Lab. 6
 
+- Finish the Wishbone peripheral and [test it in Caravel](caravel_test.md)
+- Get one Wildcat running in Caravel (blinking an LED)
 - Start your project
 - See [The Tapeout Project](03_project.md) and [Project Start](06_project_start.md) for background info
 

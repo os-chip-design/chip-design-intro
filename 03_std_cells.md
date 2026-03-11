@@ -76,7 +76,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Clock Gates
 
-[height:120px](figures/L3/iker-urteaga-TL5Vy1IM-uA-unsplash.jpg)
+![height:120px](figures/L3/iker-urteaga-TL5Vy1IM-uA-unsplash.jpg)
 - like logic gates but balanced in switching points !
 
 ![height:250px](figures/L3/sky130_fd_sc_hd__clkbuf_1.svg) ![height:250px](figures/L3/sky130_fd_sc_hd__buf_1.svg)
