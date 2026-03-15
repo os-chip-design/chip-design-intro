@@ -246,6 +246,7 @@ The lab consists of two parts:
 #### Reading
 
 - W & H 1.10 Physical Design
+- [Using Macros in LibreLane](https://librelane.readthedocs.io/en/stable/usage/using_macros.html)
 
 ### Lecture 8: Memory (TP)
 

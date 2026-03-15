@@ -17,8 +17,8 @@ backgroundColor: #fff
 ## Outline
 
 - Floorplanning
-- Placement and routing
 - Macros
+- Placement and routing
 
 ## Test the HDMI Sound
 
@@ -70,6 +70,85 @@ backgroundColor: #fff
 
 ![bg width:30%](https://github.com/os-chip-design/chip-design-book/blob/main/figures/route.png?raw=true)
 
+## What is a Macro?
+
+ * Chips are usually not synthesized, placed, and routed in one go
+ * Parts can be hardened individually
+   - Then integrated into the top-level
+ * The individually hardened block is called a macro
+ * Need to be placed in the outer macro or top level
+ * Examples:
+   - Memories (e.g., SRAM, register files)
+   - I/O cells
+   - Custom designs
+
+## Advantages of Macros
+
+ * Faster place and route
+   - Example: pre-harden a latch-based memory
+   - Upper level only needs to place and route the logic around it
+ * Can be reused across designs (e.g., instruction and data memories)
+ * Can be black-boxed (closed-source designs)
+
+## Macro Challenges
+
+ * We need timing information of the macro block
+   - Does this work well with LibreLane?
+ * Clock tree cannot be optimzed over macro boundaries
+ * Constraints the layout (floorplan)
+ * What is the right level of using pre-hardened macros?
+
+## Macro Files (LEF)
+
+ * Library Exchange Format (LEF)
+   - Defines the interface
+     - Size, pin placement
+     - Obstractions for layers
+   - Used during PnR (Place and Route)
+   - [RF Example](https://github.com/os-chip-design/caravel_leros_2025/blob/main/macro/rf_top.lef)
+
+## Macro Files (GDSII)
+
+ * Graphic Design System II Format (GDSII)
+   - *de facto* industry standard for data exchange of ICs
+ * Full layout geometry
+   - Shapes on all layers
+   - Layers are just numbers
+   - Which layer contains what is PDK specific
+ * Used for final layout and manufacturing
+
+## Macro Files (.lib)
+
+* Liberty format (.lib)
+  - Timing and power info
+  - Used during synthesis and STA
+  - [RF Example](https://github.com/os-chip-design/caravel_leros_2025/blob/main/macro/rf_top.lib)
+
+## Macro Files (Verilog)
+
+ * The Gate-Level Netlist
+   - Can be used for simulation
+   - Maybe used during STA (Static Timing Analysis)
+
+## Macro Files (SDC)
+
+ * Timing info
+ * Synopsys Design Constraints (SDC)
+   - Timing constraints for the macro
+   - Used during synthesis and STA
+
+## Macro Files (SDF)
+
+ * Standard Delay Format (SDF)
+   - Represents timing info
+   - IEEE standard
+   - Currently not supported by LibreLane :-(
+     - A spot to contribute to LibreLane ;-)
+
+## Further Reading on Macros
+
+ * [Using Macros in LibreLane](https://librelane.readthedocs.io/en/stable/usage/using_macros.html)
+
 ## Initial Floorplan
 
  * Plan area for I/O pads
@@ -94,11 +173,30 @@ backgroundColor: #fff
 
 ![bg right:30% width:70%](https://umsousercontent.com/lib_lnlnuhLgkYnZdkSC/r86juqr1bvqdd7y4.png)
 
+## Leros Example
+
+ * Macros at multiple levels
+   - A hierarchy of macros
+ * Different versions of memories used (4 Leros)
+   - Each Leros is a macro
+   - Each memory itsel is a macro
+ * [Leros example with DFF](https://github.com/os-chip-design/caravel_leros_2025/blob/main/openlane/leros-dffram/config.json)
+
 ## Summary
 
-## Have a Project Report Round
+ * Floorplanning is part of chip design
+ * Needed for hard macros, such as memories
+ * Floorplan and macro pin assignement need to *fit*
+ * Similar to part placement on PCBs
+
+## Have a Project Reporting Round
 
  * Each group has 5 minutes to present
    - Their status
    - Current challenges
    - Next steps
+
+## TODO List
+
+ * In the [README](https://github.com/os-chip-design/dtu-soc-2026?tab=readme-ov-file#needed-work) of our project
+ * Distribute tasks to groups
