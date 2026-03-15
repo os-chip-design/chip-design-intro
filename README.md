@@ -51,8 +51,6 @@ This course is an introduction to the design of digital integrated circuits. It 
 
 ## Lecture Plan
 
-This is the list of lectures from 2025. It will be adapted for 2026. 
-
 ### Lecture 1: Introduction to the Chip Design Course (MS) 
 
 - [Lecture slides](01_intro.md)
@@ -245,6 +243,9 @@ The lab consists of two parts:
 - Placement and routing
 - Macros
 
+#### Reading
+
+- W & H 1.10 Physical Design
 
 ### Lecture 8: Memory (TP)
 
