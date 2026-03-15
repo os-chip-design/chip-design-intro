@@ -308,9 +308,9 @@ The lab consists of two parts:
 #### Reading
 - None
 
-### Lecture & Lab 12: Project Work and Tapeout (MS/TP)
+### Lecture & Lab 12: Guest Lecture (Tamas) and Project Work and Tapeout
 
-The full time slot is dedicated to project work.
+Finalize the project for tapeout.
 
 - Run Timing closure and LVS
 - Fix timing violations and handle design missmatches 

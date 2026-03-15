@@ -22,6 +22,8 @@ backgroundColor: #fff
 
 ## Test the HDMI Sound
 
+ * We might have a remote guest lecture
+
 ## DTU Chip Day
 
  * Save the date: 14 April 2026
@@ -180,13 +182,28 @@ backgroundColor: #fff
  * Different versions of memories used (4 Leros)
    - Each Leros is a macro
    - Each memory itsel is a macro
- * [Leros example with DFF](https://github.com/os-chip-design/caravel_leros_2025/blob/main/openlane/leros-dffram/config.json)
+ * [Leros example with DFF memory](https://github.com/os-chip-design/caravel_leros_2025/blob/main/openlane/leros-dffram/config.json)
+
+## Connect the Die to a Package
+
+ * Select a package
+   - How many I/O pins do we need
+ * I/O from the die is connected with wire bonding
+
+## Simple Chip Bonding
+
+![bg width:50%](https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/07R01.jpg/1280px-07R01.jpg)
+
+## Today
+
+![bg width:50%](https://www.palomartechnologies.com/hs-fs/file-26167023-png/images/stackeddie.png?width=600&name=stackeddie.png)
 
 ## Summary
 
  * Floorplanning is part of chip design
  * Needed for hard macros, such as memories
  * Floorplan and macro pin assignement need to *fit*
+   - To be able to route the signals
  * Similar to part placement on PCBs
 
 ## Have a Project Reporting Round
@@ -195,8 +212,10 @@ backgroundColor: #fff
    - Their status
    - Current challenges
    - Next steps
+ * BTW: 8 weeks till tapeout deadline
 
 ## TODO List
 
  * In the [README](https://github.com/os-chip-design/dtu-soc-2026?tab=readme-ov-file#needed-work) of our project
+   - If you don't like it public, we can use our Google doc
  * Distribute tasks to groups
