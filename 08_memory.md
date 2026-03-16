@@ -4,140 +4,94 @@ theme: gaia
 _class: lead
 paginate: true
 backgroundColor: #fff
-backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
 
 <!-- headingDivider: 3 -->
 
-# **Memory and Register Files**
+# **Memories**
 
-**Martin Schoeberl**
+**02118 - Introduction to Chip Design**
 
+### Memories in general
 
-## Memories in Standard Cell Design
+![bg right:27% 550%](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel%40intel7%2810nmESF%29%40RaptorLake%40RPL%288P%2B16E%29%40i9-13900K%40ES_DSCx05_poly%405xExt.jpg/3840px-Intel%40intel7%2810nmESF%29%40RaptorLake%40RPL%288P%2B16E%29%40i9-13900K%40ES_DSCx05_poly%405xExt.jpg)
 
-**Types of Memories Used:**
-- SRAM (Static Random-Access Memory)
-- DRAM (Dynamic Random-Access Memory)
-- ROM (Read-Only Memory)
-- Register Files (D Flip-Flops)
+### Why is on-chip memory important?
 
-## SRAM in Standard Cells
+### Cache (i9-13900K 10nm)
 
-- SRAM is commonly implemented using 6T (six-transistor) or 8T cells
-- Used for caches, register files, and other high-speed applications
-- Designed for low latency and high speed
-
-## 6T SRAM Cell Design
-
-- **Transistor Composition:**
-  - 2 cross-coupled inverters (4 transistors) for data storage
-  - 2 access transistors to control read/write operations
-- **Cell Operation:**
-  - **Write Operation:** Bitline is driven high or low, access transistors enable data overwrite
-  - **Read Operation:** Wordline activates access transistors, stored value is read through the bitline
-- **Advantages:** High-speed operation, good static noise margin
-
-## SRAM Cell
-
- - https://en.wikipedia.org/wiki/Static_random-access_memory
- - 6 transistors compared to 21 in a D FF
-
-## SRAM in ASIC Design
-
- - FPAG is easy - just mapped to on-chip memories
-   - On-chip memories are hard macros
- - ASICs needs a memory generator (compiler)
-   - Memories are mixed signal
-   - Memory compilers are an extra business
-   - Weak point in the open-source world
-  - [OpenRAM](https://openram.org/) is a memory compiler
-    - One group is working on it
-
-## DRAM and ROM in Standard Cells
-
-- **DRAM:** Requires refresh cycles, high density but slower than SRAM
-- **ROM:** Used for fixed data storage, mask-programmable or electrically alterable
-
-## Memory Design Considerations
-
-- **Area Efficiency:** Memory cells are optimized for density
-- **Power Consumption:** Trade-off between dynamic and leakage power
-- **Speed:** SRAM is faster but larger, DRAM is denser but slower
-
-## Memory Read and Write Operations
-
-- **SRAM Read:**
-  - Wordline (WL) is activated
-  - Stored value is transferred to the bitline
-  - Sense amplifier detects and amplifies the signal
-- **SRAM Write:**
-  - Wordline is activated
-  - Bitline is forced high or low, overwriting the stored value
-
-## Memory Design Techniques
-
-- **Multi-port Memory:** Supports multiple read and write operations simultaneously
-- **Banking:** Divides memory into multiple independent sections to improve access speed
-- **Pipelining:** Breaks memory access into stages to increase throughput
-- **Error Correction Codes (ECC):** Detects and corrects errors to improve reliability
-
-## Low-Power Memory Design
-
-- **Power Gating:** Turns off unused memory blocks to save power
-- **Clock Gating:** Disables clock signals to idle memory circuits
-- **Data Retention Techniques:** Uses special low-leakage transistors to retain data with minimal power
-
-## Emerging Memory Technologies
-
-- **Non-Volatile Memories:** MRAM, RRAM, FeRAM offer lower power and persistent storage
-- **3D Memory Stacking:** Improves density and bandwidth by stacking memory layers
-- **Hybrid Memory Architectures:** Combines different memory types for performance and efficiency
+- L1: 
+  - 80KB/P-Core
+  - 96KB/E-Core
+- L2:
+  - 2MB/P-Core
+  - 4MB/(4 E-Cores)
+- L3: 36MB (shared)
+- Total: ≈70MB!
 
 
-## Register Files
 
-- Register files are small, fast memory blocks used in processors
-- E.g., RISC-V register files are 32 32-bit registers
+![bg right:57% width:98%](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Intel_Core_i9-13900K_Labelled_Die_Shot.jpg/1920px-Intel_Core_i9-13900K_Labelled_Die_Shot.jpg)
 
-```scala
-      val regs = SyncReadMem(32, UInt(32.W), SyncReadMem.WriteFirst)
-      val rs1Val = regs.read(rs1)
-      val rs2Val = regs.read(rs2)
-      when(wrEna && rd =/= 0.U) {
-        regs.write(rd, wrData)
-      }
-```
- - What is the generated hardware?
 
-## Register File in Hardware (Wildcat)
+### Register based memeory
 
-- Implemented as a two read, one write port SRAM in an FPGA
-  - 2 read ports implemented by two single port SRAMs
-- As registers and muxes in ASICs
-- 1024 flip-flops and 32 32:1 muxes
-- This is BIG
 
-## Synthesis Result in Skywater130nm
+### Latch based memory
 
- - Class: [sky130_fd_sc_hd__dfxtp_1](https://skywater-pdk.readthedocs.io/en/main/contents/libraries/sky130_fd_sc_hd/cells/dfxtp/README.html) instances: 1030
- - Class: [sky130_fd_sc_hd__mux2_1](https://sky130-unofficial.readthedocs.io/en/latest/contents/libraries/sky130_fd_sc_hd/cells/mux2/README.html) instances: 1462
- - Class: [sky130_fd_sc_hd__mux4_1](https://sky130-unofficial.readthedocs.io/en/latest/contents/libraries/sky130_fd_sc_hd/cells/mux4/README.html) instances: 277
 
-## Synthesized Wildcat and Register File
 
-  - Using SkyWater 130 nm
-  - 3-stages Wildcat pipeline: 429 x 432 umm2
-  - Register file: 320 x 320 umm2
-  - RF is **55 %** of the area!
-  - Better solution needed
-  - I tried latches, but yosys did not like them
-  - Can we use the OpenRAM memory?
+### Synth Ram
 
-## Summary
+- $764.59\:\mu\mathrm{m} \times 775.31\:\mu\mathrm{m}$
+- density: $567702\: \mu \text{m}^2 / 1\:\textrm{kiB} = 69.3\frac{\mu \text{m}^2}{\textrm{bit}}$
+- For 70MB: $19.7 \mathrm{cm}\times 19.7\:\mathrm{cm}$
+- In 10nm assuming 18x scaling: $4.6\:\mathrm{cm}\times 4.6\:\mathrm{cm}$
 
-- Memories like SRAM need a memory compiler for ASICs
-- 6T SRAM design is a widely used memory structure
-- Rgister file out of FFs is expensive
+![bg right:40% width:100%](figures/memory/synthram.png)
 
+
+### Latch
+
+![bg vertical right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/2/2f/D-Type_Transparent_Latch.svg)
+![bg right:40% width:100%](https://skywater-pdk.readthedocs.io/en/main/_images/sky130_fd_sc_hd__dlxtp_1.svg)
+
+<!-- _footer: Figure by <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> - Own Drawing in Inkscape 0.46, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=873561">Link</a>> -->
+
+
+### How else can we store data?
+
+![bg right:40% width:80%](figures/memory/inv_cell.drawio.svg)
+
+
+### 6T SRAM Cells
+
+![bg right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/3/31/SRAM_Cell_%286_Transistors%29.svg)
+
+<!-- _footer: Figure by <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> - <span class="int-own-work" lang="en">Own work</span>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=5771850">Link</a></sub></sup> -->
+
+### 6T SRAM Cell - Read
+
+### 6T SRAM Cell - Write
+
+### Multi-Port SRAM Cell
+
+### OpenRam 6T Cell
+
+![bg width:90%](figures/memory/openram_cell_metal_layers.png)
+![bg width:90%](figures/memory/openram_cell_transistors.png)
+
+### 4T SRAM Cell
+
+
+![bg right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/f/fe/SRAM_Cell_%284_Transistors%29.svg)
+
+
+
+<!-- _footer: Figure by <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> - <span class="int-own-work" lang="en">Own work</span>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=114648423">Link</a> -->
+
+
+### SRAM Array Layout
+
+![bg right:40% width:100%](figures/memory/sram_array_layout.drawio.svg)
 
