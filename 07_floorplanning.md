@@ -68,7 +68,7 @@ backgroundColor: #fff
    - Without constraining, the tools choose the *easy* solution
      - Large die area and place the cells with a lot of space
 
-##
+## Lab 4
 
 ![bg width:30%](https://github.com/os-chip-design/chip-design-book/blob/main/figures/route.png?raw=true)
 
@@ -84,6 +84,17 @@ backgroundColor: #fff
    - I/O cells
    - Custom designs
 
+## Content of a Macro
+
+ * A macro contains the layout
+ * Also timing and power information
+ * Different files for different purposes
+   - LEF for place and route
+   - GDSII for final layout and manufacturing
+   - .lib for synthesis and STA
+   - Verilog for simulation
+   - SDC for timing constraints
+   - SDF for timing info (not supported by LibreLane)
 ## Advantages of Macros
 
  * Faster place and route
@@ -94,9 +105,9 @@ backgroundColor: #fff
 
 ## Macro Challenges
 
- * We need timing information of the macro block
+ * We need timing information for the macro block
    - Does this work well with LibreLane?
- * Clock tree cannot be optimzed over macro boundaries
+ * Clock tree cannot be optimized over macro boundaries
  * Constraints the layout (floorplan)
  * What is the right level of using pre-hardened macros?
 
@@ -118,6 +129,7 @@ backgroundColor: #fff
    - Layers are just numbers
    - Which layer contains what is PDK specific
  * Used for final layout and manufacturing
+ * Only binary file format (to save space)
 
 ## Macro Files (.lib)
 
@@ -128,20 +140,23 @@ backgroundColor: #fff
 
 ## Macro Files (Verilog)
 
- * The Gate-Level Netlist
+ * The gate-level netlist
    - Can be used for simulation
    - Maybe used during STA (Static Timing Analysis)
+ * High-level simulation models
+   - [RF Example](https://github.com/os-chip-design/caravel_leros_2025/blob/main/macro/rf_top.v)
 
 ## Macro Files (SDC)
 
  * Timing info
- * Synopsys Design Constraints (SDC)
+ * Synopsys design constraints (SDC)
    - Timing constraints for the macro
    - Used during synthesis and STA
+   - [user_project_example.sdc](https://github.com/os-chip-design/caravel_leros_2025/blob/main/sdc/user_proj_example.sdc)
 
 ## Macro Files (SDF)
 
- * Standard Delay Format (SDF)
+ * Standard delay format (SDF)
    - Represents timing info
    - IEEE standard
    - Currently not supported by LibreLane :-(
@@ -181,13 +196,13 @@ backgroundColor: #fff
    - A hierarchy of macros
  * Different versions of memories used (4 Leros)
    - Each Leros is a macro
-   - Each memory itsel is a macro
+   - Each memory itself is a macro
  * [Leros example with DFF memory](https://github.com/os-chip-design/caravel_leros_2025/blob/main/openlane/leros-dffram/config.json)
 
 ## Connect the Die to a Package
 
  * Select a package
-   - How many I/O pins do we need
+   - How many I/O pins do we need?
  * I/O from the die is connected with wire bonding
 
 ## Simple Chip Bonding
@@ -198,11 +213,58 @@ backgroundColor: #fff
 
 ![bg width:50%](https://www.palomartechnologies.com/hs-fs/file-26167023-png/images/stackeddie.png?width=600&name=stackeddie.png)
 
+## Open-Source PDKs
+
+ * This chip design/production world has changed a lot in recent years
+ * SkyWater and Google started it
+ * But there is more
+   - IHP 130
+   - GF 180
+
+## SkyWater
+
+ * [SkyWater](https://en.wikipedia.org/wiki/SkyWater_Technology) was former Cypress
+   - Cypress made fast SRAMs
+ * Opened up their 130 nm process in 2020
+   - SkyWater, Google, and Efabless
+   - Now, chipfoundry is doing the MPW
+ * 10mm2 packaged dies for $ 15000
+ * Just reserved a [slot](https://platform.chipfoundry.io/projects/6498d2f1-fdcf-498d-ade0-26f48bf48ec8) for our project
+ * Used by Tiny Tapout
+
+![bg right:35% width:90%](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/SkyWater_Building_Exterior.jpg/330px-SkyWater_Building_Exterior.jpg)
+
+
+## IHP
+
+ * Leibniz Institute for High Performance Microelectronics ([IHP](https://en.wikipedia.org/wiki/Innovations_for_High_Performance_Microelectronics))
+ * Research institute in Germany
+   - In Frankfurt (Oder), former GDR
+   - Hosted last year's [FSiC](https://wiki.f-si.org/index.php/FSiC2025) conference
+ * Opened the PDK in 2021
+ * 1500-1000 EUR/mm2
+ * Used by Tiny Tapout
+   - Rescued TT09 and TT10 shuttles
+
+![bg right:35% width:90%](https://www.ihp-microelectronics.com/fileadmin/user_upload/211115_14_21_25.jpg)
+
+## GlobalFoundries
+
+ * 180 nm process
+ * Open-source PDK with Google (2022)
+ * MPW organized by [waver.space](https://wafer.space/)
+   - Startup by Tim Ansell (did the Google OS PDK)
+   - $ 7000 for 20mm2 bare dies
+   - 1000 dies or wire bonded
+   - Could be an option for a startup project
+
+![bg right:30% width:80%](https://wafer.space/assets/images/products/wafer-space-chip-on-board.jpg)
+
 ## Summary
 
  * Floorplanning is part of chip design
  * Needed for hard macros, such as memories
- * Floorplan and macro pin assignement need to *fit*
+ * Floorplan and macro pin assignment need to *fit*
    - To be able to route the signals
  * Similar to part placement on PCBs
 
