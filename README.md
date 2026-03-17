@@ -233,15 +233,15 @@ The lab consists of two parts:
 
 - Lecture slides (also available as PDF in DTU-Learn)
 
-### Lecture 7 Floorplanning (MS)  + Midterm course evaluation
+### Lecture 7 Floorplanning (MS)  + Midterm Course Evaluation
 
 - [Lecture slides](07_floorplanning.md)
 
 #### Lecture outline
 
 - Floorplanning
-- Placement and routing
 - Macros
+- Placement
 
 #### Reading
 
@@ -281,7 +281,7 @@ The lab consists of two parts:
 - Finalise the functional implementation of your project
 
 
-### Lecture 10: TBD (MS)
+### Lecture 10: SkyWater130 PDK (MS)
 
 - not yet availble
 
