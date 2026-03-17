@@ -1,0 +1,50 @@
+
+<svg width="600" height="500" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; }
+    .box { fill: #f5f5f5; stroke: #333; stroke-width: 2; rx: 10; }
+    .title { font-size: 16px; font-weight: bold; text-anchor: middle; }
+    .text { font-size: 13px; text-anchor: middle; }
+    .arrow { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+  </style>
+
+  <!-- Arrow definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7"
+            refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- RTL -->
+  <rect x="150" y="30" width="300" height="60" class="box"/>
+  <text x="300" y="55" class="title">RTL / Netlist</text>
+  <text x="300" y="75" class="text">Macro Instance</text>
+
+  <!-- .lib -->
+  <rect x="150" y="120" width="300" height="70" class="box"/>
+  <text x="300" y="145" class="title">.lib (Timing Model)</text>
+  <text x="300" y="165" class="text">Delay, power, constraints</text>
+
+  <!-- .lef -->
+  <rect x="150" y="220" width="300" height="70" class="box"/>
+  <text x="300" y="245" class="title">.lef (Abstract Layout)</text>
+  <text x="300" y="265" class="text">Size, pins, blockages</text>
+
+  <!-- .gds -->
+  <rect x="150" y="320" width="300" height="80" class="box"/>
+  <text x="300" y="345" class="title">.gds (Full Layout)</text>
+  <text x="300" y="365" class="text">Polygons for fabrication</text>
+
+  <!-- Arrows -->
+  <line x1="300" y1="90" x2="300" y2="120" class="arrow"/>
+  <line x1="300" y1="190" x2="300" y2="220" class="arrow"/>
+  <line x1="300" y1="290" x2="300" y2="320" class="arrow"/>
+
+  <!-- Side labels -->
+  <text x="510" y="155" class="text">Synthesis &amp; STA</text>
+  <text x="510" y="255" class="text">Place &amp; Route</text>
+  <text x="510" y="365" class="text">Tapeout</text>
+
+</svg>

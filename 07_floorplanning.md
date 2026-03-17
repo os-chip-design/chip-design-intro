@@ -4,10 +4,28 @@ theme: gaia
 _class: lead
 paginate: true
 backgroundColor: #fff
-<!--backgroundImage: url('https://marp.app/assets/hero-background.svg')-->
+backgroundImage: url('https://marp.app/assets/hero-background.svg')
+
 ---
 
 <!-- headingDivider: 3 -->
+
+<style>
+section pre {
+  background: #f2f2f2;
+  color: #1f2937;
+}
+
+section pre code {
+  background: transparent;
+  color: inherit;
+}
+
+section :not(pre) > code {
+  background: #f2f2f2;
+  color: #1f2937;
+}
+</style>
 
 
 # **Floorplanning**
@@ -53,13 +71,24 @@ backgroundColor: #fff
      - Additional area to bring power, tap cells,...
      - Space needed for further optimization (clock tree, clock buffers to fix timing)
 
+## Estimating the Area
+
+ * The area needed will be larger than the netlist estimate
+   - Core utilization = cell area / reserved core area
+ * You define the area by *estimating* the core utilization
+   - TT uses 60%,  common (conservative) number
+     - "PL_TARGET_DENSITY_PCT": 60
+   - You can play with this number with your design
+     - In the config file
+   - Iterative process, going through the backend flow
+
 ## Further Constraints
 
  * Space around macros not aligned with the standard cell rows
  * Packaging
  * I/O cells
    - Chip size is often determined by I/O and not logic
- * The area needed will be larger than the netlist estimate
+
 
 ## Example from Lab 4
    - Example design from Lab 4:
@@ -97,6 +126,7 @@ backgroundColor: #fff
    - Verilog for simulation
    - SDC for timing constraints
    - SDF for timing info (not supported by LibreLane)
+
 ## Advantages of Macros
 
  * Faster place and route
@@ -109,7 +139,7 @@ backgroundColor: #fff
 
  * We need timing information for the macro block
    - Does this work well with LibreLane?
- * Clock tree cannot be optimized over macro boundaries
+* Clock tree cannot be optimized over macro boundaries
  * Constraints the layout (floorplan)
  * What is the right level of using pre-hardened macros?
 
@@ -140,6 +170,10 @@ backgroundColor: #fff
   - Timing and power info
   - Used during synthesis and STA
   - [RF Example](https://github.com/os-chip-design/caravel_leros_2025/blob/main/macro/rf_top.lib)
+* Generated when synthesising the macro
+* Info used in the next level synthesis and STA
+  - Does it work in LibreLane?
+* Explore it in an experiment
 
 ## Macro Files (Verilog)
 
@@ -164,6 +198,11 @@ backgroundColor: #fff
    - IEEE standard
    - Currently not supported by LibreLane :-(
      - A spot to contribute to LibreLane ;-)
+
+## Macro Views - the Big Picture
+
+![width:750px](figures/macro_flow.svg)
+
 
 ## Further Reading on Macros
 
@@ -202,11 +241,21 @@ backgroundColor: #fff
    - Each memory itself is a macro
  * [Leros example with DFF memory](https://github.com/os-chip-design/caravel_leros_2025/blob/main/openlane/leros-dffram/config.json)
 
-## Connect the Die to a Package
+## Break and Midterm Course Evaluation
+
+ * Let us have it now
+   - What you like
+   - What you don't like
+   - Proposals for change
+ * I take notes
+ * We can adapt the seond half of the course
+
+## Connect the Die to Package Pins
 
  * Select a package
    - How many I/O pins do we need?
  * I/O from the die is connected with wire bonding
+   - Or as flip-chip with solder bumps
 
 ## Simple Chip Bonding
 
@@ -251,6 +300,13 @@ backgroundColor: #fff
 ## AMD
 
 ![bg width:50%](https://substackcdn.com/image/fetch/$s_!Hy22!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fce1be050-b76c-46b3-a120-2cdb5fc43d88_1024x768.jpeg)
+
+## Next Step
+
+ * 3D packaging
+ * Multiple dies stacked on top of each other
+   - Processor, DRMA, Flash
+   - With through-silicon vias
 
 ## Reading on Advanced Packaging
 
@@ -312,14 +368,6 @@ backgroundColor: #fff
    - To be able to route the signals
  * Similar to part placement on PCBs
 
-## Midterm Course Evaluation
-
- * Let us have it now
-   - What you like
-   - What you don't like
-   - Proposals for change
- * I take notes
- * We can adapt the seond half of the course
 
 ## Have a Project Reporting Round
 
@@ -334,3 +382,14 @@ backgroundColor: #fff
  * In the [README](https://github.com/os-chip-design/dtu-soc-2026?tab=readme-ov-file#needed-work) of our project
    - If you don't like it public, we can use our Google doc
  * Distribute tasks to groups
+
+
+## Needed Work (TODO List from the README)
+
+- [ ] CI with LibreLane synthesis
+- [ ] Add Wildcat in repo (like the exercise)
+- [ ] Wildcat boot from WB
+- [ ] CI with Wildcat in the test
+- [ ] Check compiler option for RV32IE (16 registers)
+- [ ] Block diagram in the README
+- [ ] Explore macro timing with LIB files
