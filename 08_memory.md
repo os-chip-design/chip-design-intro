@@ -12,9 +12,11 @@ backgroundColor: #fff
 
 **02118 - Introduction to Chip Design**
 
+![bg right:27% 550%](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel%40intel7%2810nmESF%29%40RaptorLake%40RPL%288P%2B16E%29%40i9-13900K%40ES_DSCx05_poly%405xExt.jpg/3840px-Intel%40intel7%2810nmESF%29%40RaptorLake%40RPL%288P%2B16E%29%40i9-13900K%40ES_DSCx05_poly%405xExt.jpg)
+
 ### Memories in general
 
-![bg right:27% 550%](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel%40intel7%2810nmESF%29%40RaptorLake%40RPL%288P%2B16E%29%40i9-13900K%40ES_DSCx05_poly%405xExt.jpg/3840px-Intel%40intel7%2810nmESF%29%40RaptorLake%40RPL%288P%2B16E%29%40i9-13900K%40ES_DSCx05_poly%405xExt.jpg)
+
 
 ### Why is on-chip memory important?
 
@@ -34,30 +36,44 @@ backgroundColor: #fff
 ![bg right:57% width:98%](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Intel_Core_i9-13900K_Labelled_Die_Shot.jpg/1920px-Intel_Core_i9-13900K_Labelled_Die_Shot.jpg)
 
 
-### Register based memeory
+### Register based memory
+
+![bg vertical right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/3/37/D-Type_Flip-flop_Diagram.svg)
+![bg right:40% width:100%](https://skywater-pdk.readthedocs.io/en/main/_images/sky130_fd_sc_hd__dfxtp_1.svg)
+
+- 7.360 BY 2.720
 
 
-### Latch based memory
-
-
+<!-- _footer: Figure by jjbeard - Own drawing, done in Inkscape 0.43, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=873697">Link</a> -->
 
 ### Synth Ram
 
 - $764.59\:\mu\mathrm{m} \times 775.31\:\mu\mathrm{m}$
-- density: $567702\: \mu \text{m}^2 / 1\:\textrm{kiB} = 69.3\frac{\mu \text{m}^2}{\textrm{bit}}$
-- For 70MB: $19.7 \mathrm{cm}\times 19.7\:\mathrm{cm}$
-- In 10nm assuming 18x scaling: $4.6\:\mathrm{cm}\times 4.6\:\mathrm{cm}$
+- density: $71.17\:\mu \text{m}^2/\textrm{bit}$
+- 13.819,296802454 bits/mm²
+- For 70MB: $19.96 \mathrm{cm}\times 19.96\:\mathrm{cm}$
+- In 10nm assuming 18x scaling: $1.1\:\mathrm{cm}\times 1.1\:\mathrm{cm}$
 
 ![bg right:40% width:100%](figures/memory/synthram.png)
 
+
+### Latch based memory
 
 ### Latch
 
 ![bg vertical right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/2/2f/D-Type_Transparent_Latch.svg)
 ![bg right:40% width:100%](https://skywater-pdk.readthedocs.io/en/main/_images/sky130_fd_sc_hd__dlxtp_1.svg)
-
+ 
 <!-- _footer: Figure by <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> - Own Drawing in Inkscape 0.46, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=873561">Link</a>> -->
 
+
+### DFFRAM
+
+![bg right:40% width:100%](figures/memory/dffram.png)
+
+- Area: $683.1\:\mu\mathrm{m} \times 416.54\:\mu\mathrm{m}$
+- Density: $34.7\:\mu\mathrm{m}^2/\mathrm{bit}$
+- 28.790,4826536745 bits/mm²
 
 ### How else can we store data?
 
@@ -81,6 +97,46 @@ backgroundColor: #fff
 ![bg width:90%](figures/memory/openram_cell_metal_layers.png)
 ![bg width:90%](figures/memory/openram_cell_transistors.png)
 
+### OpenRam Cell Transistors
+
+![bg width:100%](figures/memory/openram_cell_transistors.png)
+![bg width:85%](https://upload.wikimedia.org/wikipedia/commons/3/31/SRAM_Cell_%286_Transistors%29.svg)
+
+
+### SRAM Array Layout
+
+![bg right:40% width:100%](figures/memory/sram_array_layout.drawio.svg)
+
+### OpenRam Array
+
+- 1rw and 1r port
+- 256x32 bits
+- Array: $212\:\mu\mathrm{m} \times 254\:\mu\mathrm{m}$
+- Array density: $6.57\:\mu\mathrm{m}^2/\mathrm{bit}$
+- 152.131,9269053632 bits/mm²
+- Total area: $479.78\:\mu\mathrm{m} \times 397.5\:\mu\mathrm{m}$
+- Total density: $23.3\:\mu\mathrm{m}^2/\mathrm{bit}$
+- 42.954,6980521208 bits/mm²
+- For 2KiB version: $17.37\:\mu\mathrm{m}^2/\mathrm{bit}$
+- 57.580,9653073489 bits/mm²
+
+![bg right:45% width:100%](figures/memory/openram.png)
+
+
+### Commercial Sky130 SRAM
+
+![bg right:40% width:100%](figures/memory/commercial_sram.png)
+
+- Area: $387.87\:\mu\mathrm{m} \times 306.775\:\mu\mathrm{m}$
+- Density: $14,53\:\mu\mathrm{m}^2/\mathrm{bit}$
+- 137.693,6093934725 bits/mm²
+
+
+
+
+
+
+
 ### 4T SRAM Cell
 
 
@@ -91,7 +147,4 @@ backgroundColor: #fff
 <!-- _footer: Figure by <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> - <span class="int-own-work" lang="en">Own work</span>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=114648423">Link</a> -->
 
 
-### SRAM Array Layout
-
-![bg right:40% width:100%](figures/memory/sram_array_layout.drawio.svg)
 
