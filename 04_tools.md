@@ -306,7 +306,7 @@ Cell type report:                       Count       Area
 - Global routing: determine the general path for each connection
 - Detailed routing: finalize the exact paths for each connection, ensuring that they meet design rules and
 
-## The routed adder design
+## The Routed Adder Design
 
 ![width:350px](figures/route.png)
 

@@ -16,9 +16,11 @@ backgroundColor: #fff
 
 ## Outline
 
-- Floorplanning
-- Macros
-- Placement and routing
+* Palnning your chip: floorplanning
+  - determine the size of the chip 
+* Macros
+  - How to build and place them
+* Connect your chip to pins
 
 ## Test the HDMI Sound
 
@@ -115,7 +117,8 @@ backgroundColor: #fff
 
  * Library Exchange Format (LEF)
    - Defines the interface
-     - Size, pin placement
+     - Size of the macro
+     - Pin placement
      - Obstractions for layers
    - Used during PnR (Place and Route)
    - [RF Example](https://github.com/os-chip-design/caravel_leros_2025/blob/main/macro/rf_top.lef)
@@ -213,6 +216,47 @@ backgroundColor: #fff
 
 ![bg width:50%](https://www.palomartechnologies.com/hs-fs/file-26167023-png/images/stackeddie.png?width=600&name=stackeddie.png)
 
+## I/O Issue
+
+ * Number of transistors still grow exponentially
+   - E.g., TSMC has grown transistor denstity 2x per year
+ * I/O data rates only been 2x every 4 years
+ * Number of pins has not been increasing exponetially
+ * Pads for the pins need space
+
+## Xilinx
+
+![bg width:50%](https://substackcdn.com/image/fetch/$s_!ePbC!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fa49a8aec-a309-42df-8885-08e1d92dec55_1024x765.png)
+
+## Upgrading Old Designs
+
+ * For example, the automotiv chip crisis
+ * Intel has been proposing to upgrade old designs to new processes
+   - E.g., Intel 16 in Irland
+ * But then those are pad limited
+   - Need more die are just for the pads
+   - The higher price per mm2 does not scale well
+
+## Making the Die Bigger
+
+ * When the die is pad limited
+ * Use the space for very large caches
+   - E.g., AMD Infinity cache: 32 MB on chip
+ * Then pressure on I/O (memory) bandwith decreases
+ * But larger dies have a lower yield
+ * Another option is Chiplets
+   - Multiple dies in one package
+   - With high-speed interconnects
+
+## AMD
+
+![bg width:50%](https://substackcdn.com/image/fetch/$s_!Hy22!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fce1be050-b76c-46b3-a120-2cdb5fc43d88_1024x768.jpeg)
+
+## Reading on Advanced Packaging
+
+ * https://newsletter.semianalysis.com/p/advanced-packaging-part-1-pad-limited
+ * https://newsletter.semianalysis.com/p/advanced-packaging-part-2-review
+
 ## Open-Source PDKs
 
  * This chip design/production world has changed a lot in recent years
@@ -241,7 +285,7 @@ backgroundColor: #fff
  * Research institute in Germany
    - In Frankfurt (Oder), former GDR
    - Hosted last year's [FSiC](https://wiki.f-si.org/index.php/FSiC2025) conference
- * Opened the PDK in 2021
+ * Opened their PDK in 2021
  * 1500-1000 EUR/mm2
  * Used by Tiny Tapout
    - Rescued TT09 and TT10 shuttles
@@ -251,7 +295,7 @@ backgroundColor: #fff
 ## GlobalFoundries
 
  * 180 nm process
- * Open-source PDK with Google (2022)
+ * Open-source [PDK](https://gf180mcu-pdk.readthedocs.io/en/latest/) with Google (2022)
  * MPW organized by [waver.space](https://wafer.space/)
    - Startup by Tim Ansell (did the Google OS PDK)
    - $ 7000 for 20mm2 bare dies
@@ -267,6 +311,15 @@ backgroundColor: #fff
  * Floorplan and macro pin assignment need to *fit*
    - To be able to route the signals
  * Similar to part placement on PCBs
+
+## Midterm Course Evaluation
+
+ * Let us have it now
+   - What you like
+   - What you don't like
+   - Proposals for change
+ * I take notes
+ * We can adapt the seond half of the course
 
 ## Have a Project Reporting Round
 
