@@ -34,8 +34,8 @@ section :not(pre) > code {
 
 ## Outline
 
-* Palnning your chip: floorplanning
-  - determine the size of the chip 
+* Planning your chip: floorplanning
+  - Determine the size of the chip 
 * Macros
   - How to build and place them
 * Connect your chip to pins
@@ -57,14 +57,20 @@ section :not(pre) > code {
 
 ![bg width:80%](https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Intel_Pentium_II_Dixon_die_shot.jpg/1280px-Intel_Pentium_II_Dixon_die_shot.jpg)
 
-## Leros SoC
-![bg width:50%](https://github.com/os-chip-design/caravel_leros_2025/raw/main/caravel_layout.png)
-
 ## Why Floorplanning?
 
  * Die size determines cost
  * Find a minimum silicon area to implement our device
    - But only with reasonable engineering cost
+ * Divide and conquer approach
+   - Break down complex designs
+   - Individually place and route parts of the design
+ * Finish subdesigns and include in the top
+ * Advanced tools can keep the boundaries fluid
+   - To allow more optimization
+
+## Initial Estimates
+
  * Netlist gives us a first estimate
    - `xx-yosys-synthesis/reports/stat.rpt`
    - But cells cannot be placed without space
@@ -89,6 +95,19 @@ section :not(pre) > code {
  * I/O cells
    - Chip size is often determined by I/O and not logic
 
+## Leros Example Design
+
+ * Test tapeout with 4 Leros processors
+ * Exploring different memory options
+ * Test a register file macro
+ * Memories as macros
+   - Individually hardened
+   - Or given (the CF SRAM)
+ * Leros cores freely routed as macros with the memories placed
+ * The Leros processors were then placed at the top level
+
+## Leros SoC
+![bg width:50%](https://github.com/os-chip-design/caravel_leros_2025/raw/main/caravel_layout.png)
 
 ## Example from Lab 4
    - Example design from Lab 4:
@@ -143,7 +162,7 @@ section :not(pre) > code {
  * Constraints the layout (floorplan)
  * What is the right level of using pre-hardened macros?
 
-## Macro Files (LEF)
+## Macro Files: LEF
 
  * Library Exchange Format (LEF)
    - Defines the interface
@@ -153,7 +172,7 @@ section :not(pre) > code {
    - Used during PnR (Place and Route)
    - [RF Example](https://github.com/os-chip-design/caravel_leros_2025/blob/main/macro/rf_top.lef)
 
-## Macro Files (GDSII)
+## Macro Files: GDSII
 
  * Graphic Design System II Format (GDSII)
    - *de facto* industry standard for data exchange of ICs
@@ -164,7 +183,7 @@ section :not(pre) > code {
  * Used for final layout and manufacturing
  * Only binary file format (to save space)
 
-## Macro Files (.lib)
+## Macro Files: LIB/.lib
 
 * Liberty format (.lib)
   - Timing and power info
@@ -175,7 +194,7 @@ section :not(pre) > code {
   - Does it work in LibreLane?
 * Explore it in an experiment
 
-## Macro Files (Verilog)
+## Macro Files: Verilog
 
  * The gate-level netlist
    - Can be used for simulation
@@ -183,7 +202,7 @@ section :not(pre) > code {
  * High-level simulation models
    - [RF Example](https://github.com/os-chip-design/caravel_leros_2025/blob/main/macro/rf_top.v)
 
-## Macro Files (SDC)
+## Macro Files: SDC
 
  * Timing info
  * Synopsys design constraints (SDC)
@@ -191,7 +210,7 @@ section :not(pre) > code {
    - Used during synthesis and STA
    - [user_project_example.sdc](https://github.com/os-chip-design/caravel_leros_2025/blob/main/sdc/user_proj_example.sdc)
 
-## Macro Files (SDF)
+## Macro Files: SDF
 
  * Standard delay format (SDF)
    - Represents timing info
@@ -203,6 +222,17 @@ section :not(pre) > code {
 
 ![width:750px](figures/macro_flow.svg)
 
+## How Tools Treat Macros
+
+* Synthesis
+  - Uses `.lib` -> knows timing
+  - Treats macro as a *black box*
+* Place & Route
+  - Uses `.lef` -> knows size + pins
+  - Places macro as a *fixed block*
+* Tapeout
+  - Uses `.gds` -> includes full layout
+* Tools never look inside the macro during the normal flow
 
 ## Further Reading on Macros
 
@@ -236,7 +266,7 @@ section :not(pre) > code {
 
  * Macros at multiple levels
    - A hierarchy of macros
- * Different versions of memories used (4 Leros)
+ * Different versions of memories used (4 Leroses)
    - Each Leros is a macro
    - Each memory itself is a macro
  * [Leros example with DFF memory](https://github.com/os-chip-design/caravel_leros_2025/blob/main/openlane/leros-dffram/config.json)
@@ -244,18 +274,18 @@ section :not(pre) > code {
 ## Break and Midterm Course Evaluation
 
  * Let us have it now
-   - What you like
+   - What do you like
    - What you don't like
    - Proposals for change
- * I take notes
- * We can adapt the seond half of the course
+ * I take notes (in our shared Google doc)
+ * We can adapt the second half of the course
 
 ## Connect the Die to Package Pins
 
  * Select a package
    - How many I/O pins do we need?
  * I/O from the die is connected with wire bonding
-   - Or as flip-chip with solder bumps
+   - Or as a flip-chip with solder bumps
 
 ## Simple Chip Bonding
 
@@ -267,10 +297,10 @@ section :not(pre) > code {
 
 ## I/O Issue
 
- * Number of transistors still grow exponentially
-   - E.g., TSMC has grown transistor denstity 2x per year
+ * The number of transistors still grows exponentially
+   - E.g., TSMC has grown transistor density 2x per year
  * I/O data rates only been 2x every 4 years
- * Number of pins has not been increasing exponetially
+ * Number of pins has not been increasing exponentially
  * Pads for the pins need space
 
 ## Xilinx
@@ -279,11 +309,11 @@ section :not(pre) > code {
 
 ## Upgrading Old Designs
 
- * For example, the automotiv chip crisis
+ * For example, the automotive chip crisis
  * Intel has been proposing to upgrade old designs to new processes
-   - E.g., Intel 16 in Irland
+   - E.g., Intel 16 in Ireland
  * But then those are pad limited
-   - Need more die are just for the pads
+   - Need larger dies just for the pads
    - The higher price per mm2 does not scale well
 
 ## Making the Die Bigger
@@ -291,7 +321,7 @@ section :not(pre) > code {
  * When the die is pad limited
  * Use the space for very large caches
    - E.g., AMD Infinity cache: 32 MB on chip
- * Then pressure on I/O (memory) bandwith decreases
+ * Then pressure on the I/O (memory) bandwidth decreases
  * But larger dies have a lower yield
  * Another option is Chiplets
    - Multiple dies in one package
@@ -305,7 +335,7 @@ section :not(pre) > code {
 
  * 3D packaging
  * Multiple dies stacked on top of each other
-   - Processor, DRMA, Flash
+   - Processor, DRAM, Flash
    - With through-silicon vias
 
 ## Reading on Advanced Packaging
@@ -363,11 +393,13 @@ section :not(pre) > code {
 ## Summary
 
  * Floorplanning is part of chip design
- * Needed for hard macros, such as memories
+   - Determines the area (and shape) of the ASIC
+ * Standard cells are placed in the core area
+   - Need some extra space (cell utilization)
+ * We need hard macros, such as memories
+   - Need extra room for placement
  * Floorplan and macro pin assignment need to *fit*
    - To be able to route the signals
- * Similar to part placement on PCBs
-
 
 ## Have a Project Reporting Round
 
@@ -380,7 +412,7 @@ section :not(pre) > code {
 ## TODO List
 
  * In the [README](https://github.com/os-chip-design/dtu-soc-2026?tab=readme-ov-file#needed-work) of our project
-   - If you don't like it public, we can use our Google doc
+   - If you don't like it, public, we can use our Google doc
  * Distribute tasks to groups
 
 
