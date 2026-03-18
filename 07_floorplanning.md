@@ -40,10 +40,6 @@ section :not(pre) > code {
   - How to build and place them
 * Connect your chip to pins
 
-## Test the HDMI Sound
-
- * We might have a remote guest lecture
-
 ## DTU Chip Day
 
  * Save the date: 14 April 2026
@@ -65,9 +61,23 @@ section :not(pre) > code {
  * Divide and conquer approach
    - Break down complex designs
    - Individually place and route parts of the design
- * Finish subdesigns and include in the top
+ * Finish subdesigns and include in the top level
  * Advanced tools can keep the boundaries fluid
    - To allow more optimization
+
+## Leros Example Design
+
+ * Test tapeout with 4 Leros processors
+ * Exploring different memory options
+ * Test a register file macro
+ * Memories as macros
+   - Individually hardened
+   - Or given (the CF SRAM)
+ * Leros cores freely routed as macros with the memories placed
+ * The Leros processors were then placed at the top level
+
+## Leros SoC
+![bg width:50%](https://github.com/os-chip-design/caravel_leros_2025/raw/main/caravel_layout.png)
 
 ## Initial Estimates
 
@@ -95,19 +105,7 @@ section :not(pre) > code {
  * I/O cells
    - Chip size is often determined by I/O and not logic
 
-## Leros Example Design
 
- * Test tapeout with 4 Leros processors
- * Exploring different memory options
- * Test a register file macro
- * Memories as macros
-   - Individually hardened
-   - Or given (the CF SRAM)
- * Leros cores freely routed as macros with the memories placed
- * The Leros processors were then placed at the top level
-
-## Leros SoC
-![bg width:50%](https://github.com/os-chip-design/caravel_leros_2025/raw/main/caravel_layout.png)
 
 ## Example from Lab 4
    - Example design from Lab 4:
