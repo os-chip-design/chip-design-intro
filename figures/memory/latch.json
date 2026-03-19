@@ -1,0 +1,24 @@
+{
+  "signal": [
+    { "name": "clk", "wave": "0H.l.H.l", },
+    { "name": "we", "wave": "0.1..0.."},
+    { "name": "wr_data", "wave": "x.5...x.", data: "data"},
+    { "name": "latch_en", "wave": "0..1.0.."},
+    {node: "..F..MR"},
+    {node: "..CA.BD"},
+    { "name": "latch_out", "wave": "x..5....", data: "data"}
+  ],
+
+  "foot": {
+    "text": "Write into latch memory cell."
+  },
+
+  "config": { "hscale": 1 },
+  "edge": [
+    'C+A L_s',
+  	'A+B transp.',
+    'B+D L_h',
+    'F+M setup',
+    'M+R hold'
+  ]
+}
