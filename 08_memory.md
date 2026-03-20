@@ -42,7 +42,7 @@ backgroundColor: #fff
   - Latches
   - SRAM cell and its operation
   - Memory arrays
-
+- Leave the comfort of the digital abstraction (just a bit)
 
 ### Register based memory
 
@@ -51,7 +51,6 @@ backgroundColor: #fff
 
 
 - Simplest way to store data: use DFF
-- Area: $7.360\:\mu\mathrm{m} \times 2.720\:\mu\mathrm{m}$
 - What else do we need?
   - Address decoding to select registers
   - Address register for synchronous read
@@ -75,46 +74,43 @@ backgroundColor: #fff
 
 - Would be enough to store a bit
 - How can we integrate a level-sensitive latch into a edge-sensitive clocked circuit?
-- Use clock as enable signal
+- Use clock for enable signal
 - How does the timing look?
 
 ![bg vertical right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/2/2f/D-Type_Transparent_Latch.svg)
-![bg right:40% width:100%](https://skywater-pdk.readthedocs.io/en/main/_images/sky130_fd_sc_hd__dlxtp_1.svg)
+![bg right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/f/f1/Multiplexer-based_latch_using_transmission_gates.svg)
  
-<!-- _footer: Figure by <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> - Own Drawing in Inkscape 0.46, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=873561">Link</a>> -->
+<!-- _footer: Figures: <a href="https://commons.wikimedia.org/w/index.php?curid=873561">top by Inductiveload</a>>, <a href="https://commons.wikimedia.org/w/index.php?curid=8423589">bottom by Inductiveload</a> -->
 
 
 ### Latch Write Timing
 
 - Transparent latch when `clk=0`
-- Clock is gated with write enable and address select
-- Data needs to be ready before *falling* clock edge
-- Data needs to be valid until after *rising* edge
-- Long setup time
+- Clock is gated with write enable and address decoding
+- Careful: address decoding needs to be stable before `we`
+- Latch setup and hold time has to be met
 
 ![bg right:40% width:100%](figures/memory/latch_timing.svg)
 
 ### Latch Read
 
-- Combinational path through memory on write
-
-### Latch based memory
-
-- we can use clock as enable to store data in a latch
-- but data has to be valid for a whole half period
-- which period to choose?
-- latch write data and address when clock low, update target latch when clock high
-- read data using registered address
-- what if the same address is written and read in the same cycle? combinational path through memory!
+- Multiplex data based on address
+- Synchronous read
+  - Option 1: register address
+  - Option 2: register output data
+- On Write: Combinational path through memory!
+- Output register solves this
+- What about multi-ported memory?
 
 
-### DFFRAM
+### DFFRAM Synthesized
 
-![bg right:40% width:100%](figures/memory/dffram.png)
+![bg vertical right:40% width:100%](figures/memory/dffram.png)
 
+- Custom netlist
 - Area: $683.1\:\mu\mathrm{m} \times 416.54\:\mu\mathrm{m}$
-- Density: $34.7\:\mu\mathrm{m}^2/\mathrm{bit}$
-- 28.790,4826536745 bits/mm²
+- Density: 28.790 bits/mm²
+- Custom placed version exists, but area is worse?
 
 ### How else can we store data?
 
@@ -129,37 +125,57 @@ backgroundColor: #fff
 
 ![bg right:40% width:90%](figures/memory/shared_bit_line.drawio.svg)
 
+- Shared physical wire for left and right side of the cells
+- Isolation mechanism to disconnect unselected cells from bitlines
+- Wordline controls isolation mechanism
+
 ### 6T SRAM Cell
 
 ![bg right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/3/31/SRAM_Cell_%286_Transistors%29.svg)
 
-- Shared bitlines between cells
 - 2 nmos transistors connect to shared bitlines
 - wordline controls connection to bitlines
-- Sizing constraints for read/write stability
 
-<!-- _footer: Figure by <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> - <span class="int-own-work" lang="en">Own work</span>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=5771850">Link</a></sub></sup> -->
+<!-- _footer: Figure: <a href="https://commons.wikimedia.org/w/index.php?curid=5771850"> by Inductiveload</a></sub></sup> -->
 
 ### 6T SRAM Cell - Read
 
 ![bg right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/3/31/SRAM_Cell_%286_Transistors%29.svg)
+- Let bitlines float and connect cell
+- Bitlines will take the value of the cell
 - What is the state of the bitlines before activating the wordline?
-- The bitlines are long with high capacitance $\to$ long (dis)charge time
-- Better: precharge and amplify *difference* between bitlines
-<!-- _footer: Figure by <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> - <span class="int-own-work" lang="en">Own work</span>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=5771850">Link</a></sub></sup> -->
+  $\to$ Precharge bitlines to Vdd
+- Discharge bitline through nmos on one side
+
+<!-- _footer: Figure: <a href="https://commons.wikimedia.org/w/index.php?curid=5771850"> by Inductiveload</a></sub></sup> -->
 
 ### 6T SRAM Cell - Read 
 
 ![bg right:40% width:100%](figures/memory/sram_read.svg)
+- The bitlines are long with high capacitance $\to$ long (dis)charge time
+- Better: amplify *difference* between bitlines
+- Bitline voltage swing can be reduced to save power
+- Read stability: 1 on bitline must not overpower 0 in cell (NMOS sizing)
 
 ### 6T SRAM Cell - Write
 
 ![bg right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/3/31/SRAM_Cell_%286_Transistors%29.svg)
-- set BLs according to the value to be written
-- activate WL, the value on BLs will force the inverters to flip if the value is different from the stored value
-<!-- _footer: Figure by <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> - <span class="int-own-work" lang="en">Own work</span>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=5771850">Link</a></sub></sup> -->
+- Drive bitlines to the value to be written
+- activate WL to force cell into the new state
+- PMOS in inverter has to be weak enough to be overpowered by the write driver
+
+<!-- _footer: Figure: <a href="https://commons.wikimedia.org/w/index.php?curid=5771850"> by Inductiveload</a></sub></sup> -->
 
 ### Multi-Port SRAM Cell
+
+- Add bitlines and wordlines for each port
+- Read from the same cell: Two bitlines must not overpower 0 in the cell
+- Write to the same cell: External logic must prevent driving of different values on the bitlines
+- Read port only costs 2 transistors
+- More solutions exist
+
+![bg vertical right:35% width:100%](figures/memory/multi_port_cell.drawio.svg)
+![bg right:35% width:100%](figures/memory/multi_1rw1r_cell.drawio.svg)
 
 ### OpenRam 6T Cell
 
@@ -172,48 +188,53 @@ backgroundColor: #fff
 ![bg width:85%](https://upload.wikimedia.org/wikipedia/commons/3/31/SRAM_Cell_%286_Transistors%29.svg)
 
 
+### Column Read
+
+![bg right:45% width:90%](figures/memory/sram_column.drawio.svg)
+
+- Precharge through PMOS
+- Drive wordline
+- Multiplex columns using NMOS pass transistors
+- Sense amplifier to amplify difference between bitlines
+
+### Column Write
+
+![bg right:45% width:90%](figures/memory/column_write.drawio.svg)
+
+- Precharge through PMOS
+- Drive wordline
+- Multiplex columns using NMOS pass transistors
+- Drive one bitline to 0 through NMOS pass transistor
+- Other bitline floats at 1
+
+
 ### SRAM Array Layout
+
+- Generated by memory compiler
+- Read and write circuitry below array
+- Column decoder on the side
+- All IO at the bottom
 
 ![bg right:40% width:100%](figures/memory/sram_array_layout.drawio.svg)
 
 ### OpenRam Array
 
-- 1rw and 1r port
-- 256x32 bits
+- 256x32 bits: 1rw and 1r port
 - Array: $212\:\mu\mathrm{m} \times 254\:\mu\mathrm{m}$
-- Array density: $6.57\:\mu\mathrm{m}^2/\mathrm{bit}$
-- 152.131,9269053632 bits/mm²
-- Total area: $479.78\:\mu\mathrm{m} \times 397.5\:\mu\mathrm{m}$
-- Total density: $23.3\:\mu\mathrm{m}^2/\mathrm{bit}$
-- 42.954,6980521208 bits/mm²
-- For 2KiB version: $17.37\:\mu\mathrm{m}^2/\mathrm{bit}$
-- 57.580,9653073489 bits/mm²
+- 152,131 bits/mm²
+- Total: $479.78\:\mu\mathrm{m} \times 397.5\:\mu\mathrm{m}$
+- 42,954 bits/mm²
+- For 2KiB version: 57,580 bits/mm²
 
-![bg right:45% width:100%](figures/memory/openram.png)
+![bg right:41% width:100%](figures/memory/openram.png)
 
 
 ### Commercial Sky130 SRAM
 
 ![bg right:40% width:100%](figures/memory/commercial_sram.png)
 
+- Only PDN rails and IO visible
 - Area: $387.87\:\mu\mathrm{m} \times 306.775\:\mu\mathrm{m}$
-- Density: $14,53\:\mu\mathrm{m}^2/\mathrm{bit}$
-- 137.693,6093934725 bits/mm²
-
-
-
-
-
-
-
-### 4T SRAM Cell
-
-
-![bg right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/f/fe/SRAM_Cell_%284_Transistors%29.svg)
-
-
-
-<!-- _footer: Figure by <a href="//commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> - <span class="int-own-work" lang="en">Own work</span>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=114648423">Link</a> -->
-
-
+- Density: 137,693 bits/mm²
+- 2 arrays with column decoders in the middle?
 
