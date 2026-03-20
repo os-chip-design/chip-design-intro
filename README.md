@@ -265,6 +265,10 @@ The lab consists of two parts:
 #### Reading
 
 - Lecture slides (also available as PDF in DTU-Learn)
+- From the textbook: 
+  - 12.1
+  - 12.2, 12.2.1, 12.2.1.1, 12.2.1.2, 12.2.1.4
+- [OpenRam article](https://doi.org/10.1145/2966986.2980098)
 
 ### Lecture 9: Guest lecture - Chip Design at Oticon (Kasper)
 
