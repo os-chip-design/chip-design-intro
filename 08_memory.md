@@ -238,3 +238,13 @@ backgroundColor: #fff
 - Density: 137,693 bits/mm²
 - 2 arrays with column decoders in the middle?
 
+### Summary
+
+- Normal standard cells based memory is not dense enough for large memories
+- Memory cells can be optimized at the transistor level for density and performance
+- Memory arrays lend themselves to regular layout and custom design
+- Memory compilers can generate memory arrays from high-level specifications
+
+### Other Resources
+- [Sky130 SRAM Cell Design](https://github.com/Deepak42074/vsdsram_sky130)
+- [OpenRAM playground](https://colab.research.google.com/gist/proppy/1054e1618f5f90ce3af529ab5e56ad3f/openram-playground.ipynb)
