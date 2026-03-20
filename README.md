@@ -205,7 +205,6 @@ The lab consists of two parts:
 #### Reading
 
 - Lecture slides (also available as PDF in DTU-Learn)
-- TBA
 
 ### Lecture 6: Timing and Physical Design (OR)
 
@@ -252,17 +251,16 @@ The lab consists of two parts:
 
 #### Lecture outline
 
-- Memory types and memory organization
-- Register files: FF, sync mem, latches, custom design
+- Memory types: FF, latches, SRAM
+- Memory organization
 - Memory macros (IP blocks)
 - Memory options with the SkyWater130 PDK
 
-- [Lecture slides](08_memory.md) TBD
+- [Lecture slides](08_memory.md)
 
 #### Lab. 8
 
-- Exploring memory options with SkyWater130
-- Use memories in our project
+- TBD
 
 #### Reading
 
