@@ -60,9 +60,38 @@ backgroundColor: #fff
 
 ### Naive Register File
 
+- Behavioral description in Verilog
+- Synthesises tool will infer DFFs for the memory
+
+```verilog
+reg [31:0] mem [0:255];
+reg addr_reg;
+assign rdata = mem[addr_reg];
+always @(posedge clk) begin
+  addr_reg <= addr;
+  if (we) begin
+    mem[addr] <= wdata;
+  end
+end
+```
+
+### Naive Register File II
+
+- Even simpler in Chisel
+
+```scala
+val mem = SyncReadMem(256, UInt(32.W))
+when (we) {
+  mem.write(addr, wdata)
+}
+val rdata = mem.read(addr)
+```
+
+### Naive Register File III
+- 1kiB (256x32 bits)
 - Hardened with librelane
 - $764.59\:\mu\mathrm{m} \times 775.31\:\mu\mathrm{m}$
-- 13,819 bits/mm²
+- 1,69 kiB/mm²
 - For 70MB: $19.96 \mathrm{cm}\times 19.96\:\mathrm{cm}$
 - In 10nm assuming 18x scaling: $1.1\:\mathrm{cm}\times 1.1\:\mathrm{cm}$
 - Not very good, we need to do better!
@@ -78,9 +107,8 @@ backgroundColor: #fff
 - How does the timing look?
 
 ![bg vertical right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/2/2f/D-Type_Transparent_Latch.svg)
-![bg right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/f/f1/Multiplexer-based_latch_using_transmission_gates.svg)
  
-<!-- _footer: Figures: <a href="https://commons.wikimedia.org/w/index.php?curid=873561">top by Inductiveload</a>>, <a href="https://commons.wikimedia.org/w/index.php?curid=8423589">bottom by Inductiveload</a> -->
+<!-- _footer: Figures: <a href="https://commons.wikimedia.org/w/index.php?curid=873561">by Inductiveload</a> -->
 
 
 ### Latch Write Timing
@@ -109,7 +137,7 @@ backgroundColor: #fff
 
 - Custom netlist
 - Area: $683.1\:\mu\mathrm{m} \times 416.54\:\mu\mathrm{m}$
-- Density: 28.790 bits/mm²
+- 3,51 kiB/mm²
 - Custom placed version exists, but area is worse?
 
 ### How else can we store data?
@@ -221,10 +249,10 @@ backgroundColor: #fff
 
 - 256x32 bits: 1rw and 1r port
 - Array: $212\:\mu\mathrm{m} \times 254\:\mu\mathrm{m}$
-- 152,131 bits/mm²
+- 18,57 kiB/mm²
 - Total: $479.78\:\mu\mathrm{m} \times 397.5\:\mu\mathrm{m}$
-- 42,954 bits/mm²
-- For 2KiB version: 57,580 bits/mm²
+- 5,24 kiB/mm² 
+- For 2KiB version: 7,03 kiB/mm²
 
 ![bg right:41% width:100%](figures/memory/openram.png)
 
@@ -235,8 +263,21 @@ backgroundColor: #fff
 
 - Only PDN rails and IO visible
 - Area: $387.87\:\mu\mathrm{m} \times 306.775\:\mu\mathrm{m}$
-- Density: 137,693 bits/mm²
+- 16,81 kiB/mm²
 - 2 arrays with column decoders in the middle?
+
+
+### Density Comparison
+
+- Design effort for custom layout pays off
+- Overhead of read/write circuitry is amortized for larger arrays
+
+| Memory Type     | Density (kiB/mm²) |
+|-----------------|-------------------|
+| Synthesized     | 1.69              |
+| DFFRAM          | 3.51              |
+| OpenRAM         | 5.24/7.03         |
+| Commercial SRAM | 16.81             |
 
 ### Summary
 
