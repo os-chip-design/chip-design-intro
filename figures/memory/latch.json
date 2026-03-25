@@ -1,12 +1,12 @@
 {
   "signal": [
-    { "name": "clk", "wave": "0H.l.H.l", phase: 0},
-    { "name": "we", "wave": "0..1.0.."},
-    {name: "addr", wave: "x.4..x..", data: "address"},
-    { "name": "wr_data", "wave": "x..5..x.", data: "data"},
-    { "name": "latch_en", "wave": "0..1.0..",node: "....FMR"},
-    {node: "..CA.BD"},
-    { "name": "latch_out", "wave": "x..5....", data: "data"}
+    { "name": "clk", "wave": "0H..l..H", phase: 0},
+    { "name": "we", "wave": "0....1.0"},
+    {name: "addr", wave: "x..4...x", data: "address"},
+    { "name": "wr_data", "wave": "x.....5x", data: "data"},
+    { "name": "latch_en", "wave": "0....1.0",node: "......FMR"},
+    {node: "....CA.BD"},
+    { "name": "latch_out", "wave": "x.....5.", data: "data"}
   ],
 
   "foot": {

@@ -258,10 +258,6 @@ The lab consists of two parts:
 
 - [Lecture slides](08_memory.md)
 
-#### Lab. 8
-
-- TBD
-
 #### Reading
 
 - Lecture slides (also available as PDF in DTU-Learn)
