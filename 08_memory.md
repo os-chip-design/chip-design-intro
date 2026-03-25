@@ -168,9 +168,9 @@ val rdata = mem.read(addr)
 
 ![bg right:50% width:100%](figures/memory/array.drawio.svg)
 
-- Combine columns for multiple storing multi-bit words
+- Combine columns for storing multi-bit words
 - Wordline controls access to the entire row
-- Multiplex multiple columns per bit for a 1:1 aspect ratio
+- Multiplex multiple columns per read data bit for a 1:1 aspect ratio
 
 
 # **Break**
@@ -179,13 +179,14 @@ val rdata = mem.read(addr)
 
 ### 6T SRAM Cell
 
+![bg vertical right:40% width:100%](figures/memory/cell_inv.drawio.svg)
 ![bg right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/3/31/SRAM_Cell_%286_Transistors%29.svg)
 
 - Cross-coupled inverters for storage
 - NMOS transistors connect to shared bitlines
 - Wordline controls connection to bitlines
 
-<!-- _footer: Figure: <a href="https://commons.wikimedia.org/w/index.php?curid=5771850"> by Inductiveload</a></sub></sup> -->
+<!-- _footer: Figure: Bottom <a href="https://commons.wikimedia.org/w/index.php?curid=5771850"> by Inductiveload</a></sub></sup> -->
 
 ### 6T SRAM Cell - Read
 
@@ -223,7 +224,7 @@ val rdata = mem.read(addr)
 ![bg right:40% width:100%](https://upload.wikimedia.org/wikipedia/commons/3/31/SRAM_Cell_%286_Transistors%29.svg)
 - Precharge bitlines to Vdd
 - Drive bitlines to the value to be written (discharge one bitline)
-- activate WL to force cell into the new state
+- Activate WL to force cell into the new state
 
 <!-- _footer: Figure: <a href="https://commons.wikimedia.org/w/index.php?curid=5771850"> by Inductiveload</a></sub></sup> -->
 
