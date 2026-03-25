@@ -266,6 +266,7 @@ val rdata = mem.read(addr)
 - Drive wordline to select cell
 - If multiple columns per read data bit: Multiplex columns using NMOS pass transistors
 - Sense amplifier to amplify difference between bitlines
+- `Precharge=clk` and `SA_en=!clk`
 
 ### Column Write
 
@@ -276,6 +277,7 @@ val rdata = mem.read(addr)
 - If multiple columns per word bit: Multiplex columns using NMOS pass transistors
 - Drive one bitline to 0 through NMOS pass transistor
 - Other bitline floats at 1
+- `Precharge=clk` and `Evaluate=!clk`
 
 
 ### SRAM Array Layout
