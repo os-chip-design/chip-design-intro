@@ -269,7 +269,18 @@ The lab consists of two parts:
 
 ### Lecture 10: SkyWater130 PDK (MS)
 
-- not yet availble
+#### Lecture outline
+
+- What is a PDK?
+- Metal stack
+- Design rules
+- On memories
+- [Lecture slides](10_pdk.md)
+
+#### Reading
+
+- Lecture slides (also available as PDF in DTU-Learn)
+- [SkyWater PDK documentation](https://skywater-pdk.readthedocs.io/en/main/index.html)
 
 #### Lecture outline:
 
