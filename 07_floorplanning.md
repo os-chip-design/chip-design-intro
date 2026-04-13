@@ -358,7 +358,7 @@ section :not(pre) > code {
    - Now, chipfoundry is doing the MPW
  * 10mm2 packaged dies for $ 15000
  * Just reserved a [slot](https://platform.chipfoundry.io/projects/6498d2f1-fdcf-498d-ade0-26f48bf48ec8) for our project
- * Used by Tiny Tapout
+ * Used by Tiny Tapeout
 
 ![bg right:35% width:90%](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/SkyWater_Building_Exterior.jpg/330px-SkyWater_Building_Exterior.jpg)
 

@@ -3,18 +3,6 @@
 This repository contains the material for the 13-week course **02118 - Introduction to Chip Design** at the Technical University of Denmark (DTU). This course was developed with support from the
 [Edu4Chip](https://edu4chip.github.io/) project.
 
-### Content
-
-* [Practicalities](#practicalities)
-* [Course Aim](#course-aim)
-* [Reading Material](#reading-material)
-* [Lecture Plan](#lecture-plan)
-* [Project](#project)
-* [Exam](#exam)
-* [Learning Objectives](#learning_objectives)
-* [License](#license)
-* [Funding](#funding)
-
 ## Practicalities
 
 The course runs on **Wednesdays from 13:00 to 17:00** in **Building 308 - Room 017**. 
@@ -43,7 +31,7 @@ This course is an introduction to the design of digital integrated circuits. It 
 
  * Lecture slides and lab material
  * The textbook [CMOS VLSI Design, A Circuits and Systems Perspective](https://www.amazon.com/CMOS-VLSI-Design-Circuits-Perspective/dp/0321547748) by Neil H. E. Weste and David Harris, also available as PDF
- * The [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf) is a start of notes and exercises for the course.
+ * The [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf) is a start of notes and exercises for the course
  * The material related to the open-source tools we use, including installation instructions: [LibreLane Documentation](https://librelane.readthedocs.io/en/latest/)
    - For a quick start you can explore [LibreLane in the browser](https://colab.research.google.com/github/librelane/librelane/blob/main/notebook.ipynb)
  * [Caravel Documentation](https://github.com/efabless/caravel)
@@ -293,7 +281,7 @@ The lab consists of two parts:
 - None
 
 
-### Lecture 11: TBD (TP/MS)
+### Lecture 11: TBD (TP)
 
 - not yet availble
 
@@ -306,7 +294,9 @@ The lab consists of two parts:
 #### Reading
 - None
 
-### Lecture & Lab 12: Guest Lecture (Tamas) and Project Work and Tapeout
+### Lecture 12: Guest Lecture - Chip Design from First Principles (Tamas Hubai)
+
+**Will be in 324/170**
 
 Finalize the project for tapeout.
 
@@ -319,6 +309,13 @@ Finalize the project for tapeout.
 
 Each group presents their finalized project and discusses the results.
 
+The project shall also be descibed in a detailed README.md file in the project repository, which will be the final report.
+
+* Include the following sections:
+  - Introduction
+  - Design
+  - How to test
+  - Results (area and timing)
 
 
 
