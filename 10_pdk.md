@@ -189,13 +189,6 @@ section :not(pre) > code {
    - Processor starts executing from the instruction memory
  * Data memory?
 
-## On Memories
-
- * We will use the pre-generated memory macros from OpenRAM
- * Almost in all projects
- * Let us do a lab on using the memory macros today
- * Simple project (not Caravel) and connect a memory macro
-
 ## Caravel Wildcat Communication
 
  * We shall add a communication channel between Caravel and Wildcat
@@ -222,3 +215,12 @@ section :not(pre) > code {
  * A test program (blinking LED) loaded into instruction memory
  * Processor reset from a register from Wishbone
  * No branches, early integration
+
+## Memory Lab Today
+
+ * We will use the pre-generated memory macros from OpenRAM
+ * Almost in all projects
+ * Let us do a lab on using the memory macros today
+ * Simple project (not Caravel) and connect a memory macro
+ * See [configuration file](https://github.com/os-chip-design/chip-design-book/blob/main/code/srammem.yaml)
+ * Ignore timing for now

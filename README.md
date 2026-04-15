@@ -286,10 +286,13 @@ The lab consists of two parts:
 
 #### Lab. 10
 
-- Work on project
+- We will use the pre-generated memory macros from OpenRAM for our project
+  - Almost in all projects
+- Let us do a lab on using the memory macros today
+- Simple project (not Caravel) and connect a memory macro
+- See [configuration file](https://github.com/os-chip-design/chip-design-book/blob/main/code/srammem.yaml)
+- Ignore timing for now
 
-#### Reading
-- None
 
 
 ### Lecture 11: TBD (TP)
