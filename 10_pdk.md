@@ -42,7 +42,7 @@ section :not(pre) > code {
 ## Lecture 12
 
  * In 2 weeks
- * In **334/170**
+ * In **324/170**
  * Guest lecture: Chip Design from First Principles
    - Tamas Hubai
 
