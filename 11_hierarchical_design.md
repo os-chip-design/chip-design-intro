@@ -20,7 +20,6 @@ backgroundColor: #fff
   - Macro pin layout
   - Macro PDN connection
   - Macro placement
-  - Custom Shapes
 - Troubleshooting
   - Timing violations
   - Antenna violations
@@ -50,7 +49,7 @@ backgroundColor: #fff
 
 - Hard: Many macros
 - What is connected to what?
-- Easily high congestion
+- Easily highly congested areas around macros
 
 ![bg right:40% width:80%](figures/caravel_macros.drawio.svg)
 <!-- _footer: Figure: Based on <a href="https://umsousercontent.com/lib_lnlnuhLgkYnZdkSC/r86juqr1bvqdd7y4.png">ChipFoundry</a> -->
@@ -113,6 +112,31 @@ backgroundColor: #fff
   - `FP_SIZING: absolute`
   - `CORE_AREA: [0, 0, 1000, 1000]` for a 1000x1000 micron macro
 
+### Custom Shapes using Obstructions
+
+```yaml
+FP_OBSTRUCTIONS:
+  - [330, 330, 550, 550]
+ROUTING_OBSTRUCTIONS:
+  - "met1 330 330 550 550"
+  - "met2 330 330 550 550"
+  - "met3 330 330 550 550"
+  - "met4 330 330 550 550"
+  - "met5 330 330 550 550"
+PDN_OBSTRUCTIONS:
+  - "met4 330 330 550 550"
+  - "met5 330 330 550 550"
+```
+
+![bg right:35% width:100%](figures/picorv_custom_shape.png)
+
+### Deciding pin locations
+- Pin locations should orient themselves to the destination of the signal
+- Options:
+  1. Unconstrained pin placement: tool will place pins where it thinks is best
+  2. Constrained pin placement by pin order and edge assignment
+  3. Absolute control over pin placement using a custom DEF template
+
 ### Pin order definition
 - Edges (N, S, E, W)
 - List of pins in order of placement
@@ -171,12 +195,14 @@ PINS 43 ;
 ```
 
 ### Use case for custom DEF template
-- Abutment: macros are placed next to each other, no space in between
-  - Pins have to be aligned between macros
+- Abutment: macros are placed next to each other with no space in between
+  - Pins are directly connected and have to be aligned between macros
 - Integration into a harness:
   - Pin locations to outside are fixed (e.g. Caravel or TinyTapeout)
 
-### PDN layout
+
+
+### PDN Integration
 - Hierarchical grids: PDN on lower metal layers and connect from the top (`PDN_MULTILAYER`)
 - Power ring: top level PDN connects to power ring, which connects to local grid (`PDN_CORE_RING`)
 
@@ -197,23 +223,7 @@ PINS 43 ;
 
 
 
-### Custom Shapes using Obstructions
 
-```yaml
-FP_OBSTRUCTIONS:
-  - [330, 330, 550, 550]
-ROUTING_OBSTRUCTIONS:
-  - "met1 330 330 550 550"
-  - "met2 330 330 550 550"
-  - "met3 330 330 550 550"
-  - "met4 330 330 550 550"
-  - "met5 330 330 550 550"
-PDN_OBSTRUCTIONS:
-  - "met4 330 330 550 550"
-  - "met5 330 330 550 550"
-```
-
-![bg right:35% width:100%](figures/picorv_custom_shape.png)
 
 
 ### Timing constraints
@@ -267,71 +277,90 @@ PDN_MACRO_CONNECTIONS:
   - (T)emperature: e.g. 25°C
 - Default corner: nom_tt_025C_1v80
 
+
+### Timing Summary
+
+- Look at `runs/{TAG}/XX-openroad-stapostpnr/summary.rpt`
+```
+┏━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┓
+┃                      ┃ Hold     ┃ Reg to   ┃          ┃          ┃ of which  ┃ Setup    ┃           ┃          ┃           ┃ of which ┃           ┃          ┃
+┃                      ┃ Worst    ┃ Reg      ┃          ┃ Hold Vio ┃ reg to    ┃ Worst    ┃ Reg to    ┃ Setup    ┃ Setup Vio ┃ reg to   ┃ Max Cap   ┃ Max Slew ┃
+┃ Corner/Group         ┃ Slack    ┃ Paths    ┃ Hold TNS ┃ Count    ┃ reg       ┃ Slack    ┃ Reg Paths ┃ TNS      ┃ Count     ┃ reg      ┃ Violatio… ┃ Violati… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━┩
+│ Overall              │ 0.0336   │ 0.0336   │ 0.0000   │ 0        │ 0         │ 7.5014   │ 10.2605   │ 0.0000   │ 0         │ 0        │ 0         │ 0        │
+│ nom_tt_025C_1v80     │ 0.2056   │ 0.2056   │ 0.0000   │ 0        │ 0         │ 12.0283  │ 14.9410   │ 0.0000   │ 0         │ 0        │ 0         │ 0        │
+│ nom_ss_100C_1v60     │ 0.6910   │ 0.6910   │ 0.0000   │ 0        │ 0         │ 7.6481   │ 10.3670   │ 0.0000   │ 0         │ 0        │ 0         │ 0        │
+│ nom_ff_n40C_1v95     │ 0.0345   │ 0.0345   │ 0.0000   │ 0        │ 0         │ 13.4832  │ 17.7820   │ 0.0000   │ 0         │ 0        │ 0         │ 0        │
+│ min_tt_025C_1v80     │ 0.2056   │ 0.2056   │ 0.0000   │ 0        │ 0         │ 12.1310  │ 15.0080   │ 0.0000   │ 0         │ 0        │ 0         │ 0        │
+│ min_ss_100C_1v60     │ 0.6910   │ 0.6910   │ 0.0000   │ 0        │ 0         │ 7.8278   │ 10.4877   │ 0.0000   │ 0         │ 0        │ 0         │ 0        │
+│ min_ff_n40C_1v95     │ 0.0344   │ 0.0344   │ 0.0000   │ 0        │ 0         │ 13.5539  │ 17.8072   │ 0.0000   │ 0         │ 0        │ 0         │ 0        │
+│ max_tt_025C_1v80     │ 0.2051   │ 0.2051   │ 0.0000   │ 0        │ 0         │ 11.9476  │ 14.8804   │ 0.0000   │ 0         │ 0        │ 0         │ 0        │
+│ max_ss_100C_1v60     │ 0.6910   │ 0.6910   │ 0.0000   │ 0        │ 0         │ 7.5014   │ 10.2605   │ 0.0000   │ 0         │ 0        │ 0         │ 0        │
+│ max_ff_n40C_1v95     │ 0.0336   │ 0.0336   │ 0.0000   │ 0        │ 0         │ 13.4146  │ 17.7240   │ 0.0000   │ 0         │ 0        │ 0         │ 0        │
+└──────────────────────┴──────────┴──────────┴──────────┴──────────┴───────────┴──────────┴───────────┴──────────┴───────────┴──────────┴───────────┴──────────┘
+```
+
 ### Setup violation, what to do?
-- Which corner, does it matter?
+- Which corner; does it matter?
 - Increase margins:
   - `GRT_RESIZER_SETUP_SLACK_MARGIN` in ns (default = 0.025ns)
   - `GRT_RESIZER_SETUP_MAX_BUFFER_PCT` to limit how many buffers relative to number of existing cells can be added (default = 50%)
+  - `SYNTH_STRATEGY: "DELAY 0"` try a synthesis strategy that optimizes for delay instead of area
 - Otherwise:
-  - May have to change design
-  - Analyze critical path, optimize it
+  - Analyze `runs/{TAG}/XX-openroad-stapostpnr/{CORNER}/max.rpt`
+  - May have to change design to optimize critical path
+
 
 ### Critical Path Trace (max.rpt)
 
 ```
-Startpoint: _11946_ (rising edge-triggered flip-flop clocked by clock)
-Endpoint: _10503_ (rising edge-triggered flip-flop clocked by clock)
-Path Group: clock
-Path Type: max
-
+Startpoint: resetn (input port clocked by clock)
+Endpoint: core/picorv32_core/cpuregs[16][0]_sky130_fd_sc_hd__dfxtp_2_Q
+          (rising edge-triggered flip-flop clocked by clock)
 Fanout         Cap        Slew       Delay        Time   Description
 ---------------------------------------------------------------------------------------------
                                   0.000000    0.000000   clock clock (rise edge)
-                                  0.000000    0.000000   clock source latency
-     2    0.056267    0.257117    0.178999    0.178999 ^ clock (in)
-                                                         clock (net)
-                      0.257159    0.000000    0.178999 ^ clkbuf_0_clock/A (sky130_fd_sc_hd__clkbuf_16)
-     8    0.179781    0.191963    0.307513    0.486512 ^ clkbuf_0_clock/X (sky130_fd_sc_hd__clkbuf_16)
-                                                         clknet_0_clock (net)
+                                  0.000000    0.000000   clock network delay (propagated)
+                                  4.000000    4.000000 v input external delay
+     1    0.002675    0.008334    0.004228    4.004228 v resetn (in)
+                                                         resetn (net)
+                      0.008335    0.000000    4.004228 v input1/A (sky130_fd_sc_hd__dlymetal6s2s_1)
+     5    0.013077    0.082238    0.160761    4.164989 v input1/X (sky130_fd_sc_hd__dlymetal6s2s_1)
+                                                         net1 (net)
 ...
-                      0.123797    0.005285    0.900431 ^ clkbuf_leaf_192_clock/A (sky130_fd_sc_hd__clkbuf_8)
-    13    0.046487    0.092130    0.193294    1.093725 ^ clkbuf_leaf_192_clock/X (sky130_fd_sc_hd__clkbuf_8)
-                                                         clknet_leaf_192_clock (net)
-                      0.092154    0.001433    1.095158 ^ _11946_/CLK (sky130_fd_sc_hd__dfxtp_1)
-     1    0.005632    0.064597    0.336082    1.431240 ^ _11946_/Q (sky130_fd_sc_hd__dfxtp_1)
-                                                         core.picorv32_core.decoder_trigger (net)
-                      0.064597    0.000203    1.431443 ^ fanout602/A (sky130_fd_sc_hd__buf_2)
-     6    0.047677    0.233191    0.247844    1.679287 ^ fanout602/X (sky130_fd_sc_hd__buf_2)
-                                                         net602 (net)
-...
-                      0.059350    0.000115    9.677893 ^ _07218_/B (sky130_fd_sc_hd__nor2_1)
-     1    0.003421    0.048187    0.042458    9.720350 v _07218_/Y (sky130_fd_sc_hd__nor2_1)
-                                                         _00230_ (net)
-                      0.048187    0.000114    9.720464 v _10503_/D (sky130_fd_sc_hd__dfxtp_1)
-                                              9.720464   data arrival time
+                      0.060027    0.000000    8.348180 v core/picorv32_core/cpuregs[16][0]_sky130_fd_sc_hd__mux2_1_A1/S (sky130_fd_sc_hd__mux2_1)
+     1    0.001681    0.050201    0.298517    8.646697 v core/picorv32_core/cpuregs[16][0]_sky130_fd_sc_hd__mux2_1_A1/X (sky130_fd_sc_hd__mux2_1)
+                                                         core/picorv32_core/cpuregs[16][0]_sky130_fd_sc_hd__dfxtp_2_Q_D (net)
+                      0.050201    0.000000    8.646697 v core/picorv32_core/cpuregs[16][0]_sky130_fd_sc_hd__dfxtp_2_Q/D (sky130_fd_sc_hd__dfxtp_1)
+                                              8.646697   data arrival time
 
                                  20.000000   20.000000   clock clock (rise edge)
                                   0.000000   20.000000   clock source latency
-     2    0.056267    0.257117    0.178998   20.178999 ^ clock (in)
+     2    0.055693    0.254597    0.177254   20.177254 ^ clock (in)
                                                          clock (net)
-                      0.257159    0.000000   20.178999 ^ clkbuf_0_clock/A (sky130_fd_sc_hd__clkbuf_16)
-     8    0.179781    0.191963    0.307514   20.486513 ^ clkbuf_0_clock/X (sky130_fd_sc_hd__clkbuf_16)
+                      0.254647    0.000000   20.177254 ^ clkbuf_0_clock/A (sky130_fd_sc_hd__clkbuf_16)
+     8    0.175598    0.187839    0.304507   20.481760 ^ clkbuf_0_clock/X (sky130_fd_sc_hd__clkbuf_16)
                                                          clknet_0_clock (net)
 ...
-                      0.120020    0.002998   20.890413 ^ clkbuf_leaf_146_clock/A (sky130_fd_sc_hd__clkbuf_8)
-     9    0.042436    0.085728    0.187127   21.077539 ^ clkbuf_leaf_146_clock/X (sky130_fd_sc_hd__clkbuf_8)
-                                                         clknet_leaf_146_clock (net)
-                      0.085740    0.001020   21.078560 ^ _10503_/CLK (sky130_fd_sc_hd__dfxtp_1)
-                                 -0.250000   20.828560   clock uncertainty
-                                  0.000000   20.828560   clock reconvergence pessimism
-                                 -0.102409   20.726152   library setup time
-                                             20.726152   data required time
+                      0.108953    0.001927   20.873016 ^ clkbuf_leaf_53_clock/A (sky130_fd_sc_hd__clkbuf_8)
+    11    0.024286    0.059750    0.161377   21.034393 ^ clkbuf_leaf_53_clock/X (sky130_fd_sc_hd__clkbuf_8)
+                                                         clknet_leaf_53_clock (net)
+                      0.059750    0.000000   21.034393 ^ core/picorv32_core/cpuregs[16][0]_sky130_fd_sc_hd__dfxtp_2_Q/CLK (sky130_fd_sc_hd__dfxtp_1)
+                                 -0.250000   20.784393   clock uncertainty
+                                  0.000000   20.784393   clock reconvergence pessimism
+                                 -0.109366   20.675026   library setup time
+                                             20.675026   data required time
 ---------------------------------------------------------------------------------------------
-                                             20.726152   data required time
-                                             -9.720464   data arrival time
+                                             20.675026   data required time
+                                             -8.646697   data arrival time
 ---------------------------------------------------------------------------------------------
-                                             11.005689   slack (MET)
+                                             12.028330   slack (MET)
 ```
+
+### Getting readable reports
+- Usually nets and cells are named with unique IDs
+- Use `SYNTH_AUTONAME: true` to get human readable names in reports:
+- Use `SYNTH_HIERARCHY_MODE: keep` to keep module hierarchy in netlist
 
 ### Hold Time violation what to do?
 - Which corner, does it matter?
@@ -375,10 +404,10 @@ rise_transition ("del_1_7_7") {
 - `MAX_TRANSITION_CONSTRAINT` for synthesis and CTS
 - `MAX_FANOUT_CONSTRAINT` to limit fanout
 - Increase margins:
-  - `DESIGN_REPAIR_MAX_SLEW_PCT`
-  - `DESIGN_REPAIR_MAX_CAP_PCT`
-  - `GRT_DESIGN_REPAIR_MAX_SLEW_PCT`
-  - `GRT_DESIGN_REPAIR_MAX_CAP_PCT`
+  - `DESIGN_REPAIR_MAX_SLEW_PCT` after global placement
+  - `DESIGN_REPAIR_MAX_CAP_PCT` after global placement
+  - `GRT_DESIGN_REPAIR_MAX_SLEW_PCT` after global routing
+  - `GRT_DESIGN_REPAIR_MAX_CAP_PCT` after global routing
 
 ### Antenna Violations
 - During Manufacturing: Floating wires connected to gates can damage gate oxide due to plasma charging
@@ -394,10 +423,12 @@ rise_transition ("del_1_7_7") {
 <!-- _footer: Figure: By <a href="https://commons.wikimedia.org/w/index.php?curid=170018503">JmsDoug</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=170018457">Lou Scheffer</a>-->
 
 ### Fixing Antenna Violations
-- `RUN_HEURISTIC_DIODE_INSERTION`
-- `HEURISTIC_ANTENNA_THRESHOLD` in microns
-- `RUN_ANTENNA_REPAIR`
-- `GRT_ANTENNA_ITERS`
-- `GRT_ANTENNA_MARGIN` % margin for overfixing
-- `DESIGN_REPAIR_MAX_WIRE_LENGTH` in microns
-- `PL_WIRE_LENGTH_COEF` decimal to control wirelength penalty in placer (lower = higher penalty)
+- Librelane only supports diode insertion for antenna repair
+- Parameters:
+  - `RUN_HEURISTIC_DIODE_INSERTION`
+  - `HEURISTIC_ANTENNA_THRESHOLD` in microns
+  - `RUN_ANTENNA_REPAIR`
+  - `GRT_ANTENNA_ITERS`
+  - `GRT_ANTENNA_MARGIN` % margin for overfixing
+  - `DESIGN_REPAIR_MAX_WIRE_LENGTH` in microns
+  - `PL_WIRE_LENGTH_COEF` decimal to control wirelength penalty in placer (lower = higher penalty)
