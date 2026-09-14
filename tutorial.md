@@ -9,7 +9,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 <!-- headingDivider: 3 -->
 
-# **Introduction to Chip Design**
+# **Open-Source Chip Design and Low-Cost Production with LibreLane and Skywater130**
 
 **Martin Schoeberl**
 
