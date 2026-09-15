@@ -15,14 +15,21 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Welcome
 
- * Learn the basics of chip design
+ * Talk about the basics of chip design
  * Design and fabricate your own chip (ASIC)
  * We will use open-source tools only
- * This is a (relatively) new 13-week course
-    * We will adapt to your needs and interests
-    * We did an initial open-source chip design course 2025
- * Will have rough edges
- * I am excited to see you building your own chip
+ * This shall be a hands-on tutorial
+ * I will be excited to see you building your own chip :-)
+
+## Tutorial Repository
+
+Scan to open the slides and course material on GitHub.
+
+![width:250px](figures/tutorial-repo-qr.png)
+
+[github.com/os-chip-design/chip-design-intro](https://github.com/os-chip-design/chip-design-intro)
+
+Google: 02118 chip design intro
 
 ## Introduction Round
 
