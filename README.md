@@ -3,6 +3,10 @@
 This repository contains the material for the 13-week course **02118 - Introduction to Chip Design** at the Technical University of Denmark (DTU). This course was developed with support from the
 [Edu4Chip](https://edu4chip.github.io/) project.
 
+## Tutorial
+
+Here are the [Slides](tutorial.md) for the tutorial at IDA on We 16 Sep.
+
 ## Practicalities
 
 The course runs on **Wednesdays from 13:00 to 17:00** in **Building 308 - Room 017**. 
