@@ -13,6 +13,18 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 **Martin Schoeberl**
 
+## TODO (Additional Stuff))
+
+
+ * Show scaling:
+   - https://www.computerhistory.org/siliconengine/
+ * Zoom video from Matt's Z2A intro
+   - https://www.youtube.com/watch?v=Fxv3JoS1uY8
+ * 3-D structure from Wiwkipedia (Matt's intro)
+ * Veru quick intro to std cells
+   - Show std cells in KLayout
+
+
 ## Welcome
 
  * Learn the basics of chip design
