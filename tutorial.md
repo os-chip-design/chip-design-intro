@@ -21,9 +21,15 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
  * This shall be a hands-on tutorial
  * I will be excited to see you building your own chip :-)
 
+## Introduction Round
+
+ * Who are you and what is your job/interest?
+ * What do you expect from this tutorial?
+ * Are you aiming for a tapeout?
+
 ## Tutorial Repository
 
-Scan to open the slides and course material on GitHub.
+Scan to open the slides and course material on GitHub
 
 ![width:250px](figures/tutorial-repo-qr.png)
 
@@ -31,14 +37,19 @@ Scan to open the slides and course material on GitHub.
 
 Google: 02118 chip design intro
 
-## Introduction Round
+## Tool Installation
 
- * Who are we?
-   - Ole, Luca, and Martin
-   - Tjark as TA
- * Who are you?
-   - Why this course?
-   - What is your background?
+ * This is a hands-on tutorial
+ * Best to install it on your own computer
+   - Linux or macOS (or WSL for Windows)
+   - Use nix to install the tools
+   - See [LibreLane installation](https://librelane.readthedocs.io/en/latest/installation/index.html)
+
+## Tool Non-Installation
+
+ * LibreLane online (just use your browser)
+ * It is available as a [Google Colab](https://colab.research.google.com/github/librelane/librelane/blob/main/notebook.ipynb) notebook
+ * You can run it in the cloud without any installation
 
 ## Course Overview
 
@@ -296,17 +307,7 @@ Google: 02118 chip design intro
  * [Building OpenLANE: A 130nm OpenROAD-based Tapeout- Proven Flow: Invited Paper](https://ieeexplore.ieee.org/document/9256623)
  * [Tiny Tapeout: A Shared Silicon Tapeout Platform Accessible To Everyone](https://www.techrxiv.org/users/799365/articles/1165896-tiny-tapeout-a-shared-silicon-tapeout-platform-accessible-to-everyone)
 
-## Chipdesign1 Server
-
- * If tool installation is a (big) issue, use chipdesign1
- * chipdesign1.compute.dtu.dk
- * All will get an account on chipdesign1
-   - Signe the paper work
- * Login with SSH
-   - Need to use VPN (OpenVPN)
-   - See: https://itswiki.compute.dtu.dk/index.php/OpenVPN
- * Nice to use with VSC (show it)
-
+ 
 ## The Lab Today
 
  * Install LibreLane
@@ -315,17 +316,10 @@ Google: 02118 chip design intro
    - Windows: use WSL
  * Run a small design through the flow
  * The beauty of open-source tools is running them locally
-   - With closed-source tools you need to use our servers 
+ * Or use LibreLane CoLab
+   - https://colab.research.google.com/github/librelane/librelane/blob/main/notebook.ipynb
 
- ## Summary
 
- * We will design and fabricate a chip
-   - Using open-source tools only
-   - We will do a real chip tapeout
- * This is an introductory course
-   - Motivating you to learn more in the VLSI course
-     - and the chip design specialisation (in the MSc)
-   - Project-based
 
 ## Outline
 
