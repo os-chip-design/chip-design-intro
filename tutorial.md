@@ -704,6 +704,11 @@ Cell type report:                       Count       Area
 
 ![bg right:30% width:80%](https://wafer.space/assets/images/products/wafer-space-chip-on-board.jpg)
 
+## Work-in-Progress Book
+
+  * [Introduction to  Chip Design Using Open-Source Tools](https://www.imm.dtu.dk/~masca/chip-design-book.html)
+
+    ![width:300px](https://www.imm.dtu.dk/~masca/chip-cover-small.jpg)
 ## Summary
 
 - LibreLane is an open-source toolchain for ASIC design
