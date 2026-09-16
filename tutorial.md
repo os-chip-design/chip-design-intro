@@ -16,6 +16,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ## Welcome
 
  * Talk about the basics of chip design
+ * The open-source tool flow (LibreLane)
+ * The open-source PDK (SkyWater130)
  * Design and fabricate your own chip (ASIC)
  * We will use open-source tools only
  * This shall be a hands-on tutorial
@@ -51,40 +53,17 @@ Google: 02118 chip design intro
  * It is available as a [Google Colab](https://colab.research.google.com/github/librelane/librelane/blob/main/notebook.ipynb) notebook
  * You can run it in the cloud without any installation
 
-## Course Overview
 
- * Some initial lectures, including labs
- * Guest lectures
- * Project work
-   - We will do a full chip design
-     - From RTL to GDSII and tapeout
-   - Subtopics as group work
-   - Write a (short) report
- * Join Discord for communication (link in DTU Learn)
-
-## Tapeout Project
+## A Student Tapeout Project
 
   * Design a chip together
-  * Using Caravel as base chip framework
-  * Your sub-projects will be combined
-  * Chip design is a large team effort
+  * 20 BSc students
+  * RISC-V core with peripherals
   * Tapeout with [ChipFoundry](https://chipfoundry.io/)'s ChipIgnite
     - Multi-Project Wafer (MPW) run
   * Fabrication in SkyWater 130 nm technology
-  * We will cover the full flow
-  * Show the die
-
-## Prerequisites
-
- * Digital Design (DE2)
-   - Combinational and sequential logic
-   - Basic computer architecture
-   - Basic Verilog, VHDL, or Chisel knowledge
-   - Translation between HDLs and schematic
-   - Which language do you know?
- * Basic programming and shell/git skills
- * This is **not** an introduction to digital design!
- * No prior knowledge of VLSI or chip design needed
+  * [Project Repository](https://github.com/os-chip-design/dtu-soc-2026)
+  * Show the physical die
 
 ## Moore's Law: the Exponential Growth
 
@@ -118,7 +97,7 @@ Google: 02118 chip design intro
  * More specialized cores (e.g, AI accelerators) are needed
  * More digital/ASIC designs and designers are needed
  * We need 20+ new chip designers per year in Denmark/Copenhagen
- * Bright future for you!
+ * Open-source enables low-cost chip design and production
 
 ## Open Source Chip Design
 
@@ -126,11 +105,11 @@ Google: 02118 chip design intro
  * Open source PDK (SkyWater130)
  * Open source IP (e.g., RISC-V core Wildcat)
  * Open source chip framework (Caravel from efabless)
- * Open source teaching material (this course)
+ * Open source teaching material (the course at DTU)
 
 ## Open Source Enables
 
-  * Learn chip design on your own computer!
+  * Explore chip design on your own computer!
   * No expensive licenses, no server access needed
   * Allowed to share results and designs
     - Not possible with the commercial tools
@@ -174,12 +153,11 @@ Google: 02118 chip design intro
 ## Hardware Description Languages (HDLs)
 - **Verilog**: Widely used for RTL design
   - With extension to SystemVerilog
-  - We will introduce Verilog in this course
-- **VHDL**: Popular in Europe and for complex systems
+- **VHDL**: Popular in Europe
   - Almost not supported by open-source tools
 - **Chisel**: Our Favorite! 
   - Scala-based HDL
-  - You learned it in DE2
+  - I teach it in my courses
   - Generates Verilog
 
 ## LibreLane
@@ -213,7 +191,6 @@ Google: 02118 chip design intro
   - Supports Verilog-2005 and (some) SystemVerilog
   - Includes optimization and formal verification
   - ASIC and FPGA synthesis
-  - Educational and research projects
   - Part of the OpenROAD project
 
 ## Getting Started with Yosys
@@ -255,18 +232,18 @@ Google: 02118 chip design intro
 ## LibreLane Demo
 
  * Start nix with `nix-shell`
- * cd to wildcat
- * Show wildcat.json
- * Generate Verilog (`make hw-fmax`)
- * Run LibreLane and show results (see Makefile)
+ * cd the book code
+ * Show adder.yaml
+ * Run LibreLane and show results
+   - `librelane --last-run --flow openinklayout adder.json`
  * Explore in IntelliJ (or VSC)
+ * Show the GDSII with: 
 
 ## How are Chips Produced?
 
  * In a fab (short for fabrication plant)
  * Very expensive! (fab and masks)
    * MPW (Multi-Project Wafer) is a way to share the cost
- * Details in VLSI course   
  * Watch [Matt Venn at IHP](https://youtu.be/aBDJQ9NYTEU?si=G19gW0zrbZuDSOp4)
    - IHP joined the open-source movement
    - Last open-source conference FSiC was at IHP
@@ -280,35 +257,26 @@ Google: 02118 chip design intro
    - 160 x 100 um tiles
  * Full flow in the cloud (GitHub Actions)
  * Cheap tile: 50-70 EUR
- * We (Edu4Chip) can sponsor one tile per project
  * Has a large Discord community
 
 ## Tiny Tapout Workshop
  
- * Matt Venn runs a Tiny Tapeout workshop at DTU
- * Saturday 21st of February 2026
+ * Matt Venn had done two Tiny Tapeout workshops at DTU
  * From zero to a chip in 4 hours
  * [Tiny Tapeout Workshop](https://edu4chip.github.io/ttw2026DTU.html)
- * Sign up quickly, limited seats!
- * Just DKK 100, includs one tile
+ * We will do it again in 2027
+ * Just DKK 100, includes one tile
    - Thanks to our sponsors
 
-## Using Chisel
+## Reading Pointers
 
- * Who does not know Chisel?
- * Easy to learn in self-study
-   - Use the [Chisel book](https://www.imm.dtu.dk/~masca/chisel-book.html)
-   - Do the [Chisel lab](https://github.com/schoeberl/chisel-lab)
-
-## Reading
-
- * Weste and Harris: 1.1 and 1.12
+ * Weste and Harris, *CMOS VLSI Design: A Circuits and Systems Perspective*, 4th edition, Pearson, 2011 [pdf](https://dl.sabzdanesh.com/Electronic/CMOS_VLSI_Design_4th_Edition(WWW.SabzElco.IR).pdf)
  * [OpenROAD: Toward a Self-Driving, Open-Source Digital Layout Implementation Tool Chain](https://vlsicad.ucsd.edu/Publications/Conferences/370/c370.pdf)
  * [Building OpenLANE: A 130nm OpenROAD-based Tapeout- Proven Flow: Invited Paper](https://ieeexplore.ieee.org/document/9256623)
  * [Tiny Tapeout: A Shared Silicon Tapeout Platform Accessible To Everyone](https://www.techrxiv.org/users/799365/articles/1165896-tiny-tapeout-a-shared-silicon-tapeout-platform-accessible-to-everyone)
 
  
-## The Lab Today
+## Hands On
 
  * Install LibreLane
    - With nix
@@ -319,14 +287,13 @@ Google: 02118 chip design intro
  * Or use LibreLane CoLab
    - https://colab.research.google.com/github/librelane/librelane/blob/main/notebook.ipynb
 
+## A Small Design
 
-
-## Outline
-
-- Overview of the LibreLane ASIC design flow: from RTL to GDSII
-- Caravel: an open-source SoC framework for tapeout
-- Wishbone bus overview
-- Project discussion
+ * Download two files from the book repository
+   - [adder.v](https://github.com/os-chip-design/chip-design-book/blob/main/code/adder.v)
+   - [ader.yaml](https://github.com/os-chip-design/chip-design-book/blob/main/code/adder.yaml)
+ * Build with `librelane adder.yaml`
+ * Visualize with `librelane --last-run --flow openinklayout adder.yaml`
 
 ## A Bit of History
 
@@ -651,7 +618,6 @@ Cell type report:                       Count       Area
 - Layout vs. Schematic (LVS)
   - Today this is Verilog netlist vs. the extracted SPICE netlist from the layout
 
-## Break
 
 ## Caravel Harness
 
@@ -689,58 +655,6 @@ Cell type report:                       Count       Area
   - Results in a combinational logic for the slave
 - Does not allow for pipelining
   - The version 4 for pipelining is not great (not used)
-
-## Wishbone Master and Servant
-
-![width:500px](figures/Wishbone_Interface.svg)
-
-## Wishbone Transfers
-
-- Wishbone is a simple request/acknowledgment interface.
-- The master signals a request by asserting SEL_O and STB_O.
-- An asynchronous slave can, in the same cycle, reply with ACK_O.
-- A synchronous slave can delay the acknowledgment.
-- The master needs to hold the address, data, and control signals valid through the whole read or write cycle.
-
-## Simplification
-
-- The spec is lengthy, the actual implementation can be simplified
-- However, we can follow RULE 3.40 and PERMISSION 3.10 from the specification to build simple Wishbone devices
-- RULE 3.40:
-  - As a minimum, the master interface must include the following signals: ACK_I, CLK_I, CYC_O, RST_I, and STB_O. As a minimum, the slave interface must include the following signals: ACK_O, CLK_I, CYC_I, STB_I, and RST_I. All other signals are optional.
-
-## Simplification II
-
-- PERMISSION 3.10:
-  - If in standard mode, the slave guarantees it can keep pace with all master interfaces, and if the ERR_I and RTY_I signals are not used, then the slave's ACK_O signal may be tied to the logical AND of the slave's STB_I and CYC_I inputs. The interface will function normally under these circumstances.
-- This would result a combinational acknowledgment
-- We want to avoid this
-- Use a register to delay the acknowledgment by one cycle
-
-## Wishbone Bus
-
-![width:450px](figures/wishbone.svg)
-
-Wishbone asynchronous read followed by an asynchronous write
-
-## Wishbone Bus
-
-![width:500px](figures/wishbone_sync.svg)
-
-Wishbone synchronous read followed by a synchronous write
-
-## A Simple Wishbone Peripheral
-
-- [WishboneExample](https://github.com/os-chip-design/chip-design-book/blob/main/src/main/scala/WishboneExample.scala)
-- Written in Chisel, Verilog version is available as well
-- Connect it to the Caravel harness
-- Next week test it with a simple RISC-V program
-
-## Explore Leros Test Chip
-
-- Tjark and I did a test chip last fall
-- Four Leros cores with different memory options
-- [caravel_leros_2025](https://github.com/os-chip-design/caravel_leros_2025)
 
 ## Open-Source PDKs
 
@@ -794,5 +708,6 @@ Wishbone synchronous read followed by a synchronous write
 
 - LibreLane is an open-source toolchain for ASIC design
 - Caravel is an open-source SoC framework for tapeout
-- Wishbone is a simple bus interface for connecting components in a chip
+- Open-source tools and PDKs enables chip design fer everyone
+- Low-cost MPW eanbles chips for small production
 - Let us use those tools to build a chip!
