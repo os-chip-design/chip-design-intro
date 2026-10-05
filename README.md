@@ -112,7 +112,8 @@ This course is an introduction to the design of digital integrated circuits. It 
 
 #### Lab. 3
 
-- Simulate a SkyWater130 standard cell in Spice
+- Simulate a SkyWater130 standard cell in Spice (ngspice)
+- See Section 4.3 in the [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf)
 
 #### Project Setup
 

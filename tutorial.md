@@ -287,13 +287,15 @@ Google: 02118 chip design intro
  * Or use LibreLane CoLab
    - https://colab.research.google.com/github/librelane/librelane/blob/main/notebook.ipynb
 
-## A Small Design
+## Harden a Small Design
 
  * Download two files from the book repository
    - [adder.v](https://github.com/os-chip-design/chip-design-book/blob/main/code/adder.v)
-   - [ader.yaml](https://github.com/os-chip-design/chip-design-book/blob/main/code/adder.yaml)
+   - [adder.yaml](https://github.com/os-chip-design/chip-design-book/blob/main/code/adder.yaml)
+ * Start nix with `nix-shell` (in the librelane directory)
  * Build with `librelane adder.yaml`
  * Visualize with `librelane --last-run --flow openinklayout adder.yaml`
+ * Check the reports under the `run` floder
 
 ## A Bit of History
 
@@ -366,7 +368,6 @@ Google: 02118 chip design intro
 - Funded by former eFabless persons
 - Runs MPW shuttles, $ 15.000 per design
 - Renamed OpenLane2 to LibreLane
-- Our platform for the course project
 
 ## LibreLane ASIC design flow
 
@@ -672,7 +673,7 @@ Cell type report:                       Count       Area
    - SkyWater, Google, and Efabless
    - Now, chipfoundry is doing the MPW
  * 10mm2 packaged dies for $ 15000
- * Just reserved a [slot](https://platform.chipfoundry.io/projects/6498d2f1-fdcf-498d-ade0-26f48bf48ec8) for our project
+ * We used one [slot](https://platform.chipfoundry.io/projects/6498d2f1-fdcf-498d-ade0-26f48bf48ec8) for our project
  * Used by Tiny Tapeout
 
 ![bg right:35% width:90%](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/SkyWater_Building_Exterior.jpg/330px-SkyWater_Building_Exterior.jpg)
