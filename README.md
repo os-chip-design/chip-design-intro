@@ -173,8 +173,15 @@ This course is an introduction to the design of digital integrated circuits. It 
 - Find good Verilog projects and read the code
   - E.g., [YARVI](https://github.com/tommythorn/yarvi)
 
+### Lecture 5: Deep Dive into LibreLane (Leo Moser)
 
-### Lecture 5: Verification (TP)
+ - Guest lecture by Leo Moser, developer and maintainer of LibreLane
+
+#### Lab. 5
+
+ - TBD, will be a hands-on session with LibreLane
+ 
+### Lecture 6: Verification (TP)
 
 - [Lecture slides](05_verification.md)
 
@@ -188,7 +195,7 @@ This course is an introduction to the design of digital integrated circuits. It 
 - Brief overview of formal verification
 - Industry Standards, tools, and frameworks in verification
 
-#### Lab. 5
+#### Lab. 6
 
 The lab consists of two parts:
 
@@ -199,7 +206,7 @@ The lab consists of two parts:
 
 - Lecture slides (also available as PDF in DTU-Learn)
 
-### Lecture 6: Timing and Physical Design (OR)
+### Lecture 7: Timing and Physical Design (OR)
 
 - [Lecture slides](06_timing_and_backend_intro.md)
 - [Testing slides](testing_lab_slides.md)
@@ -214,7 +221,7 @@ The lab consists of two parts:
 - Timing closure
 - Physical Verification
 
-#### Lab. 6
+#### Lab. 7
 
 - Finish the Wishbone peripheral and [test it in Caravel](caravel_test.md)
 - Get one Wildcat running in Caravel (blinking an LED)
@@ -225,7 +232,7 @@ The lab consists of two parts:
 
 - Lecture slides (also available as PDF in DTU-Learn)
 
-### Lecture 7 Floorplanning (MS)  + Midterm Course Evaluation
+### Lecture 8: Floorplanning (MS)  + Midterm Course Evaluation
 
 - [Lecture slides](07_floorplanning.md)
 
@@ -240,7 +247,7 @@ The lab consists of two parts:
 - W & H 1.10 Physical Design
 - [Using Macros in LibreLane](https://librelane.readthedocs.io/en/stable/usage/using_macros.html)
 
-### Lecture 8: Memory (TP)
+### Lecture 9: Memory (TP)
 
 #### Lecture outline
 
@@ -259,7 +266,7 @@ The lab consists of two parts:
   - 12.2, 12.2.1, 12.2.1.1, 12.2.1.2, 12.2.1.4
 - [OpenRam article](https://doi.org/10.1145/2966986.2980098)
 
-### Lecture 9: Guest lecture - Chip Design at Oticon (Kasper)
+### Lecture 10: Guest lecture - Chip Design at Oticon (Kasper)
 
 #### Lecture outline:
 - Chip design at Demant
@@ -272,7 +279,7 @@ The lab consists of two parts:
 - Finalise the functional implementation of your project
 
 
-### Lecture 10: SkyWater130 PDK (MS)
+### Lecture 11: SkyWater130 PDK (MS)
 
 #### Lecture outline
 
@@ -289,7 +296,7 @@ The lab consists of two parts:
 
 #### Lecture outline:
 
-#### Lab. 10
+#### Lab. 11
 
 - We will use the pre-generated memory macros from OpenRAM for our project
   - Almost in all projects
@@ -299,16 +306,6 @@ The lab consists of two parts:
 - Ignore timing for now
 
 
-
-### Lecture 11: TBD (TP)
-
-- not yet availble
-
-#### Lecture outline:
-
-#### Lab. 11
-
-- Work on project
 
 #### Reading
 - None
