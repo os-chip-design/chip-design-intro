@@ -13,13 +13,13 @@ The course runs on **Wednesdays from 13:00 to 17:00** in **Building 308 - Room 0
 
 Each weekly session consist of a lecture and laboratory work. Some session will be fully dedicated to laboratory work (especially at the end of the course when you are expected to work on your project).
 
-The course has two teachers:
+The course has three teachers:
  * [Martin Schoeberl](https://www.imm.dtu.dk/~masca/)
+ * [Ole Richter](https://orbit.dtu.dk/en/persons/ole-richter/)
  * [Tjark Petersen](https://orbit.dtu.dk/en/persons/tjark-petersen/)
 
  Guest Lectures:
   * Luca Pezzarossa
-  * Ole Richter
   * Kasper Hesse
 
 ## Tools
@@ -54,12 +54,25 @@ This course is an introduction to the design of digital integrated circuits. It 
 - AISC with standard cells
 - PDK
 
+### Lecture 1b: Verilog (MS)
+
+#### Lecture outline
+
+- Introduction to Verilog
+- Comparison with Chisel
+
+- [Lecture slides](01_verilog.md)
+
 #### Lab. 1
 - Local installation of the open-srouce tools (LibreLane)
 - Running a "Hello World" example from Verilog source to GDSII
 - Explore timing and size
 - Explore different reset strategies
 - See Section 1.3 in the [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf)
+
+#### Verilog Lab. 1b (Optional)
+
+- See [Lab Verilog](lab_verilog.md) for instructions
 
 #### Reading
 
@@ -124,17 +137,19 @@ This course is an introduction to the design of digital integrated circuits. It 
 - See [The Tapeout Project](03_project.md) for instructions
 
 
-### Lecture 4: Tool Flow and Caravel (MS) 
+### Lecture 4: Tool Flow and Wildcat (MS)
 
 - [Lecture slides](04_tools.md)
+- [Project start slides](06_project_start.md)
+
 
 #### Lecture outline
 
 - Details of the LibreLane ASIC design flow
 - Individual tools and their outputs
-- Caravel
+- Wildcat
 - Tapeout options (CF, waver.space for production, IHP)
-- Wishbone bus overview
+- Wishbone and PipeCon bus overview
 - Project discusion
 
 #### Lab. 4
@@ -143,8 +158,9 @@ This course is an introduction to the design of digital integrated circuits. It 
   - According to Section 1.4 in the [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf)
   - Explore the outputs of the individual stages
 2. Harden our [Caravel framework](https://github.com/os-chip-design/dtu-soc-2026) with a simple peripheral
-3. Write a simple Wishbone peripheral (in Chisel)
+3. Write a simple PipeCon peripheral (in Chisel)
    - See Section 2.3.9 in the [Chip Design Booklet](https://www.imm.dtu.dk/~masca/chip-design-book.pdf)
+4. Integrate Wildcat and the PipeCon peripheral into the framework
 
 #### Reading
 
@@ -154,24 +170,6 @@ This course is an introduction to the design of digital integrated circuits. It 
 - [Wishbone Specification](https://cdn.opencores.org/downloads/wbspec_b4.pdf)
 
 
-### Lecture 4b: Verilog (MS)
-
-- [Lecture slides](04_verilog.md)
-
-#### Lecture outline
-
-- Introduction to Verilog
-- Comparison with Chisel
-
-#### Verilog Lab. 4b (Optional)
-
-- See [Lab Verilog](lab_verilog.md) for instructions
-
-#### Reading
-
-- Lecture slides (also available as PDF in DTU-Learn)
-- Find good Verilog projects and read the code
-  - E.g., [YARVI](https://github.com/tommythorn/yarvi)
 
 ### Lecture 5: Deep Dive into LibreLane (Leo Moser)
 
@@ -181,58 +179,7 @@ This course is an introduction to the design of digital integrated circuits. It 
 
  - TBD, will be a hands-on session with LibreLane
 
-### Lecture 6: Verification (TP)
-
-- [Lecture slides](05_verification.md)
-
-#### Lecture outline
-
-- Introduction to verification
-- Verification methodologies
-- Simulation-based verification
-- Testbench design
-- Assertions and coverage metrics
-- Brief overview of formal verification
-- Industry Standards, tools, and frameworks in verification
-
-#### Lab. 6
-
-The lab consists of two parts:
-
-1. One part introduces the testing setup in Caravel, see [Caravel Testing Lab](caravel_test.md) for instructions
-2. The other part works with formal verification methods. See [Verification Lab](verification-lab/readme.md) for instructions
-
-#### Reading
-
-- Lecture slides (also available as PDF in DTU-Learn)
-
-### Lecture 7: Timing and Physical Design (OR)
-
-- [Lecture slides](06_timing_and_backend_intro.md)
-- [Testing slides](testing_lab_slides.md)
-- [Project start slides](06_project_start.md)
-
-#### Lecture outline
-
-- Chip design rules
-- Power distribution design, optimization, and analysis
-- Digital design timing
-- Clock distribution challenges and clock trees
-- Timing closure
-- Physical Verification
-
-#### Lab. 7
-
-- Finish the Wishbone peripheral and [test it in Caravel](caravel_test.md)
-- Get one Wildcat running in Caravel (blinking an LED)
-- Start your project
-- See [The Tapeout Project](03_project.md) and [Project Start](06_project_start.md) for background info
-
-#### Reading
-
-- Lecture slides (also available as PDF in DTU-Learn)
-
-### Lecture 8: Floorplanning (MS)  + Midterm Course Evaluation
+### Lecture 6: Floorplanning & Hierarchical design, Macros (MS + TP)
 
 - [Lecture slides](07_floorplanning.md)
 
@@ -247,7 +194,92 @@ The lab consists of two parts:
 - W & H 1.10 Physical Design
 - [Using Macros in LibreLane](https://librelane.readthedocs.io/en/stable/usage/using_macros.html)
 
-### Lecture 9: Memory (TP)
+#### Lab. 6
+
+- TBD (streamline the lab instructions)
+- Finish the Wishbone peripheral and [test it in Caravel](caravel_test.md)
+- Get one Wildcat running in Caravel (blinking an LED)
+- Start your project
+- See [The Tapeout Project](03_project.md) and [Project Start](06_project_start.md) for background info
+- We will use the pre-generated memory macros from OpenRAM for our project
+- Almost in all projects
+- Let us do a lab on using the memory macros today
+- Simple project (not Caravel) and connect a memory macro
+- See [configuration file](https://github.com/os-chip-design/chip-design-book/blob/main/code/srammem.yaml)
+- Ignore timing for now
+
+
+### Lecture 7: Timing and Physical Design I (OR)
+
+- [Lecture slides](06_timing_and_backend_intro.md)
+
+#### Lecture outline
+
+- Chip design rules
+- Power distribution design, optimization, and analysis
+- Digital design timing
+- Clock distribution challenges and clock trees
+- Timing closure
+- Physical Verification
+
+#### Lab. 7
+
+- TBD
+
+
+#### Reading
+
+- Lecture slides (also available as PDF in DTU-Learn)
+
+
+
+### Lecture 8: Timing and Physical Design II (OR)
+
+- [Lecture slides](06_timing_and_backend_intro.md)
+
+#### Lecture outline
+
+- Chip design rules
+- Power distribution design, optimization, and analysis
+- Digital design timing
+- Clock distribution challenges and clock trees
+- Timing closure
+- Physical Verification
+
+### Lecture 9: SkyWater130 PDK (MS) and Verification (TP)
+
+#### Lecture outline
+
+- What is a PDK?
+- Metal stack
+- Design rules
+- On memories
+- Introduction to verification
+- Verification methodologies
+- Simulation-based verification
+- Testbench design
+- Assertions and coverage metrics
+- Brief overview of formal verification
+- Industry Standards, tools, and frameworks in verification
+
+- [Lecture slides](10_pdk.md)
+- [Lecture slides](05_verification.md)
+- [Testing slides](testing_lab_slides.md)
+
+#### Reading
+
+- Lecture slides (also available as PDF in DTU-Learn)
+- [SkyWater PDK documentation](https://skywater-pdk.readthedocs.io/en/main/index.html)
+
+#### Lab. 9
+
+The lab consists of two parts:
+
+1. One part introduces the testing setup in Caravel, see [Caravel Testing Lab](caravel_test.md) for instructions
+2. The other part works with formal verification methods. See [Verification Lab](verification-lab/readme.md) for instructions
+
+
+### Lecture 10: Memory and IO Cells (OR)
 
 #### Lecture outline
 
@@ -266,7 +298,7 @@ The lab consists of two parts:
   - 12.2, 12.2.1, 12.2.1.1, 12.2.1.2, 12.2.1.4
 - [OpenRam article](https://doi.org/10.1145/2966986.2980098)
 
-### Lecture 10: Guest lecture - Chip Design at Oticon (Kasper)
+### Lecture 11: Guest lecture - Chip Design at Oticon (Kasper)
 
 #### Lecture outline:
 - Chip design at Demant
@@ -274,58 +306,28 @@ The lab consists of two parts:
 - Design and implementation considerations for low power
 - Challenges in lower design nodes (and/or at lower voltages)
 
-#### Lab. 9
-
-- Finalise the functional implementation of your project
-
-
-### Lecture 11: SkyWater130 PDK (MS)
-
-#### Lecture outline
-
-- What is a PDK?
-- Metal stack
-- Design rules
-- On memories
-- [Lecture slides](10_pdk.md)
-
-#### Reading
-
-- Lecture slides (also available as PDF in DTU-Learn)
-- [SkyWater PDK documentation](https://skywater-pdk.readthedocs.io/en/main/index.html)
-
-#### Lecture outline:
-
-#### Lab. 11
-
-- We will use the pre-generated memory macros from OpenRAM for our project
-  - Almost in all projects
-- Let us do a lab on using the memory macros today
-- Simple project (not Caravel) and connect a memory macro
-- See [configuration file](https://github.com/os-chip-design/chip-design-book/blob/main/code/srammem.yaml)
-- Ignore timing for now
-
-
 
 #### Reading
 - None
 
-### Lecture 12: Guest Lecture - Chip Design from First Principles (Tamas Hubai)
+### Lecture 12: TBD
 
-**Will be in 324/170**
+ * Maybe: Guest Lecture - Chip Design from First Principles (Tamas Hubai)
+ * Or PPA and Economics
+
 
 Finalize the project for tapeout.
 
 - Run Timing closure and LVS
 - Fix timing violations and handle design missmatches 
-- "tape out" your project  
+- **Tape out** your project
 
 
-### Lecture 13: Student project presentations (MS/TP)
+### Lecture 13: Student Project Presentations
 
 Each group presents their finalized project and discusses the results.
 
-The project shall also be descibed in a detailed README.md file in the project repository, which will be the final report.
+The project shall also be described in a detailed README.md file in the project repository, which will be the final report.
 
 * Include the following sections:
   - Introduction
